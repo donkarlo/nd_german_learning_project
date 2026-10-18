@@ -1,0 +1,341 @@
+% Lokale und direktionale Praepositionen: selbstaendiges Grammatik-Kapitel.
+% Gestaltung nach erklaerung_vorlage.tex und tabelle_vorlage.tex.
+\documentclass[a4paper,11pt]{article}
+\usepackage[a4paper,margin=2cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman,english]{babel}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage[table]{xcolor}
+\usepackage{parskip}
+\usepackage{enumitem}
+\usepackage[most]{tcolorbox}
+\usepackage{titlesec}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage[hidelinks]{hyperref}
+
+\definecolor{HeaderBlueDark}{RGB}{70,110,170}
+\definecolor{RowBlueLight}{RGB}{235,243,255}
+\definecolor{RowBlueDark}{RGB}{220,233,250}
+\definecolor{SoftGray}{RGB}{90,90,90}
+\setlength{\parindent}{0pt}
+\setlist[itemize]{leftmargin=1.4em,itemsep=0.35em,topsep=0.35em}
+\linespread{1.06}
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.4}
+
+\titleformat{\section}[block]{\Large\bfseries\color{HeaderBlueDark}}{}{0pt}{}
+\titlespacing{\section}{0pt}{1.3em}{0.8em}
+\titleformat{\subsection}[block]{\large\bfseries\color{HeaderBlueDark}}{}{0pt}{}
+\titlespacing{\subsection}{0pt}{1.0em}{0.6em}
+
+\newtcolorbox{exbox}{enhanced,breakable,colback=RowBlueLight,colframe=RowBlueDark,
+boxrule=0.4pt,arc=1.5mm,left=1.2mm,right=1.2mm,top=1mm,bottom=1mm,
+title={Beispiele \textnormal{(Examples)}},fonttitle=\bfseries,
+colbacktitle=RowBlueDark,coltitle=black}
+\NewDocumentEnvironment{grammarentry}{mm+b}{%
+\begin{tcolorbox}[enhanced,breakable,colback=white,colframe=HeaderBlueDark,
+boxrule=0.6pt,arc=1.5mm,left=1.5mm,right=1.5mm,top=1mm,bottom=1mm,
+colbacktitle=HeaderBlueDark,coltitle=white,fonttitle=\bfseries,
+title={#1\hfill\normalfont\footnotesize #2}]
+#3
+\end{tcolorbox}
+}{}
+\newcommand{\GermanText}[1]{\textbf{Deutsch: }#1\par}
+\newcommand{\EnglishText}[1]{{\small\color{SoftGray}\textbf{English: }#1\par}}
+\newcommand{\ExampleItem}[2]{\item \textbf{#1}\\{\small\color{SoftGray}#2}}
+\newcommand{\TableHead}[1]{\color{white}\textbf{#1}}
+\newcommand{\Cell}[2]{#1\newline{\small\color{SoftGray}#2}}
+
+\title{Lokale und direktionale Präpositionen\\
+\large Location and Direction: \emph{nach, zu, in, an, auf, bei, aus, von} und weitere}
+\date{}
+\begin{document}
+\selectlanguage{ngerman}
+\maketitle
+\setcounter{tocdepth}{1}
+\tableofcontents
+\newpage
+
+\section{Die drei Ortsfragen (The three location questions)}
+\begin{grammarentry}{Wo? --- Wohin? --- Woher?}{location, destination, origin}
+\GermanText{\textbf{Wo?} fragt nach einem Ort oder dem Ort einer Tätigkeit: \emph{in Graz, beim Arzt, im Park}. \textbf{Wohin?} fragt nach dem Ziel: \emph{nach Graz, zum Arzt, in den Park}. \textbf{Woher?} fragt nach der Herkunft oder dem Ausgangspunkt: \emph{aus Graz, vom Arzt, aus dem Park}.}
+\EnglishText{\textbf{Where?} asks about location; \textbf{where to?} asks about destination; \textbf{where from?} asks about origin or point of departure.}
+\GermanText{Man wählt zuerst nach der \textbf{Art des Ortes} und der \textbf{gemeinten Beziehung} (hinein, an einen Rand, zu einer Person, auf eine Fläche usw.). Erst danach bestimmt man den Kasus.}
+\EnglishText{First identify the type of place and the intended spatial relationship (inside, at an edge, towards a person, onto a surface, etc.); then determine the grammatical case.}
+\end{grammarentry}
+\begin{exbox}\begin{itemize}
+\ExampleItem{Ich wohne in Graz. / Ich fahre nach Graz. / Ich komme aus Graz.}{I live in Graz. / I am travelling to Graz. / I come from Graz.}
+\ExampleItem{Ich bin beim Arzt. / Ich gehe zum Arzt. / Ich komme vom Arzt.}{I am at the doctor's. / I am going to the doctor's. / I am coming from the doctor's.}
+\ExampleItem{Ich laufe im Park. / Ich laufe in den Park.}{I am running in the park. / I am running into the park.}
+\end{itemize}\end{exbox}
+
+\section{Kasus und Präpositionstyp (Cases and types of prepositions)}
+\begin{grammarentry}{Feste Kasus und Wechselpräpositionen}{case government}
+\GermanText{\textbf{Immer Dativ:} zu, nach, bei, von, aus, gegenüber (in den hier behandelten räumlichen Verwendungen). \textbf{Immer Akkusativ:} durch, um, gegen. \textbf{Wechselpräpositionen:} an, auf, hinter, in, neben, über, unter, vor, zwischen. Bei räumlichen Angaben gilt: \textbf{Wo? = Dativ; Wohin? = Akkusativ}.}
+\EnglishText{\textbf{Fixed dative:} zu, nach, bei, von, aus, gegenüber. \textbf{Fixed accusative:} durch, um, gegen. \textbf{Two-way prepositions:} an, auf, hinter, in, neben, über, unter, vor, zwischen. For spatial use, location takes the dative and destination takes the accusative.}
+\GermanText{\textbf{Achtung:} Die Regel \glqq Bewegung = Akkusativ\grqq{} ist falsch. Der Kasus hängt von der \emph{Präposition und ihrer Funktion} ab. \emph{Ich gehe zum Bahnhof} hat Dativ; \emph{Ich gehe im Park spazieren} hat ebenfalls Dativ, obwohl man sich bewegt.}
+\EnglishText{\textbf{Important:} Movement does not automatically mean accusative. Case depends on the preposition and its function. \emph{Zum Bahnhof} takes dative; \emph{im Park} also takes dative even though walking involves movement.}
+\end{grammarentry}
+\rowcolors{2}{RowBlueLight}{RowBlueDark}
+\begin{longtable}{>{\raggedright\arraybackslash}p{3cm}>{\raggedright\arraybackslash}p{4.1cm}>{\raggedright\arraybackslash}p{8.0cm}}
+\rowcolor{HeaderBlueDark}\TableHead{Typ (Type)} & \TableHead{Kasus (Case)} & \TableHead{Beispiele (Examples)}\\
+\endfirsthead
+\rowcolor{HeaderBlueDark}\TableHead{Typ (Type)} & \TableHead{Kasus (Case)} & \TableHead{Beispiele (Examples)}\\
+\endhead
+Feste Dativpräposition & immer Dativ / always dative & \Cell{zum Bahnhof; nach Berlin; bei Anna; aus dem Haus; vom See}{to the station; to Berlin; at Anna's; out of the house; from the lake}\\
+Feste Akkusativpräposition & immer Akkusativ / always accusative & \Cell{durch den Park; um das Haus; gegen die Wand}{through the park; around the house; against the wall}\\
+Wechselpräp. & Dativ bei Wo? / dative for location & \Cell{im Park; auf dem Platz; am See}{in the park; in the square; by the lake}\\
+Wechselpräp. & Akkusativ bei Wohin? / accusative for destination & \Cell{in den Park; auf den Platz; an den See}{into the park; to the square; to the lake}\\
+\end{longtable}
+
+\section{Nach: Städte, Länder und Richtungen (Nach: cities, countries, directions)}
+\begin{grammarentry}{nach + Ortsname}{city, continent, article-free country}
+\GermanText{Für \textbf{Städte, Kontinente und Ländernamen ohne Artikel} verwendet man für das Reiseziel normalerweise \textbf{nach}: \emph{nach Graz, nach Europa, nach Österreich}. Für den Aufenthalt benutzt man \textbf{in}; für die Herkunft typischerweise \textbf{aus}.}
+\EnglishText{For \textbf{cities, continents and countries without an article}, destinations normally take \textbf{nach}: \emph{nach Graz, nach Europa, nach Österreich}. Use \textbf{in} for being there and usually \textbf{aus} for origin.}
+\GermanText{Auch Richtungen: \emph{nach Norden, nach Süden, nach links, nach rechts}. Bei \emph{nach links} folgt kein Nomen im Dativ; \emph{links} ist hier ein Richtungsadverb.}
+\EnglishText{Directional uses include \emph{nach Norden, nach Süden, nach links, nach rechts}. In \emph{nach links}, \emph{links} is a directional adverb, not a dative noun.}
+\end{grammarentry}
+\begin{exbox}\begin{itemize}
+\ExampleItem{Ich fahre nach Graz und bleibe drei Tage in Graz.}{I am going to Graz and staying there for three days.}
+\ExampleItem{Wir fliegen nach Spanien. / Wir sind in Spanien.}{We are flying to Spain. / We are in Spain.}
+\ExampleItem{Gehen Sie an der Kreuzung nach links.}{Turn left at the intersection.}
+\ExampleItem{Führt dieser Weg nach Graz?}{Does this road lead to Graz?}
+\end{itemize}\end{exbox}
+\begin{grammarentry}{Wichtige Grenze von nach}{not any destination}
+\GermanText{Man sagt im heutigen Standarddeutsch normalerweise \textbf{nicht} \emph{nach dem Bahnhof}, \emph{nach der Arbeit} im Sinne von \glqq zur Arbeit\grqq{}, \emph{nach meinem Freund} im Sinne von \glqq zu meinem Freund\grqq{} oder \emph{zu Graz} für das Reiseziel. \emph{Nach der Arbeit} bedeutet zeitlich \glqq after work\grqq{}.}
+\EnglishText{Do not use \emph{nach} indiscriminately for every destination. \emph{Nach der Arbeit} means \emph{after work}, not \emph{to work}. For going to Graz, use \emph{nach Graz}, not \emph{zu Graz}.}
+\end{grammarentry}
+
+\section{Zu: Personen, Dienste und konkrete Ziele (Zu: people, services, destinations)}
+\begin{grammarentry}{zu + Dativ}{towards a person or place}
+\GermanText{Mit \textbf{zu + Dativ} erreicht man ein \textbf{konkretes Ziel}: oft eine Person, eine Institution, einen Treffpunkt oder eine Veranstaltung. Das Betreten eines Innenraums wird dabei nicht ausdrücklich hervorgehoben.}
+\EnglishText{\textbf{Zu + dative} commonly marks a specific destination: a person, institution, meeting place or event. It does not specifically emphasize entering a room or building.}
+\GermanText{\textbf{zum = zu dem} (Maskulinum/Neutrum), \textbf{zur = zu der} (Femininum): \emph{zum Arzt, zum Bahnhof, zur Arbeit, zur Schule, zur Post, zu meiner Schwester, zu den Freunden}.}
+\EnglishText{\textbf{Zum} and \textbf{zur} are contractions of \emph{zu dem} and \emph{zu der}: to the doctor, station, work, school, post office, sister, friends.}
+\end{grammarentry}
+\begin{exbox}\begin{itemize}
+\ExampleItem{Ich fahre zur Arbeit.}{I am going to work.}
+\ExampleItem{Sie geht zum Arbeitsplatz.}{She is going to her workplace.}
+\ExampleItem{Kommst du heute zu mir?}{Are you coming to my place today?}
+\ExampleItem{Wir gehen zum Konzert.}{We are going to the concert.}
+\ExampleItem{Ich gehe zum Bahnhof, aber nicht in das Bahnhofsgebäude.}{I am going to the station, but not entering the station building.}
+\end{itemize}\end{exbox}
+\begin{grammarentry}{zu oder bei?}{destination versus location with people}
+\GermanText{\textbf{Wohin?} \emph{zu Anna, zum Arzt, zur Firma}. \textbf{Wo?} gewöhnlich \emph{bei Anna, beim Arzt, bei der Firma}. Bei \emph{Firma} ist auch \emph{in der Firma} möglich, wenn man die Räumlichkeiten oder den Arbeitsplatz meint.}
+\EnglishText{\textbf{To a person/institution:} \emph{zu Anna, zum Arzt, zur Firma}. \textbf{At a person/institution:} commonly \emph{bei Anna, beim Arzt, bei der Firma}. \emph{In der Firma} also works when focusing on the premises or workplace.}
+\end{grammarentry}
+
+\section{In: Inneres, Räume, Gebiete (In: interiors, rooms, areas)}
+\begin{grammarentry}{in + Dativ/Akkusativ}{inside versus entering}
+\GermanText{Bei \textbf{Wo?} steht \textbf{in + Dativ}: \emph{im Haus, im Kino, in der Stadt, im Park}. Bei \textbf{Wohin?} steht \textbf{in + Akkusativ}: \emph{ins Haus, ins Kino, in die Stadt, in den Park}. \emph{im = in dem}; \emph{ins = in das}.}
+\EnglishText{Use \textbf{in + dative} for being inside a space or area; use \textbf{in + accusative} for entering it. \emph{Im} contracts \emph{in dem}; \emph{ins} contracts \emph{in das}.}
+\end{grammarentry}
+\begin{exbox}\begin{itemize}
+\ExampleItem{Ich bin im Theater. / Ich gehe ins Theater.}{I am in the theatre. / I am going into the theatre or going to see a play.}
+\ExampleItem{Wir spazieren im Wald. / Wir gehen in den Wald.}{We are walking in the forest. / We are going into the forest.}
+\ExampleItem{Die Kinder spielen im Garten. / Sie laufen in den Garten.}{The children are playing in the garden. / They run into the garden.}
+\end{itemize}\end{exbox}
+\begin{grammarentry}{Länder mit Artikel}{countries that take an article}
+\GermanText{Bei Ländern mit Artikel benutzt man normalerweise \textbf{in + Akkusativ} für das Ziel und \textbf{in + Dativ} für den Aufenthaltsort: \emph{in die Schweiz / in der Schweiz; in die Türkei / in der Türkei; in den Iran / im Iran; in die USA / in den USA}. Für den Ausgangsort: \emph{aus der Schweiz, aus dem Iran, aus den USA}.}
+\EnglishText{Countries with an article generally take \textbf{in + accusative} for travel to them, \textbf{in + dative} for being there, and \textbf{aus + dative} for origin.}
+\end{grammarentry}
+\begin{grammarentry}{Stadt oder bestimmter Teil der Stadt?}{city versus city district}
+\GermanText{\emph{Ich fahre nach Graz} ist die normale Angabe für eine Fahrt in die Stadt Graz. \emph{Ich fahre in die Stadt} bezeichnet eine Stadt als Gebiet bzw. das Stadtzentrum. \emph{Ich gehe in die Herrengasse} bezeichnet die Bewegung in eine bestimmte Straße. \emph{Ich bin in der Herrengasse} bezeichnet den Aufenthaltsort.}
+\EnglishText{\emph{Nach Graz} names a city as destination. \emph{In die Stadt} means going into town; \emph{in die Herrengasse} means entering a particular street; \emph{in der Herrengasse} means being on that street.}
+\end{grammarentry}
+
+\section{An und auf: Rand, Wasser, Fläche, Plätze (An and auf: edge, water, surface, places)}
+\begin{grammarentry}{an + Dativ/Akkusativ}{at an edge or contact point}
+\GermanText{\textbf{an} beschreibt häufig eine Grenze, einen Rand oder einen Kontaktpunkt: \emph{am See / an den See; am Meer / ans Meer; an der Wand / an die Wand; an der Haltestelle / an die Haltestelle}. \emph{am = an dem}, \emph{ans = an das}.}
+\EnglishText{\textbf{An} often refers to an edge, border or point of contact: at/to the lake, sea, wall or stop. \emph{Am} means \emph{an dem}; \emph{ans} means \emph{an das}.}
+\end{grammarentry}
+\begin{exbox}\begin{itemize}
+\ExampleItem{Wir sitzen am See. / Wir fahren an den See.}{We are sitting by the lake. / We are travelling to the lake.}
+\ExampleItem{Ich fahre ans Meer. / Ich schwimme im Meer.}{I am going to the seaside. / I am swimming in the sea.}
+\ExampleItem{Sie stellt das Fahrrad an die Wand. / Es steht an der Wand.}{She puts the bicycle against the wall. / It is standing against the wall.}
+\end{itemize}\end{exbox}
+\begin{grammarentry}{auf + Dativ/Akkusativ}{on a surface, square, island}
+\GermanText{\textbf{auf} steht oft bei offenen Flächen, Plätzen, Märkten und manchen geografischen Zielen: \emph{auf dem Platz / auf den Platz; auf dem Markt / auf den Markt; auf der Insel / auf die Insel; auf dem Berg / auf den Berg}. Welche Präposition zu einem Ortsnamen gehört, ist teilweise eine feste Sprachgewohnheit.}
+\EnglishText{\textbf{Auf} often appears with open surfaces, squares, markets, islands and mountains. Some place expressions are conventional and must be learned individually.}
+\end{grammarentry}
+\begin{exbox}\begin{itemize}
+\ExampleItem{Die Kinder sind auf dem Spielplatz. / Sie gehen auf den Spielplatz.}{The children are at the playground. / They are going to the playground.}
+\ExampleItem{Ich bin auf dem Markt. / Ich gehe auf den Markt.}{I am at the market. / I am going to the market.}
+\ExampleItem{Wir sind auf Mallorca. / Wir fliegen nach Mallorca.}{We are on Mallorca. / We are flying to Mallorca.}
+\ExampleItem{Wir wohnen auf dem Land. / Wir ziehen aufs Land.}{We live in the countryside. / We are moving to the countryside.}
+\end{itemize}\end{exbox}
+\begin{grammarentry}{zu, in, an und auf sind nicht immer austauschbar}{different spatial viewpoints}
+\GermanText{\emph{Zum See} nennt den See als Ziel; \emph{an den See} betont die Uferlage; \emph{in den See} beschreibt das Hineingehen ins Wasser. \emph{Zum Markt} betont den Markt als Ziel; \emph{auf den Markt} ist die übliche Angabe für das Betreten des Marktbereichs.}
+\EnglishText{\emph{Zum See} identifies the lake as a destination; \emph{an den See} focuses on its shore; \emph{in den See} means into the water. \emph{Zum Markt} names the destination, while \emph{auf den Markt} refers to entering the market area.}
+\end{grammarentry}
+
+\section{Bei und die anderen Ortsangaben (Bei and other location expressions)}
+\begin{grammarentry}{bei + Dativ}{at or near someone/something}
+\GermanText{\textbf{bei} bezeichnet oft den Aufenthalt \textbf{bei einer Person, einer Organisation oder in deren Nähe}: \emph{bei meiner Freundin, beim Arzt, bei der Arbeit, bei der Universität} (in der Nähe der Universität). Es bezeichnet normalerweise nicht das Hineingehen.}
+\EnglishText{\textbf{Bei} commonly means being \emph{at someone's place}, \emph{with an organization}, \emph{at work} or \emph{near} a location. It does not itself mean entering.}
+\end{grammarentry}
+\begin{exbox}\begin{itemize}
+\ExampleItem{Ich bin bei meiner Schwester. / Ich gehe zu meiner Schwester.}{I am at my sister's. / I am going to my sister's.}
+\ExampleItem{Er ist bei der Arbeit. / Er fährt zur Arbeit.}{He is at work. / He is going to work.}
+\ExampleItem{Das Café liegt beim Bahnhof.}{The café is near the railway station.}
+\end{itemize}\end{exbox}
+\begin{grammarentry}{Weitere Wechselpräpositionen}{other spatial relations}
+\GermanText{\textbf{hinter, neben, über, unter, vor, zwischen} bezeichnen räumliche Beziehungen: \emph{hinter dem Haus / hinter das Haus; neben dem Tisch / neben den Tisch}. Das Muster \textbf{Wo? = Dativ, Wohin? = Akkusativ} gilt hier ebenso. \textbf{gegenüber + Dativ} beschreibt einen Ort auf der anderen Seite: \emph{gegenüber dem Bahnhof / dem Bahnhof gegenüber}.}
+\EnglishText{\textbf{Hinter, neben, über, unter, vor, zwischen} follow the dative-for-location and accusative-for-destination pattern. \textbf{Gegenüber + dative} describes a place opposite something and may also come after the noun phrase.}
+\end{grammarentry}
+\begin{exbox}\begin{itemize}
+\ExampleItem{Das Fahrrad steht vor dem Haus. / Ich stelle es vor das Haus.}{The bicycle is in front of the house. / I put it in front of the house.}
+\ExampleItem{Die Bank liegt gegenüber dem Bahnhof.}{The bank is opposite the station.}
+\end{itemize}\end{exbox}
+
+\section{Woher? Aus, von und vom (Where from? Aus and von)}
+\begin{grammarentry}{aus + Dativ}{out of an area, country or interior}
+\GermanText{\textbf{aus} drückt häufig den Ursprung aus \textbf{einem Raum, einer Stadt oder einem Land} aus: \emph{aus dem Haus, aus dem Park, aus Graz, aus Österreich, aus der Schweiz}. Bei Personen sagt man zur Herkunft auch \emph{Ich komme aus Österreich}.}
+\EnglishText{\textbf{Aus + dative} commonly indicates origin from inside a space, or origin from a city or country: out of the house, park, Graz, Austria or Switzerland.}
+\end{grammarentry}
+\begin{grammarentry}{von + Dativ}{from a person, event or point}
+\GermanText{\textbf{von} bezeichnet oft einen Ausgangspunkt, eine Person, eine Tätigkeit oder eine Reiseetappe: \emph{von Anna, vom Arzt, von der Arbeit, vom Bahnhof, vom See}. \emph{vom = von dem}. Bei einer Route kann auch \emph{von Graz nach Wien} stehen; für Herkunft/Heimat ist \emph{aus Graz} typisch.}
+\EnglishText{\textbf{Von + dative} often means from a person, event, activity or point of departure. \emph{Vom} contracts \emph{von dem}. On a route, \emph{von Graz nach Wien} is natural; when stating origin or hometown, \emph{aus Graz} is typical.}
+\end{grammarentry}
+\begin{exbox}\begin{itemize}
+\ExampleItem{Ich komme aus der Schule. / Ich komme von der Schule.}{I am coming out of the school building. / I am coming from school (the institution or activity).}
+\ExampleItem{Wir kommen vom Arzt.}{We are coming from the doctor's.}
+\ExampleItem{Der Zug fährt von Graz nach Wien.}{The train runs from Graz to Vienna.}
+\ExampleItem{Ich komme aus dem Büro. / Ich komme vom Büro.}{I am coming out of the office. / I am coming from the office (as a point of departure).}
+\end{itemize}\end{exbox}
+
+\section{Wege, Durchgang und Reichweite (Routes, passage, limits)}
+\begin{grammarentry}{durch, über, entlang, um, bis}{route descriptions}
+\GermanText{\textbf{durch + Akkusativ}: innerhalb eines Gebiets hindurch (\emph{durch den Tunnel}). \textbf{über + Akkusativ}: über einen Wegpunkt (\emph{über Wien nach Graz}); räumlich kann \emph{über} auch Wechselpräposition sein. \textbf{um + Akkusativ}: rund um ein Hindernis (\emph{um das Haus}).}
+\EnglishText{\textbf{Durch + accusative} means through an area; \textbf{über} can mark a route via an intermediate point; \textbf{um + accusative} means around. In its other spatial uses, \emph{über} is a two-way preposition.}
+\GermanText{\textbf{entlang} steht im üblichen Muster \emph{den Fluss entlang} \textbf{nachgestellt mit Akkusativ}; vor dem Nomen sind andere Kasusformen möglich. \textbf{bis} markiert eine Grenze: \emph{bis zum Bahnhof, bis nach Graz, bis an die Brücke}. Der Kasus nach \emph{bis zu} kommt von \textbf{zu}.}
+\EnglishText{\textbf{Entlang} commonly follows an accusative noun phrase: \emph{den Fluss entlang}. Case usage can differ when it precedes the noun. \textbf{Bis} indicates an endpoint: up to the station, as far as Graz, up to the bridge. In \emph{bis zu}, the dative comes from \emph{zu}.}
+\GermanText{Für eine allgemeine Orientierung sind außerdem \textbf{Richtung} (\emph{Richtung Graz}) und \textbf{in Richtung + Genitiv / von + Dativ} (\emph{in Richtung des Bahnhofs / in Richtung Bahnhof}) üblich. \emph{Von Graz aus} beschreibt den Ausgangspunkt.}
+\EnglishText{To describe a general direction, use \emph{Richtung Graz} or \emph{in Richtung des Bahnhofs / in Richtung Bahnhof}. \emph{Von Graz aus} specifies the point of departure.}
+\end{grammarentry}
+\begin{exbox}\begin{itemize}
+\ExampleItem{Wir fahren durch den Tunnel.}{We are driving through the tunnel.}
+\ExampleItem{Wir fahren über Wien nach Graz.}{We are travelling to Graz via Vienna.}
+\ExampleItem{Ich gehe den Fluss entlang.}{I am walking along the river.}
+\ExampleItem{Geh bis zum Bahnhof und dann nach rechts.}{Go as far as the station, then turn right.}
+\ExampleItem{Von Graz aus fahren wir Richtung Norden.}{From Graz we are travelling northwards.}
+\end{itemize}\end{exbox}
+
+\section{Nach Hause, zu Hause und beim Haus (Home and the house)}
+\begin{grammarentry}{Feste Wendungen für das eigene Zuhause}{fixed expressions}
+\GermanText{\textbf{Wo? zu Hause (auch: zuhause). Wohin? nach Hause (auch: nachhause). Woher? von zu Hause / von zuhause.} Die Wendungen mit \emph{Hause} sind historisch fest geworden; \emph{zu Hause} bedeutet nicht \glqq zum Haus hin\grqq{}.}
+\EnglishText{\textbf{Where? at home. Where to? home. Where from? from home.} \emph{Zu Hause} is a fixed historical expression; it does not mean moving toward a building.}
+\GermanText{Für \textbf{ein bestimmtes Gebäude} gilt etwas anderes: \emph{im Haus} = innen; \emph{ins Haus} = hinein; \emph{zum Haus} = zu dem Gebäude hin; \emph{beim Haus} = in der Nähe des Gebäudes.}
+\EnglishText{For \textbf{a specific building}: \emph{im Haus} means inside it, \emph{ins Haus} into it, \emph{zum Haus} toward the building, and \emph{beim Haus} near it.}
+\end{grammarentry}
+\begin{exbox}\begin{itemize}
+\ExampleItem{Ich bin zu Hause. / Ich gehe nach Hause.}{I am at home. / I am going home.}
+\ExampleItem{Ich arbeite heute von zu Hause aus.}{I am working from home today.}
+\ExampleItem{Ich gehe zum Haus und dann ins Haus.}{I am going to the house and then entering it.}
+\ExampleItem{Ich gehe zu Anna nach Hause.}{I am going to Anna's home.}
+\end{itemize}\end{exbox}
+
+\section{Typische Ziele im direkten Vergleich (Common destinations side by side)}
+\begin{grammarentry}{Eine Ortsbezeichnung in drei Richtungen}{location--destination--origin}
+\GermanText{Die Tabelle zeigt \textbf{typische} Kombinationen. Manche Orte erlauben mehrere Präpositionen, wenn man eine andere räumliche Beziehung meint (z.\,B. \emph{zum Bahnhof} und \emph{in den Bahnhof}).}
+\EnglishText{This table gives \textbf{typical} combinations. Several prepositions may be correct for the same place when they express different spatial relationships (e.g., going to the station versus going inside it).}
+\end{grammarentry}
+{\small
+\rowcolors{2}{RowBlueLight}{RowBlueDark}
+\begin{longtable}{>{\raggedright\arraybackslash}p{2.45cm}>{\raggedright\arraybackslash}p{3.85cm}>{\raggedright\arraybackslash}p{3.85cm}>{\raggedright\arraybackslash}p{3.85cm}}
+\rowcolor{HeaderBlueDark}\TableHead{Ziel (Place)} & \TableHead{Wo? (Where?)} & \TableHead{Wohin? (Where to?)} & \TableHead{Woher? (Where from?)}\\
+\endfirsthead
+\rowcolor{HeaderBlueDark}\TableHead{Ziel (Place)} & \TableHead{Wo? (Where?)} & \TableHead{Wohin? (Where to?)} & \TableHead{Woher? (Where from?)}\\
+\endhead
+Graz / city & \Cell{in Graz}{in Graz} & \Cell{nach Graz}{to Graz} & \Cell{aus Graz}{from Graz}\\
+Österreich / country & \Cell{in Österreich}{in Austria} & \Cell{nach Österreich}{to Austria} & \Cell{aus Österreich}{from Austria}\\
+Schweiz / article-country & \Cell{in der Schweiz}{in Switzerland} & \Cell{in die Schweiz}{to Switzerland} & \Cell{aus der Schweiz}{from Switzerland}\\
+Iran / article-country & \Cell{im Iran}{in Iran} & \Cell{in den Iran}{to Iran} & \Cell{aus dem Iran}{from Iran}\\
+Anna / person & \Cell{bei Anna}{at Anna's} & \Cell{zu Anna}{to Anna's} & \Cell{von Anna}{from Anna's}\\
+Arzt / doctor & \Cell{beim Arzt}{at the doctor's} & \Cell{zum Arzt}{to the doctor's} & \Cell{vom Arzt}{from the doctor's}\\
+Arbeit / work & \Cell{bei der Arbeit}{at work} & \Cell{zur Arbeit}{to work} & \Cell{von der Arbeit}{from work}\\
+Schule / school & \Cell{in der Schule}{at/in school} & \Cell{zur Schule}{to school} & \Cell{von der Schule}{from school}\\
+Haus / building & \Cell{im Haus}{in the house} & \Cell{ins Haus}{into the house} & \Cell{aus dem Haus}{out of the house}\\
+Zuhause / home & \Cell{zu Hause}{at home} & \Cell{nach Hause}{home(wards)} & \Cell{von zu Hause}{from home}\\
+Kino / cinema & \Cell{im Kino}{at/in the cinema} & \Cell{ins Kino}{to the cinema} & \Cell{aus dem Kino}{out of the cinema}\\
+Bahnhof / station & \Cell{am Bahnhof}{at the station} & \Cell{zum Bahnhof}{to the station} & \Cell{vom Bahnhof}{from the station}\\
+Park / park & \Cell{im Park}{in the park} & \Cell{in den Park}{into the park} & \Cell{aus dem Park}{out of the park}\\
+See / lake & \Cell{am See}{by the lake} & \Cell{an den See}{to the lake} & \Cell{vom See}{from the lake}\\
+Meer / sea & \Cell{am Meer}{by the sea} & \Cell{ans Meer}{to the seaside} & \Cell{vom Meer}{from the sea}\\
+Markt / market & \Cell{auf dem Markt}{at the market} & \Cell{auf den Markt}{to the market} & \Cell{vom Markt}{from the market}\\
+Spielplatz / playground & \Cell{auf dem Spielplatz}{on the playground} & \Cell{auf den Spielplatz}{to the playground} & \Cell{vom Spielplatz}{from the playground}\\
+Insel / island & \Cell{auf der Insel}{on the island} & \Cell{auf die Insel}{onto the island} & \Cell{von der Insel}{from the island}\\
+Berg / mountain & \Cell{auf dem Berg}{on the mountain} & \Cell{auf den Berg}{up the mountain} & \Cell{vom Berg}{down/from the mountain}\\
+\end{longtable}
+}
+\begin{grammarentry}{Weitere feste Verbindungen}{more natural combinations}
+\GermanText{Auch gebräuchlich: \emph{ins Büro / im Büro / aus dem Büro}; \emph{in die Berge / in den Bergen / aus den Bergen}; \emph{zur Universität / an der Universität} (Institution); \emph{an die Haltestelle / an der Haltestelle}; \emph{in die Stadt / in der Stadt}; \emph{auf die Straße / auf der Straße}.}
+\EnglishText{Further common patterns include going into an office; going to the mountains; going to university; going to a stop; going into town; going onto a street. The preposition may reflect either physical space or institutional use.}
+\end{grammarentry}
+
+\section{Präpositionen mit mehreren Bedeutungen (Other meanings are possible)}
+\begin{grammarentry}{Gleiches Wort, andere Funktion}{time and verb government}
+\GermanText{\textbf{Nach der Arbeit} = zeitlich \glqq after work\grqq{}, aber \textbf{zur Arbeit} = direktional \glqq to work\grqq{}. \textbf{Zu Hause} = lokaler Ausdruck \glqq at home\grqq{}. \textbf{Zu lernen} enthält den Infinitivmarker \emph{zu}, keine lokale Präposition.}
+\EnglishText{\emph{Nach der Arbeit} means \emph{after work}, whereas \emph{zur Arbeit} means \emph{to work}. \emph{Zu Hause} is a fixed expression meaning \emph{at home}. \emph{Zu lernen} uses the infinitive marker, not the spatial preposition.}
+\GermanText{In \textbf{warten auf den Bus}, \textbf{denken an jemanden} oder \textbf{teilnehmen an einem Kurs} liegt eine \textbf{Verb-Präposition-Rektion} vor: Hier darf man den Kasus nicht aus \glqq Wo?/Wohin?\grqq{} ableiten.}
+\EnglishText{In \emph{warten auf}, \emph{denken an} and \emph{teilnehmen an}, the preposition is governed by the verb. The where/where-to rule does not determine the case in these expressions.}
+\end{grammarentry}
+
+\section{Häufige Fehler und Korrekturen (Common errors and corrections)}
+\begin{exbox}\begin{itemize}
+\ExampleItem{Falsch: Ich gehe nach Arbeit.\\Richtig: Ich gehe zur Arbeit.}{Wrong: I am going to work. Correct destination expression: \emph{zur Arbeit}.}
+\ExampleItem{Falsch: Ich fahre zu Graz.\\Richtig: Ich fahre nach Graz.}{Wrong for ordinary travel to a city. Correct: I am going to Graz.}
+\ExampleItem{Falsch: Ich gehe zu Hause. (wenn \glqq heimgehen\grqq{} gemeint ist)\\Richtig: Ich gehe nach Hause.}{Wrong when \emph{go home} is intended. Correct: I am going home.}
+\ExampleItem{Falsch: Ich bin nach Graz.\\Richtig: Ich bin in Graz.}{Wrong for being in a city. Correct: I am in Graz.}
+\ExampleItem{Falsch: Ich fahre nach der Schweiz. (als Reiseziel)\\Richtig: Ich fahre in die Schweiz.}{Wrong for travelling to Switzerland. Correct: I am travelling to Switzerland.}
+\ExampleItem{Falsch: Ich gehe zu meinem Freund mit Akkusativ.\\Richtig: Ich gehe zu meinem Freund.}{The preposition \emph{zu} always governs the dative: I am going to my friend's place.}
+\ExampleItem{Nicht: Ist der Weg geht zu Graz?\\Sondern: Führt dieser Weg nach Graz?}{Correct question: Does this road lead to Graz?}
+\end{itemize}\end{exbox}
+\begin{grammarentry}{Nicht jeder andere Ausdruck ist automatisch falsch}{different emphases}
+\GermanText{\emph{Zum Kino} und \emph{ins Kino} sind möglich: \emph{zum Kino} bezeichnet den Ort als Ziel, \emph{ins Kino} den Kinobesuch oder das Hineingehen. Ebenso können \emph{zur Schule} und \emph{in die Schule} je nach Situation beide korrekt sein.}
+\EnglishText{Different prepositions may be correct with different meanings. \emph{Zum Kino} means toward the cinema as a place; \emph{ins Kino} means into the cinema or to see a film. Similarly, \emph{zur Schule} and \emph{in die Schule} can both be correct depending on context.}
+\end{grammarentry}
+
+\section{Entscheidungshilfe (Decision guide)}
+\begin{grammarentry}{In vier Schritten}{four practical questions}
+\GermanText{\textbf{1.} Frage ich \emph{Wo?}, \emph{Wohin?} oder \emph{Woher?}? \textbf{2.} Ist das Ziel ein Stadt-/Ländername, eine Person/Institution, ein Innenraum, eine Fläche oder ein Rand? \textbf{3.} Wähle \emph{nach, zu, in, auf, an, bei, aus, von} nach der Bedeutung. \textbf{4.} Wende den Kasus an: \emph{zu/nach/bei/aus/von + Dativ}; bei räumlichem \emph{in/an/auf} gilt \emph{Wo? + Dativ} und \emph{Wohin? + Akkusativ}.}
+\EnglishText{\textbf{1.} Ask where, where to, or where from. \textbf{2.} Identify the type of place. \textbf{3.} Choose the preposition by meaning. \textbf{4.} Apply the case: fixed-dative prepositions always take dative; two-way prepositions take dative for location and accusative for destination.}
+\GermanText{Lerne \textbf{ganze Paare oder Dreiergruppen}: \emph{in Graz / nach Graz / aus Graz}; \emph{beim Arzt / zum Arzt / vom Arzt}; \emph{im Kino / ins Kino / aus dem Kino}; \emph{zu Hause / nach Hause / von zu Hause}.}
+\EnglishText{Memorize \textbf{complete pairs or triples} rather than translating one English \emph{to} mechanically into German.}
+\end{grammarentry}
+
+\section{Übungen mit Lösungen (Practice with answers)}
+\begin{grammarentry}{Ergänze die passende Ortsangabe}{fill in the place expression}
+\GermanText{Setze die richtige Präposition und bei Bedarf den richtigen Artikel ein. Die Lösungen stehen darunter.}
+\EnglishText{Choose the appropriate preposition and, where necessary, article. Answers follow below.}
+\end{grammarentry}
+\begin{exbox}\begin{enumerate}
+\item Morgen fahre ich \underline{\hspace{3cm}} Salzburg. (to Salzburg)
+\item Um acht Uhr gehe ich \underline{\hspace{3cm}} Arbeit. (to work)
+\item Jetzt bin ich \underline{\hspace{3cm}} Hause. (at home)
+\item Wir fahren nächste Woche \underline{\hspace{3cm}} Schweiz. (to Switzerland)
+\item Die Kinder spielen \underline{\hspace{3cm}} Park. (in the park)
+\item Die Kinder laufen \underline{\hspace{3cm}} Park. (into the park)
+\item Ich bin gerade \underline{\hspace{3cm}} Arzt. (at the doctor's)
+\item Ich komme gerade \underline{\hspace{3cm}} Arzt. (from the doctor's)
+\item Wir gehen \underline{\hspace{3cm}} See und setzen uns ans Ufer. (to the lake shore)
+\item Das Buch liegt \underline{\hspace{3cm}} Tisch. (on the table)
+\item Ich lege das Buch \underline{\hspace{3cm}} Tisch. (onto the table)
+\item Der Zug fährt \underline{\hspace{3cm}} Graz \underline{\hspace{3cm}} Wien. (from Graz to Vienna)
+\end{enumerate}\end{exbox}
+\begin{grammarentry}{Lösungen}{answers and cases}
+\GermanText{1. \textbf{nach} Salzburg; 2. \textbf{zur} Arbeit (Dativ); 3. \textbf{zu} Hause; 4. \textbf{in die} Schweiz (Akkusativ); 5. \textbf{im} Park (Dativ); 6. \textbf{in den} Park (Akkusativ); 7. \textbf{beim} Arzt (Dativ); 8. \textbf{vom} Arzt (Dativ); 9. \textbf{an den} See (Akkusativ); 10. \textbf{auf dem} Tisch (Dativ); 11. \textbf{auf den} Tisch (Akkusativ); 12. \textbf{von} Graz \textbf{nach} Wien.}
+\EnglishText{1. to Salzburg; 2. to work; 3. at home; 4. to Switzerland; 5. in the park; 6. into the park; 7. at the doctor's; 8. from the doctor's; 9. to the lakeside; 10. on the table; 11. onto the table; 12. from Graz to Vienna.}
+\end{grammarentry}
+
+\section{Zusammenfassung (Summary)}
+\begin{grammarentry}{Merksätze}{key rules}
+\GermanText{\textbf{nach Graz, nach Österreich, nach Hause;} \textbf{zum Arzt, zur Arbeit, zu Anna;} \textbf{in die Schweiz, ins Kino, in den Park;} \textbf{an den See, auf den Markt;} \textbf{bei Anna, zu Hause;} \textbf{aus Graz, vom Arzt}.}
+\EnglishText{Use \textbf{nach} for cities, article-free countries and \emph{home}; \textbf{zu} for people and many services/destinations; \textbf{in} for entering spaces and article-bearing countries; \textbf{an/auf} for specific edges and surfaces; \textbf{bei} for being with/at somebody; \textbf{aus/von} for origin.}
+\GermanText{\textbf{Wichtig:} Die Wahl ist \emph{nicht} nur eine Frage des Kasus oder des Verbs. Entscheidend ist, \textbf{welchen Ort und welche Beziehung zu diesem Ort} man ausdrücken will.}
+\EnglishText{\textbf{Most important:} Choice is not based merely on case or a movement verb; it depends on the type of destination and the spatial relationship being expressed.}
+\end{grammarentry}
+\end{document}

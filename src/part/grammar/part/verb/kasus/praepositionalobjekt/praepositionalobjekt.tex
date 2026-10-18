@@ -1,0 +1,277 @@
+% Selbständige Grammatiklektion: ausschließlich Verben mit Präpositionalobjekt
+\documentclass[a4paper,11pt]{article}
+\usepackage[a4paper,margin=2cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman,english]{babel}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{xcolor}
+\usepackage{parskip}
+\usepackage{enumitem}
+\usepackage[most]{tcolorbox}
+\usepackage{titlesec}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage[table]{xcolor}
+\usepackage[hidelinks]{hyperref}
+\definecolor{HeaderBlueDark}{RGB}{70,110,170}
+\definecolor{RowBlueLight}{RGB}{235,243,255}
+\definecolor{RowBlueDark}{RGB}{220,233,250}
+\definecolor{SoftGray}{RGB}{90,90,90}
+\setlength{\parindent}{0pt}
+\setlist[itemize]{leftmargin=1.4em,itemsep=0.35em,topsep=0.35em}
+\linespread{1.06}
+\renewcommand{\arraystretch}{1.38}
+\setlength{\tabcolsep}{5pt}
+\titleformat{\section}[block]{\Large\bfseries\color{HeaderBlueDark}}{}{0pt}{}
+\titlespacing{\section}{0pt}{1.3em}{0.8em}
+\newtcolorbox{exbox}{enhanced,breakable,colback=RowBlueLight,colframe=RowBlueDark,boxrule=0.4pt,arc=1.5mm,left=1.2mm,right=1.2mm,top=1mm,bottom=1mm,title={Beispiele \textnormal{(Examples)}},fonttitle=\bfseries,colbacktitle=RowBlueDark,coltitle=black}
+\NewDocumentEnvironment{grammarentry}{mm+b}{%
+\begin{tcolorbox}[enhanced,breakable,colback=white,colframe=HeaderBlueDark,boxrule=0.6pt,arc=1.5mm,left=1.5mm,right=1.5mm,top=1mm,bottom=1mm,colbacktitle=HeaderBlueDark,coltitle=white,fonttitle=\bfseries,title={#1\hfill\normalfont\footnotesize #2}]
+#3
+\end{tcolorbox}
+}{}
+\newcommand{\GermanText}[1]{\textbf{Deutsch: }#1\par}
+\newcommand{\EnglishText}[1]{{\small\color{SoftGray}\textbf{English: }#1\par}}
+\newcommand{\ExampleItem}[2]{\item \textbf{#1}\\{\small\color{SoftGray}#2}}
+\title{Verben mit Präpositionalobjekt\\{\large Verbs with prepositional objects}}
+\date{}
+\begin{document}
+\maketitle
+\tableofcontents
+\newpage
+\section{Grundregel (Basic rule)}
+\begin{grammarentry}{Präpositionalobjekt}{Verb + Präposition + Kasus}
+\GermanText{Ein Präpositionalobjekt ist eine Ergänzung mit einer vom Verb bestimmten Präposition. Deshalb lernt man \textbf{Verb + Präposition + Kasus} zusammen, z.\,B. \textbf{warten auf + Akkusativ} oder \textbf{teilnehmen an + Dativ}.}
+\EnglishText{A prepositional object is a complement with a preposition selected by the verb. Therefore, learn the \textbf{verb + preposition + case} together, e.g. \textbf{warten auf + accusative} or \textbf{teilnehmen an + dative}.}
+\GermanText{\textbf{Akk.} = Akkusativ; \textbf{Dat.} = Dativ; \textbf{jdn.} = jemanden (Akkusativ); \textbf{jdm.} = jemandem (Dativ).}
+\EnglishText{\textbf{Akk.} = accusative; \textbf{Dat.} = dative; \textbf{jdn.} = someone (accusative); \textbf{jdm.} = someone (dative).}
+\end{grammarentry}
+
+\begin{exbox}
+\begin{itemize}
+\ExampleItem{Maria besucht ihren Freund. (Akkusativobjekt)}{Maria visits her boyfriend. (accusative object)}
+\ExampleItem{Paul hilft mir. (Dativobjekt)}{Paul helps me. (dative object)}
+\ExampleItem{Die Leute warten auf den Bus. (Präpositionalobjekt)}{The people are waiting for the bus. (prepositional object)}
+\end{itemize}
+\end{exbox}
+\section{Verben mit persönlichem Subjekt (Verbs with a person as subject)}
+\rowcolors{2}{RowBlueLight}{RowBlueDark}
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.30\textwidth} >{\raggedright\arraybackslash}p{0.34\textwidth} >{\raggedright\arraybackslash}p{0.25\textwidth}}
+\rowcolor{HeaderBlueDark}
+\color{white}\textbf{Verb (verb)} & \color{white}\textbf{Rektion (government)} & \color{white}\textbf{English meaning}\\
+\endfirsthead
+\rowcolor{HeaderBlueDark}
+\color{white}\textbf{Verb (verb)} & \color{white}\textbf{Rektion (government)} & \color{white}\textbf{English meaning}\\
+\endhead
+\textbf{achten / aufpassen} & auf + Akk. & pay attention / watch out for\\
+\textbf{anfangen / beginnen} & mit + Dat. & start / begin with\\
+\textbf{aufhören} & mit + Dat. & stop doing\\
+\textbf{denken} & an + Akk. & think of\\
+\textbf{nachdenken} & über + Akk. & think about\\
+\textbf{fliehen / flüchten} & vor + Dat. & flee from\\
+\textbf{lachen} & über + Akk. & laugh about\\
+\textbf{protestieren} & gegen + Akk. & protest against\\
+\textbf{rechnen} & mit + Dat. & expect / count on\\
+\textbf{sorgen} & für + Akk. & provide for / take care of\\
+\textbf{teilnehmen} & an + Dat. & participate in\\
+\textbf{warten} & auf + Akk. & wait for\\
+\end{longtable}
+\begin{exbox}
+\begin{itemize}
+\ExampleItem{Ich denke an die Prüfung.}{I am thinking about the examination.}
+\ExampleItem{Wir nehmen an dem Kurs teil.}{We participate in the course.}
+\ExampleItem{Er wartet auf den Zug.}{He is waiting for the train.}
+\end{itemize}
+\end{exbox}
+\section{Verben mit Sachen als Subjekt (Verbs with things as subjects)}
+\begin{grammarentry}{Sache als Subjekt}{Hinweis}
+\GermanText{In dieser Gruppe kann eine Sache das Subjekt sein. Das ist nicht dasselbe wie ein unpersönliches Subjekt.}
+\EnglishText{In this group, a thing can be the subject. That is not the same as an impersonal subject.}
+\end{grammarentry}
+\rowcolors{2}{RowBlueLight}{RowBlueDark}
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.30\textwidth} >{\raggedright\arraybackslash}p{0.34\textwidth} >{\raggedright\arraybackslash}p{0.25\textwidth}}
+\rowcolor{HeaderBlueDark}
+\color{white}\textbf{Verb (verb)} & \color{white}\textbf{Rektion (government)} & \color{white}\textbf{English meaning}\\
+\endfirsthead
+\rowcolor{HeaderBlueDark}
+\color{white}\textbf{Verb (verb)} & \color{white}\textbf{Rektion (government)} & \color{white}\textbf{English meaning}\\
+\endhead
+\textbf{gehören} & zu + Dat. & belong to\\
+\textbf{passen} & zu + Dat. & match / suit\\
+\textbf{riechen} & nach + Dat. & smell of\\
+\textbf{schmecken} & nach + Dat. & taste of\\
+\end{longtable}
+\begin{exbox}
+\begin{itemize}
+\ExampleItem{Die Jacke passt zu meiner Hose.}{The jacket matches my trousers.}
+\ExampleItem{Die Suppe schmeckt nach Knoblauch.}{The soup tastes of garlic.}
+\end{itemize}
+\end{exbox}
+\section{Akkusativobjekt und Präpositionalobjekt (Accusative and prepositional objects)}
+\rowcolors{2}{RowBlueLight}{RowBlueDark}
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.30\textwidth} >{\raggedright\arraybackslash}p{0.34\textwidth} >{\raggedright\arraybackslash}p{0.25\textwidth}}
+\rowcolor{HeaderBlueDark}
+\color{white}\textbf{Verb (verb)} & \color{white}\textbf{Rektion (government)} & \color{white}\textbf{English meaning}\\
+\endfirsthead
+\rowcolor{HeaderBlueDark}
+\color{white}\textbf{Verb (verb)} & \color{white}\textbf{Rektion (government)} & \color{white}\textbf{English meaning}\\
+\endhead
+\textbf{bitten + jdn.} & um + Akk. & ask someone for\\
+\textbf{einladen + jdn.} & zu + Dat. & invite someone to\\
+\textbf{fragen + jdn.} & nach + Dat. & ask someone about\\
+\textbf{informieren + jdn.} & über + Akk. & inform someone about\\
+\end{longtable}
+\begin{exbox}
+\begin{itemize}
+\ExampleItem{Ich bitte dich um Hilfe.}{I ask you for help.}
+\ExampleItem{Sie lädt mich zu ihrer Feier ein.}{She invites me to her party.}
+\ExampleItem{Er informiert mich über den Termin.}{He informs me about the appointment.}
+\end{itemize}
+\end{exbox}
+\section{Dativobjekt und Präpositionalobjekt (Dative and prepositional objects)}
+\rowcolors{2}{RowBlueLight}{RowBlueDark}
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.30\textwidth} >{\raggedright\arraybackslash}p{0.34\textwidth} >{\raggedright\arraybackslash}p{0.25\textwidth}}
+\rowcolor{HeaderBlueDark}
+\color{white}\textbf{Verb (verb)} & \color{white}\textbf{Rektion (government)} & \color{white}\textbf{English meaning}\\
+\endfirsthead
+\rowcolor{HeaderBlueDark}
+\color{white}\textbf{Verb (verb)} & \color{white}\textbf{Rektion (government)} & \color{white}\textbf{English meaning}\\
+\endhead
+\textbf{antworten + jdm.} & auf + Akk. & reply to someone about\\
+\textbf{danken + jdm.} & für + Akk. & thank someone for\\
+\textbf{gratulieren + jdm.} & zu + Dat. & congratulate someone on\\
+\textbf{helfen + jdm.} & bei + Dat. & help someone with\\
+\textbf{raten + jdm.} & zu + Dat. & advise someone to\\
+\end{longtable}
+\begin{exbox}
+\begin{itemize}
+\ExampleItem{Ich danke dir für die Hilfe.}{I thank you for the help.}
+\ExampleItem{Er hilft mir bei der Arbeit.}{He helps me with the work.}
+\ExampleItem{Sie rät ihm zu einer Pause.}{She advises him to take a break.}
+\end{itemize}
+\end{exbox}
+\section{Reflexive Verben mit Präpositionalobjekt (Reflexive verbs with prepositional objects)}
+\begin{grammarentry}{Reflexivpronomen}{Teil der Verbkonstruktion}
+\GermanText{Das Reflexivpronomen gehört zum Verbmuster, z.\,B. \textbf{ich erinnere mich}, \textbf{du erinnerst dich}, \textbf{er erinnert sich}.}
+\EnglishText{The reflexive pronoun belongs to the verb pattern, e.g. \textbf{ich erinnere mich}, \textbf{du erinnerst dich}, \textbf{er erinnert sich}.}
+\end{grammarentry}
+\rowcolors{2}{RowBlueLight}{RowBlueDark}
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.30\textwidth} >{\raggedright\arraybackslash}p{0.34\textwidth} >{\raggedright\arraybackslash}p{0.25\textwidth}}
+\rowcolor{HeaderBlueDark}
+\color{white}\textbf{Verb (verb)} & \color{white}\textbf{Rektion (government)} & \color{white}\textbf{English meaning}\\
+\endfirsthead
+\rowcolor{HeaderBlueDark}
+\color{white}\textbf{Verb (verb)} & \color{white}\textbf{Rektion (government)} & \color{white}\textbf{English meaning}\\
+\endhead
+\textbf{sich ärgern} & über + Akk. & be annoyed about\\
+\textbf{sich engagieren} & für + Akk. & be committed to\\
+\textbf{sich erinnern} & an + Akk. & remember\\
+\textbf{sich fürchten} & vor + Dat. & be afraid of\\
+\textbf{sich gewöhnen} & an + Akk. & get used to\\
+\textbf{sich interessieren} & für + Akk. & be interested in\\
+\textbf{sich kümmern} & um + Akk. & take care of\\
+\textbf{sich sorgen} & um + Akk. & worry about\\
+\textbf{sich treffen} & mit + Dat. & meet with\\
+\textbf{sich verabreden} & mit + Dat. & arrange to meet\\
+\textbf{sich verabschieden} & von + Dat. & say goodbye to\\
+\textbf{sich verlassen} & auf + Akk. & rely on\\
+\textbf{sich wenden} & an + Akk. & turn to / contact\\
+\textbf{sich wundern} & über + Akk. & be surprised about\\
+\end{longtable}
+\begin{exbox}
+\begin{itemize}
+\ExampleItem{Ich erinnere mich an den Urlaub.}{I remember the holiday.}
+\ExampleItem{Sie kümmert sich um ihren Vater.}{She takes care of her father.}
+\ExampleItem{Wir verlassen uns auf dich.}{We rely on you.}
+\end{itemize}
+\end{exbox}
+\section{Zwei Präpositionalobjekte (Two prepositional objects)}
+\begin{grammarentry}{Zwei Ergänzungen}{nicht immer gleichzeitig nötig}
+\GermanText{Die erste Präpositionalergänzung benennt häufig eine Person oder Institution und die zweite ein Thema oder einen Anlass. In einem einzelnen Satz können auch nur eine der beiden Ergänzungen auftreten.}
+\EnglishText{The first prepositional complement often names a person or institution and the second a topic or reason. A sentence can also include only one of the two complements.}
+\end{grammarentry}
+\rowcolors{2}{RowBlueLight}{RowBlueDark}
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.30\textwidth} >{\raggedright\arraybackslash}p{0.34\textwidth} >{\raggedright\arraybackslash}p{0.25\textwidth}}
+\rowcolor{HeaderBlueDark}
+\color{white}\textbf{Verb (verb)} & \color{white}\textbf{Rektion (government)} & \color{white}\textbf{English meaning}\\
+\endfirsthead
+\rowcolor{HeaderBlueDark}
+\color{white}\textbf{Verb (verb)} & \color{white}\textbf{Rektion (government)} & \color{white}\textbf{English meaning}\\
+\endhead
+\textbf{diskutieren} & mit + Dat.; über + Akk. & discuss with / about\\
+\textbf{sich anmelden} & bei + Dat.; für + Akk. & register with / for\\
+\textbf{sich bedanken} & bei + Dat.; für + Akk. & thank someone for\\
+\textbf{sich beschweren} & bei + Dat.; über + Akk. & complain to / about\\
+\textbf{sich entschuldigen} & bei + Dat.; für + Akk. & apologize to / for\\
+\textbf{sich erkundigen} & bei + Dat.; nach + Dat. & inquire with / about\\
+\textbf{sich streiten} & mit + Dat.; über + Akk. & argue with / about\\
+\textbf{sich unterhalten} & mit + Dat.; über + Akk. & talk with / about\\
+\end{longtable}
+\begin{exbox}
+\begin{itemize}
+\ExampleItem{Ich bedanke mich bei dir für die Einladung.}{I thank you for the invitation.}
+\ExampleItem{Sie erkundigt sich bei der Behörde nach den Öffnungszeiten.}{She inquires at the authority about the opening hours.}
+\ExampleItem{Wir unterhalten uns mit dem Lehrer über das Buch.}{We talk with the teacher about the book.}
+\end{itemize}
+\end{exbox}
+\section{Verschiedene Präpositionen (Alternative prepositions)}
+\begin{grammarentry}{Alternativen}{Bedeutungsunterschiede}
+\GermanText{Verschiedene Präpositionen drücken unterschiedliche Beziehungen aus. Die Tabelle zeigt Alternativen; nicht alle Ergänzungen müssen zugleich stehen.}
+\EnglishText{Different prepositions express different relationships. The table lists alternatives; the complements do not all have to appear together.}
+\end{grammarentry}
+\rowcolors{2}{RowBlueLight}{RowBlueDark}
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.30\textwidth} >{\raggedright\arraybackslash}p{0.34\textwidth} >{\raggedright\arraybackslash}p{0.25\textwidth}}
+\rowcolor{HeaderBlueDark}
+\color{white}\textbf{Verb (verb)} & \color{white}\textbf{Rektion (government)} & \color{white}\textbf{English meaning}\\
+\endfirsthead
+\rowcolor{HeaderBlueDark}
+\color{white}\textbf{Verb (verb)} & \color{white}\textbf{Rektion (government)} & \color{white}\textbf{English meaning}\\
+\endhead
+\textbf{arbeiten} & an + Dat. / mit + Dat. / für + Akk. & work on / with / for\\
+\textbf{sich bewerben} & um + Akk. / für + Akk. & apply for\\
+\textbf{sich entscheiden} & für + Akk. / gegen + Akk. & decide for / against\\
+\textbf{erzählen} & von + Dat. / über + Akk. & tell about\\
+\textbf{sich freuen} & auf + Akk. / über + Akk. & look forward to / be glad about\\
+\textbf{sprechen} & mit + Dat. / über + Akk. / von + Dat. & speak with / about\\
+\textbf{sich vorbereiten} & auf + Akk. / für + Akk. & prepare for\\
+\end{longtable}
+\begin{exbox}
+\begin{itemize}
+\ExampleItem{Ich arbeite an einem neuen Projekt.}{I am working on a new project.}
+\ExampleItem{Ich arbeite mit meiner Kollegin.}{I work with my colleague.}
+\ExampleItem{Ich arbeite für eine Firma.}{I work for a company.}
+\ExampleItem{Ich freue mich auf das Wochenende.}{I look forward to the weekend.}
+\ExampleItem{Ich freue mich über deine Nachricht.}{I am happy about your message.}
+\end{itemize}
+\end{exbox}
+\section{Fragen und Abgrenzung (Questions and distinction)}
+\begin{grammarentry}{Präposition als Teil des Verbmusters}{Objekt oder Adverbial?}
+\GermanText{Bei Sachen fragt man meist mit \textbf{wo(r) + Präposition}, z.\,B. \textbf{worauf?} Bei Personen fragt man mit \textbf{Präposition + wen/wem}, z.\,B. \textbf{auf wen?}, \textbf{mit wem?}.}
+\EnglishText{For things, questions usually use \textbf{wo(r) + preposition}, e.g. \textbf{worauf?}. For people, use \textbf{preposition + wen/wem}, e.g. \textbf{auf wen?}, \textbf{mit wem?}.}
+\GermanText{Nicht jede Präpositionalgruppe ist ein Präpositionalobjekt: In \glqq Ich warte auf den Bus\grqq{} ist \textbf{auf den Bus} das Präpositionalobjekt. In \glqq Ich warte an der Haltestelle\grqq{} ist \textbf{an der Haltestelle} eine Ortsangabe.}
+\EnglishText{Not every prepositional phrase is an object: in 'Ich warte auf den Bus,' \textbf{auf den Bus} is the prepositional object; in 'Ich warte an der Haltestelle,' \textbf{an der Haltestelle} is an adverbial of place.}
+\end{grammarentry}
+\begin{exbox}
+\begin{itemize}
+\ExampleItem{Worauf wartest du? -- Auf den Bus.}{What are you waiting for? -- For the bus.}
+\ExampleItem{Auf wen wartest du? -- Auf meinen Bruder.}{Who are you waiting for? -- For my brother.}
+\ExampleItem{Mit wem sprichst du? -- Mit meiner Nachbarin.}{With whom are you speaking? -- With my neighbour.}
+\end{itemize}
+\end{exbox}
+\section{Wichtige Unterschiede (Important differences)}
+\begin{grammarentry}{Bedeutung je nach Präposition}{drei häufige Paare}
+\GermanText{\textbf{für jemanden sorgen} bedeutet, für dessen Wohl zu sorgen; \textbf{sich um jemanden sorgen} bedeutet, um jemanden besorgt zu sein.}
+\EnglishText{\textbf{für jemanden sorgen} means to provide care for someone; \textbf{sich um jemanden sorgen} means to worry about someone.}
+\GermanText{\textbf{sich auf etwas freuen} bezieht sich gewöhnlich auf Zukünftiges; \textbf{sich über etwas freuen} auf etwas Gegenwärtiges oder Vergangenes.}
+\EnglishText{\textbf{sich auf etwas freuen} usually looks forward to something future; \textbf{sich über etwas freuen} expresses pleasure about something present or past.}
+\GermanText{\textbf{sich um eine Stelle bewerben} ist die übliche Form. Auch \textbf{sich für eine Stelle bewerben} kommt vor; mit \textbf{sich bei einer Firma bewerben} nennt man den Arbeitgeber.}
+\EnglishText{\textbf{sich um eine Stelle bewerben} is the standard form. \textbf{sich für eine Stelle bewerben} also occurs; \textbf{sich bei einer Firma bewerben} identifies the employer.}
+\end{grammarentry}
+\section{Zusammenfassung (Summary)}
+\begin{grammarentry}{Merksatz}{für B1}
+\GermanText{Lerne \textbf{Verb + Präposition + Kasus} zusammen. Falls das Verb zusätzlich ein Akkusativobjekt, Dativobjekt oder Reflexivpronomen verlangt, lerne auch diesen Bestandteil.}
+\EnglishText{Learn \textbf{verb + preposition + case} together. If a verb also requires an accusative object, dative object, or reflexive pronoun, learn that part as well.}
+\end{grammarentry}
+\end{document}

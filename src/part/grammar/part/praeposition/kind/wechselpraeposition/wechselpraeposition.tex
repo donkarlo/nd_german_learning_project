@@ -1,0 +1,181 @@
+% Diese datei bewahrt was ein Beischpiel für die Erklerungen über ein Deutschsprachethema
+
+\documentclass[a4paper,11pt]{article}
+
+\usepackage[a4paper,margin=2cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman,english]{babel}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage[table]{xcolor}
+\usepackage{parskip}
+\usepackage{enumitem}
+\usepackage[most]{tcolorbox}
+\usepackage{titlesec}
+\usepackage[hidelinks]{hyperref}
+
+\definecolor{HeaderBlueDark}{RGB}{70,110,170}
+\definecolor{RowBlueLight}{RGB}{235,243,255}
+\definecolor{RowBlueDark}{RGB}{220,233,250}
+\definecolor{SoftGray}{RGB}{90,90,90}
+
+\setlength{\parindent}{0pt}
+\setlist[itemize]{leftmargin=1.4em,itemsep=0.35em,topsep=0.35em}
+\linespread{1.06}
+
+\titleformat{\section}[block]
+{\Large\bfseries\color{HeaderBlueDark}}
+{}{0pt}{}
+\titlespacing{\section}{0pt}{1.3em}{0.8em}
+
+\titleformat{\subsection}[block]
+{\large\bfseries\color{HeaderBlueDark}}
+{}{0pt}{}
+\titlespacing{\subsection}{0pt}{1.0em}{0.6em}
+
+\newtcolorbox{exbox}{enhanced,breakable,colback=RowBlueLight,colframe=RowBlueDark,boxrule=0.4pt,arc=1.5mm,left=1.2mm,right=1.2mm,top=1mm,bottom=1mm,title={Beispiele \textnormal{(Examples)}},fonttitle=\bfseries,colbacktitle=RowBlueDark,coltitle=black}
+
+\NewDocumentEnvironment{grammarentry}{mm+b}{%
+    \begin{tcolorbox}[enhanced,breakable,colback=white,colframe=HeaderBlueDark,boxrule=0.6pt,arc=1.5mm,left=1.5mm,right=1.5mm,top=1mm,bottom=1mm,colbacktitle=HeaderBlueDark,coltitle=white,fonttitle=\bfseries,title={#1\hfill\normalfont\footnotesize #2}]
+    #3
+    \end{tcolorbox}
+}{}
+
+\newcommand{\GermanText}[1]{\textbf{Deutsch: }#1\par}
+\newcommand{\EnglishText}[1]{{\small\color{SoftGray}\textbf{English: }#1\par}}
+\newcommand{\ExampleItem}[2]{\item \textbf{#1}\\{\small\color{SoftGray}#2}}
+
+\usepackage{array}
+\usepackage{longtable}
+\title{Wechselpräpositionen (Two-way prepositions)}
+\date{}
+\begin{document}
+\maketitle
+\tableofcontents
+\newpage
+\section{Grundbedeutung (Basic meaning)}
+\begin{grammarentry}{Wechselpräpositionen}{two-way prepositions}
+\GermanText{Es gibt neun Wechselpräpositionen: \textbf{an, auf, hinter, in, neben, über, unter, vor, zwischen}. Bei räumlicher Bedeutung können sie den Dativ oder den Akkusativ verlangen.}
+\EnglishText{There are nine two-way prepositions: \textbf{an, auf, hinter, in, neben, über, unter, vor, zwischen}. In spatial use, they govern the dative or the accusative.}
+\end{grammarentry}
+\section{Grundregel (Basic rule)}
+\begin{grammarentry}{Wo? = Dativ}{location}
+\GermanText{Die Präpositionalgruppe beschreibt einen Ort, an dem eine Person oder Sache ist oder eine Handlung stattfindet.}
+\EnglishText{The prepositional phrase describes a location where a person or object is or an action takes place.}
+\end{grammarentry}
+\begin{grammarentry}{Wohin? = Akkusativ}{destination}
+\GermanText{Die Präpositionalgruppe beschreibt das Ziel einer Bewegung oder Platzierung.}
+\EnglishText{The prepositional phrase describes the destination of movement or placement.}
+\end{grammarentry}
+\begin{exbox}
+\begin{itemize}
+\ExampleItem{Ich laufe im Park.}{I am running in the park. (Where? Dative)}
+\ExampleItem{Ich laufe in den Park.}{I am running into the park. (Where to? Accusative)}
+\ExampleItem{Die Katze springt auf dem Sofa.}{The cat is jumping on the sofa. (Dative)}
+\ExampleItem{Die Katze springt auf das Sofa.}{The cat jumps onto the sofa. (Accusative)}
+\end{itemize}
+\end{exbox}
+\section{Alle neun Präpositionen im Vergleich (All nine prepositions compared)}
+\begin{grammarentry}{Vergleichstabelle}{comparison table}
+\GermanText{Links steht der Ort im Dativ, rechts das Ziel im Akkusativ.}
+\EnglishText{The left column describes a location in the dative; the right column describes a destination in the accusative.}
+\end{grammarentry}
+\begin{longtable}{>{\raggedright\arraybackslash}p{1.9cm}>{\raggedright\arraybackslash}p{6.45cm}>{\raggedright\arraybackslash}p{6.45cm}}
+\rowcolor{HeaderBlueDark}\color{white}\textbf{Präp. (Prep.)} & \color{white}\textbf{Dativ: Wo? (Where?)} & \color{white}\textbf{Akkusativ: Wohin? (Where to?)}\\
+\endfirsthead
+\rowcolor{HeaderBlueDark}\color{white}\textbf{Präp. (Prep.)} & \color{white}\textbf{Dativ: Wo? (Where?)} & \color{white}\textbf{Akkusativ: Wohin? (Where to?)}\\
+\endhead
+\rowcolor{RowBlueLight}
+\textbf{an} & Das Bild hängt an der Wand.\newline{\small\color{SoftGray}The picture hangs on the wall.} & Ich hänge das Bild an die Wand.\newline{\small\color{SoftGray}I hang the picture on the wall.}\\
+\rowcolor{RowBlueDark}
+\textbf{auf} & Die Tasse steht auf dem Tisch.\newline{\small\color{SoftGray}The cup is on the table.} & Ich stelle die Tasse auf den Tisch.\newline{\small\color{SoftGray}I put the cup on the table.}\\
+\rowcolor{RowBlueLight}
+\textbf{hinter} & Der Hund sitzt hinter dem Auto.\newline{\small\color{SoftGray}The dog sits behind the car.} & Der Hund läuft hinter das Auto.\newline{\small\color{SoftGray}The dog runs behind the car.}\\
+\rowcolor{RowBlueDark}
+\textbf{in} & Das Kind spielt im Garten.\newline{\small\color{SoftGray}The child is playing in the garden.} & Das Kind läuft in den Garten.\newline{\small\color{SoftGray}The child runs into the garden.}\\
+\rowcolor{RowBlueLight}
+\textbf{neben} & Die Tasche liegt neben dem Stuhl.\newline{\small\color{SoftGray}The bag lies next to the chair.} & Ich lege die Tasche neben den Stuhl.\newline{\small\color{SoftGray}I put the bag next to the chair.}\\
+\rowcolor{RowBlueDark}
+\textbf{über} & Die Lampe hängt über dem Tisch.\newline{\small\color{SoftGray}The lamp hangs above the table.} & Ich hänge die Lampe über den Tisch.\newline{\small\color{SoftGray}I hang the lamp above the table.}\\
+\rowcolor{RowBlueLight}
+\textbf{unter} & Der Ball liegt unter dem Bett.\newline{\small\color{SoftGray}The ball lies under the bed.} & Ich rolle den Ball unter das Bett.\newline{\small\color{SoftGray}I roll the ball under the bed.}\\
+\rowcolor{RowBlueDark}
+\textbf{vor} & Das Fahrrad steht vor dem Haus.\newline{\small\color{SoftGray}The bicycle stands in front of the house.} & Ich stelle das Fahrrad vor das Haus.\newline{\small\color{SoftGray}I put the bicycle in front of the house.}\\
+\rowcolor{RowBlueLight}
+\textbf{zwischen} & Der Tisch steht zwischen den Stühlen.\newline{\small\color{SoftGray}The table stands between the chairs.} & Ich stelle den Tisch zwischen die Stühle.\newline{\small\color{SoftGray}I put the table between the chairs.}\\
+\end{longtable}
+\section{Verben der Lage und der Platzierung (Verbs of location and placement)}
+\begin{grammarentry}{Zustand und Ziel}{state and destination}
+\GermanText{Typische Paare sind \textbf{stehen / stellen}, \textbf{liegen / legen}, \textbf{sitzen / sich setzen} und \textbf{hängen / hängen}. Entscheidend ist die räumliche Funktion des Ausdrucks, nicht allein das Verb.}
+\EnglishText{Typical pairs are \textbf{stehen / stellen}, \textbf{liegen / legen}, \textbf{sitzen / sich setzen}, and \textbf{hängen / hängen}. What matters is the spatial function of the phrase, not just the verb.}
+\end{grammarentry}
+\begin{exbox}
+\begin{itemize}
+\ExampleItem{Der Stuhl steht neben dem Bett. / Ich stelle den Stuhl neben das Bett.}{The chair stands next to the bed. / I put the chair next to the bed.}
+\ExampleItem{Das Kind sitzt zwischen den Eltern. / Es setzt sich zwischen die Eltern.}{The child sits between its parents. / It sits down between its parents.}
+\end{itemize}
+\end{exbox}
+\section{Einschränkungen und feste Rektion (Limitations and fixed verb patterns)}
+\begin{grammarentry}{Bewegung bedeutet nicht automatisch Akkusativ}{movement does not always mean accusative}
+\GermanText{Die Formel \glqq Bewegung = Akkusativ\grqq{} ist falsch: \glqq Ich gehe im Park spazieren\grqq{} hat Dativ, weil die Bewegung \emph{im} Park stattfindet. Bei \glqq Ich gehe in den Park\grqq{} ist der Park das Ziel (Akkusativ).}
+\EnglishText{Movement alone is not enough. In \emph{Ich gehe im Park spazieren}, the park is the location of the walk (dative). In \emph{Ich gehe in den Park}, the park is the destination (accusative).}
+\end{grammarentry}
+\begin{grammarentry}{Feste Verb-Präposition-Verbindungen}{lexically governed complements}
+\GermanText{\textbf{denken an + Akkusativ}, \textbf{warten auf + Akkusativ}, \textbf{sprechen über + Akkusativ}, \textbf{teilnehmen an + Dativ} und \textbf{arbeiten an + Dativ} haben eine feste Rektion. Die Frage \glqq Wo? / Wohin?\grqq{} hilft dabei nicht. Das gilt auch für viele zeitliche und übertragene Verwendungen.}
+\EnglishText{\textbf{denken an + accusative}, \textbf{warten auf + accusative}, \textbf{sprechen über + accusative}, \textbf{teilnehmen an + dative}, and \textbf{arbeiten an + dative} have fixed case government. The where / where-to distinction does not determine their case. The same caution applies to many temporal and figurative uses.}
+\end{grammarentry}
+\begin{exbox}
+\begin{itemize}
+\ExampleItem{Ich denke an meinen Bruder.}{I am thinking about my brother. (Accusative)}
+\ExampleItem{Sie wartet auf den Bus.}{She is waiting for the bus. (Accusative)}
+\ExampleItem{Wir nehmen an dem Kurs teil.}{We take part in the course. (Dative)}
+\ExampleItem{Vor einem Jahr war ich Student.}{A year ago I was a student. (Temporal dative)}
+\end{itemize}
+\end{exbox}
+\section{Verschmelzungen (Contractions)}
+\begin{grammarentry}{Artikel und Präposition}{articles and prepositions}
+\GermanText{\textbf{in dem = im}, \textbf{an dem = am} (Dativ); \textbf{in das = ins}, \textbf{an das = ans}, \textbf{auf das = aufs} (Akkusativ).}
+\EnglishText{\textbf{in dem = im}, \textbf{an dem = am} (dative); \textbf{in das = ins}, \textbf{an das = ans}, \textbf{auf das = aufs} (accusative).}
+\end{grammarentry}
+\begin{exbox}
+\begin{itemize}
+\ExampleItem{Wir sind im Kino. / Wir gehen ins Kino.}{We are at the cinema. / We are going to the cinema.}
+\ExampleItem{Er steht am Fenster. / Er geht ans Fenster.}{He is standing at the window. / He walks up to the window.}
+\end{itemize}
+\end{exbox}
+\section{Nicht-Wechselpräpositionen (Prepositions that are not two-way)}
+\begin{grammarentry}{Andere Kasusregeln}{other case rules}
+\GermanText{\textbf{zu, nach, bei, aus, von} regieren normalerweise den Dativ. \textbf{durch, für, gegen, ohne, um} regieren den Akkusativ. Die Regel Wo/Wohin gilt nicht automatisch für diese Präpositionen.}
+\EnglishText{\textbf{zu, nach, bei, aus, von} normally take the dative. \textbf{durch, für, gegen, ohne, um} take the accusative. The where / where-to rule does not automatically apply to them.}
+\end{grammarentry}
+\begin{exbox}
+\begin{itemize}
+\ExampleItem{Ich gehe zum Arzt.}{I am going to the doctor. (zu + dative)}
+\ExampleItem{Ich fahre nach Wien.}{I am travelling to Vienna. (nach + dative)}
+\ExampleItem{Wir gehen durch den Wald.}{We walk through the forest. (durch + accusative)}
+\end{itemize}
+\end{exbox}
+\section{Übungen und Lösungen (Exercises and answers)}
+\begin{grammarentry}{Ergänze den Artikel}{insert the article}
+\GermanText{Ergänze den passenden bestimmten Artikel.}
+\EnglishText{Insert the correct definite article.}
+\end{grammarentry}
+\begin{enumerate}
+\item Ich sitze neben \_\_\_ Fenster. (das)
+\item Ich setze mich neben \_\_\_ Fenster. (das)
+\item Das Kind läuft in \_\_\_ Garten. (der)
+\item Das Kind spielt in \_\_\_ Garten. (der)
+\item Der Ball liegt unter \_\_\_ Stuhl. (der)
+\item Ich rolle den Ball unter \_\_\_ Stuhl. (der)
+\end{enumerate}
+\begin{grammarentry}{Lösungen}{answers}
+\GermanText{1. \textbf{dem} (Dat.), 2. \textbf{das} (Akk.), 3. \textbf{den} (Akk.), 4. \textbf{dem} (Dat.), 5. \textbf{dem} (Dat.), 6. \textbf{den} (Akk.).}
+\EnglishText{1. dative, 2. accusative, 3. accusative, 4. dative, 5. dative, 6. accusative.}
+\end{grammarentry}
+\section{Zusammenfassung (Summary)}
+\begin{grammarentry}{Merksatz}{key rule}
+\GermanText{Für räumliche Wechselpräpositionen gilt: \textbf{Wo? = Dativ, Wohin? = Akkusativ}. Bewegung allein entscheidet nicht. Feste Rektion gesondert lernen.}
+\EnglishText{For spatial two-way prepositions: \textbf{Where? = dative, Where to? = accusative}. Movement alone does not decide the case. Learn fixed constructions separately.}
+\end{grammarentry}
+\end{document}

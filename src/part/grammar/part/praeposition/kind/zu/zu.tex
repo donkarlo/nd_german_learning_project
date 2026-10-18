@@ -1,191 +1,497 @@
-\documentclass[a4paper,12pt]{article}
-
+\documentclass[a4paper,11pt]{article}
 \usepackage[a4paper,margin=2cm]{geometry}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage[ngerman,english]{babel}
-\usepackage{xcolor}
-\usepackage[most]{tcolorbox}
-\usepackage{array}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage[table]{xcolor}
 \usepackage{parskip}
-\usepackage{booktabs}
-\usepackage{colortbl}
-
+\usepackage{enumitem}
+\usepackage[most]{tcolorbox}
+\usepackage{titlesec}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage[hidelinks]{hyperref}
 \definecolor{HeaderBlueDark}{RGB}{70,110,170}
 \definecolor{RowBlueLight}{RGB}{235,243,255}
 \definecolor{RowBlueDark}{RGB}{220,233,250}
-
+\definecolor{SoftGray}{RGB}{90,90,90}
 \setlength{\parindent}{0pt}
-\linespread{1.15}
-
+\setlist[itemize]{leftmargin=1.4em,itemsep=0.35em,topsep=0.35em}
+\setlength{\tabcolsep}{5pt}
+\renewcommand{\arraystretch}{1.3}
+\linespread{1.06}
+\titleformat{\section}[block]{\Large\bfseries\color{HeaderBlueDark}}{}{0pt}{}
+\titlespacing{\section}{0pt}{1.3em}{0.8em}
+\titleformat{\subsection}[block]{\large\bfseries\color{HeaderBlueDark}}{}{0pt}{}
+\titlespacing{\subsection}{0pt}{1.0em}{0.6em}
+\newtcolorbox{exbox}{enhanced,breakable,colback=RowBlueLight,colframe=RowBlueDark,boxrule=0.4pt,arc=1.5mm,left=1.2mm,right=1.2mm,top=1mm,bottom=1mm,title={Beispiele \textnormal{(Examples)}},fonttitle=\bfseries,colbacktitle=RowBlueDark,coltitle=black}
+\NewDocumentEnvironment{grammarentry}{mm+b}{%
+\begin{tcolorbox}[enhanced,breakable,colback=white,colframe=HeaderBlueDark,boxrule=0.6pt,arc=1.5mm,left=1.5mm,right=1.5mm,top=1mm,bottom=1mm,colbacktitle=HeaderBlueDark,coltitle=white,fonttitle=\bfseries,title={#1\hfill\normalfont\footnotesize #2}]
+#3
+\end{tcolorbox}
+}{}
+\newcommand{\GermanText}[1]{\textbf{Deutsch: }#1\par}
+\newcommand{\EnglishText}[1]{{\small\color{SoftGray}\textbf{English: }#1\par}}
+\newcommand{\ExampleItem}[2]{\item \textbf{#1}\\{\small\color{SoftGray}#2}}
+\newcommand{\TableHead}[1]{\color{white}\textbf{#1}}
+\title{Das Wort \glqq zu\grqq{}: Präposition, Infinitivmarker und weitere Funktionen}
+\date{}
 \begin{document}
-    
-    \section{Die Präposition und das Wort \glqq zu\grqq}
-        
-        \textbf{zu} ist ein sehr wichtiges Wort im Deutschen. Es kann als Präposition, als Teil einer Infinitivkonstruktion und auch als Adverb benutzt werden. Die wichtigste Bedeutung ist oft: \textbf{Richtung zu einer Person, einem Ort oder einem Ziel}. Als Präposition steht \textbf{zu} fast immer mit dem \textbf{Dativ}.
-        
-        \begin{tcolorbox}[colback=RowBlueLight,colframe=HeaderBlueDark,title=\textbf{Grundregel}]
-            \textbf{zu + Dativ = to; toward; to the place of}\\
-            ex: Ich gehe zu Klaus: I am going to Klaus's place.\\
-            ex: Ich gehe zum Arzt: I am going to the doctor.\\
-            ex: Ich gehe zur Arbeit: I am going to work.
-        \end{tcolorbox}
-    
-    
-    \section{Formen: zum, zur, zu den}
-        
-        \textbf{zu} verbindet sich oft mit dem Artikel. Diese Formen sind sehr wichtig:
-        
-        \rowcolors{2}{RowBlueLight}{RowBlueDark}
-        \begin{tabular}{>{\bfseries}p{4cm}p{5cm}p{5cm}}
-            \rowcolor{HeaderBlueDark}
-            \color{white}\textbf{Form} & \color{white}\textbf{Deutsch} & \color{white}\textbf{English} \\
-            zu + dem                   & zum Arzt                      & to the doctor                 \\
-            zu + der                   & zur Schule                    & to school                     \\
-            zu + den                   & zu den Kindern                & to the children               \\
-            zu + einem                 & zu einem Freund               & to a friend                   \\
-            zu + einer                 & zu einer Freundin             & to a female friend            \\
-        \end{tabular}
-    
-    
-    \section{zu bei Personen}
-        
-        Wenn man zu einer Person geht, benutzt man meistens \textbf{zu}. Sehr oft bedeutet das: zu dieser Person nach Hause oder an den Ort, wo diese Person ist.
-        
-        ex: Ich gehe zu Klaus: I am going to Klaus's place.\\
-        ex: Kommst du heute zu mir?: Are you coming to my place today?\\
-        ex: Wir fahren morgen zu meinen Eltern: We are going to my parents tomorrow.\\
-        ex: Sie geht zu ihrer Freundin: She is going to her friend's place.
-        
-        \textbf{Wichtig:} Wenn man schon dort ist, benutzt man oft \textbf{bei}.
-        
-        ex: Ich bin bei Klaus: I am at Klaus's place.\\
-        ex: Ich war gestern bei meinen Eltern: I was at my parents' place yesterday.
-    
-    
-    \section{zu bei Orten, Terminen und Institutionen}
-        
-        Man benutzt \textbf{zu} oft, wenn man zu einem Ziel, zu einem Termin oder zu einer Institution geht. Dabei ist nicht immer wichtig, ob man wirklich in ein Gebäude hineingeht. Wichtig ist das Ziel.
-        
-        ex: Ich gehe zum Arzt: I am going to the doctor.\\
-        ex: Ich muss zur Bank: I have to go to the bank.\\
-        ex: Wir fahren zum Bahnhof: We are going to the train station.\\
-        ex: Er geht zur Arbeit: He is going to work.\\
-        ex: Ich gehe zum Unterricht: I am going to class.\\
-        ex: Sie geht zur Party: She is going to the party.
-    
-    
-    \section{zu, nach und in: der Unterschied}
-        
-        Viele Deutschlernende verwechseln \textbf{zu}, \textbf{nach} und \textbf{in}. Die einfache Regel ist:
-        
-        \rowcolors{2}{RowBlueLight}{RowBlueDark}
-        \begin{tabular}{>{\bfseries}p{3cm}p{5.5cm}p{5.5cm}}
-            \rowcolor{HeaderBlueDark}
-            \color{white}\textbf{Wort} & \color{white}\textbf{Benutzung}                  & \color{white}\textbf{Beispiel} \\
-            zu                         & Personen, Termine, Institutionen, Ziel allgemein & Ich gehe zum Arzt.             \\
-            nach                       & Städte, Länder ohne Artikel, Hause               & Ich fahre nach Wien.           \\
-            in                         & Bewegung in einen Raum oder in ein Gebiet        & Ich gehe ins Haus.             \\
-        \end{tabular}
-        
-        ex: Ich fahre nach Österreich: I am going to Austria.\\
-        ex: Ich fahre nach Wien: I am going to Vienna.\\
-        ex: Ich gehe nach Hause: I am going home.\\
-        ex: Ich gehe zu Klaus nach Hause: I am going to Klaus's home.\\
-        ex: Ich gehe ins Haus: I am going into the house.
-        
-        \textbf{Nicht richtig:} Ich gehe nach Klaus Hause.\\
-        \textbf{Richtig:} Ich gehe zu Klaus.\\
-        \textbf{Richtig:} Ich gehe zu Klaus nach Hause.
-    
-    
-    \section{zu + Infinitiv}
-        
-        \textbf{zu} steht auch vor dem Infinitiv eines Verbs. Dann ist \textbf{zu} keine normale Präposition, sondern ein Teil der Infinitivkonstruktion.
-        
-        ex: Ich versuche, Deutsch zu lernen: I try to learn German.\\
-        ex: Es ist wichtig, pünktlich zu sein: It is important to be punctual.\\
-        ex: Ich habe vergessen, dich anzurufen: I forgot to call you.\\
-        ex: Sie hat keine Zeit, einkaufen zu gehen: She has no time to go shopping.
-        
-        Bei trennbaren Verben steht \textbf{zu} zwischen Präfix und Verb:
-        
-        ex: anrufen $\rightarrow$ anzurufen\\
-        ex: einkaufen $\rightarrow$ einzukaufen\\
-        ex: aufstehen $\rightarrow$ aufzustehen\\
-        ex: anfangen $\rightarrow$ anzufangen
-        
-        ex: Ich versuche, früher aufzustehen: I try to get up earlier.\\
-        ex: Er hat vergessen, mich anzurufen: He forgot to call me.
-    
-    
-    \section{um ... zu, ohne ... zu, statt ... zu}
-        
-        Es gibt auch feste Konstruktionen mit \textbf{zu}.
-        
-        \textbf{um ... zu} bedeutet: in order to. Man benutzt es für ein Ziel oder einen Zweck.
-        
-        ex: Ich lerne Deutsch, um in Österreich zu arbeiten: I learn German in order to work in Austria.\\
-        ex: Ich spare Geld, um eine Kamera zu kaufen: I save money in order to buy a camera.
-        
-        \textbf{ohne ... zu} bedeutet: without doing something.
-        
-        ex: Er ging weg, ohne etwas zu sagen: He left without saying anything.\\
-        ex: Ich habe gearbeitet, ohne eine Pause zu machen: I worked without taking a break.
-        
-        \textbf{statt ... zu} oder \textbf{anstatt ... zu} bedeutet: instead of doing something.
-        
-        ex: Ich bleibe zu Hause, statt auszugehen: I stay at home instead of going out.\\
-        ex: Sie schreibt eine Nachricht, anstatt anzurufen: She writes a message instead of calling.
-    
-    
-    \section{zu als Adverb: too}
-        
-        \textbf{zu} kann auch \textbf{too} bedeuten. Dann steht es vor einem Adjektiv oder Adverb und zeigt, dass etwas mehr ist, als gut oder passend ist.
-        
-        ex: Das Auto ist zu teuer: The car is too expensive.\\
-        ex: Der Kaffee ist zu heiß: The coffee is too hot.\\
-        ex: Du fährst zu schnell: You are driving too fast.\\
-        ex: Ich habe zu wenig Zeit: I have too little time.\\
-        ex: Es gibt zu viele Probleme: There are too many problems.
-    
-    
-    \section{Feste Ausdrücke mit zu}
-        
-        Es gibt viele feste Ausdrücke mit \textbf{zu}. Diese sollte man als ganze Ausdrücke lernen.
-        
-        \rowcolors{2}{RowBlueLight}{RowBlueDark}
-        \begin{tabular}{>{\bfseries}p{4cm}p{5cm}p{5cm}}
-            \rowcolor{HeaderBlueDark}
-            \color{white}\textbf{Ausdruck} & \color{white}\textbf{Bedeutung} & \color{white}\textbf{Beispiel}  \\
-            zu Fuß                         & on foot                         & Ich gehe zu Fuß.                \\
-            zum Beispiel                   & for example                     & Zum Beispiel lerne ich Deutsch. \\
-            zu Hause                       & at home                         & Ich bin zu Hause.               \\
-            nach Hause                     & home, toward home               & Ich gehe nach Hause.            \\
-            zu spät                        & too late                        & Ich komme zu spät.              \\
-            zu Ende                        & finished, over                  & Der Film ist zu Ende.           \\
-            zu Besuch                      & visiting                        & Ich bin bei Klaus zu Besuch.    \\
-            zu zweit                       & as two people                   & Wir arbeiten zu zweit.          \\
-            bis zu                         & up to                           & Das kostet bis zu 100 Euro.     \\
-        \end{tabular}
-    
-    
-    \section{Kurze Zusammenfassung}
-        
-        \textbf{zu} hat mehrere wichtige Funktionen. Als Präposition steht es mit dem Dativ und bedeutet oft \textbf{to} oder \textbf{toward}. Man benutzt es besonders bei Personen, Terminen, Institutionen und Zielen.
-        
-        ex: Ich gehe zu Klaus: I am going to Klaus's place.\\
-        ex: Ich gehe zum Arzt: I am going to the doctor.\\
-        ex: Ich fahre zur Arbeit: I am going to work.
-        
-        Mit Infinitiv bedeutet \textbf{zu} ungefähr \textbf{to} vor einem Verb.
-        
-        ex: Ich versuche, Deutsch zu lernen: I try to learn German.
-        
-        Als Adverb bedeutet \textbf{zu} oft \textbf{too}.
-        
-        ex: Der Kaffee ist zu heiß: The coffee is too hot.
-        
-        Die wichtigste Regel ist: \textbf{zu + Dativ}. Außerdem muss man den Unterschied zwischen \textbf{zu}, \textbf{nach} und \textbf{in} gut lernen, weil diese Wörter im Deutschen nicht genau wie im Englischen benutzt werden.
+\selectlanguage{ngerman}
+\maketitle
+\tableofcontents
+\newpage
 
+\section{Überblick (Overview)}
+\begin{grammarentry}{Ein Wort, mehrere Funktionen}{grammatical roles}
+\GermanText{\textbf{zu} hat mehrere Funktionen: Es kann \textbf{Präposition mit Dativ} sein (\emph{zum Arzt}), \textbf{Infinitivmarker} (\emph{zu lernen}), \textbf{Gradpartikel} (\emph{zu teuer}), \textbf{Zustandspartikel} (\emph{Die Tür ist zu}) oder \textbf{Verbzusatz} (\emph{zumachen}). Diese Verwendungen dürfen nicht verwechselt werden.}
+\EnglishText{\textbf{zu} can be a \textbf{dative preposition}, an \textbf{infinitive marker}, a \textbf{degree particle} meaning \emph{too}, a \textbf{state particle} meaning \emph{closed}, or a \textbf{separable verb particle}. These uses must be distinguished.}
+\end{grammarentry}
+\rowcolors{2}{RowBlueLight}{RowBlueDark}
+\begin{longtable}{>{\raggedright\arraybackslash}p{3.7cm}>{\raggedright\arraybackslash}p{5.45cm}>{\raggedright\arraybackslash}p{5.65cm}}
+\rowcolor{HeaderBlueDark}\TableHead{Funktion (Function)} & \TableHead{Deutsch (German)} & \TableHead{English (Meaning)}\\
+\endfirsthead
+\rowcolor{HeaderBlueDark}\TableHead{Funktion (Function)} & \TableHead{Deutsch (German)} & \TableHead{English (Meaning)}\\
+\endhead
+Präposition & Ich gehe \textbf{zum Arzt}. & I am going to the doctor.\\
+Infinitivmarker & Ich versuche, \textbf{zu lernen}. & I am trying to learn.\\
+Gradpartikel & Das Auto ist \textbf{zu teuer}. & The car is too expensive.\\
+Zustandspartikel & Die Tür ist \textbf{zu}. & The door is closed.\\
+Verbzusatz & Ich mache die Tür \textbf{zu}. & I close the door.\\
+\end{longtable}
+
+\section{Präposition zu: immer Dativ (The preposition zu: always dative)}
+\begin{grammarentry}{Rektion: zu + Dativ}{case government}
+\GermanText{\textbf{zu} ist \textbf{keine Wechselpräposition}. Als Präposition verlangt es \textbf{immer den Dativ}, auch bei Bewegung: \emph{Ich gehe zu meinem Bruder}. Das Bewegungsverb macht den Dativ nicht zum Akkusativ.}
+\EnglishText{As a preposition, \textbf{zu} always takes the \textbf{dative}, even with movement: \emph{Ich gehe zu meinem Bruder}. It is not a two-way preposition.}
+\end{grammarentry}
+\rowcolors{2}{RowBlueLight}{RowBlueDark}
+\begin{longtable}{>{\raggedright\arraybackslash}p{3.2cm}>{\raggedright\arraybackslash}p{5.75cm}>{\raggedright\arraybackslash}p{5.85cm}}
+\rowcolor{HeaderBlueDark}\TableHead{Genus / Numerus} & \TableHead{Bestimmter Artikel (Definite)} & \TableHead{Unbestimmter Artikel (Indefinite)}\\
+\endfirsthead
+\rowcolor{HeaderBlueDark}\TableHead{Genus / Numerus} & \TableHead{Bestimmter Artikel (Definite)} & \TableHead{Unbestimmter Artikel (Indefinite)}\\
+\endhead
+Maskulin & \textbf{zum Mann} = zu dem Mann & zu einem Mann\\
+Feminin & \textbf{zur Frau} = zu der Frau & zu einer Frau\\
+Neutrum & \textbf{zum Kind} = zu dem Kind & zu einem Kind\\
+Plural & \textbf{zu den Kindern} & zu Kindern / zu meinen Kindern\\
+\end{longtable}
+\begin{grammarentry}{Pronomen und Adjektivdeklination}{pronouns and adjective endings}
+\GermanText{Die Formen heißen \textbf{zu mir, zu dir, zu ihm, zu ihr, zu uns, zu euch, zu ihnen, zu Ihnen}. Bei Nominalgruppen: \textbf{zum neuen Arzt, zur alten Schule, zu einem guten Freund, zu meinen lieben Eltern}. Der Dativ Plural hat oft ein zusätzliches \textbf{-n}: \emph{zu den Kindern}.}
+\EnglishText{Dative pronouns are \textbf{zu mir, zu dir, zu ihm, zu ihr, zu uns, zu euch, zu ihnen, zu Ihnen}. Articles, adjectives and plural nouns also follow the dative rules.}
+\end{grammarentry}
+\begin{exbox}\begin{itemize}
+\ExampleItem{Ich gehe zu meiner Schwester.}{I am going to my sister's place.}
+\ExampleItem{Kannst du zu mir kommen?}{Can you come to me / my place?}
+\ExampleItem{Wir fahren zu unseren Eltern.}{We are going to our parents.}
+\ExampleItem{Ich gehe zum neuen Arzt.}{I am going to the new doctor.}
+\end{itemize}\end{exbox}
+
+\section{zum und zur: Verschmelzungen (Contractions)}
+\begin{grammarentry}{zum = zu dem; zur = zu der}{article contractions}
+\GermanText{\textbf{zum} gehört zu maskulinen und neutralen Nomen, \textbf{zur} zu femininen. Im Plural sagt man \textbf{zu den}. Die nicht verschmolzenen Formen \emph{zu dem} und \emph{zu der} sind besonders bei Betonung oder näherer Bestimmung möglich.}
+\EnglishText{\textbf{zum} contracts \emph{zu dem} (masculine/neuter); \textbf{zur} contracts \emph{zu der} (feminine). The plural form is \textbf{zu den}. Uncontracted forms can be used for emphasis or specificity.}
+\end{grammarentry}
+\begin{exbox}\begin{itemize}
+\ExampleItem{Ich gehe zum Bahnhof.}{I am going to the station.}
+\ExampleItem{Sie geht zur Universität.}{She is going to university.}
+\ExampleItem{Ich gehe zu dem Arzt, den du empfohlen hast.}{I am going to that particular doctor you recommended.}
+\ExampleItem{Wir fahren zu den Freunden.}{We are going to our friends.}
+\end{itemize}\end{exbox}
+
+\section{Ziele: Personen, Einrichtungen und Termine (Destinations)}
+\begin{grammarentry}{zu bei Personen}{to somebody}
+\GermanText{Bei Bewegungen zu Personen benutzt man typischerweise \textbf{zu + Dativ}. Häufig ist die Wohnung oder der Aufenthaltsort der Person mitgemeint. Wenn man bereits dort ist, steht oft \textbf{bei + Dativ}.}
+\EnglishText{When going to a person, \textbf{zu + dative} is common; the person's home or current location is often implied. When already there, \textbf{bei + dative} is often used.}
+\end{grammarentry}
+\begin{exbox}\begin{itemize}
+\ExampleItem{Ich gehe zu Anna.}{I am going to Anna's place.}
+\ExampleItem{Ich bin bei Anna.}{I am at Anna's place.}
+\ExampleItem{Wir fahren zu unseren Freunden.}{We are going to our friends.}
+\ExampleItem{Morgen muss ich zum Zahnarzt.}{I have to go to the dentist tomorrow.}
+\end{itemize}\end{exbox}
+\begin{grammarentry}{zu bei Institutionen und Anlässen}{institutions and events}
+\GermanText{Häufige Wendungen: \textbf{zur Arbeit, zur Schule, zur Universität, zum Arzt, zur Bank, zur Post, zum Bahnhof, zum Unterricht, zur Besprechung, zum Konzert, zur Party, zur Hochzeit}. \textbf{zu} bezeichnet ein Ziel, ohne notwendigerweise das Betreten eines Gebäudes hervorzuheben.}
+\EnglishText{Common destinations include \textbf{zur Arbeit} (to work), \textbf{zur Schule} (to school), \textbf{zum Bahnhof} (to the station), \textbf{zur Party} (to a party) and \textbf{zum Konzert} (to a concert). \textbf{zu} marks a goal, not necessarily entering a building.}
+\end{grammarentry}
+\begin{exbox}\begin{itemize}
+\ExampleItem{Ich fahre zur Arbeit.}{I am going to work.}
+\ExampleItem{Sie geht zur Hochzeit.}{She is going to the wedding.}
+\ExampleItem{Ich gehe zum Theater.}{I am going to the theatre as a destination.}
+\ExampleItem{Ich gehe ins Theater.}{I am going into the theatre / to see a play.}
+\end{itemize}\end{exbox}
+
+\section{zu, nach, in, auf, an und bei (Different location prepositions)}
+\begin{grammarentry}{Zielart und Bedeutung entscheiden}{destination and meaning}
+\GermanText{\textbf{zu + Dativ} steht oft bei Personen, Institutionen und konkreten Zielen. \textbf{nach} wird bei Städten, Ländern ohne Artikel und \emph{nach Hause} verwendet. \textbf{in + Akkusativ} betont das Hineingehen in einen Raum, ein Gebiet oder ein Land mit Artikel. \textbf{auf/an + Akkusativ} kommt bei bestimmten Zielen vor. \textbf{bei + Dativ} beschreibt häufig einen Aufenthalt.}
+\EnglishText{\textbf{zu + dative}: people, institutions and destinations. \textbf{nach}: cities, countries without an article and \emph{nach Hause}. \textbf{in + accusative}: entering an area or a country with an article. \textbf{auf/an + accusative}: certain destination types. \textbf{bei + dative}: location with a person or institution.}
+\end{grammarentry}
+\rowcolors{2}{RowBlueLight}{RowBlueDark}
+\begin{longtable}{>{\raggedright\arraybackslash}p{3.25cm}>{\raggedright\arraybackslash}p{5.55cm}>{\raggedright\arraybackslash}p{6cm}}
+\rowcolor{HeaderBlueDark}\TableHead{Präposition (Prep.)} & \TableHead{Deutsch (German)} & \TableHead{English (Meaning)}\\
+\endfirsthead
+\rowcolor{HeaderBlueDark}\TableHead{Präposition (Prep.)} & \TableHead{Deutsch (German)} & \TableHead{English (Meaning)}\\
+\endhead
+zu + Dativ & Ich gehe \textbf{zum Bahnhof}. & I am going to the station.\\
+nach + Dativ & Ich fahre \textbf{nach Graz}. & I am going to Graz.\\
+in + Akkusativ & Ich gehe \textbf{in den Bahnhof}. & I am going into the station.\\
+auf + Akkusativ & Wir gehen \textbf{auf den Markt}. & We are going to the market.\\
+an + Akkusativ & Wir fahren \textbf{ans Meer}. & We are going to the seaside.\\
+bei + Dativ & Ich bin \textbf{bei meinen Eltern}. & I am at my parents' place.\\
+\end{longtable}
+\begin{grammarentry}{Wohin? bedeutet nicht immer Akkusativ}{destination does not imply accusative}
+\GermanText{Die Regel \glqq Wo? = Dativ, Wohin? = Akkusativ\grqq{} gilt nur für die räumlichen Verwendungen der \textbf{Wechselpräpositionen}. \textbf{zu} und \textbf{nach} bleiben auch bei Bewegung Dativpräpositionen. Bei Ländern mit Artikel heißt es oft \emph{in die Schweiz}, \emph{in die Türkei} (Akkusativ).}
+\EnglishText{The rule \emph{Where? = dative; Where to? = accusative} only applies to \textbf{spatial two-way prepositions}. \textbf{zu} and \textbf{nach} take the dative even for motion. Countries with articles often use \emph{in + accusative}.}
+\end{grammarentry}
+\begin{exbox}\begin{itemize}
+\ExampleItem{Ich fahre nach Wien.}{I am travelling to Vienna.}
+\ExampleItem{Ich fahre nach Österreich.}{I am travelling to Austria.}
+\ExampleItem{Ich fahre in die Schweiz.}{I am travelling to Switzerland.}
+\ExampleItem{Ich gehe zum Arzt.}{I am going to the doctor (dative despite direction).}
+\end{itemize}\end{exbox}
+
+\section{zu Hause und nach Hause (At home versus homewards)}
+\begin{grammarentry}{Wo? zu Hause -- Wohin? nach Hause}{fixed spatial expressions}
+\GermanText{\textbf{zu Hause} oder \textbf{zuhause} = am Wohnort. \textbf{nach Hause} = in Richtung Wohnort. In der festen Wendung \emph{zu Hause} liegt keine Richtungsangabe vor. Vergleiche \textbf{bei mir zu Hause} mit \textbf{zu mir nach Hause}.}
+\EnglishText{\textbf{zu Hause / zuhause} means \emph{at home}. \textbf{nach Hause} means \emph{going home}. Compare \textbf{bei mir zu Hause} (at my home) with \textbf{zu mir nach Hause} (to my home).}
+\end{grammarentry}
+\begin{exbox}\begin{itemize}
+\ExampleItem{Ich bin zu Hause.}{I am at home.}
+\ExampleItem{Ich gehe nach Hause.}{I am going home.}
+\ExampleItem{Wir treffen uns bei mir zu Hause.}{We are meeting at my home.}
+\ExampleItem{Komm bitte zu mir nach Hause.}{Please come to my home.}
+\end{itemize}\end{exbox}
+
+\section{Zweck und substantivierte Infinitive (Purpose and nominalised infinitives)}
+\begin{grammarentry}{zum + substantivierter Infinitiv}{preposition + dative noun}
+\GermanText{Infinitive können als Nomen verwendet und dann \textbf{großgeschrieben} werden: \textbf{zum Lernen, zum Essen, zum Schwimmen, zum Arbeiten}. Das \emph{zu} ist hier eine \textbf{Präposition}; \emph{dem Lernen} steht im Dativ. Dagegen ist in \emph{um Deutsch zu lernen} das Wort \emph{zu} ein Infinitivmarker.}
+\EnglishText{Infinitives can function as nouns and are then \textbf{capitalised}: \textbf{zum Lernen, zum Essen, zum Schwimmen, zum Arbeiten}. Here \emph{zu} is a true \textbf{preposition} taking dative. In \emph{um Deutsch zu lernen}, \emph{zu} is an infinitive marker instead.}
+\end{grammarentry}
+\begin{exbox}\begin{itemize}
+\ExampleItem{Ich brauche Ruhe zum Lernen.}{I need quiet for studying.}
+\ExampleItem{Ich gehe zum Schwimmen.}{I am going swimming.}
+\ExampleItem{Hast du etwas zum Essen?}{Do you have anything to eat?}
+\ExampleItem{Ich lerne Deutsch, um in Österreich zu arbeiten.}{I am learning German in order to work in Austria.}
+\end{itemize}\end{exbox}
+\begin{grammarentry}{zu und für: verschiedene Formen}{purpose and intended use}
+\GermanText{\textbf{zum Schneiden} besteht aus \emph{zu + dem + substantiviertem Infinitiv}; \textbf{für den Unterricht} ist \emph{für + Akkusativ}. Beide können einen Zweck benennen, aber die Grammatik ist verschieden.}
+\EnglishText{\textbf{zum Schneiden} consists of \emph{zu + dem + a nominalised infinitive}, while \textbf{für den Unterricht} uses \emph{für + accusative}. Both can express purpose but have different grammatical structures.}
+\end{grammarentry}
+\begin{exbox}\begin{itemize}
+\ExampleItem{Das ist ein Messer zum Schneiden von Brot.}{This is a knife for cutting bread.}
+\ExampleItem{Diese Unterlagen sind für den Unterricht.}{These materials are for class.}
+\end{itemize}\end{exbox}
+
+\section{Zeitangaben und feste Wendungen (Time expressions and idioms)}
+\begin{grammarentry}{Zeitangaben mit zu}{when?}
+\GermanText{Häufige Zeitangaben sind \textbf{zu Weihnachten, zu Ostern, zu Beginn, zum Schluss, zum Jahresende, zu dieser Zeit, zum ersten Mal}. Sie beantworten meist \glqq Wann?\grqq{} oder \glqq Zu welchem Zeitpunkt?\grqq.}
+\EnglishText{Common temporal phrases include \textbf{zu Weihnachten} (at Christmas), \textbf{zu Ostern} (at Easter), \textbf{zu Beginn} (at the beginning), \textbf{zum Schluss} (at the end), \textbf{zum Jahresende} (at year-end), \textbf{zu dieser Zeit} (at that time), \textbf{zum ersten Mal} (for the first time).}
+\end{grammarentry}
+\begin{exbox}\begin{itemize}
+\ExampleItem{Wir besuchen unsere Familie zu Weihnachten.}{We visit our family at Christmas.}
+\ExampleItem{Zu Beginn des Semesters war ich nervös.}{I was nervous at the beginning of the semester.}
+\ExampleItem{Ich war zum ersten Mal in Wien.}{I was in Vienna for the first time.}
+\end{itemize}\end{exbox}
+\begin{grammarentry}{Feste Verbindungen}{idiomatic expressions}
+\GermanText{Häufig: \textbf{zu Fuß, zu zweit, zu dritt, zu Besuch, zu Gast, zu Ende, zu guter Letzt, zu Recht, zu Unrecht, zurzeit, zum Beispiel, zur Verfügung, zu Hilfe}. Die Ausdrücke haben unterschiedliche grammatische Entwicklungen und Bedeutungen; lerne sie jeweils als Einheit.}
+\EnglishText{Common fixed expressions include \textbf{zu Fuß} (on foot), \textbf{zu zweit} (as two), \textbf{zu dritt} (as three), \textbf{zu Besuch} (visiting), \textbf{zu Gast} (as a guest), \textbf{zu Ende} (over), \textbf{zu guter Letzt} (last but not least), \textbf{zu Recht} (rightly), \textbf{zu Unrecht} (wrongly), \textbf{zurzeit} (currently), \textbf{zum Beispiel} (for example), \textbf{zur Verfügung} (available), \textbf{zu Hilfe} (to someone's aid).}
+\end{grammarentry}
+\begin{exbox}\begin{itemize}
+\ExampleItem{Ich komme zu Fuß.}{I am coming on foot.}
+\ExampleItem{Wir fahren zu zweit.}{The two of us are travelling together.}
+\ExampleItem{Sie ist zu Besuch bei ihrer Tante.}{She is visiting her aunt.}
+\ExampleItem{Zurzeit habe ich viel zu tun.}{Currently I have a lot to do.}
+\ExampleItem{Das Gerät steht zur Verfügung.}{The device is available.}
+\end{itemize}\end{exbox}
+\begin{grammarentry}{bis zu; von ... zu; zu 80 Prozent}{limit and proportion}
+\GermanText{\textbf{bis zu + Dativ} benennt eine Obergrenze (\emph{bis zu 50 Euro}) oder einen Endpunkt (\emph{bis zum Bahnhof}). \textbf{von ... zu ...} verknüpft zwei Stationen oder Zustände. In Verhältnissen steht ebenfalls \emph{zu}: \emph{zu 80 Prozent}, \emph{drei zu eins}.}
+\EnglishText{\textbf{bis zu + dative} denotes an upper limit or endpoint: \emph{bis zu 50 Euro}, \emph{bis zum Bahnhof}. \textbf{von ... zu ...} connects points or stages. \emph{zu} also occurs in proportions: \emph{zu 80 Prozent} (80 percent), \emph{drei zu eins} (three to one).}
+\end{grammarentry}
+\begin{exbox}\begin{itemize}
+\ExampleItem{Das kostet bis zu 50 Euro.}{That costs up to 50 euros.}
+\ExampleItem{Fahr bis zum Bahnhof.}{Go as far as the railway station.}
+\ExampleItem{Wir gehen von Haus zu Haus.}{We are going from house to house.}
+\ExampleItem{Das Glas ist zu 80 Prozent voll.}{The glass is 80 percent full.}
+\end{itemize}\end{exbox}
+
+\section{Verben und Adjektive mit zu + Dativ (Fixed case patterns)}
+\begin{grammarentry}{Verben mit zu + Dativ}{verb-preposition government}
+\GermanText{Verben wie \textbf{gehören zu, passen zu, gratulieren zu, einladen zu, führen zu, zählen zu, zwingen zu, raten zu, neigen zu, sich entschließen zu, beitragen zu} haben häufig eine feste Ergänzung mit \textbf{zu + Dativ}. Das Verb kann außerdem andere Objekte regieren: \emph{Ich lade dich (Akkusativ) zu einer Feier (Dativ) ein}.}
+\EnglishText{Verbs such as \textbf{gehören zu} (belong to), \textbf{passen zu} (match), \textbf{gratulieren zu} (congratulate on), \textbf{einladen zu} (invite to), \textbf{führen zu} (lead to), \textbf{zählen zu} (count among), \textbf{zwingen zu} (force into), \textbf{raten zu} (advise), \textbf{neigen zu} (tend to), \textbf{sich entschließen zu} (decide on), \textbf{beitragen zu} (contribute to) take \textbf{zu + dative} complements. Other verb objects may also be present.}
+\end{grammarentry}
+\begin{exbox}
+\begin{itemize}
+\ExampleItem{Das Buch gehört zu meiner Sammlung.}{The book belongs to my collection.}
+\ExampleItem{Die Farbe passt zu deinem Hemd.}{The colour matches your shirt.}
+\ExampleItem{Ich gratuliere dir zum Geburtstag.}{I congratulate you on your birthday.}
+\ExampleItem{Wir laden sie zur Feier ein.}{We invite her to the party.}
+\ExampleItem{Das Problem führt zu einer Verzögerung.}{The problem causes a delay.}
+\ExampleItem{Er rät mir zu einer Pause.}{He recommends that I take a break.}
+\ExampleItem{Wir tragen zu einer Lösung bei.}{We contribute to a solution.}
+\end{itemize}
+\end{exbox}
+\begin{grammarentry}{Adjektive mit zu + Dativ}{adjective-preposition government}
+\GermanText{Häufige Verbindungen sind \textbf{nett zu jemandem, freundlich zu jemandem, ehrlich zu jemandem, höflich zu jemandem, passend zu etwas, bereit zu etwas, fähig zu etwas}. Dagegen enthält \emph{bereit, etwas zu tun} einen \textbf{Infinitivmarker}, keine Dativpräposition.}
+\EnglishText{Common combinations are \textbf{nett zu jemandem} (nice to someone), \textbf{freundlich zu jemandem} (friendly to), \textbf{ehrlich zu jemandem} (honest with), \textbf{höflich zu jemandem} (polite to), \textbf{passend zu etwas} (matching), \textbf{bereit zu etwas} (ready for), \textbf{fähig zu etwas} (capable of). In \emph{bereit, etwas zu tun}, by contrast, \emph{zu} introduces an infinitive.}
+\end{grammarentry}
+\begin{exbox}
+\begin{itemize}
+\ExampleItem{Sei bitte nett zu deinem Bruder.}{Please be nice to your brother.}
+\ExampleItem{Sie ist ehrlich zu mir.}{She is honest with me.}
+\ExampleItem{Ich bin bereit zu einem Gespräch.}{I am ready for a conversation.}
+\ExampleItem{Ich bin bereit, mit dir zu sprechen.}{I am ready to speak with you.}
+\end{itemize}
+\end{exbox}
+
+\section{zu wem, wozu, dazu (Questions and pronominal adverbs)}
+\begin{grammarentry}{zu wem? -- wozu? -- dazu}{people, things, purposes}
+\GermanText{Bei Personen fragt man \textbf{zu wem?} und antwortet mit \emph{zu + Dativ}. Bei Sachen oder abstrakten Ergänzungen stehen oft \textbf{wozu?} und \textbf{dazu}. \emph{Wozu?} fragt auch nach dem Zweck. \emph{Dazu} kann \glqq zu dieser Sache\grqq{} oder \glqq außerdem\grqq{} bedeuten.}
+\EnglishText{For people use \textbf{zu wem?} (to whom?). For things and abstract complements, \textbf{wozu?} (what for?) and \textbf{dazu} (to that / about that / additionally) are common.}
+\end{grammarentry}
+\begin{exbox}
+\begin{itemize}
+\ExampleItem{Zu wem gehst du? -- Zu meinem Arzt.}{Who are you going to? -- To my doctor.}
+\ExampleItem{Wozu brauchst du das? -- Zum Kochen.}{What do you need that for? -- For cooking.}
+\ExampleItem{Was sagst du dazu?}{What do you say about that?}
+\ExampleItem{Dazu kommt noch ein Problem.}{Another problem comes on top of that.}
+\end{itemize}
+\end{exbox}
+
+\section{zu als Infinitivmarker: keine Präposition (Infinitive marker)}
+\begin{grammarentry}{Infinitiv mit zu}{non-finite verb}
+\GermanText{In \emph{Deutsch zu lernen} oder \emph{pünktlich zu sein} ist \textbf{zu} ein \textbf{Infinitivmarker} und verlangt \textbf{keinen Dativ}. Infinitivgruppen haben gewöhnlich kein ausdrücklich genanntes eigenes Subjekt; man erschließt es aus dem Hauptsatz oder dem Kontext.}
+\EnglishText{In \emph{Deutsch zu lernen} or \emph{pünktlich zu sein}, \textbf{zu} is an \textbf{infinitive marker} and does \textbf{not} govern the dative. The understood subject of an infinitive clause is typically determined by the main clause or context.}
+\end{grammarentry}
+\begin{exbox}
+\begin{itemize}
+\ExampleItem{Ich versuche, Deutsch zu lernen.}{I try to learn German.}
+\ExampleItem{Sie hofft, eine Wohnung zu finden.}{She hopes to find an apartment.}
+\ExampleItem{Es ist wichtig, pünktlich zu sein.}{It is important to be punctual.}
+\ExampleItem{Ich habe vergessen, dich anzurufen.}{I forgot to call you.}
+\end{itemize}
+\end{exbox}
+
+\subsection{Form und Wortstellung (Formation and word order)}
+\begin{grammarentry}{zu bei trennbaren Verben}{separable infinitives}
+\GermanText{Bei einem einfachen Infinitiv steht \textbf{zu} direkt vor dem Verb: \emph{zu lernen, zu gehen}. Bei \textbf{trennbaren Verben} steht \emph{zu} zwischen Vorsilbe und Stamm: \textbf{anzurufen, aufzustehen, einzukaufen, zuzuhören}. Bei untrennbaren Verben steht es vor dem Verb: \emph{zu verstehen, zu besuchen}.}
+\EnglishText{With a simple infinitive, \textbf{zu} precedes the verb. With \textbf{separable verbs}, it is inserted between prefix and stem: \textbf{anzurufen, aufzustehen, einzukaufen, zuzuhören}. With inseparable verbs, it precedes the whole verb.}
+\end{grammarentry}
+\rowcolors{2}{RowBlueLight}{RowBlueDark}
+\begin{longtable}{>{\raggedright\arraybackslash}p{2.9cm}>{\raggedright\arraybackslash}p{3.6cm}>{\raggedright\arraybackslash}p{8.3cm}}
+\rowcolor{HeaderBlueDark}\TableHead{Grundform (Base)} & \TableHead{Mit zu (With zu)} & \TableHead{Beispiel (Example)}\\
+\endfirsthead
+\rowcolor{HeaderBlueDark}\TableHead{Grundform (Base)} & \TableHead{Mit zu (With zu)} & \TableHead{Beispiel (Example)}\\
+\endhead
+lernen & \textbf{zu lernen} & Ich versuche, Deutsch zu lernen.\\
+anrufen & \textbf{anzurufen} & Ich plane, dich anzurufen.\\
+aufstehen & \textbf{aufzustehen} & Ich versuche, früh aufzustehen.\\
+einkaufen & \textbf{einzukaufen} & Sie plant, morgen einzukaufen.\\
+zuhören & \textbf{zuzuhören} & Ich versuche, gut zuzuhören.\\
+verstehen & \textbf{zu verstehen} & Es ist schwer, ihn zu verstehen.\\
+\end{longtable}
+\begin{grammarentry}{Komplexe Infinitive}{complex infinitives}
+\GermanText{Bei Infinitivgruppen mit mehreren Verben findet man Formen wie \textbf{arbeiten zu können, geholfen zu haben, angekommen zu sein}. Diese Gruppen besitzen keinen finiten Verbteil. Vergleiche dagegen den Modalverb-Perfektsatz \emph{Ich habe arbeiten müssen}.}
+\EnglishText{More complex infinitive groups include \textbf{arbeiten zu können} (to be able to work), \textbf{geholfen zu haben} (to have helped), \textbf{angekommen zu sein} (to have arrived). These lack a finite verb. Compare the modal perfect \emph{Ich habe arbeiten müssen}.}
+\end{grammarentry}
+\begin{exbox}
+\begin{itemize}
+\ExampleItem{Ich hoffe, bald wieder arbeiten zu können.}{I hope to be able to work again soon.}
+\ExampleItem{Sie behauptet, alles richtig gemacht zu haben.}{She claims to have done everything correctly.}
+\ExampleItem{Er freut sich, rechtzeitig angekommen zu sein.}{He is glad to have arrived on time.}
+\end{itemize}
+\end{exbox}
+\begin{grammarentry}{Häufige Auslöser}{common infinitive triggers}
+\GermanText{Infinitivgruppen folgen häufig auf \textbf{versuchen, hoffen, planen, beschließen, vergessen, anfangen, aufhören, vorhaben, versprechen, sich weigern}; außerdem auf Ausdrücke mit \textbf{wichtig, schwer, möglich, schön, bereit}, und auf Nomen wie \textbf{Zeit, Lust, Angst, Wunsch, Absicht, Möglichkeit}. Nicht jedes Verb erlaubt dieselbe Konstruktion.}
+\EnglishText{Infinitive clauses commonly follow verbs such as \textbf{versuchen} (try), \textbf{hoffen} (hope), \textbf{planen} (plan), \textbf{vergessen} (forget), \textbf{versprechen} (promise); adjectives such as \textbf{wichtig} (important) or \textbf{schwer} (difficult); and nouns like \textbf{Zeit} (time) and \textbf{Wunsch} (wish). Not every verb permits the same construction.}
+\end{grammarentry}
+\begin{exbox}
+\begin{itemize}
+\ExampleItem{Wir haben beschlossen, länger zu bleiben.}{We have decided to stay longer.}
+\ExampleItem{Ich habe keine Lust, zu warten.}{I do not feel like waiting.}
+\ExampleItem{Es ist schwierig, die Frage zu beantworten.}{It is difficult to answer the question.}
+\end{itemize}
+\end{exbox}
+
+\section{um ... zu, ohne ... zu, (an)statt ... zu (Infinitive clauses)}
+\begin{grammarentry}{um ... zu: Zweck}{purpose: in order to}
+\GermanText{\textbf{um ... zu} nennt ein Ziel oder eine Absicht. Der Handelnde ist gewöhnlich derselbe wie der im Hauptsatz oder wird aus diesem erschlossen. Für ein anderes ausdrücklich genanntes Subjekt verwendet man häufig einen finiten Nebensatz mit \textbf{damit}. Vor Infinitivgruppen mit \emph{um} steht immer ein Komma.}
+\EnglishText{\textbf{um ... zu} means \emph{in order to}. The implied actor is normally controlled by the main clause. With a different explicitly mentioned actor, a finite \textbf{damit} clause is often appropriate. A comma is required before an \emph{um ... zu} clause.}
+\end{grammarentry}
+\begin{exbox}
+\begin{itemize}
+\ExampleItem{Ich lerne Deutsch, um in Österreich zu arbeiten.}{I learn German in order to work in Austria.}
+\ExampleItem{Ich spare Geld, um ein Auto zu kaufen.}{I save money to buy a car.}
+\ExampleItem{Ich gebe dir das Buch, damit du es lesen kannst.}{I give you the book so that you can read it.}
+\end{itemize}
+\end{exbox}
+\begin{grammarentry}{ohne ... zu; statt ... zu}{without; instead of}
+\GermanText{\textbf{ohne ... zu} beschreibt eine nicht ausgeführte Handlung; \textbf{statt/anstatt ... zu} eine Alternative. Ist ein anderer Handelnder ausdrücklich genannt, sind finite Sätze mit \textbf{ohne dass} oder \textbf{(an)statt dass} häufig angemessener. Vor diesen Infinitivgruppen steht immer ein Komma.}
+\EnglishText{\textbf{ohne ... zu} means \emph{without doing}; \textbf{statt/anstatt ... zu} means \emph{instead of doing}. With a different explicitly mentioned subject, finite clauses with \textbf{ohne dass} or \textbf{(an)statt dass} are often better. These infinitive clauses require a comma.}
+\end{grammarentry}
+\begin{exbox}
+\begin{itemize}
+\ExampleItem{Er ging weg, ohne sich zu verabschieden.}{He left without saying goodbye.}
+\ExampleItem{Sie fährt mit dem Rad, anstatt das Auto zu nehmen.}{She cycles instead of taking the car.}
+\ExampleItem{Er ging weg, ohne dass ich es bemerkte.}{He left without my noticing it.}
+\end{itemize}
+\end{exbox}
+
+\section{Infinitiv ohne zu (Bare infinitive)}
+\begin{grammarentry}{Modalverben und weitere Verben}{no infinitive marker}
+\GermanText{Nach \textbf{können, müssen, dürfen, sollen, wollen, mögen} steht normalerweise ein Infinitiv \textbf{ohne zu}. Das gilt oft auch nach \textbf{lassen, sehen, hören} und für Tätigkeiten mit \textbf{gehen} (\emph{schwimmen gehen}). Bei \textbf{helfen} kommen Formen mit und ohne \emph{zu} vor.}
+\EnglishText{Modal verbs typically take a \textbf{bare infinitive}: \emph{muss gehen}. The same pattern often follows \emph{lassen}, \emph{sehen}, \emph{hören} and activity expressions with \emph{gehen}. Both forms can occur with \emph{helfen}.}
+\end{grammarentry}
+\begin{exbox}
+\begin{itemize}
+\ExampleItem{Ich muss gehen.}{I must go.}
+\ExampleItem{Wir wollen schwimmen.}{We want to swim.}
+\ExampleItem{Ich sehe ihn laufen.}{I see him running.}
+\ExampleItem{Sie lässt mich warten.}{She makes me wait.}
+\ExampleItem{Wir gehen einkaufen.}{We are going shopping.}
+\ExampleItem{Er hilft mir, die Tasche zu tragen.}{He helps me carry the bag.}
+\end{itemize}
+\end{exbox}
+
+\section{Kommas bei Infinitivgruppen (Commas)}
+\begin{grammarentry}{Pflichtkomma und fakultatives Komma}{comma rules}
+\GermanText{Ein Komma steht bei Infinitivgruppen mit \textbf{um, ohne, statt, anstatt, außer, als}, bei Abhängigkeit von einem \textbf{Nomen} und bei Ankündigung durch \textbf{es, daran, darauf} usw. In anderen einfachen Fällen kann es fakultativ sein.}
+\EnglishText{A comma is required with infinitive clauses introduced by \emph{um, ohne, statt, anstatt, außer, als}; with clauses dependent on a noun; and with a referring word such as \emph{es, daran, darauf}. In some other cases it is optional.}
+\end{grammarentry}
+\begin{exbox}
+\begin{itemize}
+\ExampleItem{Ich spare Geld, um ein Fahrrad zu kaufen.}{I save money to buy a bicycle.}
+\ExampleItem{Sie ging, ohne etwas zu sagen.}{She left without saying anything.}
+\ExampleItem{Er hat den Wunsch, Arzt zu werden.}{He wishes to become a doctor.}
+\ExampleItem{Ich freue mich darauf, dich zu sehen.}{I look forward to seeing you.}
+\end{itemize}
+\end{exbox}
+
+\section{zu als Gradpartikel (Degree particle: too)}
+\begin{grammarentry}{zu + Adjektiv oder Adverb}{excessive degree}
+\GermanText{\textbf{zu} bedeutet hier \glqq mehr als erwünscht oder angemessen\grqq{}: \textbf{zu teuer, zu groß, zu schnell, zu spät, zu viel, zu wenig, zu viele}. Vergleiche \textbf{sehr} (= very) und \textbf{zu} (= too). Diese Funktion regiert keinen Dativ.}
+\EnglishText{Here \textbf{zu} means \emph{too, excessively}: \emph{zu teuer} (too expensive), \emph{zu schnell} (too fast), \emph{zu viel} (too much). Unlike \textbf{sehr} (very), it indicates an inappropriate excess. It does not govern case.}
+\end{grammarentry}
+\begin{exbox}
+\begin{itemize}
+\ExampleItem{Das Auto ist sehr teuer.}{The car is very expensive.}
+\ExampleItem{Das Auto ist zu teuer.}{The car is too expensive.}
+\ExampleItem{Du fährst zu schnell.}{You are driving too fast.}
+\ExampleItem{Ich habe zu wenig Zeit.}{I have too little time.}
+\end{itemize}
+\end{exbox}
+\begin{grammarentry}{zu ... um ... zu}{too ... to}
+\GermanText{In \emph{zu schwer, um es allein zu tragen} ist das erste \emph{zu} eine \textbf{Gradpartikel}, das zweite ein \textbf{Infinitivmarker}. Auch \textbf{zu ... als dass} mit finitem Verb ist möglich, besonders bei anderem ausdrücklich genannten Subjekt.}
+\EnglishText{In \emph{zu schwer, um es allein zu tragen}, the first \emph{zu} means \emph{too}, while the second marks the infinitive. A \emph{zu ... als dass} construction with a finite verb is possible as well.}
+\end{grammarentry}
+\begin{exbox}
+\begin{itemize}
+\ExampleItem{Der Koffer ist zu schwer, um ihn allein zu tragen.}{The suitcase is too heavy to carry alone.}
+\ExampleItem{Das ist zu schön, um wahr zu sein.}{That is too good to be true.}
+\end{itemize}
+\end{exbox}
+
+\section{zu = geschlossen und als Verbzusatz (Closed and verb particles)}
+\begin{grammarentry}{Die Tür ist zu}{closed}
+\GermanText{In der Alltagssprache bedeutet \textbf{zu} auch \glqq geschlossen\grqq{}: \emph{Die Tür ist zu}. Es verlangt hier keinen Dativ.}
+\EnglishText{In everyday language, \textbf{zu} can mean \emph{closed}: \emph{Die Tür ist zu}. It does not govern dative case.}
+\end{grammarentry}
+\begin{exbox}
+\begin{itemize}
+\ExampleItem{Die Tür ist zu.}{The door is closed.}
+\ExampleItem{Ist das Fenster schon zu?}{Is the window closed already?}
+\end{itemize}
+\end{exbox}
+\begin{grammarentry}{Trennbare Verben mit zu-}{separable verbs}
+\GermanText{\textbf{zumachen} = schließen, \textbf{zuhören} = aufmerksam hören, \textbf{zusehen} = beobachten, \textbf{zugeben} = einräumen, \textbf{zunehmen} = mehr werden. Bei der Bildung eines Infinitivs mit \emph{zu} entstehen Formen wie \textbf{zuzuhören} und \textbf{zuzumachen}.}
+\EnglishText{Examples: \emph{zumachen} (close), \emph{zuhören} (listen), \emph{zusehen} (watch), \emph{zugeben} (admit), \emph{zunehmen} (increase). With an infinitive marker, the forms include \emph{zuzuhören} and \emph{zuzumachen}.}
+\end{grammarentry}
+\begin{exbox}
+\begin{itemize}
+\ExampleItem{Ich mache die Tür zu.}{I close the door.}
+\ExampleItem{Ich versuche, die Tür zuzumachen.}{I try to close the door.}
+\ExampleItem{Sie hört mir zu.}{She is listening to me.}
+\ExampleItem{Sie versucht, mir zuzuhören.}{She tries to listen to me.}
+\ExampleItem{Die Preise nehmen zu.}{Prices are increasing.}
+\end{itemize}
+\end{exbox}
+
+\section{Weitere Sonderkonstruktionen (Other special constructions)}
+\begin{grammarentry}{sein + zu; haben + zu}{necessity or possibility}
+\GermanText{\textbf{sein + zu + Infinitiv} kann Notwendigkeit oder Möglichkeit mit passiver Bedeutung ausdrücken (\emph{Die Aufgabe ist zu erledigen}; \emph{Der Fehler ist leicht zu beheben}). \textbf{haben + zu + Infinitiv} beschreibt oft eine Verpflichtung oder etwas noch Erforderliches (\emph{Ich habe viel zu tun}).}
+\EnglishText{\textbf{sein + zu + infinitive} can express passive-like necessity or possibility (\emph{must be done / can be fixed}). \textbf{haben + zu + infinitive} may express an obligation or something that remains to do.}
+\end{grammarentry}
+\begin{exbox}
+\begin{itemize}
+\ExampleItem{Die Aufgabe ist bis morgen zu erledigen.}{The task must be completed by tomorrow.}
+\ExampleItem{Der Fehler ist leicht zu beheben.}{The error can easily be fixed.}
+\ExampleItem{Ich habe noch viel zu tun.}{I still have a lot to do.}
+\ExampleItem{Du hast dich an die Regeln zu halten.}{You are required to follow the rules.}
+\end{itemize}
+\end{exbox}
+\begin{grammarentry}{brauchen ... nicht / nur ... zu}{need not; only need to}
+\GermanText{Bei \textbf{brauchen + nicht, kein oder nur} ist der Infinitiv mit \textbf{zu} typisch: \emph{Du brauchst nicht zu warten}; \emph{Du brauchst nur anzurufen}. Umgangssprachliche Varianten ohne \emph{zu} kommen vor; mit \emph{zu} ist die sichere standardsprachliche Form.}
+\EnglishText{With \textbf{brauchen + nicht, kein or nur}, an infinitive with \textbf{zu} is typical: \emph{Du brauchst nicht zu warten} (you need not wait); \emph{Du brauchst nur anzurufen} (you only need to call). Forms without \emph{zu} occur in colloquial speech.}
+\end{grammarentry}
+\begin{exbox}
+\begin{itemize}
+\ExampleItem{Du brauchst nicht zu kommen.}{You need not come.}
+\ExampleItem{Du brauchst nur anzurufen.}{You only need to call.}
+\end{itemize}
+\end{exbox}
+\begin{grammarentry}{auf ... zu}{towards}
+\GermanText{In \textbf{auf jemanden / etwas zu} regiert \textbf{auf} den \textbf{Akkusativ}; \emph{zu} zeigt die Richtung an. Dies ist nicht die Präposition \emph{zu + Dativ}. Man sagt \textbf{auf mich zu}, \textbf{auf den Bahnhof zu} und \textbf{auf jemanden zugehen}.}
+\EnglishText{In \textbf{auf ... zu} (towards), \textbf{auf} governs the \textbf{accusative}. The final \emph{zu} is a directional particle, not the dative preposition.}
+\end{grammarentry}
+\begin{exbox}
+\begin{itemize}
+\ExampleItem{Ein Mann kommt auf mich zu.}{A man is coming towards me.}
+\ExampleItem{Wir gehen auf den Bahnhof zu.}{We are walking towards the station.}
+\end{itemize}
+\end{exbox}
+
+\section{Häufige Fehler (Common errors)}
+\rowcolors{2}{RowBlueLight}{RowBlueDark}
+\begin{longtable}{>{\raggedright\arraybackslash}p{4.35cm}>{\raggedright\arraybackslash}p{5.35cm}>{\raggedright\arraybackslash}p{5.1cm}}
+\rowcolor{HeaderBlueDark}\TableHead{Falsch (Incorrect)} & \TableHead{Richtig (Correct)} & \TableHead{Grund (Reason)}\\
+\endfirsthead
+\rowcolor{HeaderBlueDark}\TableHead{Falsch (Incorrect)} & \TableHead{Richtig (Correct)} & \TableHead{Grund (Reason)}\\
+\endhead
+Ich gehe zu den Arzt. & Ich gehe \textbf{zum Arzt}. & zu + Dativ\\
+Ich fahre zu Wien. & Ich fahre \textbf{nach Wien}. & Stadtname mit nach\\
+Ich gehe zu Hause. & Ich gehe \textbf{nach Hause}. & Richtung\\
+Ich bin nach Hause. & Ich bin \textbf{zu Hause}. & Position\\
+Ich muss zu gehen. & Ich muss \textbf{gehen}. & Modalverb ohne zu\\
+Ich versuche, aufzu stehen. & Ich versuche, \textbf{aufzustehen}. & trennbares Verb\\
+\end{longtable}
+
+\section{Übungen mit Lösungen (Exercises and answers)}
+\begin{grammarentry}{Teil A: Ergänze die Formen}{complete the forms}
+\GermanText{Setze die passende Präposition oder Infinitivform ein.}
+\EnglishText{Insert the correct preposition or infinitive form.}
+\begin{enumerate}
+\item Ich gehe \underline{\hspace{2cm}} (der Arzt).
+\item Wir fahren \underline{\hspace{2cm}} (unsere Eltern).
+\item Er kommt heute \underline{\hspace{2cm}} (ich).
+\item Sie geht \underline{\hspace{2cm}} (die neue Schule).
+\item Ich fahre morgen \underline{\hspace{2cm}} Berlin.
+\item Ich gehe \underline{\hspace{2cm}} Kino (hinein).
+\item Ich bin \underline{\hspace{2cm}} meiner Schwester.
+\item Ich muss heute einkaufen \underline{\hspace{1cm}}.
+\item Ich versuche, früher \underline{\hspace{2cm}} (aufstehen).
+\item Ich lerne Deutsch, \underline{\hspace{1cm}} besser kommunizieren \underline{\hspace{1cm}} können.
+\item Der Tee ist \underline{\hspace{1cm}} heiß, um ihn sofort zu trinken.
+\end{enumerate}
+\end{grammarentry}
+\begin{grammarentry}{Lösungen}{answers}
+\GermanText{\textbf{1.} zum Arzt; \textbf{2.} zu unseren Eltern; \textbf{3.} zu mir; \textbf{4.} zur neuen Schule; \textbf{5.} nach Berlin; \textbf{6.} ins Kino; \textbf{7.} bei meiner Schwester; \textbf{8.} kein zu (Ich muss einkaufen); \textbf{9.} aufzustehen; \textbf{10.} um ... zu; \textbf{11.} zu heiß.}
+\EnglishText{\textbf{1--4.} Preposition with dative; \textbf{5.} destination city; \textbf{6.} entering a building; \textbf{7.} location at a person's place; \textbf{8.} modal with bare infinitive; \textbf{9.} separable verb; \textbf{10.} purpose clause; \textbf{11.} degree particle, meaning too hot.}
+\end{grammarentry}
+
+\section{Zusammenfassung (Summary)}
+\begin{grammarentry}{Die wichtigsten Regeln}{key rules}
+\GermanText{\textbf{1.} Präposition \emph{zu} verlangt \textbf{Dativ}. \textbf{2.} Bei Personen und Einrichtungen ist \emph{zu} häufig, bei Städten eher \emph{nach}. \textbf{3.} \emph{zum Lernen} enthält ein Nomen, \emph{zu lernen} einen Infinitiv. \textbf{4.} Infinitiv-\emph{zu} regiert \textbf{keinen Kasus}. \textbf{5.} \emph{zu teuer} heißt \glqq too expensive\grqq{}, \emph{Die Tür ist zu} heißt \glqq The door is closed\grqq{}.}
+\EnglishText{\textbf{1.} Prepositional \emph{zu} governs the \textbf{dative}. \textbf{2.} Use \emph{zu} with many people and institutions, \emph{nach} with cities. \textbf{3.} \emph{zum Lernen} uses a nominalised infinitive, while \emph{zu lernen} uses an infinitive marker. \textbf{4.} The infinitive marker governs no case. \textbf{5.} \emph{zu teuer} means too expensive; \emph{Die Tür ist zu} means the door is closed.}
+\end{grammarentry}
 \end{document}

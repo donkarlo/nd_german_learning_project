@@ -1,0 +1,103 @@
+% Diese datei bewahrt was ein Beischpiel für die Erklerungen über ein Deutschsprachethema
+
+\documentclass[a4paper,11pt]{article}
+
+\usepackage[a4paper,margin=2cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman,english]{babel}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage[table]{xcolor}
+\usepackage{parskip}
+\usepackage{enumitem}
+\usepackage[most]{tcolorbox}
+\usepackage{titlesec}
+\usepackage[hidelinks]{hyperref}
+
+\definecolor{HeaderBlueDark}{RGB}{70,110,170}
+\definecolor{RowBlueLight}{RGB}{235,243,255}
+\definecolor{RowBlueDark}{RGB}{220,233,250}
+\definecolor{SoftGray}{RGB}{90,90,90}
+
+\setlength{\parindent}{0pt}
+\setlist[itemize]{leftmargin=1.4em,itemsep=0.35em,topsep=0.35em}
+\linespread{1.06}
+
+\titleformat{\section}[block]
+{\Large\bfseries\color{HeaderBlueDark}}
+{}{0pt}{}
+\titlespacing{\section}{0pt}{1.3em}{0.8em}
+
+\titleformat{\subsection}[block]
+{\large\bfseries\color{HeaderBlueDark}}
+{}{0pt}{}
+\titlespacing{\subsection}{0pt}{1.0em}{0.6em}
+
+\newtcolorbox{exbox}{enhanced,breakable,colback=RowBlueLight,colframe=RowBlueDark,boxrule=0.4pt,arc=1.5mm,left=1.2mm,right=1.2mm,top=1mm,bottom=1mm,title={Beispiele \textnormal{(Examples)}},fonttitle=\bfseries,colbacktitle=RowBlueDark,coltitle=black}
+
+\NewDocumentEnvironment{grammarentry}{mm+b}{%
+    \begin{tcolorbox}[enhanced,breakable,colback=white,colframe=HeaderBlueDark,boxrule=0.6pt,arc=1.5mm,left=1.5mm,right=1.5mm,top=1mm,bottom=1mm,colbacktitle=HeaderBlueDark,coltitle=white,fonttitle=\bfseries,title={#1\hfill\normalfont\footnotesize #2}]
+    #3
+    \end{tcolorbox}
+}{}
+
+\newcommand{\GermanText}[1]{\textbf{Deutsch: }#1\par}
+\newcommand{\EnglishText}[1]{{\small\color{SoftGray}\textbf{English: }#1\par}}
+\newcommand{\ExampleItem}[2]{\item \textbf{#1}\\{\small\color{SoftGray}#2}}
+
+\usepackage{array}
+\usepackage{longtable}
+\title{Die Präposition neben (The preposition beside / next to)}
+\date{}
+\begin{document}
+\maketitle
+\tableofcontents
+\newpage
+\section{Grundbedeutung (Basic meaning)}
+\begin{grammarentry}{neben}{beside / next to}
+\GermanText{\textbf{neben} bedeutet räumlich: an der Seite von jemandem oder etwas.}
+\EnglishText{\textbf{neben} in spatial use means: beside or next to somebody or something.}
+\end{grammarentry}
+\section{Wo? + Dativ (Location: Where? + dative)}
+\begin{grammarentry}{neben + Dativ}{location}
+\GermanText{Der Ausdruck bezeichnet die Position, an der sich jemand oder etwas befindet oder eine Handlung abspielt.}
+\EnglishText{The expression describes the location where somebody or something is or where an action takes place.}
+\end{grammarentry}
+\begin{exbox}
+\begin{itemize}
+\ExampleItem{Das Fahrrad steht neben dem Baum.}{The bicycle is standing next to the tree.}
+\end{itemize}
+\end{exbox}
+\section{Wohin? + Akkusativ (Destination: Where to? + accusative)}
+\begin{grammarentry}{neben + Akkusativ}{destination}
+\GermanText{Der Ausdruck bezeichnet den Zielort einer Bewegung oder Platzierung.}
+\EnglishText{The expression describes the destination of a movement or placement.}
+\end{grammarentry}
+\begin{exbox}
+\begin{itemize}
+\ExampleItem{Ich stelle das Fahrrad neben den Baum.}{I put the bicycle next to the tree.}
+\end{itemize}
+\end{exbox}
+\section{Übertragene und feste Verwendungen (Figurative and fixed uses)}
+\begin{grammarentry}{Weitere Bedeutungen}{other uses}
+\GermanText{\textbf{neben} kann auch \glqq zusätzlich zu\grqq{} bedeuten: \textbf{neben dem Studium} (Dativ).}
+\EnglishText{\textbf{neben} can also mean in addition to: \textbf{neben dem Studium} (dative).}
+\end{grammarentry}
+\begin{exbox}
+\begin{itemize}
+\ExampleItem{Neben dem Studium arbeitet sie in einem Café.}{She works in a café alongside her studies.}
+\ExampleItem{Setz dich bitte neben mich.}{Please sit down next to me.}
+\end{itemize}
+\end{exbox}
+\section{Vergleich und häufiger Fehler (Comparison and common error)}
+\begin{grammarentry}{Ort oder Ziel?}{location or destination}
+\GermanText{\textbf{Das Fahrrad steht neben dem Baum.} (Dativ, Wo?) im Gegensatz zu \textbf{Ich stelle das Fahrrad neben den Baum.} (Akkusativ, Wohin?). Nicht jedes Bewegungsverb verlangt den Akkusativ.}
+\EnglishText{\textbf{Das Fahrrad steht neben dem Baum.} (dative, location) contrasts with \textbf{Ich stelle das Fahrrad neben den Baum.} (accusative, destination). Movement verbs do not automatically require accusative.}
+\end{grammarentry}
+\section{Zusammenfassung (Summary)}
+\begin{grammarentry}{Merksatz}{key rule}
+\GermanText{Räumlich: \textbf{Wo? = Dativ, Wohin? = Akkusativ}. Die feste Rektion muss getrennt gelernt werden.}
+\EnglishText{Spatial use: \textbf{Where? = dative, Where to? = accusative}. Learn fixed case government separately.}
+\end{grammarentry}
+\end{document}
