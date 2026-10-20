@@ -1,0 +1,466 @@
+% Verbalkomplex / Mehrere Verben -- ein eigenstaendiges Lernblatt (B1--C2)
+% Nach der projektinternen erklaerung_vorlage.tex; Orthografie: amtliches Regelwerk 2024.
+\documentclass[a4paper,11pt]{article}
+\usepackage[a4paper,margin=2cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman,english]{babel}
+\usepackage{lmodern,microtype,parskip,enumitem}
+\usepackage[table]{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{titlesec}
+\usepackage{xurl}
+\usepackage[hidelinks]{hyperref}
+\usepackage{array,longtable}
+\definecolor{HeaderBlueDark}{RGB}{70,110,170}
+\definecolor{RowBlueLight}{RGB}{235,243,255}
+\definecolor{RowBlueDark}{RGB}{220,233,250}
+\definecolor{SoftGray}{RGB}{90,90,90}
+\setlength{\parindent}{0pt}
+\setlist[itemize]{leftmargin=1.4em,itemsep=0.35em,topsep=0.35em}
+\linespread{1.06}
+\renewcommand{\arraystretch}{1.20}
+\titleformat{\section}[block]{\Large\bfseries\color{HeaderBlueDark}}{}{0pt}{}
+\titlespacing{\section}{0pt}{1.3em}{0.8em}
+\titleformat{\subsection}[block]{\large\bfseries\color{HeaderBlueDark}}{}{0pt}{}
+\titlespacing{\subsection}{0pt}{1.0em}{0.6em}
+\newtcolorbox{exbox}{enhanced,breakable,colback=RowBlueLight,colframe=RowBlueDark,boxrule=0.4pt,arc=1.5mm,left=1.2mm,right=1.2mm,top=1mm,bottom=1mm,title={Beispiele \textnormal{(Examples)}},fonttitle=\bfseries,colbacktitle=RowBlueDark,coltitle=black}
+\NewDocumentEnvironment{grammarentry}{mm+b}{%
+ \begin{tcolorbox}[enhanced,breakable,colback=white,colframe=HeaderBlueDark,boxrule=0.6pt,arc=1.5mm,left=1.5mm,right=1.5mm,top=1mm,bottom=1mm,colbacktitle=HeaderBlueDark,coltitle=white,fonttitle=\bfseries,title={#1\hfill\normalfont\footnotesize #2}]
+ #3
+ \end{tcolorbox}
+}{}
+\newcommand{\GermanText}[1]{\textbf{Deutsch: }#1\par}
+\newcommand{\EnglishText}[1]{{\small\color{SoftGray}\textbf{English: }#1\par}}
+\newcommand{\ExampleItem}[2]{\item \textbf{#1}\\{\small\color{SoftGray}#2}}
+\newcommand{\DEEN}[2]{\GermanText{#1}\EnglishText{#2}}
+\newcommand{\Pair}[2]{\ExampleItem{#1}{#2}}
+\title{Der Verbalkomplex und die Kombination mehrerer Verben\\
+ \large\textnormal{Verb clusters and combinations of multiple verbs in German (B1--C2)}}
+\date{}
+\begin{document}
+\selectlanguage{ngerman}
+\maketitle\tableofcontents\newpage
+
+\section{Definition und Abgrenzung \textnormal{(Definition and scope)}}
+\begin{grammarentry}{Verbalkomplex}{Prädikat und Verbenfolge}
+\DEEN{Der \textbf{Verbalkomplex} bildet den verbalen Kern eines Satzes. Im weiteren Sinn enthält er eine finite Verbform und eventuell eine oder mehrere infinite Verbformen. Manche Grammatiktheorien nennen nur ein mehrteiliges Prädikat einen Verbalkomplex. Mehrere Verben in einem Satz gehören nicht zwangsläufig alle zu demselben engen Verbalkomplex.}{The verb cluster is the verbal core of a clause. In a broader definition, it contains a finite verb and optionally one or more non-finite verb forms. Some frameworks use the term only for multi-part predicates. Not every verb in the same sentence belongs to the same narrow verb cluster.}
+\DEEN{Eine \textbf{finite} Form ist konjugiert (\glqq kann\grqq, \glqq hätte\grqq); \textbf{infinite} Formen sind Infinitiv ohne zu, Infinitiv mit zu und Partizip II. In einem einfachen finiten Teilsatz steht typischerweise ein finites Verb; eine Infinitivgruppe besitzt kein eigenes finites Verb.}{A finite form is conjugated; non-finite forms are a bare infinitive, a zu-infinitive, and a past participle. A simple finite clause typically contains one finite verb; an infinitive clause has no finite verb of its own.}
+\DEEN{\textbf{Wichtig:} \glqq Ich werde kommen\grqq{} ist ein enger Verbalkomplex. \glqq Ich hoffe, zu kommen\grqq{} enthält dagegen eine vom Vollverb abhängige Infinitivgruppe. Für das Lernziel \glqq mehrere Verben kombinieren\grqq{} sind beide Arten relevant.}{Important: Ich werde kommen forms a narrow verb cluster, while Ich hoffe, zu kommen contains a dependent infinitive clause. Both structures matter for learning to combine verbs.}
+\end{grammarentry}
+\begin{exbox}\begin{itemize}
+\Pair{Ich schlafe.}{I am sleeping.}
+\Pair{Ich habe geschlafen.}{I have slept.}
+\Pair{Ich werde schlafen können.}{I will be able to sleep.}
+\Pair{Ich hoffe, heute schlafen zu können.}{I hope to be able to sleep today.}
+\end{itemize}\end{exbox}
+
+\section{Statusrektion: die drei Formen \textnormal{(Government of verb forms)}}
+\begin{grammarentry}{Status}{1, 2 oder 3}
+\DEEN{\textbf{1. Status}: reiner Infinitiv, z.\,B. \textbf{gehen}. \textbf{2. Status}: zu-Infinitiv, \textbf{zu gehen}. \textbf{3. Status}: Partizip II, \textbf{gegangen}. Ein übergeordnetes Verb verlangt eine bestimmte Form des untergeordneten Verbs; dies nennt man \textbf{Statusrektion}.}{First status: bare infinitive; second status: zu-infinitive; third status: past participle. A higher verb requires a specific form of the lower verb; this is called status government.}
+\DEEN{Die Wahl hängt von der Konstruktion und dem regierenden Verb ab, \textbf{nicht} davon, wie viele Verben schon vorhanden sind. Die Kasus- und Präpositionsergänzungen stammen dagegen vor allem aus der \textbf{Valenz} des Vollverbs.}{The choice depends on the construction and governing verb, not on the number of verbs in the sentence. Case and prepositional complements are largely determined by the lexical verb's valency.}
+\end{grammarentry}
+\rowcolors{2}{RowBlueLight}{RowBlueDark}
+\begin{longtable}{>{\raggedright\arraybackslash}p{2.5cm} >{\raggedright\arraybackslash}p{4.7cm} >{\raggedright\arraybackslash}p{5.9cm}}
+\rowcolor{HeaderBlueDark}\color{white}\textbf{Form / status}&\color{white}\textbf{Regierendes Verb / governor}&\color{white}\textbf{Beispiel / example}\\
+1: ohne zu & wollen, können, müssen; werden (Futur); lassen & Ich \textbf{will gehen}. / I want to go.\\
+2: mit zu & hoffen, versuchen, anfangen; scheinen & Ich \textbf{hoffe, zu gehen}. / I hope to go.\\
+3: Partizip II & haben, sein (Perfekt); werden (Passiv) & Ich \textbf{bin gegangen}. / I have gone.\\
+\end{longtable}
+\begin{exbox}\begin{itemize}
+\Pair{Ich muss arbeiten.}{I must work.}
+\Pair{Ich versuche, zu arbeiten.}{I am trying to work.}
+\Pair{Ich habe gearbeitet.}{I have worked.}
+\end{itemize}\end{exbox}
+
+\section{Verbtypen und Baupläne \textnormal{(Types of multi-verb constructions)}}
+\begin{grammarentry}{Hilfs-, Modal- und Vollverben}{Form und Funktion}
+\DEEN{\textbf{Hilfsverben} (haben, sein, werden) bilden zusammengesetzte Zeiten und Passivformen. \textbf{Modalverben} (dürfen, können, mögen, müssen, sollen, wollen) verlangen gewöhnlich einen bloßen Infinitiv. \textbf{Vollverben} wie hoffen, versuchen und aufhören können eine Infinitivgruppe verlangen. \textbf{Halbmodale} wie scheinen verlangen oft einen zu-Infinitiv.}{Auxiliaries form compound tenses and passive constructions. Core modals usually require a bare infinitive. Lexical verbs such as hope, try, and stop may govern an infinitive clause. Semi-modals such as seem often require a zu-infinitive.}
+\end{grammarentry}
+\begin{exbox}\begin{itemize}
+\Pair{Sie ist angekommen.}{She has arrived. (perfect)}
+\Pair{Sie wird ankommen.}{She will arrive. (future)}
+\Pair{Die Tür wird geöffnet.}{The door is being opened. (process passive)}
+\Pair{Die Tür ist geöffnet.}{The door is open. (state passive)}
+\Pair{Sie kann kommen.}{She can come. (modal)}
+\Pair{Sie hofft, kommen zu können.}{She hopes to be able to come. (infinitive clause)}
+\Pair{Sie scheint kommen zu können.}{She seems to be able to come. (semi-modal)}
+\end{itemize}\end{exbox}
+
+\section{Mehrere Verben systematisch verbinden \textnormal{(Building verb chains)}}
+\begin{grammarentry}{Hierarchisches Verfahren}{von innen nach außen}
+\DEEN{Beginne mit dem \textbf{Vollverb}, füge ein regierendes Verb hinzu und bestimme, in welchem Status das untergeordnete Verb stehen muss. Wiederhole den Schritt. Danach bestimme die Wortstellung für Hauptsatz, Frage oder Nebensatz.}{Start with the lexical verb. Add a governing verb and decide which form its dependent must take. Repeat. Then determine word order for a statement, question, or subordinate clause.}
+\DEEN{\textbf{lernen} $\rightarrow$ \textbf{lernen können} $\rightarrow$ \textbf{lernen können wollen}. Als normaler Hauptsatz: \glqq Ich \textbf{will} Deutsch \textbf{lernen können}.\grqq{} Beim Wechsel der Verbfolge ändern sich häufig Bedeutung oder grammatische Zulässigkeit.}{Start with lernen, add können, then wollen. As a main clause: Ich will Deutsch lernen können (I want to be able to learn German). Changing the order often changes the meaning or grammaticality.}
+\end{grammarentry}
+\begin{exbox}\begin{itemize}
+\Pair{Ich lerne Deutsch.}{I am learning German.}
+\Pair{Ich kann Deutsch lernen.}{I can learn German.}
+\Pair{Ich will Deutsch lernen können.}{I want to be able to learn German.}
+\Pair{Ich hoffe, Deutsch lernen zu können.}{I hope to be able to learn German.}
+\Pair{Ich sollte versuchen, regelmäßig Deutsch zu lernen.}{I should try to study German regularly.}
+\Pair{Ich hoffe, bald wieder arbeiten zu können.}{I hope to be able to work again soon.}
+\end{itemize}\end{exbox}
+\begin{grammarentry}{Nicht jedes Verb bekommt zu}{abhängige Teilketten}
+\DEEN{In \glqq Ich hoffe, Deutsch \textbf{lernen zu können}\grqq{} fordert hoffen den zu-Infinitiv \textbf{zu können}. Innerhalb dieses Komplexes verlangt können den bloßen Infinitiv \textbf{lernen}. Der Ausdruck \glqq zu lernen zu können\grqq{} ist daher falsch.}{In Ich hoffe, Deutsch lernen zu können, hoffen requires zu können, whereas können requires the bare infinitive lernen. Hence zu lernen zu können is wrong.}
+\end{grammarentry}
+
+\section{Infinitiv mit zu \textnormal{(Zu-infinitives)}}
+\begin{grammarentry}{Regierende Verben}{häufige Muster}
+\DEEN{Typische Verben: \textbf{versuchen, hoffen, planen, beschließen, beabsichtigen, anfangen, beginnen, aufhören, vergessen, versprechen, sich weigern, sich bemühen, vorhaben}. Auch \textbf{bitten, raten, erlauben} verbinden sich mit Infinitivgruppen, bei denen oft die angesprochene Person die Handlung ausführt.}{Typical verbs include try, hope, plan, decide, intend, begin, stop, forget, promise, refuse, endeavor, and intend. Ask, advise, and allow can take an infinitive clause whose understood subject is often a different person.}
+\end{grammarentry}
+\begin{exbox}\begin{itemize}
+\Pair{Ich versuche, weiterzumachen.}{I am trying to continue.}
+\Pair{Sie hat beschlossen, ein Buch zu schreiben.}{She has decided to write a book.}
+\Pair{Er fängt an, regelmäßig zu trainieren.}{He is beginning to exercise regularly.}
+\Pair{Ich habe vergessen, die Tür abzuschließen.}{I forgot to lock the door.}
+\Pair{Ich bitte dich, leise zu sprechen.}{I ask you to speak quietly.}
+\end{itemize}\end{exbox}
+
+\section{Infinitiv ohne zu \textnormal{(Bare infinitives)}}
+\begin{grammarentry}{Nicht nur Modalverben}{besondere Vollverben}
+\DEEN{Neben den sechs Kernmodalverben regieren \textbf{lassen} und die Wahrnehmungsverben \textbf{sehen, hören, fühlen} oft bloße Infinitive. Ebenso üblich sind \textbf{gehen einkaufen}, \textbf{bleiben sitzen}, \textbf{lernen schwimmen}. Bei manchen Verben besteht Variation zwischen mit und ohne zu.}{Besides the six core modals, let/cause and verbs of perception frequently take bare infinitives. Constructions such as going shopping, remaining seated, and learning to swim are also common. Some verbs show variation between bare and zu-infinitives.}
+\end{grammarentry}
+\begin{exbox}\begin{itemize}
+\Pair{Ich muss heute arbeiten.}{I must work today.}
+\Pair{Ich lasse mein Fahrrad reparieren.}{I am having my bicycle repaired.}
+\Pair{Ich sehe ihn über die Straße gehen.}{I see him cross the street.}
+\Pair{Ich höre die Kinder singen.}{I hear the children sing.}
+\Pair{Wir gehen Kaffee trinken.}{We are going out for coffee.}
+\Pair{Bitte bleiben Sie sitzen.}{Please remain seated.}
+\Pair{Das Kind lernt schwimmen.}{The child is learning to swim.}
+\end{itemize}\end{exbox}
+
+\section{Variation: helfen, lernen, brauchen \textnormal{(Alternating patterns)}}
+\begin{grammarentry}{Mit oder ohne zu}{genau auf das Verb achten}
+\DEEN{Bei \textbf{helfen} sind beide Konstruktionen gebräuchlich: \glqq Ich helfe dir, die Kisten \textbf{zu tragen}\grqq{} und \glqq Ich helfe dir die Kisten \textbf{tragen}\grqq. Auch \textbf{lernen} und \textbf{lehren} können mit oder ohne zu stehen.}{Both patterns occur with helfen. Lernen and lehren also allow both constructions in certain uses.}
+\DEEN{\textbf{brauchen} mit modalem Sinn tritt typischerweise mit \textbf{nicht, nur, kaum} usw. auf: \glqq Du brauchst heute nicht (zu) kommen.\grqq{} Beide Varianten sind belegt; mit zu ist eine gute Wahl für Lernende. \glqq Ich brauche Geld\grqq{} ist normales transitives brauchen mit Nomen, kein Infinitivkomplex.}{Modal-like brauchen typically occurs with negative or restrictive expressions. Both bare and zu-infinitives occur; using zu is a safe choice for learners. Ich brauche Geld simply uses a noun object.}
+\end{grammarentry}
+\begin{exbox}\begin{itemize}
+\Pair{Ich helfe dir, die Tasche zu tragen.}{I will help you carry the bag.}
+\Pair{Ich helfe dir die Tasche tragen.}{I will help you carry the bag. (bare infinitive variant)}
+\Pair{Sie lernt, Auto zu fahren.}{She is learning to drive.}
+\Pair{Sie lernt Auto fahren.}{She is learning to drive. (bare infinitive variant)}
+\Pair{Du brauchst heute nicht zu kommen.}{You do not need to come today.}
+\Pair{Du brauchst heute nicht kommen.}{You do not need to come today. (variant)}
+\end{itemize}\end{exbox}
+
+\section{Satzklammer im Hauptsatz \textnormal{(Main-clause brackets)}}
+\begin{grammarentry}{Verbzweit und Verberst}{finite Form zuerst}
+\DEEN{In einem gewöhnlichen \textbf{Aussagehauptsatz} steht die finite Verbform an \textbf{zweiter Stelle}. Weitere Teile des engen Verbalkomplexes stehen meistens am Ende. Bei Entscheidungsfragen und häufig im Imperativ steht das finite Verb an erster Stelle. Eine eigenständige Infinitivgruppe kann rechts zusätzlich folgen.}{In a declarative main clause, the finite verb occupies the second position, while other parts of a narrow verb cluster generally occur at the end. Yes/no questions and many imperatives use verb-first order. A dependent infinitive clause may appear afterwards.}
+\end{grammarentry}
+\begin{exbox}\begin{itemize}
+\Pair{Er will heute länger arbeiten.}{He wants to work longer today.}
+\Pair{Heute will er länger arbeiten.}{Today he wants to work longer.}
+\Pair{Will er heute länger arbeiten?}{Does he want to work longer today?}
+\Pair{Ich habe gestern länger arbeiten müssen.}{I had to work longer yesterday.}
+\Pair{Ich versuche, die Aufgabe zu lösen.}{I am trying to solve the task.}
+\end{itemize}\end{exbox}
+
+
+\section{Nebensätze: Verbendstellung \textnormal{(Subordinate-clause word order)}}
+\begin{grammarentry}{Verbletzt}{gewöhnliche Reihenfolge}
+\DEEN{In einem eingeleiteten \textbf{Nebensatz} mit weil, dass, obwohl usw. steht die finite Verbform grundsätzlich am Ende der rechten Satzklammer. Ohne Sonderregel gilt: die infiniteren Formen stehen \textbf{vor} dem finiten Verb. \textbf{Ausnahme:} Vorangestelltes finites haben im Ersatzinfinitivkomplex (siehe unten).}{In subordinate clauses introduced by because, that, although, etc., the finite verb generally stands at the end of the verb bracket. Other verbal forms come before it unless a special rule applies, notably the fronted finite haben with a substitute infinitive.}
+\end{grammarentry}
+\begin{exbox}\begin{itemize}
+\Pair{Ich weiß, dass er heute arbeiten muss.}{I know that he has to work today.}
+\Pair{Ich weiß, dass er heute gearbeitet hat.}{I know that he worked today.}
+\Pair{Ich weiß, dass er heute arbeiten will.}{I know that he wants to work today.}
+\Pair{Sie glaubt, dass das Buch gelesen worden ist.}{She believes that the book has been read.}
+\Pair{Es ist gut, dass sie versucht, die Frage zu beantworten.}{It is good that she is trying to answer the question.}
+\end{itemize}\end{exbox}
+\begin{grammarentry}{Satzgrenzen erkennen}{nicht jedes letzte Wort gehört zum selben Satz}
+\DEEN{Bei \glqq Ich weiß, dass er \textbf{versucht}, Deutsch \textbf{zu lernen}\grqq{} steht versucht am Ende seines finiten Nebensatzteils; die folgende Infinitivgruppe hat keine finite Verbform. Man darf die Regel \glqq finites Verb am Ende\grqq{} nicht blind auf die gesamte Schriftzeile anwenden.}{In Ich weiß, dass er versucht, Deutsch zu lernen, versucht belongs to the finite subordinate clause and is followed by a non-finite infinitive clause. The verb-final rule must not be applied blindly to the very last word of the written sentence.}
+\end{grammarentry}
+
+\section{Perfekt, Plusquamperfekt und Futur \textnormal{(Compound tenses)}}
+\begin{grammarentry}{Auxiliarketten}{haben, sein, werden}
+\DEEN{Im \textbf{Perfekt} regieren haben/sein normalerweise das Partizip II; im \textbf{Plusquamperfekt} stehen hatte/war + Partizip II. Futur I enthält werden + Infinitiv. \textbf{Futur II} enthält werden + Partizip II + haben/sein. Ein \textbf{Infinitiv Perfekt} hat die Form Partizip II + haben/sein und ist selbst infinit.}{Perfect: haben/sein + past participle; pluperfect: hatte/war + past participle; future I: werden + infinitive; future II: werden + participle + haben/sein. A perfect infinitive consists of participle + haben/sein and is itself non-finite.}
+\DEEN{Das Hilfsverb \textbf{sein} oder \textbf{haben} wird durch das Verb und seine Verwendung bestimmt (ankommen: ist angekommen; arbeiten: hat gearbeitet). Die Futurform ist keine zwingende Übersetzung jedes englischen will; das Präsens mit Zeitangabe ist oft üblicher.}{The choice between sein and haben depends on the verb and its use. The future form need not translate every English will; present tense with a time expression is often more natural.}
+\end{grammarentry}
+\begin{exbox}\begin{itemize}
+\Pair{Er hat gearbeitet.}{He has worked.}
+\Pair{Er hatte gearbeitet.}{He had worked.}
+\Pair{Sie ist angekommen.}{She has arrived.}
+\Pair{Sie wird morgen ankommen.}{She will arrive tomorrow.}
+\Pair{Sie wird bis morgen angekommen sein.}{She will have arrived by tomorrow.}
+\Pair{Ich freue mich, das Buch gelesen zu haben.}{I am glad to have read the book.}
+\Pair{Ich hoffe, rechtzeitig angekommen zu sein.}{I hope to have arrived on time.}
+\end{itemize}\end{exbox}
+
+\section{Modalverben, mehrfache Modalität und Skopus \textnormal{(Modal stacking and scope)}}
+\begin{grammarentry}{Zwei Modalverben}{Bedeutung und Abfolge}
+\DEEN{Auch zwei modal gebrauchte Verben können kombiniert werden. \glqq Ich \textbf{will} arbeiten \textbf{können}\grqq{} heißt: Ich möchte die Fähigkeit/Möglichkeit haben, zu arbeiten. \glqq Ich \textbf{muss} gehen \textbf{dürfen}\grqq{} wäre grammatisch konstruierbar, aber semantisch ungewöhnlich: Die Erlaubnis zum Gehen muss bestehen. Solche Ketten werden schnell schwer verständlich.}{Two modal meanings can be stacked. Ich will arbeiten können means that I want to be able to work. Ich muss gehen dürfen is structurally possible but pragmatically unusual: I must be permitted to leave. Long chains rapidly become difficult to understand.}
+\DEEN{\textbf{Skopus} bedeutet Bedeutungsbereich. \glqq Er \textbf{muss gekommen sein}\grqq{} drückt oft eine Schlussfolgerung über die Vergangenheit aus, nicht eine damals bestehende Pflicht. \glqq Er \textbf{hat kommen müssen}\grqq{} bedeutet dagegen, dass er kommen musste.}{Scope concerns which proposition an operator affects. Er muss gekommen sein often expresses an inference about the past, not past obligation. Er hat kommen müssen means that he had to come.}
+\end{grammarentry}
+\begin{exbox}\begin{itemize}
+\Pair{Ich will Deutsch sprechen können.}{I want to be able to speak German.}
+\Pair{Sie möchte hier bleiben dürfen.}{She would like to be allowed to stay here.}
+\Pair{Er muss gestern zu Hause gewesen sein.}{He must have been at home yesterday. (inference)}
+\Pair{Er hat gestern zu Hause bleiben müssen.}{He had to stay at home yesterday. (obligation)}
+\Pair{Ich hätte früher anfangen sollen.}{I should have started earlier.}
+\end{itemize}\end{exbox}
+
+\section{Ersatzinfinitiv im Perfekt \textnormal{(Substitute infinitive)}}
+\begin{grammarentry}{Doppelinfinitiv}{Modalverb statt Partizip II}
+\DEEN{Wenn ein \textbf{Modalverb} einen Infinitiv regiert und der gesamte Komplex im Perfekt steht, erscheint bei Kernmodalverben normalerweise ein \textbf{Ersatzinfinitiv} statt des Partizips II: \glqq Er \textbf{hat arbeiten müssen}\grqq{}, nicht \glqq hat arbeiten gemusst\grqq. Das gilt auch für brauchen in modalem Gebrauch; Ersatzinfinitiv ist ferner bei \textbf{lassen}, Wahrnehmungsverben und \textbf{helfen} möglich bzw. üblich, je nach Konstruktion.}{If a core modal governs an infinitive and the construction occurs in the perfect, a substitute infinitive normally replaces the modal's past participle: Er hat arbeiten müssen, not hat arbeiten gemusst. Similar patterns occur with modal-like brauchen, lassen, perception verbs, and in some patterns with helfen.}
+\DEEN{Ohne abhängigen Infinitiv kann ein Modalverb dagegen ein gewöhnliches Partizip bilden: \glqq Ich habe das nicht \textbf{gewollt}\grqq{} oder \glqq Er hat nicht \textbf{gekonnt}\grqq. Die genaue Verteilung der Formen hängt vom Gebrauch des Modalverbs ab.}{Without a dependent infinitive, a modal can form an ordinary participle: Ich habe das nicht gewollt, Er hat nicht gekonnt. The distribution depends on the specific use.}
+\end{grammarentry}
+\begin{exbox}\begin{itemize}
+\Pair{Ich habe länger arbeiten müssen.}{I had to work longer.}
+\Pair{Er hat früher gehen dürfen.}{He was allowed to leave earlier.}
+\Pair{Sie hat das Problem lösen können.}{She was able to solve the problem.}
+\Pair{Ich habe mein Fahrrad reparieren lassen.}{I had my bicycle repaired.}
+\Pair{Ich habe ihn kommen sehen.}{I saw him coming.}
+\Pair{Ich habe das nicht gewollt.}{I did not want that. (no dependent infinitive)}
+\end{itemize}\end{exbox}
+
+\section{Das Oberfeld im Nebensatz \textnormal{(Upper-field positioning)}}
+\begin{grammarentry}{Ersatzinfinitiv mit haben}{fortgeschrittene Verbstellung C1--C2}
+\DEEN{Besonders wichtig ist die Ausnahme vom einfachen Muster der Verbendstellung: Wenn finites \textbf{haben} einen Komplex mit \textbf{Ersatzinfinitiv eines Kernmodalverbs} regiert, steht es \textbf{vor} den infiniten Verben (im sogenannten \textbf{Oberfeld}): \glqq weil er gestern \textbf{hat arbeiten müssen}\grqq. Die naive Folge \glqq weil er gestern arbeiten müssen hat\grqq{} ist im überregionalen Standard nicht die richtige Grundform.}{A crucial exception concerns finite haben governing a substitute infinitive of a core modal. Haben precedes the lower verbs in the upper field: weil er gestern hat arbeiten müssen. The mechanically verb-final version arbeiten müssen hat is not the standard basic pattern.}
+\DEEN{Bei anderen Verben wie \textbf{lassen, sehen, hören} existieren komplexere Stellungsvarianten; im sorgfältigen Standard ist \glqq dass sie ihn \textbf{hat gehen sehen}\grqq{} gut möglich. Regionale Varianten (unter anderem im süddeutschen und österreichischen Sprachraum) sind zu unterscheiden von einer sicheren neutralen Schreibweise.}{Other verbs such as lassen, sehen, and hören show more complex word-order variation; dass sie ihn hat gehen sehen is possible in careful standard German. Regional variants, including southern German and Austrian patterns, should be distinguished from an unmarked written form.}
+\end{grammarentry}
+\begin{exbox}\begin{itemize}
+\Pair{Er sagt, dass er gestern hat arbeiten müssen.}{He says that he had to work yesterday.}
+\Pair{Sie weiß, dass ich früher habe gehen wollen.}{She knows that I wanted to leave earlier.}
+\Pair{Ich glaube, dass er das Auto hat reparieren lassen.}{I think that he had the car repaired.}
+\Pair{Sie erzählt, dass sie ihn hat kommen sehen.}{She says that she saw him coming.}
+\Pair{Ich denke, dass er heute arbeiten muss.}{I think that he has to work today. (normal verb-final order)}
+\end{itemize}\end{exbox}
+\begin{grammarentry}{Konjunktiv II}{hätte + Infinitiv + Modalinfinitiv}
+\DEEN{Auch im Konjunktiv II der Vergangenheit: \glqq Er \textbf{hätte früher kommen sollen}\grqq; im Nebensatz: \glqq dass er \textbf{hätte früher kommen sollen}\grqq{} ist wegen der Stellung der Adverbiale problematisch. Die standardnahe Form lautet \glqq dass er \textbf{früher hätte kommen sollen}\grqq. Das konjugierte hätte tritt vor die infiniten Teile des Komplexes, nicht zwangsläufig vor jedes andere Satzglied.}{The same pattern occurs in past counterfactuals. In a subordinate clause use dass er früher hätte kommen sollen. Hätte appears before the infinitive cluster, not necessarily before every adverbial.}
+\end{grammarentry}
+\begin{exbox}\begin{itemize}
+\Pair{Ich hätte früher anfangen sollen.}{I should have started earlier.}
+\Pair{Ich bedauere, dass ich früher hätte anfangen sollen.}{I regret that I should have started earlier.}
+\Pair{Wenn ich früher hätte kommen können, wäre ich gekommen.}{If I could have come earlier, I would have come.}
+\end{itemize}\end{exbox}
+
+\section{Passiv und lange Verbenketten \textnormal{(Passive and long chains)}}
+\begin{grammarentry}{werden, sein und Modalverb}{Vorgangs- und Zustandspassiv}
+\DEEN{Das \textbf{Vorgangspassiv} wird mit \textbf{werden + Partizip II} gebildet; das \textbf{Zustandspassiv} verwendet \textbf{sein + Partizip II}. Ein Modalverb kann ein Passiv regieren: \glqq Der Brief \textbf{muss geschrieben werden}\grqq. Beim Perfekt mit Modalverb ergibt sich ein langer Komplex mit Ersatzinfinitiv: \glqq Der Brief \textbf{hat geschrieben werden müssen}\grqq.}{The process passive uses werden + past participle, the state passive sein + past participle. A modal may govern a passive: Der Brief muss geschrieben werden. In the perfect with a modal, a long chain arises: Der Brief hat geschrieben werden müssen.}
+\DEEN{Perfekt des Vorgangspassivs: \textbf{ist geschrieben worden}; Futur II des Vorgangspassivs: \textbf{wird geschrieben worden sein}. In der gesprochenen Sprache und in klaren Texten sind kürzere Umschreibungen oft vorzuziehen.}{Perfect of the process passive: ist geschrieben worden; future perfect passive: wird geschrieben worden sein. Shorter alternatives are often clearer in speech and ordinary writing.}
+\end{grammarentry}
+\begin{exbox}\begin{itemize}
+\Pair{Der Brief wird geschrieben.}{The letter is being written.}
+\Pair{Der Brief ist geschrieben.}{The letter is written. (state)}
+\Pair{Der Brief ist geschrieben worden.}{The letter has been written. (process)}
+\Pair{Der Brief muss geschrieben werden.}{The letter must be written.}
+\Pair{Der Brief hat geschrieben werden müssen.}{The letter had to be written.}
+\Pair{Der Brief wird bis morgen geschrieben worden sein.}{The letter will have been written by tomorrow.}
+\Pair{Der Brief muss schon geschrieben worden sein.}{The letter must already have been written. (inference)}
+\end{itemize}\end{exbox}
+
+\section{Erweiterte Infinitivformen \textnormal{(Advanced non-finite forms)}}
+\begin{grammarentry}{Perfekt und Passiv als Infinitiv}{zu an der richtigen Stelle}
+\DEEN{Ein \textbf{Infinitiv Perfekt} besteht aus \textbf{Partizip II + haben/sein}: \glqq gelesen haben\grqq, \glqq angekommen sein\grqq. Mit zu wird die letzte Infinitivform markiert: \glqq gelesen \textbf{zu haben}\grqq. Ein \textbf{Infinitiv Passiv} lautet \glqq geschrieben werden\grqq, mit zu: \glqq geschrieben \textbf{zu werden}\grqq. Ein passiver Perfektinfinitiv lautet \glqq geschrieben worden \textbf{zu sein}\grqq.}{A perfect infinitive consists of participle + haben/sein. With zu, the final infinitive carries zu: gelesen zu haben. A passive infinitive is geschrieben werden, with zu: geschrieben zu werden. A passive perfect infinitive is geschrieben worden zu sein.}
+\DEEN{Bei Modalverben steht zu vor dem \textbf{höchsten abhängigen Infinitiv}: \glqq das Problem lösen \textbf{zu können}\grqq{} oder \glqq das Buch lesen \textbf{zu dürfen}\grqq. Die untergeordneten Verben behalten ihre von der jeweils höheren Form verlangten Formen.}{With modals, zu belongs to the highest infinitive required by the governing construction: das Problem lösen zu können or das Buch lesen zu dürfen. Lower verbs retain the forms required by their individual governors.}
+\end{grammarentry}
+\begin{exbox}\begin{itemize}
+\Pair{Ich hoffe, das Problem lösen zu können.}{I hope to be able to solve the problem.}
+\Pair{Sie behauptet, das Buch gelesen zu haben.}{She claims to have read the book.}
+\Pair{Er scheint rechtzeitig angekommen zu sein.}{He seems to have arrived on time.}
+\Pair{Er hofft, nicht beobachtet zu werden.}{He hopes not to be watched.}
+\Pair{Er behauptet, beobachtet worden zu sein.}{He claims to have been watched.}
+\end{itemize}\end{exbox}
+
+
+\section{Modalähnliche Konstruktionen \textnormal{(Semi-modal constructions)}}
+\begin{grammarentry}{scheinen, drohen, pflegen, haben zu, sein zu}{Bedeutungsunterschiede}
+\DEEN{\textbf{scheinen + zu-Infinitiv} drückt eine Einschätzung aus: \glqq Er scheint müde zu sein.\grqq{} \textbf{drohen + zu-Infinitiv} kann eine unerwünschte bevorstehende Entwicklung ausdrücken: \glqq Das Gebäude droht einzustürzen.\grqq{} \textbf{pflegen + zu-Infinitiv} bedeutet in gehobenem Stil eine Gewohnheit.}{Scheinen + zu expresses an assessment; drohen + zu can express an impending undesirable development; pflegen + zu denotes habitual behavior in formal style.}
+\DEEN{\textbf{haben + zu-Infinitiv} drückt häufig Pflicht aus: \glqq Du hast die Regeln zu beachten.\grqq{} \textbf{sein + zu-Infinitiv} kann Notwendigkeit oder Möglichkeit ausdrücken: \glqq Die Tür ist zu schließen\grqq{} (obligation) bzw. \glqq Der Fehler ist leicht zu beheben\grqq{} (possibility). Diese Konstruktionen gehören zum Verbalkomplex; deshalb steht normalerweise \textbf{kein Komma} zwischen ihren Teilen.}{Haben + zu often expresses obligation. Sein + zu can express necessity or possibility. These constructions belong to the verb cluster, so normally no comma separates its parts.}
+\DEEN{Beachte: \glqq Der Chef \textbf{droht, ihn zu entlassen}\grqq{} bedeutet eine Drohung einer Person und ist eine andere Konstruktion als \glqq Die Firma \textbf{droht pleitezugehen}\grqq{} (drohende Entwicklung).}{A person threatening to dismiss someone is a different construction from a company being in danger of going bankrupt.}
+\end{grammarentry}
+\begin{exbox}\begin{itemize}
+\Pair{Er scheint die Lösung gefunden zu haben.}{He seems to have found the solution.}
+\Pair{Der Plan droht zu scheitern.}{The plan is in danger of failing.}
+\Pair{Sie pflegt früh aufzustehen.}{She habitually gets up early. (formal)}
+\Pair{Sie haben die Vorschriften einzuhalten.}{You must comply with the regulations. (formal)}
+\Pair{Die Unterlagen sind noch zu prüfen.}{The documents still have to be checked.}
+\Pair{Dieses Problem ist leicht zu lösen.}{This problem can easily be solved.}
+\end{itemize}\end{exbox}
+
+\section{Lassen, Wahrnehmung und Subjektbezug \textnormal{(Causatives, perception and control)}}
+\begin{grammarentry}{Wer führt die Handlung aus?}{Subjektkontrolle und Objektkontrolle}
+\DEEN{Beim Kombinieren der Verben muss man unterscheiden, \textbf{wer die Handlung des Infinitivs ausführt}. Bei \glqq Ich verspreche dir, \textbf{zu kommen}\grqq{} komme \textbf{ich} (Subjektkontrolle). Bei \glqq Ich bitte dich, \textbf{zu kommen}\grqq{} kommst \textbf{du} (Objektkontrolle). Bei \glqq Ich sehe \textbf{ihn} kommen\grqq{} kommt \textbf{er}; bei \glqq Ich lasse \textbf{ihn} gehen\grqq{} geht \textbf{er}.}{Verb combinations differ in who performs the infinitival action. With promise, the subject typically performs it; with ask, the object does. In perception and causative constructions, the accusative participant typically performs the embedded event.}
+\DEEN{\textbf{lassen} kann kausativ (\glqq jemanden etwas machen lassen\grqq), permissiv (\glqq jemanden gehen lassen\grqq) oder in festen reflexiven Konstruktionen verwendet werden (\glqq Das lässt sich erklären\grqq). Die grammatischen Ergänzungen des eingebetteten Verbs bleiben wichtig.}{Lassen can be causative, permissive, or part of reflexive constructions such as Das lässt sich erklären. The embedded verb's complements still matter.}
+\end{grammarentry}
+\begin{exbox}\begin{itemize}
+\Pair{Ich verspreche dir, morgen zu kommen.}{I promise you that I will come tomorrow.}
+\Pair{Ich bitte dich, morgen zu kommen.}{I ask you to come tomorrow.}
+\Pair{Ich sehe ihn das Zimmer betreten.}{I see him enter the room.}
+\Pair{Ich lasse ihn das Zimmer betreten.}{I let him enter the room.}
+\Pair{Ich lasse mein Fahrrad reparieren.}{I have my bicycle repaired.}
+\Pair{Das Problem lässt sich lösen.}{The problem can be solved.}
+\end{itemize}\end{exbox}
+
+\section{Trennbare Verben und zu \textnormal{(Separable verbs and zu)}}
+\begin{grammarentry}{zu zwischen Präfix und Stamm}{zusammenschreiben}
+\DEEN{Bei \textbf{trennbaren Verben} steht zu zwischen Verbpartikel und Infinitivstamm: \textbf{anfangen $\rightarrow$ anzufangen}, \textbf{aufstehen $\rightarrow$ aufzustehen}, \textbf{weitermachen $\rightarrow$ weiterzumachen}. Bei \textbf{untrennbaren Verben} steht zu vor dem gesamten Infinitiv: \textbf{verstehen $\rightarrow$ zu verstehen}.}{In separable verbs, zu is inserted between the separable particle and the verb stem and written as one word. For inseparable verbs, zu precedes the whole infinitive.}
+\DEEN{Das normale Adverb \textbf{weiter} kann eine Fortsetzung ausdrücken, ohne dass ein zusätzliches Verb benötigt wird. \glqq Ich sollte es \textbf{weiter versuchen}\grqq{} entspricht englisch \glqq I should continue trying\grqq. Eine Umschreibung mit zwei Verben ist \glqq Ich sollte \textbf{fortfahren, es zu versuchen}\grqq, aber deutlich formeller.}{The adverb weiter can express continuation without an extra verb. Ich sollte es weiter versuchen means I should continue trying. A two-verb paraphrase with fortfahren is possible but distinctly more formal.}
+\end{grammarentry}
+\begin{exbox}\begin{itemize}
+\Pair{Ich versuche, morgen früher aufzustehen.}{I am trying to get up earlier tomorrow.}
+\Pair{Ich habe beschlossen, endlich anzufangen.}{I have decided to finally start.}
+\Pair{Ich verspreche, damit weiterzumachen.}{I promise to continue with it.}
+\Pair{Ich hoffe, alles zu verstehen.}{I hope to understand everything.}
+\Pair{Ich sollte es weiter versuchen.}{I should continue trying.}
+\Pair{Ich sollte fortfahren, es zu versuchen.}{I should continue trying. (formal)}
+\end{itemize}\end{exbox}
+
+\section{Negation und Bedeutungsbereich \textnormal{(Negation and scope)}}
+\begin{grammarentry}{nicht: Welches Verb wird verneint?}{Negationsskopus}
+\DEEN{Die Stellung von \textbf{nicht} kann zeigen, ob die Hauptaussage oder nur die Handlung der Infinitivgruppe verneint wird. \glqq Ich habe \textbf{nicht beschlossen}, weiterzuarbeiten\grqq{} verneint die Entscheidung; \glqq Ich habe beschlossen, \textbf{nicht weiterzuarbeiten}\grqq{} behauptet eine Entscheidung für das Aufhören.}{The placement of nicht may determine whether the main predicate or the embedded action is negated. I did not decide to continue working differs from I decided not to continue working.}
+\DEEN{\textbf{nicht müssen} bedeutet häufig \glqq nicht verpflichtet sein\grqq{} und nicht \glqq verpflichtet sein, es nicht zu tun\grqq. Für ein Verbot verwendet man meist \textbf{nicht dürfen}. \glqq Du musst nicht kommen\grqq{} und \glqq Du darfst nicht kommen\grqq{} sind grundverschieden.}{Nicht müssen usually means not being required to do something, whereas nicht dürfen expresses prohibition. Du musst nicht kommen and Du darfst nicht kommen have very different meanings.}
+\end{grammarentry}
+\begin{exbox}\begin{itemize}
+\Pair{Ich habe nicht beschlossen, weiterzuarbeiten.}{I have not decided to continue working.}
+\Pair{Ich habe beschlossen, nicht weiterzuarbeiten.}{I have decided not to continue working.}
+\Pair{Du musst morgen nicht arbeiten.}{You do not have to work tomorrow.}
+\Pair{Du darfst morgen nicht arbeiten.}{You are not allowed to work tomorrow.}
+\Pair{Er scheint nicht kommen zu können.}{He seems unable to come.}
+\end{itemize}\end{exbox}
+
+\section{Vorfeld und Umstellung \textnormal{(Fronting verb cluster parts)}}
+\begin{grammarentry}{Infinite Teile im Vorfeld}{betonte Wortstellung C1--C2}
+\DEEN{Ein infinites Verb oder eine zusammengehörige Folge infiniter Verbformen kann aus der rechten Satzklammer ins \textbf{Vorfeld} vor das finite Verb treten. Das ergibt häufig \textbf{Kontrast oder Hervorhebung}: \glqq \textbf{Arbeiten} muss ich heute nicht.\grqq{} Auch \glqq \textbf{Gelesen haben} soll er das Buch\grqq{} ist möglich. Nicht beliebige Teile einer längeren Kette sind frei beweglich; die interne Abhängigkeit setzt Grenzen.}{A non-finite verb or a coherent group of non-finite verbs can move to the preverbal field for emphasis: Arbeiten muss ich heute nicht. Gelesen haben soll er das Buch is also possible. Not every piece of a larger chain can be moved independently; structural dependencies limit fronting.}
+\end{grammarentry}
+\begin{exbox}\begin{itemize}
+\Pair{Arbeiten muss ich heute nicht.}{Work is not something I have to do today.}
+\Pair{Schwimmen kann er schon sehr gut.}{He can already swim very well.}
+\Pair{Gelesen haben soll er das Buch bereits.}{He is said to have read the book already.}
+\Pair{Geschrieben worden sein kann der Bericht noch nicht.}{The report cannot have been written yet.}
+\end{itemize}\end{exbox}
+
+\section{Kommasetzung nach dem Regelwerk 2024 \textnormal{(Comma rules since 2024)}}
+\begin{grammarentry}{Satzwertige Infinitivgruppe}{Komma grundsätzlich obligatorisch}
+\DEEN{Nach dem \textbf{Amtlichen Regelwerk 2024}, §\,73, werden \textbf{satzwertige Infinitivgruppen} wie Nebensätze mit Komma abgegrenzt. Dies gilt insbesondere für \textbf{erweiterte} zu-Infinitive nach Verben, Nomen und Adjektiven sowie nach \textbf{um, ohne, statt/anstatt, als, außer}. Eingeschobene Gruppen werden mit zwei Kommas abgegrenzt.}{Under the 2024 official spelling rules, clause-like infinitive groups are separated by commas, including extended zu-infinitives dependent on verbs, nouns, and adjectives, and those introduced by um, ohne, statt/anstatt, als, or außer. An inserted group is set off with two commas.}
+\DEEN{Ein \textbf{einfacher, nicht erweiterter} zu-Infinitiv kann in bestimmten Fällen ohne Komma stehen: \glqq Er bat sie(,) mitzukommen.\grqq{} Bei \textbf{Hilfs- und Halbmodalverbkomplexen} wie \glqq Er scheint zu schlafen\grqq, \glqq Sie hat zu arbeiten\grqq{} setzt man dagegen \textbf{kein} Komma zwischen die Prädikatsteile. Außerdem gibt es Grenzfälle bei eng verbundenen Verben; daher ist nicht jedes zu ein Kommasignal.}{An unexpanded simple zu-infinitive can sometimes occur without a comma. In auxiliary or semi-modal verb clusters, e.g. Er scheint zu schlafen or Sie hat zu arbeiten, no comma separates the predicate components. Some tightly integrated constructions are borderline cases; zu alone does not determine comma placement.}
+\DEEN{Bei zweifelhaften Konstruktionen mit \textbf{versuchen, wagen, versprechen} kann die Grenze zwischen einem einheitlichen Verbalkomplex und einer satzwertigen Infinitivgruppe fließend sein. Die Form \glqq Ich versuche, die Aufgabe zu lösen\grqq{} ist eine gut lesbare Standardvariante; nicht jede Variante ohne Komma ist automatisch falsch.}{With some verbs such as versuchen, wagen, or versprechen, boundaries between a tightly integrated verbal construction and an infinitive clause can be fluid. A comma in Ich versuche, die Aufgabe zu lösen is a clear standard choice; not every version without a comma is necessarily wrong.}
+\end{grammarentry}
+\begin{exbox}\begin{itemize}
+\Pair{Sie plant, mit dem Zug zu fahren.}{She plans to travel by train. (comma required)}
+\Pair{Ich wünsche mir, bald Deutsch fließend sprechen zu können.}{I wish to be able to speak German fluently soon.}
+\Pair{Ohne lange nachzudenken, stimmte er zu.}{Without thinking for long, he agreed.}
+\Pair{Der Wunsch, endlich nach Hause zu gehen, war groß.}{The desire to finally go home was strong.}
+\Pair{Er bat sie(,) mitzukommen.}{He asked her to come along. (comma may be omitted)}
+\Pair{Er scheint die Nachricht verstanden zu haben.}{He seems to have understood the news. (no comma)}
+\Pair{Das ist morgen zu erledigen.}{This must be done tomorrow. (no comma)}
+\end{itemize}\end{exbox}
+
+\section{Häufige Fehler \textnormal{(Common errors)}}
+\begin{grammarentry}{Fehlerdiagnose}{falsch und richtig}
+\DEEN{\textbf{Fehler 1:} Jedes infinitive Verb erhält zu. \textbf{Richtig}: Das jeweilige regierende Verb bestimmt die Form.}{Error 1: Putting zu before every infinitive. Correct: each governing verb selects the form.}
+\DEEN{\textbf{Fehler 2:} Die finite Verbform wird im Hauptsatz ans Satzende gesetzt. \textbf{Richtig}: Im gewöhnlichen Hauptsatz steht sie auf Position zwei.}{Error 2: Placing the finite verb at the end of a declarative main clause. Correct: verb-second order.}
+\DEEN{\textbf{Fehler 3:} Das Perfekt eines Modalverbs mit Infinitiv wird gewöhnlich durch sein Partizip gebildet. \textbf{Richtig}: Ersatzinfinitiv.}{Error 3: Using a modal participle in the perfect with a dependent infinitive. Correct: substitute infinitive.}
+\DEEN{\textbf{Fehler 4:} zu wird bei trennbaren Verben vor die Partikel gestellt. \textbf{Richtig}: Partikel + zu + Verbstamm.}{Error 4: Placing zu before the separable particle. Correct: particle + zu + verb stem.}
+\DEEN{\textbf{Fehler 5:} Beim Nebensatz mit Ersatzinfinitiv steht das finite haben automatisch ganz hinten. \textbf{Richtig}: Oberfeldstellung beachten.}{Error 5: Automatically putting finite haben at the very end of a subordinate clause with a substitute infinitive. Correct: recognize upper-field positioning.}
+\end{grammarentry}
+\begin{exbox}\begin{itemize}
+\Pair{Falsch: Ich kann zu gehen. \quad Richtig: Ich kann gehen.}{Wrong: zu after können. Correct: bare infinitive.}
+\Pair{Falsch: Ich will gehen zu können. \quad Richtig: Ich will gehen können.}{Wrong: zu after wollen in this pattern. Correct: two bare infinitives.}
+\Pair{Falsch: Ich gestern habe gehen müssen. \quad Richtig: Ich habe gestern gehen müssen.}{Wrong: finite verb position. Correct: verb second.}
+\Pair{Falsch: Er hat arbeiten gemusst. \quad Richtig: Er hat arbeiten müssen.}{Wrong: ordinary participle in this modal cluster. Correct: substitute infinitive.}
+\Pair{Falsch: Ich versuche, zu anfangen. \quad Richtig: Ich versuche, anzufangen.}{Wrong: placement of zu in a separable verb.}
+\Pair{Falsch: Ich hoffe, Deutsch zu lernen zu können. \quad Richtig: Ich hoffe, Deutsch lernen zu können.}{Wrong: redundant infinitive marker.}
+\end{itemize}\end{exbox}
+
+
+\section{Konjunktiv, indirekte Rede und Modalität \textnormal{(Subjunctive and reported speech)}}
+\begin{grammarentry}{Konjunktiv I und II}{mit Verbketten}
+\DEEN{\textbf{Konjunktiv I} kann indirekte Rede markieren: \glqq Er behauptet, er \textbf{habe arbeiten müssen}\grqq. \textbf{Konjunktiv II} kann Irreales oder eine verpasste Möglichkeit ausdrücken: \glqq Er \textbf{hätte länger schlafen können}\grqq. Bei der Kombination mit einem Modalverb und Perfekt gilt erneut der \textbf{Ersatzinfinitiv}.}{Subjunctive I can mark reported speech, whereas subjunctive II can express counterfactuality or a missed possibility. Combining past tense and modals again produces a substitute infinitive.}
+\DEEN{\textbf{würde + Infinitiv} ist eine weitere Konjunktiv-II-Umschreibung, insbesondere bei Vollverben: \glqq Ich würde kommen\grqq. Das ist nicht mit dem Futur \glqq Ich werde kommen\grqq{} identisch. \glqq Ich würde kommen können\grqq{} ist möglich, aber meist einfacher durch \glqq Ich könnte kommen\grqq{} zu ersetzen.}{Würde + infinitive can express conditional meaning; it differs from the future auxiliary werde. Ich würde kommen können is possible but Ich könnte kommen is usually simpler.}
+\end{grammarentry}
+\begin{exbox}\begin{itemize}
+\Pair{Er behauptet, er habe gestern arbeiten müssen.}{He claims that he had to work yesterday.}
+\Pair{Er hätte früher kommen müssen.}{He should have come earlier.}
+\Pair{Ich hätte gestern länger schlafen können.}{I could have slept longer yesterday.}
+\Pair{Wenn ich mehr Zeit hätte, würde ich häufiger lesen.}{If I had more time, I would read more often.}
+\Pair{Ich könnte morgen kommen.}{I could come tomorrow.}
+\end{itemize}\end{exbox}
+
+\section{Stil und Verständlichkeit bis C2 \textnormal{(Style and readability up to C2)}}
+\begin{grammarentry}{Grammatisch möglich ist nicht immer gut}{Textkompetenz}
+\DEEN{Im Deutschen lassen sich Verbalkomplexe teilweise mit vier oder mehr Verbformen bilden. Je länger die Kette, desto schwerer wird die \textbf{Zuordnung von Zeit, Modalität, Passiv und Subjekt}. Auf C1/C2-Niveau ist deshalb nicht das Bauen maximal langer Ketten entscheidend, sondern das \textbf{Erkennen, Umformen und gezielte Vereinfachen}.}{German permits some clusters with four or more verb forms. As they grow, tense, modality, voice, and subject assignment become harder to parse. At C1/C2, the key skill is to recognize, paraphrase, and selectively simplify them rather than to maximize cluster length.}
+\DEEN{Verteile komplexe Inhalte auf Teilsätze, wenn dies Klarheit schafft. Die Paraphrase soll jedoch dieselbe Bedeutung behalten: Eine Pflicht, eine Vermutung und eine Möglichkeit dürfen nicht einfach verwechselt werden.}{Split information into clauses where this improves clarity. A paraphrase must preserve whether the original expressed obligation, inference, or possibility.}
+\end{grammarentry}
+\begin{exbox}\begin{itemize}
+\Pair{Der Vertrag hätte gestern unterschrieben werden müssen.}{The contract should have been signed yesterday.}
+\Pair{Es wäre notwendig gewesen, den Vertrag gestern zu unterschreiben.}{It would have been necessary to sign the contract yesterday. (paraphrase)}
+\Pair{Ich habe das Buch bis gestern lesen können.}{I was able to read the book by yesterday.}
+\Pair{Es war mir möglich, das Buch bis gestern zu lesen.}{It was possible for me to read the book by yesterday. (paraphrase)}
+\Pair{Der Bericht muss bereits geprüft worden sein.}{The report must already have been checked. (inference)}
+\Pair{Ich nehme an, dass der Bericht bereits geprüft wurde.}{I assume that the report has already been checked. (explanatory paraphrase)}
+\end{itemize}\end{exbox}
+
+\section{Übungen nach Niveau \textnormal{(Exercises by level)}}
+\begin{grammarentry}{Aufgaben B1--B2}{Formwahl und Stellung}
+\DEEN{Ergänze die Lücken oder verbinde die vorgegebenen Verben. Achte auf die vom jeweils höheren Verb verlangte Form. Die Lösungen stehen im nächsten Abschnitt.}{Fill in the gaps or combine the given verbs. Pay attention to the form governed by the higher verb. Solutions are in the next section.}
+\end{grammarentry}
+\begin{enumerate}[label=\textbf{\arabic*.}]
+\item (B1) Ich will morgen früher \underline{\hspace{2.5cm}}. (aufstehen)
+\item (B1) Ich hoffe, morgen früher \underline{\hspace{3cm}}. (aufstehen)
+\item (B1) Ich habe gestern lange \underline{\hspace{2.6cm}}. (arbeiten)
+\item (B2) Ich hoffe, den Text lesen \underline{\hspace{3cm}}. (können)
+\item (B2) Er hat gestern lange arbeiten \underline{\hspace{3cm}}. (müssen)
+\item (B2) Ordne: \textit{weil / heute / arbeiten / er / muss}.
+\item (B2) Ordne: \textit{dass / sie / lesen / den Text / versucht / zu}.
+\item (B2) Komma ergänzen: \textit{Er plant im Sommer intensiver Deutsch zu lernen}.
+\end{enumerate}
+\begin{grammarentry}{Aufgaben C1--C2}{Ersatzinfinitiv, Passiv und Skopus}
+\DEEN{Bilde idiomatische Standardsätze; beurteile die Bedeutungsunterschiede. Wenn eine komplexe Konstruktion entsteht, prüfe zuerst die Abhängigkeiten und danach die Wortstellung.}{Form standard sentences and identify semantic contrasts. For complex constructions, check dependencies before word order.}
+\end{grammarentry}
+\begin{enumerate}[label=\textbf{\arabic*.},start=9]
+\item (C1) Ordne zum Nebensatz: \textit{weil / gestern / er / arbeiten / hat / müssen}.
+\item (C1) Perfekt mit lassen: \textit{Ich / das Auto / reparieren / lassen} (gestern).
+\item (C1) Vorgangspassiv mit Modalverb: \textit{Der Brief / schreiben / müssen} (Präsens).
+\item (C1) Ersetze durch einen Infinitiv Perfekt: \textit{Sie behauptet: Ich habe den Bericht gelesen}.
+\item (C2) Bilde Konjunktiv II Vergangenheit: \textit{Er / früher / kommen / sollen}.
+\item (C2) Bilde den Nebensatz: \textit{Wenn / ich / früher / kommen / können / hätte}, wäre ich gekommen.
+\item (C2) Unterscheide die Bedeutung: \textit{Er muss gekommen sein} / \textit{Er hat kommen müssen}.
+\item (C2) Entscheide: \textit{Ich habe nicht beschlossen, weiterzuarbeiten} / \textit{Ich habe beschlossen, nicht weiterzuarbeiten}.
+\item (C2) Bilde: \textit{Der Vertrag / unterschreiben / müssen} (Konjunktiv II Vergangenheit, Passiv).
+\item (C2) Warum ist \textit{Ich hoffe, Deutsch zu lernen zu können} falsch? Gib die richtige Fassung an.
+\end{enumerate}
+
+\section{Lösungen mit Erläuterungen \textnormal{(Answer key and explanations)}}
+\begin{exbox}\begin{itemize}
+\Pair{1. Ich will morgen früher aufstehen.}{Will governs a bare infinitive.}
+\Pair{2. Ich hoffe, morgen früher aufzustehen.}{Hoffen takes a zu-infinitive; zu is inserted in the separable verb.}
+\Pair{3. Ich habe gestern lange gearbeitet.}{Perfekt: haben + past participle.}
+\Pair{4. Ich hoffe, den Text lesen zu können.}{Hoffen governs zu können; können governs bare lesen.}
+\Pair{5. Er hat gestern lange arbeiten müssen.}{A modal with dependent infinitive uses the substitute infinitive in the perfect.}
+\Pair{6. ..., weil er heute arbeiten muss.}{Ordinary finite verb-final order.}
+\Pair{7. ..., dass sie versucht, den Text zu lesen.}{Finite versucht belongs to the subordinate clause; zu lesen is an infinitive clause.}
+\Pair{8. Er plant, im Sommer intensiver Deutsch zu lernen.}{A clause-like extended infinitive group requires a comma under the 2024 rules.}
+\Pair{9. ..., weil er gestern hat arbeiten müssen.}{The finite auxiliary haben precedes the substitute-infinitive cluster.}
+\Pair{10. Ich habe gestern das Auto reparieren lassen.}{Perfect with lassen and the substitute infinitive.}
+\Pair{11. Der Brief muss geschrieben werden.}{A modal governs a process passive in the infinitive.}
+\Pair{12. Sie behauptet, den Bericht gelesen zu haben.}{Perfect infinitive: participle + zu haben.}
+\Pair{13. Er hätte früher kommen sollen.}{Counterfactual past with substitute infinitive.}
+\Pair{14. Wenn ich früher hätte kommen können, wäre ich gekommen.}{Upper-field placement of hätte in the subordinate clause.}
+\Pair{15. Er muss gekommen sein: Schlussfolgerung. Er hat kommen müssen: frühere Verpflichtung.}{Must have come: inference. Had to come: past obligation.}
+\Pair{16. Erstes Beispiel: keine Entscheidung zur Fortsetzung. Zweites: Entscheidung, nicht fortzusetzen.}{First: no decision to continue. Second: decision not to continue.}
+\Pair{17. Der Vertrag hätte unterschrieben werden müssen.}{Passive + counterfactual past + substitute modal infinitive.}
+\Pair{18. Ich hoffe, Deutsch lernen zu können.}{Only können receives zu from hoffen; lernen remains bare after können.}
+\end{itemize}\end{exbox}
+
+\section{Entscheidungsalgorithmus und Merksätze \textnormal{(Decision procedure and key rules)}}
+\begin{grammarentry}{Praktischer Algorithmus}{in fünf Schritten}
+\DEEN{\textbf{1.} Bestimme das eigentliche Vollverb und seine Ergänzungen (Kasus, Präposition, Reflexivpronomen). \textbf{2.} Bestimme jede übergeordnete Verbform und deren \textbf{Statusrektion} (ohne zu, mit zu, Partizip II). \textbf{3.} Wähle Tempus, Modus, Aktiv/Passiv und prüfe gegebenenfalls den \textbf{Ersatzinfinitiv}. \textbf{4.} Ordne die Verbformen entsprechend \textbf{V2, V1 oder Verbletzt}; beachte das \textbf{Oberfeld}. \textbf{5.} Prüfe die Grenzen von Infinitivgruppen und die \textbf{Kommasetzung}.}{1. Identify the lexical verb and its complements. 2. Check the status required by each higher verb. 3. Select tense, mood, voice, and any substitute infinitive. 4. Order verbs according to main-clause, question, or subordinate-clause word order, including upper-field effects. 5. Check infinitive-clause boundaries and commas.}
+\DEEN{\textbf{Merksätze:} Nicht alle Verben verlangen zu. Zu gehört zum \textbf{richtigen Verb}, nicht pauschal zur ganzen Reihe. Ein finites Verb wird pro finitem Teilsatz gesetzt. Im Perfekt mit Modalverb + Infinitiv steht normalerweise der Ersatzinfinitiv. Eine lange grammatisch mögliche Kette ist nicht immer eine gute stilistische Wahl.}{Key rules: Not all verbs require zu. Zu attaches to the appropriate verb, not automatically to the whole sequence. Each finite clause has its finite predicate. Modal + infinitive in the perfect normally takes a substitute infinitive. A grammatically possible long cluster is not necessarily stylistically advisable.}
+\end{grammarentry}
+
+\section{Quellen und verwandte Lernblätter \textnormal{(References and related learning sheets)}}
+\begin{itemize}
+\item Leibniz-Institut für Deutsche Sprache (IDS), \textit{Verbalkomplex, wissenschaftliche Terminologie}: \url{https://grammis.ids-mannheim.de/terminologie/398}
+\item IDS, \textit{Status}: \url{https://grammis.ids-mannheim.de/terminologie/2017}
+\item IDS, \textit{Rektion und Determination im Verbalkomplex}: \url{https://grammis.ids-mannheim.de/systematische-grammatik/1520}
+\item IDS, \textit{Ersatzinfinitiv}: \url{https://grammis.ids-mannheim.de/systematische-grammatik/1615}
+\item IDS, \textit{Oberfeld}: \url{https://grammis.ids-mannheim.de/terminologie/2106}
+\item IDS, \textit{Modalverben im Verbalkomplex}: \url{https://grammis.ids-mannheim.de/systematische-grammatik/1543}
+\item IDS, \textit{helfen und brauchen mit/ohne zu}: \url{https://grammis.ids-mannheim.de/fragen/98}
+\item Rat für deutsche Rechtschreibung, \textit{Amtliches Regelwerk 2024}, besonders §\,73: \url{https://www.rechtschreibrat.com/DOX/RfdR_Amtliches-Regelwerk_2024.pdf}
+\item Duden, \textit{Das Komma bei Infinitivgruppen}: \url{https://www.duden.de/sprachwissen/sprachratgeber/Das-Komma-bei-Infinitivgruppen}
+\item \textbf{Projektintern:} \path{src/part/grammar/part/satz/kind/infinitiv/infinitiv.tex} und \path{src/part/grammar/part/satz/kind/infinitiv/kind/infinitivgruppe/infinitivgruppe.tex} vertiefen Infinitivgruppen; \path{src/part/grammar/part/satz/wortstellung/wortstellung.tex} behandelt die allgemeinere Wortstellung.
+\end{itemize}
+\end{document}
