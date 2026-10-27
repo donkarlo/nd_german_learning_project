@@ -1,0 +1,326 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage[a4paper,margin=2cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman,english]{babel}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage[table]{xcolor}
+\usepackage{parskip}
+\usepackage{enumitem}
+\usepackage[most]{tcolorbox}
+\usepackage{titlesec}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage[hidelinks]{hyperref}
+\definecolor{HeaderBlueDark}{RGB}{70,110,170}
+\definecolor{RowBlueLight}{RGB}{235,243,255}
+\definecolor{RowBlueDark}{RGB}{220,233,250}
+\definecolor{SoftGray}{RGB}{90,90,90}
+\setlength{\parindent}{0pt}
+\setlist[itemize]{leftmargin=1.4em,itemsep=0.28em,topsep=0.3em}
+\setlist[enumerate]{leftmargin=1.6em,itemsep=0.28em,topsep=0.3em}
+\renewcommand{\arraystretch}{1.36}
+\setlength{\tabcolsep}{4pt}
+\linespread{1.04}
+\titleformat{\section}[block]{\Large\bfseries\color{HeaderBlueDark}}{}{0pt}{}
+\titlespacing{\section}{0pt}{1.25em}{0.7em}
+\titleformat{\subsection}[block]{\large\bfseries\color{HeaderBlueDark}}{}{0pt}{}
+\titlespacing{\subsection}{0pt}{0.95em}{0.5em}
+\newtcolorbox{exbox}{enhanced,breakable,colback=RowBlueLight,colframe=RowBlueDark,boxrule=0.4pt,arc=1.5mm,left=1.2mm,right=1.2mm,top=1mm,bottom=1mm,title={Beispiele \textnormal{(Examples)}},fonttitle=\bfseries,colbacktitle=RowBlueDark,coltitle=black}
+\NewDocumentEnvironment{grammarentry}{mm+b}{\begin{tcolorbox}[enhanced,breakable,colback=white,colframe=HeaderBlueDark,boxrule=0.6pt,arc=1.5mm,left=1.5mm,right=1.5mm,top=1mm,bottom=1mm,colbacktitle=HeaderBlueDark,coltitle=white,fonttitle=\bfseries,title={#1\hfill\normalfont\footnotesize #2}]#3\end{tcolorbox}}{}
+\newcommand{\GermanText}[1]{\textbf{Deutsch: }#1\par}
+\newcommand{\EnglishText}[1]{{\small\color{SoftGray}\textbf{English: }#1\par}}
+\newcommand{\ExampleItem}[2]{\item \textbf{#1}\\{\small\color{SoftGray}#2}}
+\newcommand{\TableEnglish}[1]{{\small\color{SoftGray}\textbf{English: }#1\par}}
+\newcommand{\Endungstabelle}[1]{\begin{center}#1\end{center}}
+\title{Attributive Adjektive\\\large Attributive Adjectives in German}
+\date{}
+\begin{document}
+\maketitle
+\tableofcontents
+\newpage
+
+\section{Definition und Hauptregel \textnormal{(Definition and main rule)}}
+\begin{grammarentry}{Attributives Adjektiv}{adjective modifying a noun}
+\GermanText{Ein \textbf{attributives Adjektiv} beschreibt oder bestimmt ein Substantiv \textbf{innerhalb einer Nominalgruppe}. In der normalen Stellung steht es \textbf{vor dem Substantiv} und erhält meist eine \textbf{Deklinationsendung}. Die Deklinationsendung zeigt zusammen mit dem Begleiter Informationen über Kasus, Genus und Numerus.}
+\EnglishText{An \textbf{attributive adjective} describes or specifies a noun \textbf{inside a noun phrase}. In the normal position, it appears \textbf{before the noun} and usually takes a \textbf{declensional ending}. Together with the determiner, that ending expresses case, gender and number.}
+\GermanText{Grundmuster: \textbf{(Begleiter) + (Adverb) + Adjektiv mit Endung + Nomen}. Ein Begleiter ist beispielsweise der, ein, mein oder dieser.}
+\EnglishText{Basic pattern: \textbf{(determiner) + (adverb) + inflected adjective + noun}. A determiner may be der, ein, mein or dieser.}
+\end{grammarentry}
+\begin{exbox}\begin{itemize}
+\ExampleItem{ein \underline{interessantes} Buch}{an interesting book}
+\ExampleItem{die \underline{neue} Methode}{the new method}
+\ExampleItem{mit \underline{guten} Freunden}{with good friends}
+\ExampleItem{ein sehr \underline{schwieriges} Problem}{a very difficult problem; sehr is an adverb and does not change}
+\end{itemize}\end{exbox}
+
+\section{Attributiv, prädikativ, adverbial \textnormal{(Attributive, predicative, adverbial)}}
+\begin{grammarentry}{Drei verschiedene Funktionen}{three syntactic uses}
+\GermanText{\textbf{Attributiv}: Das Adjektiv ist Teil der Nominalgruppe. Es steht typischerweise vor dem Nomen und wird dekliniert: \emph{das schnelle Auto}.}
+\EnglishText{\textbf{Attributive}: The adjective is part of the noun phrase, normally preceding the noun and inflected: \emph{the fast car}.}
+\GermanText{\textbf{Prädikativ}: Das Adjektiv folgt zum Beispiel auf \emph{sein, werden, bleiben} und bleibt ohne Adjektivendung: \emph{Das Auto ist schnell}.}
+\EnglishText{\textbf{Predicative}: The adjective follows, for example, \emph{sein, werden, bleiben} and does not take an adjective ending: \emph{The car is fast}.}
+\GermanText{\textbf{Adverbial}: Das Adjektiv beschreibt ein Verb oder einen Vorgang und bleibt ebenfalls ungebeugt: \emph{Das Auto fährt schnell}. \emph{schnell} ist hier ein adverbial verwendetes Adjektiv.}
+\EnglishText{\textbf{Adverbial}: The adjective describes a verb or action and also remains uninflected: \emph{The car drives fast}. Here \emph{schnell} is an adjective used adverbially.}
+\end{grammarentry}
+\begin{exbox}\begin{itemize}
+\ExampleItem{Eine kluge Frau antwortet ruhig.}{A clever woman answers calmly. (kluge: attributive; ruhig: adverbial)}
+\ExampleItem{Die Frau ist klug.}{The woman is clever. (predicative)}
+\ExampleItem{Ich finde die Antwort hilfreich.}{I find the answer helpful. (helpful is a predicative complement, not an attributive adjective)}
+\end{itemize}\end{exbox}
+
+\section{Wovon hängt die Endung ab? \textnormal{(What determines the ending?)}}
+\begin{grammarentry}{Vier Entscheidungen}{four decisions}
+\GermanText{\textbf{1. Kasus}: Nominativ, Akkusativ, Dativ oder Genitiv. \textbf{2. Genus}: maskulin, feminin oder neutrum. \textbf{3. Numerus}: Singular oder Plural. \textbf{4. Begleiter}: bestimmter Artikel, ein-/kein-/Possessivartikel oder kein Artikel.}
+\EnglishText{\textbf{1. Case}: nominative, accusative, dative or genitive. \textbf{2. Gender}: masculine, feminine or neuter. \textbf{3. Number}: singular or plural. \textbf{4. Determiner}: definite article, ein-/kein-/possessive article, or no article.}
+\GermanText{Die drei Deklinationstypen heißen \textbf{schwach}, \textbf{gemischt} und \textbf{stark}. Es ist \textbf{kein festes Merkmal des Adjektivs}: Dasselbe Adjektiv kann alle drei Formen annehmen.}
+\EnglishText{The three declension patterns are \textbf{weak}, \textbf{mixed} and \textbf{strong}. They are \textbf{not permanent properties of an adjective}: the same adjective can use all three.}
+\end{grammarentry}
+\begin{exbox}\begin{itemize}
+\ExampleItem{der gute Plan -- ein guter Plan -- guter Rat}{the good plan -- a good plan -- good advice (weak -- mixed -- strong)}
+\ExampleItem{Wir lesen den interessanten Artikel.}{We read the interesting article. (accusative masculine)}
+\ExampleItem{Wir helfen der freundlichen Frau.}{We help the friendly woman. (dative feminine)}
+\end{itemize}\end{exbox}
+
+\section{Die vollständigen Endungstabellen \textnormal{(Complete ending tables)}}
+\subsection{Schwache Deklination \textnormal{(Weak declension)}}
+\GermanText{Nach Begleitern mit deutlich erkennbaren Kasus-/Genusendungen, typischerweise \textbf{der, die, das; dieser; jener; jeder; welcher} und im Plural \textbf{alle, beide}, erhält das Adjektiv gewöhnlich nur \textbf{-e} oder \textbf{-en}.}
+\EnglishText{After determiners with clear case/gender markers, typically \textbf{der, die, das; dieser; jener; jeder; welcher}, and in the plural \textbf{alle, beide}, the adjective usually has only \textbf{-e} or \textbf{-en}.}
+\rowcolors{2}{RowBlueLight}{RowBlueDark}
+\begin{center}\begin{tabular}{>{\bfseries}p{2.2cm}|*{4}{>{\centering\arraybackslash}p{2.65cm}}}
+\rowcolor{HeaderBlueDark}\color{white}Kasus (Case)&\color{white}Mask. (M.)&\color{white}Fem. (F.)&\color{white}Neutr. (N.)&\color{white}Plural (Pl.)\\
+Nominativ&der gute&die gute&das gute&die guten\\
+Akkusativ&den guten&die gute&das gute&die guten\\
+Dativ&dem guten&der guten&dem guten&den guten\\
+Genitiv&des guten&der guten&des guten&der guten\\
+\end{tabular}\end{center}
+\TableEnglish{Forms shown with \emph{gut} (good) after the definite article. The plural has -en in every case.}
+
+\subsection{Gemischte Deklination \textnormal{(Mixed declension)}}
+\GermanText{Nach \textbf{ein, kein} und \textbf{Possessivartikeln} (mein, dein, sein, ihr, unser, euer, Ihr) übernimmt das Adjektiv dort die starke Endung, wo der Begleiter keine klare Endung zeigt. Sonst ist es schwach. \textbf{Ein} besitzt keine Pluralform; für Pluralbeispiele wird \textbf{kein} benutzt.}
+\EnglishText{After \textbf{ein, kein} and \textbf{possessive determiners}, the adjective carries the strong marker wherever the determiner has no explicit ending; otherwise it uses a weak ending. \textbf{Ein} has no plural; the plural examples use \textbf{kein}.}
+\rowcolors{2}{RowBlueLight}{RowBlueDark}
+\begin{center}\begin{tabular}{>{\bfseries}p{2.2cm}|*{4}{>{\centering\arraybackslash}p{2.65cm}}}
+\rowcolor{HeaderBlueDark}\color{white}Kasus (Case)&\color{white}Mask. (M.)&\color{white}Fem. (F.)&\color{white}Neutr. (N.)&\color{white}Plural (Pl.)\\
+Nominativ&ein guter&eine gute&ein gutes&keine guten\\
+Akkusativ&einen guten&eine gute&ein gutes&keine guten\\
+Dativ&einem guten&einer guten&einem guten&keinen guten\\
+Genitiv&eines guten&einer guten&eines guten&keiner guten\\
+\end{tabular}\end{center}
+\TableEnglish{Mixed pattern with \emph{ein} in the singular and \emph{kein} in the plural. The same adjective endings occur with possessive determiners.}
+
+\subsection{Starke Deklination \textnormal{(Strong declension)}}
+\GermanText{Ohne Artikel oder vergleichbaren Begleiter trägt das Adjektiv meist die wesentlichen Kasus-/Genusendungen. \textbf{Ausnahme:} Im Genitiv Singular Maskulin/Neutrum lautet die Adjektivendung im Normalfall \textbf{-en}; das Substantiv trägt dort gewöhnlich zusätzlich \textbf{-(e)s}.}
+\EnglishText{Without an article or comparable determiner, the adjective usually carries the key case/gender marker. \textbf{Exception:} In masculine/neuter genitive singular, the adjective normally ends in \textbf{-en}, while the noun usually additionally ends in \textbf{-(e)s}.}
+\rowcolors{2}{RowBlueLight}{RowBlueDark}
+\begin{center}\begin{tabular}{>{\bfseries}p{2.2cm}|*{4}{>{\centering\arraybackslash}p{2.65cm}}}
+\rowcolor{HeaderBlueDark}\color{white}Kasus (Case)&\color{white}Mask. (M.)&\color{white}Fem. (F.)&\color{white}Neutr. (N.)&\color{white}Plural (Pl.)\\
+Nominativ&guter&gute&gutes&gute\\
+Akkusativ&guten&gute&gutes&gute\\
+Dativ&gutem&guter&gutem&guten\\
+Genitiv&guten&guter&guten&guter\\
+\end{tabular}\end{center}
+\TableEnglish{Strong endings for \emph{gut} without an article. Nouns are omitted here so that endings are easier to compare.}
+\begin{exbox}\begin{itemize}
+\ExampleItem{frischer Kaffee; frisches Wasser; frische Luft}{fresh coffee; fresh water; fresh air}
+\ExampleItem{mit frischem Kaffee; mit guten Freunden}{with fresh coffee; with good friends}
+\ExampleItem{wegen starken Regens; trotz schlechten Wetters}{because of heavy rain; despite bad weather (genitive masculine/neuter)}
+\end{itemize}\end{exbox}
+
+\section{Begleiter erkennen \textnormal{(Recognizing determiners)}}
+\begin{grammarentry}{Schnellübersicht}{which pattern?}
+\GermanText{\textbf{Schwach}: \emph{der, dieser, jener, jeder, welcher} und normalerweise \emph{alle/beide} im Plural. \textbf{Gemischt}: \emph{ein, kein, mein, dein, sein, ihr, unser, euer, Ihr}. \textbf{Stark}: kein bestimmender Artikel, insbesondere bloßer Plural oder ein Stoffname ohne Artikel.}
+\EnglishText{\textbf{Weak}: \emph{der, dieser, jener, jeder, welcher}, and generally \emph{alle/beide} in the plural. \textbf{Mixed}: \emph{ein, kein, mein, dein, sein, ihr, unser, euer, Ihr}. \textbf{Strong}: no determining article, particularly bare plurals and uncountable nouns without an article.}
+\GermanText{\textbf{Wichtig:} Mengenwörter wie \emph{viele, wenige, einige, mehrere, manche} sind keine einfache Kopie der \emph{der}-Gruppe: \emph{viele gute Ideen, einige interessante Bücher, manche schwierige Fälle} (bei \emph{manche} bestehen zusätzliche Varianten je nach Konstruktion). Lerne diese Kombinationen in echten Nominalgruppen.}
+\EnglishText{\textbf{Important:} Quantifiers such as \emph{viele, wenige, einige, mehrere, manche} do not uniformly behave like the \emph{der} group: \emph{viele gute Ideen, einige interessante Bücher}; \emph{manche} also permits special variation in certain constructions. Learn the actual noun phrase rather than forcing every quantifier into one simple category.}
+\end{grammarentry}
+\begin{exbox}\begin{itemize}
+\ExampleItem{jeder neue Tag; diese schwierige Frage}{every new day; this difficult question}
+\ExampleItem{alle guten Freunde; beide alten Häuser}{all good friends; both old houses}
+\ExampleItem{mein neuer Computer; keine großen Probleme}{my new computer; no major problems}
+\ExampleItem{drei große Häuser; viele neue Ideen}{three large houses; many new ideas}
+\end{itemize}\end{exbox}
+
+\section{Kasus im ganzen Ausdruck \textnormal{(Case belongs to the whole phrase)}}
+\begin{grammarentry}{Kasus vom Satz bestimmen}{determine case from syntax}
+\GermanText{Der \textbf{Kasus} wird durch die Funktion der \textbf{gesamten Nominalgruppe} bestimmt: durch das Verb, die Präposition oder ihre Stellung als Subjekt. Das Adjektiv entscheidet den Kasus \textbf{nicht selbst}.}
+\EnglishText{The \textbf{case} is determined by the role of the \textbf{entire noun phrase}: the governing verb, preposition or its position as subject. The adjective \textbf{does not determine the case} on its own.}
+\end{grammarentry}
+\begin{exbox}\begin{itemize}
+\ExampleItem{Der junge Mann liest.}{The young man is reading. (subject: nominative)}
+\ExampleItem{Ich kenne den jungen Mann.}{I know the young man. (direct object: accusative)}
+\ExampleItem{Ich helfe dem jungen Mann.}{I help the young man. (helfen + dative)}
+\ExampleItem{Das Auto des jungen Mannes ist neu.}{The young man's car is new. (genitive)}
+\ExampleItem{Sie sitzt auf einem bequemen Stuhl.}{She sits on a comfortable chair. (location: dative)}
+\ExampleItem{Sie setzt sich auf einen bequemen Stuhl.}{She sits down onto a comfortable chair. (direction: accusative)}
+\end{itemize}\end{exbox}
+
+\section{Mehrere Adjektive und ihre Reihenfolge \textnormal{(Multiple adjectives and their order)}}
+\begin{grammarentry}{Alle passenden Adjektive deklinieren}{each adjective gets an ending}
+\GermanText{Stehen mehrere attributive Adjektive vor einem Nomen, wird \textbf{jedes} Adjektiv passend dekliniert. Ein vorangestelltes Adverb wie \emph{sehr, besonders, ziemlich, außergewöhnlich} wird dagegen nicht dekliniert.}
+\EnglishText{If several attributive adjectives precede a noun, \textbf{each} adjective receives the appropriate ending. A preceding adverb such as \emph{sehr, besonders, ziemlich, außergewöhnlich} stays uninflected.}
+\GermanText{\textbf{Gleichrangige} Adjektive beschreiben unabhängig voneinander dasselbe Substantiv: Man kann meist \emph{und} einsetzen; dann steht häufig ein Komma. \textbf{Nicht gleichrangige} Adjektive bilden eine abgestufte Einheit; in der Regel steht kein Komma. Die Reihenfolge ist teilweise bedeutungsabhängig und nicht in einer einzigen starren Regel festgelegt.}
+\EnglishText{\textbf{Coordinate} adjectives independently describe the noun: \emph{and} can often be inserted, and a comma is common. \textbf{Non-coordinate} adjectives form a hierarchical unit and are usually not separated by a comma. Adjective order is partly meaning-based rather than fixed by one universal rule.}
+\end{grammarentry}
+\begin{exbox}\begin{itemize}
+\ExampleItem{ein langer, schwieriger Weg}{a long, difficult path (long and difficult: coordinate)}
+\ExampleItem{ein schöner alter Holztisch}{a beautiful old wooden table (hierarchical grouping; no comma required)}
+\ExampleItem{die sehr wichtige neue Regel}{the very important new rule (sehr modifies wichtige)}
+\ExampleItem{mit zwei kleinen schwarzen Hunden}{with two small black dogs (dative plural: beiden adjectives -en)}
+\end{itemize}\end{exbox}
+
+\section{Steigerung als Attribut \textnormal{(Comparison before a noun)}}
+\begin{grammarentry}{Positiv, Komparativ, Superlativ}{three degrees}
+\GermanText{Auch gesteigerte Adjektive werden attributiv dekliniert: \textbf{neu} $\rightarrow$ \textbf{neuer} $\rightarrow$ \textbf{neueste}. Beim Komparativ folgt die Kasusendung auf \emph{-er}: \emph{ein neueres Modell}. Beim attributiven Superlativ wird \emph{-st-/-est-} vor der Deklinationsendung verwendet: \emph{das neueste Modell}.}
+\EnglishText{Comparative and superlative adjectives also decline when attributive: \textbf{new} $\rightarrow$ \textbf{newer} $\rightarrow$ \textbf{newest}. In the comparative, the case ending comes after \emph{-er}: \emph{a newer model}. The attributive superlative uses \emph{-st-/-est-} before the declensional ending: \emph{the newest model}.}
+\GermanText{Der adverbiale/prädikative Superlativ lautet oft \emph{am ...-sten} (\emph{Dieses Modell ist am neuesten}). Attributiv heißt es hingegen \emph{das neueste Modell}; nicht \emph{das am neuesten Modell}.}
+\EnglishText{The predicative/adverbial superlative is often \emph{am ...-sten} (\emph{This model is the newest}), whereas before a noun the form is \emph{das neueste Modell}, not \emph{das am neuesten Modell}.}
+\end{grammarentry}
+\begin{exbox}\begin{itemize}
+\ExampleItem{ein interessanter Artikel -- ein interessanterer Artikel}{an interesting article -- a more interesting article}
+\ExampleItem{die besten Ergebnisse; mit dem ältesten Freund}{the best results; with the oldest friend}
+\ExampleItem{ein höherer Preis; die höchste Stufe}{a higher price; the highest level}
+\end{itemize}\end{exbox}
+
+\section{Ordnungszahlen und ähnliche Wörter \textnormal{(Ordinals and adjective-like words)}}
+\begin{grammarentry}{erste, zweite, dritte, letzte, nächste}{ordinal adjectives}
+\GermanText{\textbf{Ordnungszahlen} wie \emph{erste, zweite, dritte, vierte, zwanzigste} verhalten sich attributiv wie Adjektive und werden entsprechend dekliniert. Dasselbe gilt für \emph{letzte, nächste, vorherige, folgende}. Diese Wörter sind oft inhaltlich keine gewöhnlichen Eigenschaften, aber grammatisch attributiv.}
+\EnglishText{\textbf{Ordinal numbers} such as \emph{erste, zweite, dritte, vierte, zwanzigste} function like adjectives before nouns and receive the same endings. The same applies to \emph{letzte, nächste, vorherige, folgende}. Their meanings may differ from ordinary qualities, but their grammatical behavior is attributive.}
+\end{grammarentry}
+\begin{exbox}\begin{itemize}
+\ExampleItem{der erste Versuch -- den ersten Versuch -- beim ersten Versuch}{the first attempt (nominative -- accusative -- dative)}
+\ExampleItem{mein zweiter Termin; am dritten Tag}{my second appointment; on the third day}
+\ExampleItem{die nächste Frage; mit einer anderen Methode}{the next question; with another method}
+\end{itemize}\end{exbox}
+
+\section{Partizipien als Attribute \textnormal{(Participles used attributively)}}
+\begin{grammarentry}{Partizip I und II}{participial adjectives}
+\GermanText{\textbf{Partizip I} (Infinitiv + \emph{-d}) bezeichnet häufig einen gleichzeitigen/aktiven Vorgang: \emph{der wartende Fahrgast}. \textbf{Partizip II} bezeichnet häufig ein Ergebnis, einen abgeschlossenen Vorgang oder eine passive Bedeutung: \emph{der geschriebene Brief}. Beide erhalten attributiv die normalen Adjektivendungen.}
+\EnglishText{\textbf{Present participle} (infinitive + \emph{-d}) often denotes a simultaneous/active action: \emph{the waiting passenger}. \textbf{Past participle} often expresses a result, completed action or passive sense: \emph{the written letter}. Both take regular adjective endings when attributive.}
+\GermanText{Partizipialattribute können \textbf{erweitert} werden: Zusätze stehen normalerweise \textbf{vor} dem Partizip. Solche Gruppen sind im gehobenen und wissenschaftlichen Deutsch sehr häufig. Ob eine passive Umschreibung möglich ist, hängt vom Verb ab.}
+\EnglishText{Participial modifiers may be \textbf{expanded}: complements normally appear \textbf{before} the participle. Such phrases are common in formal and academic German. Whether a passive paraphrase is possible depends on the verb.}
+\end{grammarentry}
+\begin{exbox}\begin{itemize}
+\ExampleItem{die lachenden Kinder}{the laughing children (Partizip I)}
+\ExampleItem{die gestern veröffentlichten Ergebnisse}{the results published yesterday (Partizip II)}
+\ExampleItem{das von einer Forscherin entwickelte Verfahren}{the method developed by a female researcher}
+\ExampleItem{die seit Jahren in Graz lebenden Menschen}{the people who have been living in Graz for years}
+\end{itemize}\end{exbox}
+
+\section{Adjektivgruppen mit Ergänzungen \textnormal{(Adjective phrases with complements)}}
+\begin{grammarentry}{Erweiterte Attribute}{expanded adjectival phrases}
+\GermanText{Manche Adjektive verlangen eine \textbf{Ergänzung} oder verbinden sich typisch mit einer Präposition: \emph{stolz auf + Akkusativ}, \emph{ähnlich + Dativ}, \emph{reich an + Dativ}, \emph{verantwortlich für + Akkusativ}. In erweiterten Attributen steht die Ergänzung in der Regel \textbf{vor dem flektierten Adjektiv}.}
+\EnglishText{Some adjectives require a \textbf{complement} or regularly combine with a preposition: \emph{proud of + accusative}, \emph{similar to + dative}, \emph{rich in + dative}, \emph{responsible for + accusative}. In expanded attributive phrases, the complement usually comes \textbf{before the inflected adjective}.}
+\GermanText{Solche Gruppen sind oft stilistisch dichter als ein Relativsatz. Bei sehr langen Attributen kann ein Relativsatz verständlicher sein.}
+\EnglishText{These phrases are often denser than relative clauses. If the attributive phrase becomes very long, a relative clause may be clearer.}
+\end{grammarentry}
+\begin{exbox}\begin{itemize}
+\ExampleItem{ein auf seine Tochter stolzer Vater}{a father who is proud of his daughter}
+\ExampleItem{eine dem Original ähnliche Kopie}{a copy similar to the original}
+\ExampleItem{die für das Projekt verantwortliche Person}{the person responsible for the project}
+\ExampleItem{eine an Vitaminen reiche Ernährung}{a diet rich in vitamins}
+\end{itemize}\end{exbox}
+
+\section{Besondere Formen und Grenzen \textnormal{(Special forms and limits)}}
+\subsection{Stammveränderungen \textnormal{(Stem changes)}}
+\begin{grammarentry}{hoch, dunkel, teuer, sauer, edel}{spelling of inflected forms}
+\GermanText{Einige Adjektive verändern ihren Stamm bei der Deklination. Besonders wichtig sind \emph{hoch $\rightarrow$ hohe}, \emph{dunkel $\rightarrow$ dunkle}, \emph{edel $\rightarrow$ edle}, \emph{teuer $\rightarrow$ teure}, \emph{sauer $\rightarrow$ saure}. Die Endungsregel bleibt gleich; nur der Stamm hat eine verkürzte Form.}
+\EnglishText{Some adjectives change their stem when inflected. Important examples are \emph{hoch $\rightarrow$ hohe}, \emph{dunkel $\rightarrow$ dunkle}, \emph{edel $\rightarrow$ edle}, \emph{teuer $\rightarrow$ teure}, \emph{sauer $\rightarrow$ saure}. The declension principle stays the same; the stem is shortened or altered.}
+\end{grammarentry}
+\begin{exbox}\begin{itemize}
+\ExampleItem{ein hohes Gebäude; ein höheres Gebäude}{a tall building; a taller building}
+\ExampleItem{ein dunkler Raum; teure Geräte}{a dark room; expensive devices}
+\ExampleItem{eine saure Zitrone; eine edle Absicht}{a sour lemon; a noble intention}
+\end{itemize}\end{exbox}
+
+\subsection{Unflektierte oder besondere Farbwörter \textnormal{(Uninflected or special colour words)}}
+\begin{grammarentry}{rosa, lila, beige}{colour adjectives}
+\GermanText{Einige Farbwörter wie \textbf{rosa} und \textbf{lila} bleiben in der Standardsprache häufig \textbf{unflektiert}: \emph{ein rosa Kleid, eine lila Tasche}. Alternativ sind abgeleitete Formen wie \emph{rosafarbenes Kleid} und \emph{lilafarbene Tasche} eindeutig flektierbar. Andere Farbwörter wie \emph{beige} werden regulär flektiert: \emph{ein beiges Kleid}.}
+\EnglishText{Some colour words such as \textbf{rosa} and \textbf{lila} commonly remain \textbf{uninflected} in standard usage: \emph{a pink dress, a purple bag}. Derived forms such as \emph{rosafarbenes Kleid} and \emph{lilafarbene Tasche} inflect normally. Other colour words such as \emph{beige} are inflected: \emph{a beige dress}.}
+\end{grammarentry}
+
+\subsection{Adjektiv oder Wortteil? \textnormal{(Adjective or part of a compound?)}}
+\begin{grammarentry}{Zusammengesetzte Substantive}{compound nouns}
+\GermanText{In \emph{der große Garten} ist \emph{große} ein attributives Adjektiv. In \emph{der Großgarten} wäre \emph{Groß-} dagegen Bestandteil eines zusammengesetzten Nomens und nicht ein frei deklinierbares Adjektiv. Zusammenschreibung und Bedeutung entscheiden mit.}
+\EnglishText{In \emph{der große Garten}, \emph{große} is an attributive adjective. In a hypothetical compound \emph{Großgarten}, \emph{Groß-} would instead be part of the compound noun, not a freely inflectable adjective. Spelling and meaning both matter.}
+\end{grammarentry}
+
+\section{Grenzfall: substantivierte Adjektive \textnormal{(Boundary case: nominalized adjectives)}}
+\begin{grammarentry}{etwas Gutes, die Alte}{the adjective becomes the head}
+\GermanText{In \emph{etwas Gutes, nichts Neues, alles Gute} oder \emph{der Alte} steht \textbf{kein ausgesprochenes Nomen nach dem Adjektiv}. Das Adjektiv wird \textbf{substantiviert}, großgeschrieben und weiterhin dekliniert. Das ähnelt formal der attributiven Deklination, ist aber syntaktisch \textbf{nicht einfach ein attributives Adjektiv vor einem sichtbaren Nomen}.}
+\EnglishText{In \emph{something good, nothing new, all the best}, or \emph{the old man}, \textbf{no overt noun follows the adjective}. The adjective is \textbf{nominalized}, capitalized and still inflected. Its endings resemble attributive declension, but syntactically this is \textbf{not just an adjective before an expressed noun}.}
+\end{grammarentry}
+\begin{exbox}\begin{itemize}
+\ExampleItem{Wir haben etwas Interessantes entdeckt.}{We discovered something interesting. (nominalized)}
+\ExampleItem{Sie hat ein interessantes Buch gekauft.}{She bought an interesting book. (attributive)}
+\ExampleItem{Ich wünsche dir alles Gute.}{I wish you all the best. (nominalized)}
+\end{itemize}\end{exbox}
+
+\section{Typische Fehler \textnormal{(Common mistakes)}}
+\begin{exbox}\begin{itemize}
+\ExampleItem{Falsch: die erste Versuch. \quad Richtig: der erste Versuch.}{The noun Versuch is masculine: der Versuch.}
+\ExampleItem{Falsch: ein gut Buch. \quad Richtig: ein gutes Buch.}{After ein + neuter nominative/accusative, the adjective ends in -es.}
+\ExampleItem{Falsch: mit einen guten Freund. \quad Richtig: mit einem guten Freund.}{Mit requires the dative; the determiner also changes.}
+\ExampleItem{Falsch: die gute Freunde. \quad Richtig: die guten Freunde.}{With the definite article, plural adjectives take -en.}
+\ExampleItem{Falsch: die sehr wichtige Regeln (plural). \quad Richtig: die sehr wichtigen Regeln.}{Sehr does not decline; the adjective does.}
+\ExampleItem{Falsch: ein mehr gut Buch. \quad Richtig: ein besseres Buch.}{German normally uses an actual comparative adjective, here besser.}
+\ExampleItem{Falsch: Das ist das am beste Ergebnis. \quad Richtig: Das ist das beste Ergebnis.}{Before a noun, the superlative takes the attributive form.}
+\end{itemize}\end{exbox}
+
+\section{Schritt-für-Schritt-Methode \textnormal{(Step-by-step method)}}
+\begin{grammarentry}{Praktische Entscheidungsfolge}{reliable procedure}
+\GermanText{\textbf{Schritt 1}: Finde das Substantiv und seinen Genus/Numerus (\emph{der Tisch, das Haus, die Häuser}). \textbf{Schritt 2}: Bestimme den Kasus der gesamten Nominalgruppe aus dem Satz. \textbf{Schritt 3}: Prüfe den Begleiter: \emph{der}-Wort, \emph{ein}-Wort oder kein Artikel. \textbf{Schritt 4}: Lies die Endung aus der passenden Tabelle ab. \textbf{Schritt 5}: Kontrolliere Sonderfälle wie Plural, Komparativ, Partizipien und substantivierte Adjektive.}
+\EnglishText{\textbf{Step 1}: Find the noun and its gender/number. \textbf{Step 2}: Determine the case of the whole noun phrase from sentence syntax. \textbf{Step 3}: Identify the determiner: der-type, ein-type or none. \textbf{Step 4}: Choose the ending from the matching table. \textbf{Step 5}: Check special cases such as plurals, comparatives, participles and nominalized adjectives.}
+\end{grammarentry}
+\begin{exbox}\begin{itemize}
+\ExampleItem{Ich spreche mit (ein, nett) Kollege $\rightarrow$ Ich spreche mit einem netten Kollegen.}{mit + dative; Kollege is masculine and weakly declined as a noun; ein takes -em, nett takes -en.}
+\ExampleItem{Sie braucht (neu) Informationen $\rightarrow$ Sie braucht neue Informationen.}{accusative plural with no article: strong adjective -e.}
+\ExampleItem{Wegen (stark) Regen bleiben wir zu Hause $\rightarrow$ Wegen starken Regens bleiben wir zu Hause.}{genitive masculine without article: adjective -en, noun -s.}
+\end{itemize}\end{exbox}
+
+\section{Übungen \textnormal{(Exercises)}}
+\GermanText{Ergänze die richtige Adjektivendung oder die ganze korrekte Form. Achte auf den Kasus und den Begleiter.}
+\EnglishText{Supply the correct adjective ending or complete form. Pay attention to case and determiner.}
+\begin{enumerate}
+\item der erst\underline{\hspace{1.0cm}} Tag
+\item Ich sehe ein alt\underline{\hspace{1.0cm}} Haus.
+\item Sie spricht mit den freundlich\underline{\hspace{1.0cm}} Nachbarn.
+\item Wir brauchen neu\underline{\hspace{1.0cm}} Ideen.
+\item Das ist mein best\underline{\hspace{1.0cm}} Ergebnis.
+\item Wegen schlecht\underline{\hspace{1.0cm}} Wetters bleiben wir hier.
+\item Er kauft einen sehr teuer\underline{\hspace{1.0cm}} Computer.
+\item Ich habe keine wichtig\underline{\hspace{1.0cm}} Fragen.
+\item Die gestern veröffentlicht\underline{\hspace{1.0cm}} Studie ist interessant.
+\item Sie arbeitet an einem anspruchsvoll\underline{\hspace{1.0cm}} Projekt.
+\end{enumerate}
+\subsection{Lösungen mit Begründung \textnormal{(Solutions with reasons)}}
+\begin{enumerate}
+\item \textbf{der erste Tag}: nominative masculine, weak -e.\\{\small\color{SoftGray}The first day; definite article and nominative masculine.}
+\item \textbf{ein altes Haus}: accusative neuter, mixed -es.\\{\small\color{SoftGray}An old house; ein does not mark neuter accusative.}
+\item \textbf{mit den freundlichen Nachbarn}: dative plural, weak -en.\\{\small\color{SoftGray}With the friendly neighbours; mit governs the dative.}
+\item \textbf{neue Ideen}: accusative plural without determiner, strong -e.\\{\small\color{SoftGray}New ideas; bare plural.}
+\item \textbf{mein bestes Ergebnis}: nominative neuter, mixed -es.\\{\small\color{SoftGray}My best result; the superlative is declinable.}
+\item \textbf{wegen schlechten Wetters}: genitive neuter without article, strong -en.\\{\small\color{SoftGray}Because of bad weather; genitive without article.}
+\item \textbf{einen sehr teuren Computer}: accusative masculine, mixed -en; sehr is unchanged.\\{\small\color{SoftGray}A very expensive computer; teuren is the shortened stem form.}
+\item \textbf{keine wichtigen Fragen}: accusative plural after kein, mixed -en.\\{\small\color{SoftGray}No important questions; the possessive/negative article pattern.}
+\item \textbf{die gestern veröffentlichte Studie}: nominative feminine, weak -e.\\{\small\color{SoftGray}The study published yesterday; participle II used as an attribute.}
+\item \textbf{an einem anspruchsvollen Projekt}: dative neuter, mixed -en.\\{\small\color{SoftGray}Working on a demanding project; an + dative here.}
+\end{enumerate}
+
+\section{Zusammenfassung \textnormal{(Summary)}}
+\begin{grammarentry}{Die sechs wichtigsten Regeln}{six rules to remember}
+\GermanText{\textbf{1.} Attributive Adjektive stehen normalerweise vor dem Nomen und erhalten eine Endung.\\
+\textbf{2.} Die Endung richtet sich nach Kasus, Genus, Numerus und Begleiter.\\
+\textbf{3.} \emph{der}-Wörter $\rightarrow$ meist schwach; \emph{ein}-Wörter $\rightarrow$ gemischt; ohne Artikel $\rightarrow$ stark.\\
+\textbf{4.} Alle attributiven Adjektive in einer Gruppe werden passend dekliniert; Adverbien nicht.\\
+\textbf{5.} Komparative, Superlative, Ordnungszahlen und Partizipien können attributiv sein und nehmen Endungen.\\
+\textbf{6.} Prädikative und adverbiale Adjektive bleiben normalerweise ungebeugt.}
+\EnglishText{\textbf{1.} Attributive adjectives normally precede nouns and take an ending.\\
+\textbf{2.} The ending depends on case, gender, number and determiner.\\
+\textbf{3.} Der-type $\rightarrow$ generally weak; ein-type $\rightarrow$ mixed; no article $\rightarrow$ strong.\\
+\textbf{4.} Every attributive adjective in a phrase declines, but adverbs do not.\\
+\textbf{5.} Comparatives, superlatives, ordinals and participles can be attributive and inflected.\\
+\textbf{6.} Predicative and adverbially used adjectives normally remain uninflected.}
+\end{grammarentry}
+\end{document}
