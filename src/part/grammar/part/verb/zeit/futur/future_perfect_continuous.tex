@@ -1,0 +1,90 @@
+\documentclass[a4paper,11pt]{article}
+
+\usepackage[a4paper,margin=2cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman,english]{babel}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{xcolor}
+\usepackage{parskip}
+\usepackage{enumitem}
+\usepackage[most]{tcolorbox}
+\usepackage{titlesec}
+\usepackage[hidelinks]{hyperref}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage[table]{xcolor}
+
+\definecolor{HeaderBlueDark}{RGB}{70,110,170}
+\definecolor{RowBlueLight}{RGB}{235,243,255}
+\definecolor{RowBlueDark}{RGB}{220,233,250}
+\definecolor{SoftGray}{RGB}{90,90,90}
+
+\setlength{\parindent}{0pt}
+\setlist[itemize]{leftmargin=1.4em,itemsep=0.35em,topsep=0.35em}
+\linespread{1.06}
+\renewcommand{\arraystretch}{1.35}
+\setlength{\tabcolsep}{6pt}
+
+\titleformat{\section}[block]
+{\Large\bfseries\color{HeaderBlueDark}}
+{}{0pt}{}
+\titlespacing{\section}{0pt}{1.3em}{0.8em}
+
+\titleformat{\subsection}[block]
+{\large\bfseries\color{HeaderBlueDark}}
+{}{0pt}{}
+\titlespacing{\subsection}{0pt}{1.0em}{0.6em}
+
+\newtcolorbox{exbox}{enhanced,breakable,colback=RowBlueLight,colframe=RowBlueDark,boxrule=0.4pt,arc=1.5mm,left=1.2mm,right=1.2mm,top=1mm,bottom=1mm,title={Beispiele \textnormal{(Examples)}},fonttitle=\bfseries,colbacktitle=RowBlueDark,coltitle=black}
+
+\NewDocumentEnvironment{grammarentry}{mm+b}{%
+    \begin{tcolorbox}[enhanced,breakable,colback=white,colframe=HeaderBlueDark,boxrule=0.6pt,arc=1.5mm,left=1.5mm,right=1.5mm,top=1mm,bottom=1mm,colbacktitle=HeaderBlueDark,coltitle=white,fonttitle=\bfseries,title={#1\hfill\normalfont\footnotesize #2}]
+    #3
+    \end{tcolorbox}
+}{}
+
+\newcommand{\GermanText}[1]{\textbf{Deutsch: }#1\par}
+\newcommand{\EnglishText}[1]{{\small\color{SoftGray}\textbf{English: }#1\par}}
+\newcommand{\ExampleItem}[2]{\item \textbf{#1}\\{\small\color{SoftGray}#2}}
+
+\title{Dauer bis zu einem zukünftigen Zeitpunkt\\\large\textnormal{Future Perfect Continuous in German}}
+\date{}
+
+\begin{document}
+    \maketitle
+    \tableofcontents
+    \newpage
+
+
+\section{Grundidee \textnormal{(Basic idea)}}
+\begin{grammarentry}{Verlauf statt eigener Tempusform}{No separate German continuous tense}
+\GermanText{Englisches will have been + -ing nennt oft die Dauer einer Handlung bis zu einem zukünftigen Zeitpunkt. Im Deutschen ist ein Präsens mit seit und Zukunftsangabe häufig die natürlichste Lösung, wenn die Handlung dann noch läuft.}
+\EnglishText{English will have been + -ing often describes how long an action will have continued by a future reference point. German frequently uses the present tense with seit and a future time expression when the activity will still be ongoing.}
+\end{grammarentry}
+
+\section{Future Perfect Continuous \textnormal{(English future perfect continuous)}}
+\begin{grammarentry}{Dauer bis zu einem zukünftigen Zeitpunkt}{Duration up to a future reference point}
+\GermanText{Für englisches will have been + -ing mit einer dann noch andauernden Handlung kann man im Deutschen Präsens mit Zukunftsangabe und seit verwenden. Futur II mit Partizip II betont dagegen oft eine bis dahin erreichte oder abgeschlossene Zeitspanne und ist nicht automatisch progressiv.}
+\EnglishText{For English will have been + -ing describing an activity still ongoing at a future reference point, German can use present tense with future time reference and seit. Future perfect with a past participle often emphasizes a period completed by then and is not automatically progressive.}
+\end{grammarentry}
+\begin{exbox}
+\begin{itemize}
+\ExampleItem{Im Juni arbeite ich seit fünf Jahren hier.}{In June I will have been working here for five years.}
+\ExampleItem{Nächste Woche lerne ich seit sechs Monaten Deutsch.}{Next week I will have been learning German for six months.}
+\ExampleItem{Bis Juni werde ich fünf Jahre lang an diesem Projekt gearbeitet haben.}{By June I will have worked on this project for five years; this does not necessarily say it continues after June.}
+\end{itemize}
+\end{exbox}
+
+\section{Zusammenfassung \textnormal{(Summary)}}
+\begin{grammarentry}{Merksätze}{Key rules}
+\GermanText{Für eine bis zu einem späteren Zeitpunkt fortdauernde Handlung: Im Juni arbeite ich seit fünf Jahren hier. Futur II betont häufig die bis dahin erreichte Zeitspanne und ist nicht dasselbe wie eine grammatische Verlaufsform.}
+\EnglishText{For an activity still continuing at a future reference point: Im Juni arbeite ich seit fünf Jahren hier. Futur II often emphasizes the period accumulated by then and is not a grammatical continuous tense.}
+\end{grammarentry}
+
+\section{Quelle \textnormal{(Source)}}
+        \GermanText{Institut für Deutsche Sprache (IDS), grammis: Darf man Ich bin am Schreiben schreiben?}
+        \EnglishText{Institute for the German Language (IDS), grammis: discussion of progressive constructions and their formation in different tenses.}
+        \url{https://grammis.ids-mannheim.de/fragen/4551}
+\end{document}

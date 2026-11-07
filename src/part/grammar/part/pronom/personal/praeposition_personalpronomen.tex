@@ -1,0 +1,85 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage[a4paper,margin=2cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman,english]{babel}
+\usepackage{lmodern,microtype,xcolor,parskip,enumitem}
+\usepackage[most]{tcolorbox}
+\usepackage{titlesec}
+\usepackage[hidelinks]{hyperref}
+\definecolor{HeaderBlueDark}{RGB}{70,110,170}
+\definecolor{RowBlueLight}{RGB}{235,243,255}
+\definecolor{RowBlueDark}{RGB}{220,233,250}
+\definecolor{SoftGray}{RGB}{90,90,90}
+\setlength{\parindent}{0pt}
+\setlist[itemize]{leftmargin=1.4em,itemsep=0.35em}
+\titleformat{\section}{\Large\bfseries\color{HeaderBlueDark}}{}{0pt}{}
+\newtcolorbox{exbox}{enhanced,breakable,colback=RowBlueLight,colframe=RowBlueDark,boxrule=0.4pt,title={Beispiele (Examples)},colbacktitle=RowBlueDark,coltitle=black}
+\NewDocumentEnvironment{grammarentry}{mm+b}{\begin{tcolorbox}[enhanced,breakable,colback=white,colframe=HeaderBlueDark,boxrule=0.6pt,title={#1\hfill\normalfont\footnotesize #2},colbacktitle=HeaderBlueDark,coltitle=white,fonttitle=\bfseries]#3\end{tcolorbox}}{}
+\newcommand{\GermanText}[1]{\textbf{Deutsch: }#1\par}
+\newcommand{\EnglishText}[1]{{\small\color{SoftGray}\textbf{English: }#1\par}}
+\newcommand{\ExampleItem}[2]{\item \textbf{#1}\\{\small\color{SoftGray}#2}}
+\title{Präposition + Personalpronomen\\{\large Preposition + Personal Pronoun}}
+\date{}
+\begin{document}
+\maketitle
+\tableofcontents
+\newpage
+\section{Grundregel (Basic Rule)}
+\begin{grammarentry}{Präposition + Personalpronomen}{Struktur}
+\GermanText{Eine Präposition kann vor einem Personalpronomen stehen. Das Personalpronomen ersetzt oft eine vorher genannte Person oder ein Lebewesen. Beide Wörter bleiben getrennt: \textbf{über ihn}, \textbf{mit ihr}, \textbf{für sie}.}
+\EnglishText{A preposition can precede a personal pronoun. The pronoun often replaces a previously mentioned person or living being. Both words remain separate: about him, with her, for her.}
+\GermanText{Die Präposition bestimmt den Kasus des Pronomens: Akkusativ, Dativ oder selten Genitiv.}
+\EnglishText{The preposition determines the pronoun's case: accusative, dative, or rarely genitive.}
+\end{grammarentry}
+\begin{exbox}\begin{itemize}
+\ExampleItem{Ärgerst du dich über deinen Freund? -- Ja, ich ärgere mich über ihn.}{Are you annoyed with your friend? -- Yes, I am annoyed with him.}
+\ExampleItem{Kümmerst du dich um die Katze? -- Ja, ich kümmere mich um sie.}{Are you taking care of the cat? -- Yes, I am taking care of it.}
+\ExampleItem{Ich spreche mit Maria. -- Ich spreche mit ihr.}{I am talking with Maria. -- I am talking with her.}
+\end{itemize}\end{exbox}
+\section{Kasus nach Präpositionen (Case After Prepositions)}
+\begin{grammarentry}{Akkusativ (Accusative)}{durch, für, gegen, ohne, um}
+\GermanText{Diese Präpositionen verlangen den Akkusativ: \textbf{für mich}, \textbf{ohne dich}, \textbf{gegen ihn}, \textbf{um sie}, \textbf{durch uns}.}
+\EnglishText{These prepositions govern the accusative: for me, without you, against him, around her, through us.}
+\end{grammarentry}
+\begin{grammarentry}{Dativ (Dative)}{aus, außer, bei, mit, nach, seit, von, zu}
+\GermanText{Diese Präpositionen verlangen den Dativ: \textbf{mit mir}, \textbf{bei dir}, \textbf{von ihm}, \textbf{zu ihr}, \textbf{mit uns}, \textbf{nach ihnen}.}
+\EnglishText{These prepositions govern the dative: with me, at your place, from him, to her, with us, after them.}
+\end{grammarentry}
+\begin{grammarentry}{Wechselpräpositionen (Two-way Prepositions)}{an, auf, hinter, in, neben, über, unter, vor, zwischen}
+\GermanText{Bei räumlicher Bedeutung steht der Akkusativ für eine Richtung (Wohin?), der Dativ für einen Ort (Wo?). Bei festen Verb-Präposition-Verbindungen bestimmt die Verbindung den Kasus.}
+\EnglishText{In spatial uses, accusative marks direction (where to?), while dative marks location (where?). In fixed verb-preposition constructions, the construction determines case.}
+\end{grammarentry}
+\begin{exbox}\begin{itemize}
+\ExampleItem{Ich stelle mich neben ihn. / Ich stehe neben ihm.}{I position myself next to him. / I am standing next to him.}
+\ExampleItem{Ich denke an sie. / Ich spreche mit ihr.}{I think of her. / I speak with her.}
+\ExampleItem{Ich ärgere mich über ihn.}{I am annoyed with him. (Accusative in this fixed construction.)}
+\end{itemize}\end{exbox}
+\section{Personalpronomen im Akkusativ und Dativ (Accusative and Dative Pronouns)}
+\begin{exbox}\begin{center}
+\begin{tabular}{lll}\textbf{Nominativ}&\textbf{Akkusativ}&\textbf{Dativ}\\\hline
+ich&mich&mir\\du&dich&dir\\er&ihn&ihm\\sie (Sg.)&sie&ihr\\es&es&ihm\\wir&uns&uns\\ihr&euch&euch\\sie (Pl.)&sie&ihnen\\Sie&Sie&Ihnen
+\end{tabular}\end{center}\end{exbox}
+\section{Personen und Sachen (People and Things)}
+\begin{grammarentry}{Personenbezug und Sachbezug}{Unterschied}
+\GermanText{Bei Personen verwendet man normalerweise \textbf{Präposition + Personalpronomen}: \textbf{über ihn}, \textbf{mit ihr}, \textbf{auf sie}. Bei Sachen oder Sachverhalten steht häufig ein Pronominaladverb mit \textbf{da(r)-}: \textbf{darüber}, \textbf{damit}, \textbf{darauf}.}
+\EnglishText{For people, German normally uses preposition + personal pronoun: about him, with her, for her. For things or situations, a da(r)- pronominal adverb is frequent: about it, with it, for it.}
+\GermanText{Das ist keine absolute Regel: Bei örtlichen Bedeutungen können Präpositionen mit Personalpronomen auch Sachen bezeichnen, z.\,B. \textbf{Ich sitze auf ihm} (auf dem Stuhl).}
+\EnglishText{This is not an absolute rule: in spatial meanings, prepositions plus personal pronouns can refer to things too, e.g. I am sitting on it (the chair).}
+\end{grammarentry}
+\begin{exbox}\begin{itemize}
+\ExampleItem{Ärgerst du dich über deinen Freund? -- Ja, über ihn.}{Are you annoyed with your friend? -- Yes, with him.}
+\ExampleItem{Ärgerst du dich über die Verspätung? -- Ja, darüber.}{Are you annoyed about the delay? -- Yes, about it.}
+\ExampleItem{Rechnest du mit deinem Kollegen? -- Ja, ich rechne mit ihm.}{Are you counting on your colleague? -- Yes, I am counting on him.}
+\ExampleItem{Rechnest du mit einer Verzögerung? -- Ja, ich rechne damit.}{Are you expecting a delay? -- Yes, I am.}
+\end{itemize}\end{exbox}
+\section{Häufige Fehler (Common Mistakes)}
+\begin{exbox}\begin{itemize}
+\ExampleItem{Falsch: Ich spreche mit er. \quad Richtig: Ich spreche mit ihm.}{Incorrect: with he. Correct: with him. The preposition mit requires dative.}
+\ExampleItem{Falsch: Ich warte auf ihm. \quad Richtig: Ich warte auf ihn.}{Incorrect: dative form. Correct: accusative with warten auf.}
+\ExampleItem{Bei einer Person: Ich ärgere mich über ihn. \quad Bei einem Problem: Ich ärgere mich darüber.}{For a person: I am annoyed with him. For a problem: I am annoyed about it.}
+\end{itemize}\end{exbox}
+\section{Zusammenfassung (Summary)}
+\GermanText{Die Präposition bestimmt den Kasus. Für Personen verwendet man gewöhnlich \textbf{Präposition + Personalpronomen}. Für Sachen und Sachverhalte verwendet man häufig \textbf{da(r)- + Präposition}.}
+\EnglishText{The preposition determines case. For people, German usually uses preposition + personal pronoun. For things and situations, German often uses da(r)- + preposition.}
+\end{document}

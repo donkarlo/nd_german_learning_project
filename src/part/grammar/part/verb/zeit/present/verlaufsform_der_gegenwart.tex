@@ -1,0 +1,196 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage[a4paper,margin=2cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman,english]{babel}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{xcolor}
+\usepackage{parskip}
+\usepackage{enumitem}
+\usepackage[most]{tcolorbox}
+\usepackage{titlesec}
+\usepackage[hidelinks]{hyperref}
+\usepackage{array}
+\usepackage{longtable}
+\definecolor{HeaderBlueDark}{RGB}{70,110,170}
+\definecolor{RowBlueLight}{RGB}{235,243,255}
+\definecolor{RowBlueDark}{RGB}{220,233,250}
+\definecolor{SoftGray}{RGB}{90,90,90}
+\setlength{\parindent}{0pt}
+\setlist[itemize]{leftmargin=1.4em,itemsep=0.35em,topsep=0.35em}
+\linespread{1.06}
+\renewcommand{\arraystretch}{1.25}
+\setlength{\tabcolsep}{5pt}
+\titleformat{\section}[block]{\Large\bfseries\color{HeaderBlueDark}}{}{0pt}{}
+\titlespacing{\section}{0pt}{1.3em}{0.8em}
+\titleformat{\subsection}[block]{\large\bfseries\color{HeaderBlueDark}}{}{0pt}{}
+\titlespacing{\subsection}{0pt}{1.0em}{0.6em}
+\newtcolorbox{exbox}{enhanced,breakable,colback=RowBlueLight,colframe=RowBlueDark,boxrule=0.4pt,arc=1.5mm,left=1.2mm,right=1.2mm,top=1mm,bottom=1mm,title={Beispiele \textnormal{(Examples)}},fonttitle=\bfseries,colbacktitle=RowBlueDark,coltitle=black}
+\NewDocumentEnvironment{grammarentry}{mm+b}{%
+\begin{tcolorbox}[enhanced,breakable,colback=white,colframe=HeaderBlueDark,boxrule=0.6pt,arc=1.5mm,left=1.5mm,right=1.5mm,top=1mm,bottom=1mm,colbacktitle=HeaderBlueDark,coltitle=white,fonttitle=\bfseries,title={#1\hfill\normalfont\footnotesize #2}]
+#3
+\end{tcolorbox}
+}{}
+\newcommand{\GermanText}[1]{\textbf{Deutsch: }#1\par}
+\newcommand{\EnglishText}[1]{{\small\color{SoftGray}\textbf{English: }#1\par}}
+\newcommand{\ExampleItem}[2]{\item \textbf{#1}\\{\small\color{SoftGray}#2}}
+\title{Verlaufsform der Gegenwart\\\large\textnormal{Present Continuous in German}}
+\date{}
+\begin{document}
+\maketitle
+\tableofcontents
+\newpage
+
+\section{Grundidee \textnormal{(Basic idea)}}
+\begin{grammarentry}{Kein eigenes Continuous-Tempus}{No separate continuous tense}
+\GermanText{Das Deutsche hat kein eigenes, obligatorisches Present Continuous wie das englische am/is/are + -ing. Ein Präsensverb kann sowohl eine Gewohnheit als auch eine gerade ablaufende Handlung ausdrücken.}
+\EnglishText{German does not have a separate obligatory present continuous tense like English am/is/are + -ing. A German present-tense verb may express a habit or an action happening at the moment.}
+\end{grammarentry}
+\begin{exbox}
+\begin{itemize}
+\ExampleItem{Ich lese.}{I read / I am reading. Context determines the meaning.}
+\ExampleItem{Ich lese jeden Abend.}{I read every evening. Habitual action.}
+\ExampleItem{Ich lese gerade.}{I am reading right now.}
+\end{itemize}
+\end{exbox}
+
+\section{Präsens ohne Zusatz \textnormal{(Present tense without an extra marker)}}
+\begin{grammarentry}{Kontext genügt oft}{Context is often sufficient}
+\GermanText{Das gewöhnliche Präsens genügt, wenn Situation oder Frage deutlich macht, dass die Tätigkeit gerade läuft. Eine Übersetzung aus dem Englischen braucht nicht immer das Wort gerade.}
+\EnglishText{Ordinary present tense is sufficient when the situation or question already indicates that an activity is in progress. An English -ing form does not always require gerade.}
+\end{grammarentry}
+\begin{exbox}
+\begin{itemize}
+\ExampleItem{Was machst du? -- Ich schreibe einen Bericht.}{What are you doing? -- I am writing a report.}
+\ExampleItem{Sei bitte leise, ich telefoniere.}{Please be quiet; I am on the phone.}
+\end{itemize}
+\end{exbox}
+
+\section{Präsens mit gerade \textnormal{(Present tense with gerade)}}
+\begin{grammarentry}{gerade + konjugiertes Präsens}{Ongoing action right now}
+\GermanText{Gerade betont, dass eine Handlung im Sprechmoment abläuft. Das Verb bleibt im Präsens. Im Hauptsatz gilt die Verbzweitstellung: Ich lerne gerade. / Gerade lerne ich.}
+\EnglishText{Gerade emphasizes an action in progress at speaking time. The verb remains in the present tense. Main clauses preserve verb-second word order: Ich lerne gerade. / Gerade lerne ich.}
+\end{grammarentry}
+\begin{exbox}
+\begin{itemize}
+\ExampleItem{Ich lerne gerade Deutsch.}{I am studying German right now.}
+\ExampleItem{Gerade spreche ich mit meiner Kollegin.}{Right now I am talking to my colleague.}
+\ExampleItem{Ich kann nicht kommen, weil ich gerade arbeite.}{I cannot come because I am working right now.}
+\ExampleItem{Was liest du gerade?}{What are you reading right now?}
+\end{itemize}
+\end{exbox}
+
+\section{dabei sein + zu + Infinitiv \textnormal{(Being in the process of doing something)}}
+\begin{grammarentry}{Expliziter Verlauf}{Explicitly ongoing process}
+\GermanText{Die Konstruktion dabei sein, etwas zu tun betont den Verlauf. Das Verb sein wird konjugiert, das Vollverb steht mit zu im Infinitiv. Vor der Infinitivgruppe steht ein Komma. Bei trennbaren Verben: aufzuräumen, anzurufen.}
+\EnglishText{The construction dabei sein, etwas zu tun emphasizes that the activity is in progress. Sein is conjugated, and the main verb uses the zu-infinitive. A comma precedes the infinitive group. With separable verbs: aufzuräumen, anzurufen.}
+\end{grammarentry}
+\begin{exbox}
+\begin{itemize}
+\ExampleItem{Ich bin gerade dabei, einen Artikel zu schreiben.}{I am in the middle of writing an article.}
+\ExampleItem{Sie ist dabei, das Zimmer aufzuräumen.}{She is in the process of tidying the room.}
+\ExampleItem{Wir sind gerade dabei, eine Lösung zu finden.}{We are currently working on finding a solution.}
+\end{itemize}
+\end{exbox}
+
+\section{am-Progressiv \textnormal{(The am-progressive)}}
+\begin{grammarentry}{sein + am + substantivierter Infinitiv}{Recognized but context-dependent}
+\GermanText{Ich bin am Lernen ist eine echte deutsche Verlaufsform. Der substantivierte Infinitiv wird großgeschrieben. Die Konstruktion ist verbreitet und keineswegs grundsätzlich falsch, ihre Akzeptanz hängt aber von Region, Textsorte und Situation ab. Für formelle Texte ist gerade oder dabei sein, ... zu ... oft neutraler.}
+\EnglishText{Ich bin am Lernen is an established German progressive construction. The nominalized infinitive is capitalized. It is widespread and not inherently incorrect, but acceptability varies by region, genre and situation. Gerade or dabei sein, ... zu ... is often more neutral in formal writing.}
+\end{grammarentry}
+\begin{exbox}
+\begin{itemize}
+\ExampleItem{Ich bin am Lernen.}{I am studying.}
+\ExampleItem{Die Kinder sind am Spielen.}{The children are playing.}
+\ExampleItem{Sie ist noch am Überlegen.}{She is still thinking it over.}
+\end{itemize}
+\end{exbox}
+
+\section{beim + substantivierter Infinitiv \textnormal{(beim + nominalized infinitive)}}
+\begin{grammarentry}{Tätigkeit und Gleichzeitigkeit}{Activity and simultaneity}
+\GermanText{Ich bin beim Lesen kann eine laufende Beschäftigung beschreiben. Beim Lesen höre ich Musik bedeutet dagegen während des Lesens. Die beim-Konstruktion ist nicht in jedem Satz mit der am-Konstruktion austauschbar.}
+\EnglishText{Ich bin beim Lesen may describe a currently ongoing activity. Beim Lesen höre ich Musik means while reading. The beim-construction and the am-construction are not interchangeable in all contexts.}
+\end{grammarentry}
+\begin{exbox}
+\begin{itemize}
+\ExampleItem{Er ist gerade beim Essen.}{He is eating at the moment.}
+\ExampleItem{Beim Kochen telefoniere ich manchmal.}{I sometimes talk on the phone while cooking.}
+\ExampleItem{Sie ist im Begriff, das Haus zu verlassen.}{She is about to leave the house; this usually describes something imminent, not already under way.}
+\ExampleItem{Er ist zum Einkaufen.}{He is out shopping; this primarily describes absence.}
+\end{itemize}
+\end{exbox}
+
+\section{Zeitangaben und Unterschiede \textnormal{(Time expressions and distinctions)}}
+\begin{grammarentry}{gerade, momentan, zurzeit, noch}{Not interchangeable in all cases}
+\GermanText{Gerade oder im Moment bezieht sich typischerweise auf den jetzigen Augenblick. Zurzeit oder derzeit kann einen längeren aktuellen Zeitraum meinen. Noch oder immer noch betont das Fortdauern. Ständig und dauernd können eine wiederholte Handlung oder eine Beschwerde ausdrücken.}
+\EnglishText{Gerade or im Moment typically refers to the present moment. Zurzeit or derzeit may describe a longer current period. Noch or immer noch emphasizes continuation. Ständig and dauernd can describe repetition or a complaint.}
+\end{grammarentry}
+\begin{exbox}
+\begin{itemize}
+\ExampleItem{Ich koche gerade.}{I am cooking right now.}
+\ExampleItem{Zurzeit arbeite ich an einem Forschungsprojekt.}{I am currently working on a research project (over a period).}
+\ExampleItem{Ich arbeite immer noch.}{I am still working.}
+\ExampleItem{Er unterbricht mich ständig.}{He is always interrupting me (repeated behavior).}
+\end{itemize}
+\end{exbox}
+
+\section{Present Perfect Continuous im Deutschen \textnormal{(English present perfect continuous in German)}}
+\begin{grammarentry}{Präsens + seit + Dativ}{Action started in the past and continues}
+\GermanText{Eine Handlung, die in der Vergangenheit begonnen hat und jetzt noch andauert, wird häufig im Präsens mit seit ausgedrückt. Seit verlangt den Dativ: seit zwei Stunden, seit einem Jahr, seit Montag. Schon kann die Dauer hervorheben.}
+\EnglishText{An action that started in the past and continues up to now is often expressed in German with present tense plus seit. Seit takes the dative: seit zwei Stunden, seit einem Jahr, seit Montag. Schon can emphasize elapsed duration.}
+\end{grammarentry}
+\begin{exbox}
+\begin{itemize}
+\ExampleItem{Ich lerne seit zwei Stunden Deutsch.}{I have been studying German for two hours (and am still studying).}
+\ExampleItem{Sie wartet schon seit einer Stunde.}{She has already been waiting for an hour.}
+\ExampleItem{Wir wohnen seit 2020 hier.}{We have been living here since 2020.}
+\ExampleItem{Ich habe zwei Stunden lang gelernt.}{I studied for two hours; this does not assert that I am still studying.}
+\end{itemize}
+\end{exbox}
+
+\section{Verlaufsbedeutung im Passiv \textnormal{(Progressive meaning in passive voice)}}
+\begin{grammarentry}{werden + Partizip II}{The event passive}
+\GermanText{Das deutsche Vorgangspassiv kann ein laufendes Geschehen ausdrücken. Gerade kann es verdeutlichen. Das Hilfsverb werden dient hier dem Passiv und bildet für sich allein kein Futur.}
+\EnglishText{German event passive can describe an ongoing process. Gerade may make this explicit. The auxiliary werden is passive-marking here and does not itself indicate the future.}
+\end{grammarentry}
+\begin{exbox}
+\begin{itemize}
+\ExampleItem{Das Auto wird gerade repariert.}{The car is being repaired right now.}
+\ExampleItem{Die Daten werden momentan ausgewertet.}{The data are currently being evaluated.}
+\ExampleItem{Die Tür ist geschlossen.}{The door is closed (a state, not necessarily an ongoing closing process).}
+\end{itemize}
+\end{exbox}
+
+\section{Häufige Verwechslungen \textnormal{(Common confusions)}}
+\begin{grammarentry}{Nicht alle Zeitformen eins zu eins übertragen}{Do not map tense forms mechanically}
+\GermanText{Ich habe gerade gegessen bedeutet normalerweise, dass das Essen soeben beendet wurde. Das Perfekt mit gerade bedeutet deshalb nicht automatisch eine laufende Handlung. Auch im Begriff sein betont gewöhnlich einen bevorstehenden Beginn und nicht den Verlauf.}
+\EnglishText{Ich habe gerade gegessen normally means that eating has just finished. Therefore the perfect tense plus gerade does not automatically indicate ongoing action. Im Begriff sein likewise normally emphasizes an imminent start, not an ongoing activity.}
+\end{grammarentry}
+\begin{exbox}
+\begin{itemize}
+\ExampleItem{Ich esse gerade.}{I am eating right now.}
+\ExampleItem{Ich habe gerade gegessen.}{I have just eaten.}
+\ExampleItem{Ich bin gerade dabei, zu essen.}{I am in the middle of eating.}
+\end{itemize}
+\end{exbox}
+
+\section{Zusammenfassung \textnormal{(Summary)}}
+\begin{grammarentry}{Merksätze}{Key rules}
+\GermanText{Präsens kann für Simple Present oder Present Continuous stehen. Gerade ist eine häufige Verdeutlichung. Dabei sein, ... zu ... und am + substantivierter Infinitiv machen den Verlauf ausdrücklich; ihre stilistische Wirkung ist unterschiedlich. Bei bis jetzt andauernden Handlungen ist Präsens + seit besonders wichtig.}
+\EnglishText{German present tense can correspond to simple present or present continuous. Gerade is a frequent clarifier. Dabei sein, ... zu ... and am + nominalized infinitive explicitly mark ongoing activity, but differ in register. Present tense plus seit is especially important for actions continuing until now.}
+\end{grammarentry}
+\begin{exbox}
+\begin{itemize}
+\ExampleItem{Ich lerne.}{I study / I am studying.}
+\ExampleItem{Ich lerne gerade.}{I am studying right now.}
+\ExampleItem{Ich bin dabei, zu lernen.}{I am in the process of studying.}
+\ExampleItem{Ich lerne seit acht Uhr.}{I have been studying since eight o'clock.}
+\end{itemize}
+\end{exbox}
+
+\section{Quelle \textnormal{(Source)}}
+\GermanText{Institut für Deutsche Sprache (IDS), grammis: Darf man Ich bin am Schreiben schreiben?}
+\EnglishText{Institute for the German Language (IDS), grammis: discussion of the German progressive and its acceptability.}
+\url{https://grammis.ids-mannheim.de/fragen/4551}
+\end{document}

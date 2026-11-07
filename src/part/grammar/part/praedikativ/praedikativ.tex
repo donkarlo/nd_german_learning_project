@@ -1,0 +1,184 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage[a4paper,margin=2cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman,english]{babel}
+\usepackage{lmodern,microtype,parskip,enumitem}
+\usepackage[table]{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{titlesec,array,longtable}
+\usepackage[hidelinks]{hyperref}
+
+\definecolor{HeaderBlueDark}{RGB}{70,110,170}
+\definecolor{RowBlueLight}{RGB}{235,243,255}
+\definecolor{RowBlueDark}{RGB}{220,233,250}
+\definecolor{SoftGray}{RGB}{90,90,90}
+\setlength{\parindent}{0pt}
+\setlist[itemize]{leftmargin=1.4em,itemsep=0.35em,topsep=0.35em}
+\linespread{1.06}
+\renewcommand{\arraystretch}{1.35}
+\setlength{\tabcolsep}{5pt}
+\titleformat{\section}[block]{\Large\bfseries\color{HeaderBlueDark}}{}{0pt}{}
+\titlespacing{\section}{0pt}{1.3em}{0.8em}
+\titleformat{\subsection}[block]{\large\bfseries\color{HeaderBlueDark}}{}{0pt}{}
+\titlespacing{\subsection}{0pt}{1.0em}{0.6em}
+\newtcolorbox{exbox}{enhanced,breakable,colback=RowBlueLight,colframe=RowBlueDark,boxrule=0.4pt,arc=1.5mm,left=1.2mm,right=1.2mm,top=1mm,bottom=1mm,title={Beispiele \textnormal{(Examples)}},fonttitle=\bfseries,colbacktitle=RowBlueDark,coltitle=black}
+\NewDocumentEnvironment{grammarentry}{mm+b}{%
+\begin{tcolorbox}[enhanced,breakable,colback=white,colframe=HeaderBlueDark,boxrule=0.6pt,arc=1.5mm,left=1.5mm,right=1.5mm,top=1mm,bottom=1mm,colbacktitle=HeaderBlueDark,coltitle=white,fonttitle=\bfseries,title={#1\hfill\normalfont\footnotesize #2}]
+#3
+\end{tcolorbox}
+}{}
+\newcommand{\GermanText}[1]{\textbf{Deutsch: }#1\par}
+\newcommand{\EnglishText}[1]{{\small\color{SoftGray}\textbf{English: }#1\par}}
+\newcommand{\ExampleItem}[2]{\item \textbf{#1}\\{\small\color{SoftGray}#2}}
+\title{Das Prädikativ\\\large\textnormal{The Predicative Complement}}
+\date{}
+\begin{document}
+\maketitle
+\tableofcontents
+\newpage
+
+\section{Begriff und Funktion \textnormal{(Concept and function)}}
+\begin{grammarentry}{Was ist ein Prädikativ?}{Definition / Definition}
+\GermanText{Ein \textbf{Prädikativ} (auch \textbf{prädikative Ergänzung}) ordnet dem Subjekt oder Objekt eine Eigenschaft, Identität, Rolle, Einordnung oder einen Zustand zu. Es ist nicht dasselbe wie das \textbf{Prädikat}: Das Prädikat umfasst den verbalen Teil des Satzes.}
+\EnglishText{A \textbf{predicative complement} assigns a property, identity, role, classification, or state to the subject or an object. It is not the same as the \textbf{predicate}, which comprises the verbal part of the clause.}
+\GermanText{Die wichtigsten Arten sind das \textbf{Subjektsprädikativ} und das \textbf{Objektsprädikativ}. Ein Prädikativ ist \textbf{nicht automatisch ein Objekt}.}
+\EnglishText{The main types are the \textbf{subject complement} and the \textbf{object complement}. A predicative complement is \textbf{not automatically an object}.}
+\end{grammarentry}
+\begin{exbox}\begin{itemize}
+\ExampleItem{Der Himmel ist blau.}{The sky is blue. (blau = subject complement)}
+\ExampleItem{Meine Schwester ist Ärztin.}{My sister is a doctor. (Ärztin = subject complement)}
+\ExampleItem{Ich finde den Text verständlich.}{I find the text understandable. (verständlich = object complement)}
+\end{itemize}\end{exbox}
+
+\section{Subjektsprädikativ \textnormal{(Subject complement)}}
+\begin{grammarentry}{Bezug auf das Subjekt}{Subject complement}
+\GermanText{Das \textbf{Subjektsprädikativ} sagt, was oder wie das Subjekt ist, wird oder bleibt. Typische \textbf{Kopulaverben} sind \textbf{sein}, \textbf{werden} und \textbf{bleiben}.}
+\EnglishText{A \textbf{subject complement} tells us what the subject is, becomes, or remains, or what it is like. Typical \textbf{copular verbs} are \textbf{sein}, \textbf{werden}, and \textbf{bleiben}.}
+\GermanText{Bei einem \textbf{nominalen} Subjektsprädikativ steht die Nominalgruppe gewöhnlich im \textbf{Nominativ}. Bei einem \textbf{adjektivischen} Prädikativ wird das Adjektiv normalerweise nicht dekliniert.}
+\EnglishText{A \textbf{nominal} subject complement normally takes the \textbf{nominative}. A \textbf{predicative adjective} normally has no adjective declension ending.}
+\end{grammarentry}
+\begin{exbox}\begin{itemize}
+\ExampleItem{Er ist ein guter Lehrer.}{He is a good teacher. (ein guter Lehrer = nominative)}
+\ExampleItem{Sie wird eine erfahrene Ärztin.}{She is becoming an experienced doctor. (eine erfahrene Ärztin = nominative)}
+\ExampleItem{Das bleibt ein großes Problem.}{That remains a major problem. (ein großes Problem = nominative)}
+\ExampleItem{Die Lehrer sind freundlich.}{The teachers are friendly. (freundlich = undeclined adjective)}
+\end{itemize}\end{exbox}
+
+\subsection{Nominales Prädikativ \textnormal{(Nominal predicative)}}
+\begin{grammarentry}{Nomen oder Nominalgruppe}{Nominativ / Nominative}
+\GermanText{Eine Nominalgruppe enthält ein Nomen oder Pronomen und kann Artikel, Adjektive und weitere Attribute enthalten. Nach kopulativem \textbf{sein}, \textbf{werden} und \textbf{bleiben} steht das nominale Prädikativ im Nominativ. Die Adjektive \textbf{innerhalb} der Nominalgruppe müssen trotzdem korrekt dekliniert werden.}
+\EnglishText{A noun phrase can contain a noun or pronoun, with articles, adjectives and modifiers. After copular \textbf{sein}, \textbf{werden}, and \textbf{bleiben}, the nominal complement is in the nominative. Adjectives \textbf{inside} that noun phrase must still be declined correctly.}
+\GermanText{Bei Beruf, Nationalität und Zugehörigkeit steht das Nomen häufig ohne Artikel: \textbf{Er ist Arzt}. Mit einem beschreibenden Adjektiv steht oft ein Artikel: \textbf{Er ist ein guter Arzt}.}
+\EnglishText{Professions, nationalities and affiliations often occur without an article: \textbf{Er ist Arzt} (He is a doctor). An evaluative adjective often leads to an article: \textbf{Er ist ein guter Arzt} (He is a good doctor).}
+\end{grammarentry}
+\begin{exbox}\begin{itemize}
+\ExampleItem{Das ist ein anderer Nachteil.}{That is another disadvantage. (nominative masculine: ein anderer)}
+\ExampleItem{Ich sehe einen anderen Nachteil.}{I see another disadvantage. (accusative masculine: einen anderen)}
+\ExampleItem{Das ist ein anderes Problem.}{That is another problem. (nominative neuter)}
+\ExampleItem{Ich sehe ein anderes Problem.}{I see another problem. (accusative neuter: identical form)}
+\end{itemize}\end{exbox}
+
+\subsection{Adjektivisches Prädikativ \textnormal{(Adjectival predicative)}}
+\begin{grammarentry}{Adjektiv ohne Endung}{Adjective without agreement ending}
+\GermanText{Ein prädikatives Adjektiv steht normalerweise in seiner \textbf{unflektierten Form}: \textbf{Er ist müde}; \textbf{Sie ist müde}; \textbf{Die Kinder sind müde}. Es erhält \textbf{keinen Nominativ-, Dativ- oder Akkusativ-Kasus} wie eine Nominalgruppe.}
+\EnglishText{A predicative adjective normally appears in its \textbf{uninflected form}: he is tired; she is tired; the children are tired. It does \textbf{not} bear nominal nominative, dative, or accusative case endings.}
+\GermanText{Steigerung ist möglich: \textbf{Sie ist schneller}; \textbf{Sie ist am schnellsten}. Ergänzungen des Adjektivs haben gegebenenfalls ihren eigenen Kasus: \textbf{Ich bin dir dankbar} (dir: Dativ).}
+\EnglishText{Comparison is possible: \textbf{Sie ist schneller} (she is faster); \textbf{Sie ist am schnellsten} (she is the fastest). Complements licensed by an adjective have their own case: \textbf{Ich bin dir dankbar} (I am grateful to you; dir: dative).}
+\end{grammarentry}
+
+\section{Objektsprädikativ \textnormal{(Object complement)}}
+\begin{grammarentry}{Bezug auf ein Objekt}{Object complement}
+\GermanText{Ein \textbf{Objektsprädikativ} beschreibt oder benennt das Objekt und gehört zur Struktur bestimmter Verben, etwa \textbf{finden}, \textbf{nennen}, \textbf{halten für}, \textbf{machen} und \textbf{wählen}. Das Bezugsobjekt ist häufig ein Akkusativobjekt.}
+\EnglishText{An \textbf{object complement} describes or names an object and belongs to the construction of certain verbs, such as \textbf{finden}, \textbf{nennen}, \textbf{halten für}, \textbf{machen}, and \textbf{wählen}. Its referent is often an accusative object.}
+\GermanText{Ein \textbf{adjektivisches} Objektsprädikativ bleibt normalerweise unflektiert. Ein \textbf{nominales} Objektsprädikativ kann je nach Konstruktion ebenfalls im Akkusativ stehen oder als Präpositionalgruppe auftreten.}
+\EnglishText{An \textbf{adjectival} object complement is normally uninflected. A \textbf{nominal} object complement may itself be accusative or take the form of a prepositional phrase, depending on the construction.}
+\end{grammarentry}
+\begin{exbox}\begin{itemize}
+\ExampleItem{Ich finde den Film interessant.}{I find the film interesting. (den Film = accusative object; interessant = object complement)}
+\ExampleItem{Sie nennt ihn einen Experten.}{She calls him an expert. (ihn = accusative object; einen Experten = accusative nominal complement)}
+\ExampleItem{Wir streichen die Wand weiß.}{We paint the wall white. (weiß = resultative object-related complement)}
+\ExampleItem{Ich halte ihn für einen Experten.}{I consider him an expert. (für + accusative within a prepositional complement)}
+\ExampleItem{Sie wurde zur Vorsitzenden gewählt.}{She was elected chairperson. (zu + dative: zur Vorsitzenden)}
+\end{itemize}\end{exbox}
+\begin{grammarentry}{Achtung: mehrere Analysemodelle}{Terminology note}
+\GermanText{Die Einteilung mancher objektbezogenen Ausdrücke in \textbf{Objektsprädikativ}, \textbf{resultatives Prädikativ} oder \textbf{prädikatives Attribut} variiert zwischen Grammatiken. Entscheidend sind Bezugswort, Verbkonstruktion und Bedeutung. Eine Präpositionalgruppe wie \textbf{für einen Experten} ist nicht einfach ein Nominativprädikativ.}
+\EnglishText{Grammar frameworks differ in whether certain object-related expressions are classified as \textbf{object complements}, \textbf{resultative predicates}, or \textbf{secondary predicates}. The referent, verb construction, and meaning matter. A prepositional phrase such as \textbf{für einen Experten} is not a nominative subject complement.}
+\end{grammarentry}
+
+\section{Weitere Formen \textnormal{(Other forms)}}
+\begin{grammarentry}{Nicht nur Nomen und Adjektive}{Further constructions}
+\GermanText{Prädikativische Funktionen können auch durch andere Formen ausgedrückt werden, zum Beispiel \textbf{Infinitivgruppen} und \textbf{Inhaltssätze}. Ob Ortsangaben wie \textbf{in Graz} nach \textbf{sein} als prädikativ oder als lokale Ergänzung analysiert werden, hängt vom Grammatikmodell ab.}
+\EnglishText{Predicative functions can also be expressed by other forms, such as \textbf{infinitive clauses} and \textbf{content clauses}. Whether locative expressions such as \textbf{in Graz} after \textbf{sein} are analysed as predicative or as locative complements depends on the grammar model.}
+\end{grammarentry}
+\begin{exbox}\begin{itemize}
+\ExampleItem{Mein Ziel ist, die Prüfung zu bestehen.}{My aim is to pass the examination. (infinitive clause)}
+\ExampleItem{Das Problem ist, dass wir keine Zeit haben.}{The problem is that we have no time. (content clause)}
+\ExampleItem{Meine Schwester ist in Graz.}{My sister is in Graz. (locative complement; classification varies)}
+\end{itemize}\end{exbox}
+
+\section{Prädikativ, Attribut und Adverbial \textnormal{(Predicative, attributive and adverbial uses)}}
+\rowcolors{2}{RowBlueLight}{RowBlueDark}
+\begin{longtable}{>{\raggedright\arraybackslash}p{3.1cm}|>{\raggedright\arraybackslash}p{5.4cm}|>{\raggedright\arraybackslash}p{5.2cm}}
+\rowcolor{HeaderBlueDark}
+\color{white}\textbf{Funktion / Function} & \color{white}\textbf{Beispiel / Example} & \color{white}\textbf{Erklärung / Explanation}\\
+Attributiv / attributive & \textbf{ein interessantes Buch} & Adjektiv vor Nomen; dekliniert / adjective before noun; declined\\
+Prädikativ / predicative & Das Buch ist \textbf{interessant}. & Beschreibung des Subjekts / describes the subject\\
+Adverbial / adverbial & Er spricht \textbf{deutlich}. & Beschreibung der Handlung / describes the manner of speaking\\
+Objektsprädikativ / object complement & Ich finde das Buch \textbf{interessant}. & Beschreibung des Objekts / describes the object\\
+\end{longtable}
+\begin{grammarentry}{Nicht verwechseln}{Avoid confusion}
+\GermanText{Das \textbf{Prädikat} ist nicht dasselbe wie das \textbf{Prädikativ}: In \textbf{Das Buch ist interessant} ist \textbf{ist} die finite Kopula und \textbf{interessant} das Subjektsprädikativ. Zusammen bilden sie den prädikatsbezogenen Ausdruck.}
+\EnglishText{The \textbf{predicate} is not the same as the \textbf{predicative complement}: in \textbf{Das Buch ist interessant}, \textbf{ist} is the finite copula and \textbf{interessant} is the subject complement.}
+\end{grammarentry}
+
+\section{Kopulaverb oder Hilfsverb? \textnormal{(Copula or auxiliary?)}}
+\begin{grammarentry}{Die Funktion des Verbs prüfen}{Different constructions}
+\GermanText{\textbf{sein} und \textbf{werden} sind nicht in jedem Satz Kopulaverben. In \textbf{Er ist gegangen} bildet \textbf{ist} das Perfekt; in \textbf{Der Brief wird geschrieben} bildet \textbf{wird} das Vorgangspassiv. Das sind keine Beispiele für nominale Subjektsprädikative.}
+\EnglishText{\textbf{sein} and \textbf{werden} are not always copulas. In \textbf{Er ist gegangen} (He has gone), \textbf{ist} forms the perfect; in \textbf{Der Brief wird geschrieben} (The letter is being written), \textbf{wird} forms the eventive passive. These are not nominal subject complements.}
+\GermanText{In \textbf{Die Tür ist geschlossen} ist die Abgrenzung zwischen adjektivischer Zustandsbeschreibung und Zustandspassiv von Kontext und Analyse abhängig.}
+\EnglishText{In \textbf{Die Tür ist geschlossen} (The door is closed), the distinction between an adjectival description and the stative passive depends on context and analysis.}
+\end{grammarentry}
+
+\section{Systematische Satzanalyse \textnormal{(Systematic sentence analysis)}}
+\begin{grammarentry}{Vier Prüfschritte}{Four diagnostic steps}
+\GermanText{\textbf{1.} Bestimme das finite Verb und das Subjekt. \textbf{2.} Prüfe, ob eine Nominalgruppe ein Objekt ist oder dem Subjekt eine Identität/Eigenschaft zuweist. \textbf{3.} Untersuche, ob ein weiterer Ausdruck ein Objekt charakterisiert. \textbf{4.} Ermittle den Kasus anhand der \textbf{gesamten Konstruktion}, nicht anhand der Wortstellung.}
+\EnglishText{\textbf{1.} Identify the finite verb and subject. \textbf{2.} Check whether a noun phrase is an object or attributes an identity/property to the subject. \textbf{3.} Determine whether another expression characterises an object. \textbf{4.} Determine case from the \textbf{whole construction}, not from word order.}
+\end{grammarentry}
+\begin{exbox}\begin{itemize}
+\ExampleItem{Zu spät zu kommen ist ein anderes Problem.}{Being late is another problem. (zu spät zu kommen = infinitive-clause subject; ein anderes Problem = nominal subject complement in the nominative)}
+\ExampleItem{Dieses Problem ist ein anderer Nachteil.}{This problem is another disadvantage. (ein anderer Nachteil = nominative complement)}
+\ExampleItem{Dieses Problem verursacht einen anderen Nachteil.}{This problem causes another disadvantage. (einen anderen Nachteil = accusative object)}
+\ExampleItem{Sie nennt dieses Problem einen schweren Fehler.}{She calls this problem a serious mistake. (dieses Problem = object; einen schweren Fehler = accusative object complement)}
+\end{itemize}\end{exbox}
+
+\section{Häufige Fehler \textnormal{(Common mistakes)}}
+\begin{grammarentry}{Fehler und Korrekturen}{Mistakes and corrections}
+\GermanText{\textbf{Falsch:} Er ist einen guten Lehrer. \textbf{Richtig:} Er ist ein guter Lehrer. (nominales Subjektsprädikativ im Nominativ).}
+\EnglishText{\textbf{Wrong:} Er ist einen guten Lehrer. \textbf{Correct:} Er ist ein guter Lehrer. (nominative subject complement).}
+\GermanText{\textbf{Falsch:} Das Kind ist müdes. \textbf{Richtig:} Das Kind ist müde. (prädikatives Adjektiv ohne Endung).}
+\EnglishText{\textbf{Wrong:} Das Kind ist müdes. \textbf{Correct:} Das Kind ist müde. (uninflected predicative adjective).}
+\GermanText{\textbf{Falsch:} Nach \glqq sein\grqq{} steht immer ein Nominativobjekt. \textbf{Richtig:} Das nominale Subjektsprädikativ steht im Nominativ; ein \glqq Nominativobjekt\grqq{} ist in der üblichen Schulgrammatik keine eigene Objektart.}
+\EnglishText{\textbf{Wrong:} After \textbf{sein} there is always a nominative object. \textbf{Correct:} A nominal subject complement takes the nominative; \textbf{nominative object} is not a standard object category in ordinary German school grammar.}
+\end{grammarentry}
+
+\section{Übungen mit Lösungen \textnormal{(Exercises with answers)}}
+\begin{grammarentry}{Bestimme die Funktion}{Identify the function}
+\GermanText{Bestimme jeweils \textbf{Subjekt}, \textbf{Objekt} und \textbf{Prädikativ}, falls vorhanden: (a) \textbf{Die Aufgabe ist schwierig.} (b) \textbf{Er wird Ingenieur.} (c) \textbf{Ich finde ihn kompetent.} (d) \textbf{Sie nennt ihn einen Experten.} (e) \textbf{Er liest ein gutes Buch.}}
+\EnglishText{Identify the \textbf{subject}, \textbf{object}, and \textbf{predicative complement}, where applicable, in sentences (a)--(e).}
+\end{grammarentry}
+\begin{grammarentry}{Lösungen}{Answers}
+\GermanText{\textbf{(a)} Die Aufgabe = Subjekt; schwierig = adjektivisches Subjektsprädikativ. \textbf{(b)} Er = Subjekt; Ingenieur = nominales Subjektsprädikativ (Nom.). \textbf{(c)} Ich = Subjekt; ihn = Akkusativobjekt; kompetent = Objektsprädikativ.}
+\EnglishText{\textbf{(a)} The task = subject; difficult = adjectival subject complement. \textbf{(b)} He = subject; engineer = nominative noun complement. \textbf{(c)} I = subject; him = accusative object; competent = object complement.}
+\GermanText{\textbf{(d)} Sie = Subjekt; ihn = Akkusativobjekt; einen Experten = nominales Objektsprädikativ (Akk.). \textbf{(e)} Er = Subjekt; ein gutes Buch = Akkusativobjekt; kein Prädikativ.}
+\EnglishText{\textbf{(d)} She = subject; him = accusative object; an expert = accusative nominal object complement. \textbf{(e)} He = subject; a good book = accusative object; no predicative complement.}
+\end{grammarentry}
+
+\section{Zusammenfassung \textnormal{(Summary)}}
+\begin{grammarentry}{Die wichtigsten Regeln}{Key rules}
+\GermanText{\textbf{Nominales Subjektsprädikativ} nach \textbf{sein, werden, bleiben}: normalerweise \textbf{Nominativ}. \textbf{Adjektivisches Prädikativ}: normalerweise \textbf{unflektiert}. \textbf{Objektsprädikativ}: auf das Objekt bezogen; die konkrete Konstruktion bestimmt die Form.}
+\EnglishText{\textbf{Nominal subject complement} after \textbf{sein, werden, bleiben}: normally \textbf{nominative}. \textbf{Adjectival predicative}: normally \textbf{uninflected}. \textbf{Object complement}: refers to an object; the construction determines its form.}
+\GermanText{Für die vertiefte Behandlung prädikativer Adjektive steht im gleichen Ordner das Dokument \texttt{praedikative.tex}; für die vier Kasus siehe das Dokument \texttt{../kasus/kasus.tex}.}
+\EnglishText{For more detail on predicative adjectives, see \texttt{praedikative.tex} in the same folder; for the four cases, see \texttt{../kasus/kasus.tex}.}
+\end{grammarentry}
+\end{document}

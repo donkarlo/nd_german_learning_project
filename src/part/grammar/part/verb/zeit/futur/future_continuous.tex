@@ -1,0 +1,101 @@
+\documentclass[a4paper,11pt]{article}
+
+\usepackage[a4paper,margin=2cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman,english]{babel}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{xcolor}
+\usepackage{parskip}
+\usepackage{enumitem}
+\usepackage[most]{tcolorbox}
+\usepackage{titlesec}
+\usepackage[hidelinks]{hyperref}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage[table]{xcolor}
+
+\definecolor{HeaderBlueDark}{RGB}{70,110,170}
+\definecolor{RowBlueLight}{RGB}{235,243,255}
+\definecolor{RowBlueDark}{RGB}{220,233,250}
+\definecolor{SoftGray}{RGB}{90,90,90}
+
+\setlength{\parindent}{0pt}
+\setlist[itemize]{leftmargin=1.4em,itemsep=0.35em,topsep=0.35em}
+\linespread{1.06}
+\renewcommand{\arraystretch}{1.35}
+\setlength{\tabcolsep}{6pt}
+
+\titleformat{\section}[block]
+{\Large\bfseries\color{HeaderBlueDark}}
+{}{0pt}{}
+\titlespacing{\section}{0pt}{1.3em}{0.8em}
+
+\titleformat{\subsection}[block]
+{\large\bfseries\color{HeaderBlueDark}}
+{}{0pt}{}
+\titlespacing{\subsection}{0pt}{1.0em}{0.6em}
+
+\newtcolorbox{exbox}{enhanced,breakable,colback=RowBlueLight,colframe=RowBlueDark,boxrule=0.4pt,arc=1.5mm,left=1.2mm,right=1.2mm,top=1mm,bottom=1mm,title={Beispiele \textnormal{(Examples)}},fonttitle=\bfseries,colbacktitle=RowBlueDark,coltitle=black}
+
+\NewDocumentEnvironment{grammarentry}{mm+b}{%
+    \begin{tcolorbox}[enhanced,breakable,colback=white,colframe=HeaderBlueDark,boxrule=0.6pt,arc=1.5mm,left=1.5mm,right=1.5mm,top=1mm,bottom=1mm,colbacktitle=HeaderBlueDark,coltitle=white,fonttitle=\bfseries,title={#1\hfill\normalfont\footnotesize #2}]
+    #3
+    \end{tcolorbox}
+}{}
+
+\newcommand{\GermanText}[1]{\textbf{Deutsch: }#1\par}
+\newcommand{\EnglishText}[1]{{\small\color{SoftGray}\textbf{English: }#1\par}}
+\newcommand{\ExampleItem}[2]{\item \textbf{#1}\\{\small\color{SoftGray}#2}}
+
+\title{Verlaufsform der Zukunft\\\large\textnormal{Future Continuous in German}}
+\date{}
+
+\begin{document}
+    \maketitle
+    \tableofcontents
+    \newpage
+
+
+\section{Grundidee \textnormal{(Basic idea)}}
+\begin{grammarentry}{Verlauf statt eigener Tempusform}{No separate German continuous tense}
+\GermanText{Englisches will be + -ing wird meist durch Präsens mit Zukunftsangabe oder durch Futur I mit gerade / dabei sein ausgedrückt. Ein eigenes Futur Continuous gibt es nicht.}
+\EnglishText{English will be + -ing is commonly expressed through present tense with a future time expression or through Futur I with gerade / dabei sein. German has no separate future progressive tense.}
+\end{grammarentry}
+
+\section{Future Continuous \textnormal{(English future continuous)}}
+\begin{grammarentry}{Zukunftsbezug plus Verlauf}{No separate future progressive tense}
+\GermanText{Auch das englische will be + -ing besitzt im Deutschen kein eigenes Tempus. Häufig genügt Präsens mit einer eindeutigen zukünftigen Zeitangabe; alternativ ist Futur I mit gerade oder einer Verlaufsumschreibung möglich. Das Futur I allein garantiert keine Verlaufsbedeutung.}
+\EnglishText{German likewise has no separate tense corresponding to English will be + -ing. Present tense with a clear future time expression is often sufficient; future tense with gerade or an explicit progressive paraphrase is also possible. Future tense alone does not guarantee an ongoing interpretation.}
+\end{grammarentry}
+\begin{exbox}
+\begin{itemize}
+\ExampleItem{Morgen um zehn arbeite ich.}{Tomorrow at ten I will be working / I will work (context decides).}
+\ExampleItem{Morgen um zehn werde ich gerade arbeiten.}{Tomorrow at ten I will be working.}
+\ExampleItem{Morgen um zehn werde ich gerade dabei sein, einen Bericht zu schreiben.}{Tomorrow at ten I will be in the middle of writing a report.}
+\ExampleItem{Morgen um zehn bin ich noch am Arbeiten.}{Tomorrow at ten I will still be working (am-progressive, depending on register).}
+\end{itemize}
+\end{exbox}
+
+\section{Zukünftiger Verlauf im Passiv \textnormal{(Future ongoing passive)}}
+\begin{grammarentry}{werden + Partizip II}{Passive, not automatically future}
+\GermanText{Mit einer zukünftigen Zeitangabe kann das Präsens des Vorgangspassivs einen Vorgang ausdrücken, der dann gerade läuft. Werden ist hier das Passivhilfsverb.}
+\EnglishText{With a future time expression, the present event passive can describe a process that will be ongoing then. Here werden is a passive auxiliary.}
+\end{grammarentry}
+\begin{exbox}
+\begin{itemize}
+\ExampleItem{Morgen um zehn wird der Bericht gerade überprüft.}{Tomorrow at ten the report will be under review / will be being checked.}
+\end{itemize}
+\end{exbox}
+\section{Zusammenfassung \textnormal{(Summary)}}
+\begin{grammarentry}{Merksätze}{Key rules}
+\GermanText{Morgen um zehn arbeite ich und Morgen um zehn werde ich gerade arbeiten können beide zukünftigen Verlauf beschreiben. Gerade betont den laufenden Vorgang; die Zeitangabe verankert ihn in der Zukunft.}
+\EnglishText{Morgen um zehn arbeite ich and Morgen um zehn werde ich gerade arbeiten can both describe future ongoing activity. Gerade emphasizes the process; the time expression establishes the future reference point.}
+\end{grammarentry}
+
+\section{Quelle \textnormal{(Source)}}
+        \GermanText{Institut für Deutsche Sprache (IDS), grammis: Darf man Ich bin am Schreiben schreiben?}
+        \EnglishText{Institute for the German Language (IDS), grammis: discussion of progressive constructions and their formation in different tenses.}
+        \url{https://grammis.ids-mannheim.de/fragen/4551}
+\end{document}

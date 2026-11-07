@@ -1,50 +1,200 @@
-\documentclass[a4paper]{article}
-
-\usepackage{graphicx}
-\usepackage{amsmath,amssymb}
-\usepackage{minted}
-\usepackage{multirow}
-\usepackage{float}
-\usepackage{todonotes}
-\usepackage{forest}
-\usepackage{xstring}
-\usepackage{xcolor}
+\documentclass[a4paper,11pt]{article}
+\usepackage[a4paper,margin=2cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman,english]{babel}
+\usepackage{lmodern,microtype,parskip,enumitem}
+\usepackage[table]{xcolor}
 \usepackage[most]{tcolorbox}
-\usepackage{xparse}
-\usepackage{natbib}
-
-\usetikzlibrary{graphs,graphdrawing}
-\usegdlibrary{layered}
-
-% Benötigt: \usepackage{xcolor}
-\definecolor{TranslationGray}{RGB}{120,120,120}
-\newcommand{\EN}[1]{\par{\small\textcolor{TranslationGray}{#1}}\vspace{0.4em}}
-
-% for external graphviz
-\input{/home/donkarlo/Dropbox/repo/nd_language_ai_project/src/nd_language_ai/formal/computer/programming/tex/latex/code_clips/external_graphviz.tex}
-
-% for tags
-\input{/home/donkarlo/Dropbox/repo/nd_language_ai_project/src/nd_language_ai/formal/computer/programming/tex/latex/part/control_sequence/kind/semtag/semtag.tex}
-
-% for links
-\input{/home/donkarlo/Dropbox/repo/nd_language_ai_project/src/nd_language_ai/formal/computer/programming/tex/latex/code_clips/seehere.tex}
-
-\title{Kasus}
+\usepackage{titlesec,array,longtable}
+\usepackage[hidelinks]{hyperref}
+\definecolor{HeaderBlueDark}{RGB}{70,110,170}
+\definecolor{RowBlueLight}{RGB}{235,243,255}
+\definecolor{RowBlueDark}{RGB}{220,233,250}
+\definecolor{SoftGray}{RGB}{90,90,90}
+\setlength{\parindent}{0pt}
+\setlist[itemize]{leftmargin=1.4em,itemsep=0.35em,topsep=0.35em}
+\linespread{1.06}
+\renewcommand{\arraystretch}{1.35}
+\setlength{\tabcolsep}{5pt}
+\titleformat{\section}[block]{\Large\bfseries\color{HeaderBlueDark}}{}{0pt}{}
+\titlespacing{\section}{0pt}{1.3em}{0.8em}
+\titleformat{\subsection}[block]{\large\bfseries\color{HeaderBlueDark}}{}{0pt}{}
+\titlespacing{\subsection}{0pt}{1.0em}{0.6em}
+\newtcolorbox{exbox}{enhanced,breakable,colback=RowBlueLight,colframe=RowBlueDark,boxrule=0.4pt,arc=1.5mm,left=1.2mm,right=1.2mm,top=1mm,bottom=1mm,title={Beispiele \textnormal{(Examples)}},fonttitle=\bfseries,colbacktitle=RowBlueDark,coltitle=black}
+\NewDocumentEnvironment{grammarentry}{mm+b}{%
+\begin{tcolorbox}[enhanced,breakable,colback=white,colframe=HeaderBlueDark,boxrule=0.6pt,arc=1.5mm,left=1.5mm,right=1.5mm,top=1mm,bottom=1mm,colbacktitle=HeaderBlueDark,coltitle=white,fonttitle=\bfseries,title={#1\hfill\normalfont\footnotesize #2}]
+#3
+\end{tcolorbox}
+}{}
+\newcommand{\GermanText}[1]{\textbf{Deutsch: }#1\par}
+\newcommand{\EnglishText}[1]{{\small\color{SoftGray}\textbf{English: }#1\par}}
+\newcommand{\ExampleItem}[2]{\item \textbf{#1}\\{\small\color{SoftGray}#2}}
+\newcommand{\EN}[1]{\EnglishText{#1}}
+\title{Die vier Kasus\\\large\textnormal{The Four Grammatical Cases}}
 \date{}
-
 \begin{document}
     \maketitle
     
     
-    \section{Situationen die der Kasus ein Wort bestimmen}
-        Es gibt drei Situation die die kasus ein Adjektiv oder Adverb oder Pronom oder Artikel bestimmen können:
-        
-        \subsection{Präpositionen vor die Wörter wie von, seit }
-        
-        \subsection{Die zweite oder erste Objekt eines verb sein}
+    \tableofcontents
+    \newpage
+
+    \section{Grundlagen: Was ist Kasus? \textnormal{(Basics: what is grammatical case?)}}
+        \begin{grammarentry}{Vier grammatische Fälle}{Four cases}
+            \GermanText{Der \textbf{Kasus} kennzeichnet die grammatische Rolle und die syntaktischen Beziehungen einer Nominalgruppe. Im Deutschen gibt es \textbf{Nominativ}, \textbf{Akkusativ}, \textbf{Dativ} und \textbf{Genitiv}.}
+            \EnglishText{\textbf{Case} marks grammatical roles and syntactic relationships of noun phrases. German has \textbf{nominative}, \textbf{accusative}, \textbf{dative}, and \textbf{genitive}.}
+            \GermanText{Kasusformen zeigen sich vor allem an \textbf{Artikeln, Pronomen und Adjektivendungen}; manchmal auch am Nomen. Ein freies Adverb wie \textbf{heute} wird nicht dekliniert.}
+            \EnglishText{Case is primarily visible in \textbf{articles, pronouns, and adjective endings}, and sometimes in nouns. An ordinary adverb such as \textbf{heute} is not declined.}
+        \end{grammarentry}
+
+        \rowcolors{2}{RowBlueLight}{RowBlueDark}
+        \begin{longtable}{>{\bfseries}p{2.7cm}|p{2.5cm}|p{5.1cm}|p{4cm}}
+            \rowcolor{HeaderBlueDark}
+            \color{white}\textbf{Kasus / Case} &
+            \color{white}\textbf{Frage / Question} &
+            \color{white}\textbf{Beispiel / Example} &
+            \color{white}\textbf{Rolle / Role}\\
+            Nominativ & Wer? Was? & \textbf{Der Mann} kommt. & Subjekt / subject\\
+            Akkusativ & Wen? Was? & Ich sehe \textbf{den Mann}. & Akkusativobjekt / direct object\\
+            Dativ & Wem? & Ich helfe \textbf{dem Mann}. & Dativobjekt / dative object\\
+            Genitiv & Wessen? & Das ist das Auto \textbf{des Mannes}. & Attribut / possessive modifier\\
+        \end{longtable}
+
+    \section{Subjekt, Objekt und Prädikativ \textnormal{(Subject, object and predicative complement)}}
+        \begin{grammarentry}{Drei unterschiedliche Funktionen}{Syntactic functions}
+            \GermanText{\textbf{Subjekt}: Das Satzglied, mit dem das finite Verb hinsichtlich Person und Numerus normalerweise übereinstimmt; es steht im \textbf{Nominativ}. \textbf{Objekt}: Eine vom Verb verlangte oder zugelassene Ergänzung, typischerweise im \textbf{Akkusativ}, \textbf{Dativ} oder \textbf{Genitiv} oder als \textbf{Präpositionalobjekt}. \textbf{Prädikativ}: Eine Ergänzung, die Subjekt oder Objekt eine Identität, Rolle oder Eigenschaft zuschreibt.}
+            \EnglishText{\textbf{Subject}: the clause element that normally controls finite-verb agreement and takes \textbf{nominative} case. \textbf{Object}: a complement selected or allowed by the verb, typically \textbf{accusative}, \textbf{dative}, \textbf{genitive}, or \textbf{prepositional}. \textbf{Predicative complement}: a phrase attributing identity, role, or property to the subject or an object.}
+            \GermanText{Der Ausdruck \textbf{Nominativobjekt} ist in der üblichen deutschen Schulgrammatik \textbf{keine reguläre Objektkategorie}. Nach kopulativem \textbf{sein}, \textbf{werden} und \textbf{bleiben} steht ein nominales Subjektsprädikativ im \textbf{Nominativ}.}
+            \EnglishText{\textbf{Nominative object} is \textbf{not a regular object category} in standard German school grammar. After copular \textbf{sein}, \textbf{werden}, and \textbf{bleiben}, a nominal subject complement takes \textbf{nominative} case.}
+        \end{grammarentry}
+
+        \begin{exbox}\begin{itemize}
+            \ExampleItem{Er ist ein guter Lehrer.}{He is a good teacher. (Er = subject; ein guter Lehrer = nominative subject complement)}
+            \ExampleItem{Ich kenne einen guten Lehrer.}{I know a good teacher. (einen guten Lehrer = accusative object)}
+            \ExampleItem{Sie nennt ihn einen guten Lehrer.}{She calls him a good teacher. (ihn = accusative object; einen guten Lehrer = accusative object complement)}
+            \ExampleItem{Zu spät zu kommen ist ein anderes Problem.}{Being late is another problem. (infinitive clause = subject; ein anderes Problem = nominative complement)}
+            \ExampleItem{Die Kinder sind glücklich.}{The children are happy. (glücklich = uninflected adjective, not a nominative noun phrase)}
+        \end{itemize}\end{exbox}
+
+    \section{Alle vier Kasus im Detail \textnormal{(All four cases in detail)}}
+        \subsection{Nominativ \textnormal{(Nominative)}}
+            \begin{grammarentry}{Subjekt und nominales Subjektsprädikativ}{Main roles}
+                \GermanText{Der \textbf{Nominativ} bezeichnet das Subjekt und steht auch bei nominalen Subjektsprädikativen nach \textbf{sein}, \textbf{werden} und \textbf{bleiben}. Auch Fragen nach dem Subjekt und dessen Antworten stehen entsprechend im Nominativ.}
+                \EnglishText{\textbf{Nominative} marks the subject and nominal subject complements after \textbf{sein}, \textbf{werden}, and \textbf{bleiben}. Questions about the subject and their corresponding answers use the nominative.}
+            \end{grammarentry}
+            \begin{exbox}\begin{itemize}
+                \ExampleItem{Ein neuer Student kommt.}{A new student arrives.}
+                \ExampleItem{Der Student wird ein guter Forscher.}{The student becomes a good researcher.}
+                \ExampleItem{Wer ist das? Das ist mein Bruder.}{Who is that? That is my brother.}
+            \end{itemize}\end{exbox}
+
+        \subsection{Akkusativ \textnormal{(Accusative)}}
+            \begin{grammarentry}{Objekt, Präposition und Zeitmaß}{Common roles}
+                \GermanText{Der \textbf{Akkusativ} erscheint bei vielen Verbobjekten (\textbf{sehen, kaufen, fragen}), nach bestimmten Präpositionen (\textbf{für, durch, ohne, gegen, um}), bei Richtungsangaben nach Wechselpräpositionen und bei manchen Zeit- und Maßangaben (\textbf{den ganzen Tag}).}
+                \EnglishText{The \textbf{accusative} appears with many verb objects (\textbf{see, buy, ask}), after certain prepositions (\textbf{for, through, without, against, around}), with direction after two-way prepositions, and with some expressions of time and measure (\textbf{all day}).}
+            \end{grammarentry}
+            \begin{exbox}\begin{itemize}
+                \ExampleItem{Ich frage den Lehrer.}{I ask the teacher.}
+                \ExampleItem{Ich warte auf den Bus.}{I am waiting for the bus. (auf + accusative: governed prepositional object)}
+                \ExampleItem{Ich lege das Buch auf den Tisch.}{I put the book onto the table. (direction: accusative)}
+                \ExampleItem{Ich arbeite den ganzen Tag.}{I work all day. (adverbial accusative)}
+            \end{itemize}\end{exbox}
+
+        \subsection{Dativ \textnormal{(Dative)}}
+            \begin{grammarentry}{Dativobjekt und lokale Ergänzung}{Common roles}
+                \GermanText{Der \textbf{Dativ} wird von bestimmten Verben (\textbf{helfen, danken, gehören, gefallen}), Präpositionen (\textbf{mit, bei, zu, nach, seit, von, aus}) und Wechselpräpositionen bei einer statischen Ortsangabe gefordert. Er bezeichnet häufig einen Empfänger, ist aber \textbf{nicht immer} ein indirektes Objekt.}
+                \EnglishText{The \textbf{dative} is required by certain verbs (\textbf{help, thank, belong to, please}), prepositions (\textbf{with, at, to, after, since, from, out of}), and two-way prepositions for static location. It often marks a recipient but is \textbf{not always} an indirect object.}
+            \end{grammarentry}
+            \begin{exbox}\begin{itemize}
+                \ExampleItem{Ich helfe dem Kind.}{I help the child.}
+                \ExampleItem{Sie gibt dem Kind ein Buch.}{She gives the child a book. (dem Kind = dative; ein Buch = accusative)}
+                \ExampleItem{Das Buch liegt auf dem Tisch.}{The book is lying on the table. (location: dative)}
+            \end{itemize}\end{exbox}
+
+        \subsection{Genitiv \textnormal{(Genitive)}}
+            \begin{grammarentry}{Zugehörigkeit und seltene Verbobjekte}{Common roles}
+                \GermanText{Der \textbf{Genitiv} steht vor allem bei Nomen als Attribut (\textbf{das Dach des Hauses}), nach formellen Präpositionen wie \textbf{während, trotz, wegen} und bei wenigen Verben wie \textbf{bedürfen}, \textbf{gedenken} oder \textbf{sich einer Sache annehmen}.}
+                \EnglishText{The \textbf{genitive} mainly occurs as a noun modifier (\textbf{the roof of the house}), after formal prepositions such as \textbf{during, despite, because of}, and with a few verbs such as \textbf{bedürfen}, \textbf{gedenken}, or \textbf{sich einer Sache annehmen}.}
+            \end{grammarentry}
+            \begin{exbox}\begin{itemize}
+                \ExampleItem{Das ist das Auto meines Bruders.}{That is my brother's car.}
+                \ExampleItem{Wegen des Wetters bleiben wir zu Hause.}{Because of the weather, we are staying at home.}
+                \ExampleItem{Diese Frage bedarf einer Erklärung.}{This question requires an explanation. (genitive object)}
+            \end{itemize}\end{exbox}
+
+    \section{Deklination im Überblick \textnormal{(Overview of declension)}}
+        \begin{grammarentry}{Bestimmte Artikel}{Definite articles}
+            \GermanText{Die Artikel zeigen besonders deutlich den Kasus. Im Plural wird im Dativ am Nomen häufig ein zusätzliches \textbf{-n} verwendet, sofern die Pluralform nicht bereits auf \textbf{-n} oder \textbf{-s} endet: \textbf{mit den Kindern}.}
+            \EnglishText{Articles show case particularly clearly. In the dative plural, nouns often receive an extra \textbf{-n} unless the plural already ends in \textbf{-n} or \textbf{-s}: \textbf{mit den Kindern} (with the children).}
+        \end{grammarentry}
+        \rowcolors{2}{RowBlueLight}{RowBlueDark}
+        \begin{longtable}{>{\bfseries}p{3.2cm}|p{2.8cm}|p{2.8cm}|p{2.8cm}|p{2.6cm}}
+            \rowcolor{HeaderBlueDark}
+            \color{white}\textbf{Kasus / Case} &
+            \color{white}\textbf{Maskulin} &
+            \color{white}\textbf{Feminin} &
+            \color{white}\textbf{Neutrum} &
+            \color{white}\textbf{Plural}\\
+            Nominativ & der & die & das & die\\
+            Akkusativ & den & die & das & die\\
+            Dativ & dem & der & dem & den\\
+            Genitiv & des & der & des & der\\
+        \end{longtable}
+        \begin{grammarentry}{Adjektive und Pronomen}{Agreement and case}
+            \GermanText{Innerhalb einer \textbf{Nominalgruppe} richten sich Artikel und Adjektivendung nach Kasus, Genus und Numerus: \textbf{ein guter Lehrer} (Nom.), \textbf{einen guten Lehrer} (Akk.), \textbf{einem guten Lehrer} (Dat.), \textbf{eines guten Lehrers} (Gen.).}
+            \EnglishText{Inside a \textbf{noun phrase}, articles and adjective endings depend on case, gender, and number: \textbf{a good teacher} in nominative, accusative, dative, and genitive forms.}
+            \GermanText{Personalpronomen verändern sich ebenfalls: \textbf{ich -- mich -- mir -- meiner}; \textbf{er -- ihn -- ihm -- seiner}. Die prädikativen Adjektive dagegen bleiben normalerweise unverändert: \textbf{Der Lehrer ist gut}.}
+            \EnglishText{Personal pronouns also change form: \textbf{ich -- mich -- mir -- meiner}; \textbf{er -- ihn -- ihm -- seiner}. Predicative adjectives, in contrast, normally remain unchanged: \textbf{The teacher is good}.}
+        \end{grammarentry}
+
+    \section{Kasus wird durch Konstruktionen bestimmt \textnormal{(Case depends on constructions)}}
+        \begin{grammarentry}{Verb, Präposition, Adjektiv und Nomen}{Case assignment}
+            \GermanText{\textbf{1. Verb}: \textbf{jemandem helfen} (Dat.), \textbf{jemanden sehen} (Akk.). \textbf{2. Präposition}: \textbf{mit jemandem} (Dat.), \textbf{für jemanden} (Akk.). \textbf{3. Adjektiv}: \textbf{jemandem dankbar sein} (Dat.). \textbf{4. Nomen}: \textbf{die Erinnerung an jemanden} (\textbf{an} + Akk.). \textbf{5. Satzfunktion}: Subjekt und nominales Subjektsprädikativ (Nom.).}
+            \EnglishText{\textbf{1. Verb}: help someone (dative), see someone (accusative). \textbf{2. Preposition}: with someone (dative), for someone (accusative). \textbf{3. Adjective}: grateful to someone (dative). \textbf{4. Noun}: memory of someone (\textbf{an} + accusative). \textbf{5. Clause function}: subject and nominal subject complement (nominative).}
+            \GermanText{Die \textbf{Wortstellung} allein entscheidet nicht über den Kasus: \textbf{Den Mann sieht die Frau} hat dieselben Kasusrollen wie \textbf{Die Frau sieht den Mann}.}
+            \EnglishText{\textbf{Word order} alone does not determine case: \textbf{Den Mann sieht die Frau} and \textbf{Die Frau sieht den Mann} contain the same accusative object and nominative subject.}
+        \end{grammarentry}
+
+
     
     
-    \section{Kasus bei deutschen Verben}
+    \section{Arten von Objekten \textnormal{(Types of objects)}}
+        \begin{grammarentry}{Nicht jedes Objekt ist ein Akkusativobjekt}{Object classification}
+            \GermanText{Die gewöhnlichen Objektarten heißen \textbf{Akkusativobjekt}, \textbf{Dativobjekt}, \textbf{Genitivobjekt} und \textbf{Präpositionalobjekt}. Die Fragewörter \textbf{wen/was}, \textbf{wem}, \textbf{wessen} helfen, aber die \textbf{Rektion des Verbs} ist entscheidend. Ein \textbf{Nominativobjekt} zählt in der traditionellen Schulgrammatik nicht zu diesen Objektarten.}
+            \EnglishText{The standard object types are \textbf{accusative}, \textbf{dative}, \textbf{genitive}, and \textbf{prepositional objects}. The question words \textbf{whom/what}, \textbf{to whom}, and \textbf{whose} can help, but the \textbf{verb's government pattern} is decisive. A \textbf{nominative object} is not a standard object category in traditional school grammar.}
+        \end{grammarentry}
+        \begin{exbox}\begin{itemize}
+            \ExampleItem{Ich besuche meinen Freund.}{I visit my friend. (meinen Freund = accusative object)}
+            \ExampleItem{Ich vertraue meinem Freund.}{I trust my friend. (meinem Freund = dative object)}
+            \ExampleItem{Wir gedenken der Opfer.}{We commemorate the victims. (der Opfer = genitive object)}
+            \ExampleItem{Wir warten auf den Zug.}{We are waiting for the train. (auf den Zug = prepositional object; auf + accusative)}
+            \ExampleItem{Sie spricht mit ihrem Bruder über das Problem.}{She speaks with her brother about the problem. (mit + dative; über + accusative)}
+        \end{itemize}\end{exbox}
+        \begin{grammarentry}{Präpositionalobjekt oder freie Angabe?}{Prepositional object or adjunct?}
+            \GermanText{Ein \textbf{Präpositionalobjekt} ist eng an die Bedeutung/Rektion eines Verbs gebunden, z.\,B. \textbf{warten auf + Akkusativ}. Eine \textbf{freie adverbiale Angabe} ergänzt dagegen z.\,B. Ort, Zeit oder Art und Weise: \textbf{Ich lese im Garten}. Der Kasus innerhalb einer Präpositionalgruppe wird durch deren Präposition bestimmt.}
+            \EnglishText{A \textbf{prepositional object} is governed by the verb, e.g. \textbf{warten auf + accusative}. A \textbf{free adverbial adjunct} provides information such as place, time or manner: \textbf{Ich lese im Garten} (I read in the garden). The case inside a prepositional phrase is determined by its preposition.}
+        \end{grammarentry}
+
+    \section{Wechselpräpositionen \textnormal{(Two-way prepositions)}}
+        \begin{grammarentry}{Ort und Richtung}{Location and direction}
+            \GermanText{Die neun häufigsten Wechselpräpositionen sind \textbf{an, auf, hinter, in, neben, über, unter, vor, zwischen}. Bei einer statischen Lage steht meist \textbf{Dativ} (Wo?), bei einer Zielrichtung/Ortsveränderung \textbf{Akkusativ} (Wohin?). Entscheidend ist \textbf{Ort gegenüber Ziel}, nicht bloß, ob Bewegung stattfindet.}
+            \EnglishText{The nine common two-way prepositions are \textbf{an, auf, hinter, in, neben, über, unter, vor, zwischen}. Static location normally takes the \textbf{dative} (where?); destination/change of location takes the \textbf{accusative} (where to?). The key is \textbf{location versus destination}, not merely whether there is movement.}
+        \end{grammarentry}
+        \begin{exbox}\begin{itemize}
+            \ExampleItem{Ich laufe im Park.}{I run in the park. (where? in + dative, despite the movement)}
+            \ExampleItem{Ich laufe in den Park.}{I run into the park. (where to? in + accusative)}
+            \ExampleItem{Das Bild hängt an der Wand.}{The picture hangs on the wall. (location, dative)}
+            \ExampleItem{Ich hänge das Bild an die Wand.}{I hang the picture on the wall. (destination, accusative)}
+        \end{itemize}\end{exbox}
+
+    \section{Apposition und Kasus \textnormal{(Apposition and case)}}
+        \begin{grammarentry}{Gleichsetzung mit einem Nomen}{Apposition}
+            \GermanText{Eine \textbf{Apposition} erläutert eine Nominalgruppe. Sie übernimmt typischerweise deren Kasus: \textbf{Mein Bruder, ein Arzt, wohnt hier} (Nominativ) und \textbf{Ich spreche mit meinem Bruder, einem Arzt} (Dativ). Eine Apposition ist von einem \textbf{Prädikativ nach sein} zu unterscheiden.}
+            \EnglishText{An \textbf{apposition} explains a noun phrase and typically shares its case: \textbf{Mein Bruder, ein Arzt, wohnt hier} (nominative) and \textbf{Ich spreche mit meinem Bruder, einem Arzt} (dative). An apposition differs from a \textbf{predicative complement after sein}.}
+        \end{grammarentry}
+
+    \section{Kasus bei deutschen Verben \textnormal{(Case with German verbs)}}
         
         \textbf{Im Deutschen reicht es nicht immer, nur direktes und indirektes Objekt zu erkennen.}
         \EN{In German, it is not always enough to recognize only direct and indirect objects.}
@@ -55,7 +205,7 @@
         \textbf{Deshalb sollte man viele Verben zusammen mit ihrem Kasus lernen.}
         \EN{Therefore, many verbs should be learned together with their case.}
         
-        \subsection{Verben mit Dativ}
+        \subsection{Verben mit Dativ \textnormal{(Verbs with dative)}}
             
             \textbf{Einige Verben brauchen immer oder meistens den Dativ.}
             \EN{Some verbs always or usually require the dative.}
@@ -84,7 +234,7 @@
             \textbf{Das Buch gehört mir.}
             \EN{The book belongs to me.}
         
-        \subsection{Verben mit Akkusativ}
+        \subsection{Verben mit Akkusativ \textnormal{(Verbs with accusative)}}
             
             \textbf{Die meisten Verben mit Objekt brauchen den Akkusativ.}
             \EN{Most verbs with an object require the accusative.}
@@ -107,7 +257,7 @@
             \textbf{Ich kaufe das Brot.}
             \EN{I buy the bread.}
         
-        \subsection{Verben mit zwei Objekten}
+        \subsection{Verben mit zwei Objekten \textnormal{(Verbs with two objects)}}
             
             \textbf{Wenn ein Satz zwei Objekte hat, ist die Person oft Dativ und die Sache Akkusativ.}
             \EN{When a sentence has two objects, the person is often dative and the thing is accusative.}
@@ -130,7 +280,7 @@
             \textbf{den Ball = Akkusativ}
             \EN{the ball = accusative}
         
-        \subsection{Wichtige Regel}
+        \subsection{Wichtige Regel \textnormal{(Important rule)}}
             
             \textbf{Für Deutsch muss man zuerst lernen, welchen Kasus ein Verb verlangt.}
             \EN{For German, one must first learn which case a verb requires.}
@@ -151,7 +301,7 @@
             \EN{to give + dative + accusative: I give you the book.}
     
     
-    \section{Kasus bei Präpositionen}
+    \section{Kasus bei Präpositionen \textnormal{(Case with prepositions)}}
         
         \textbf{Nicht nur Verben bestimmen den Kasus. Auch Präpositionen bestimmen oft den Kasus.}
         \EN{Not only verbs determine the case. Prepositions often determine the case too.}
@@ -168,7 +318,7 @@
         \textbf{Manche Präpositionen können Dativ oder Akkusativ haben.}
         \EN{Some prepositions can take dative or accusative.}
         
-        \subsection{Präpositionen mit Dativ}
+        \subsection{Präpositionen mit Dativ \textnormal{(Dative prepositions)}}
             
             \textbf{Diese Präpositionen brauchen immer den Dativ: aus, bei, mit, nach, seit, von, zu.}
             \EN{These prepositions always require the dative: from/out of, at/near, with, after/to, since/for, from/of, to.}
@@ -203,7 +353,7 @@
             \textbf{Ich gehe zu meinem Professor.}
             \EN{I go to my professor.}
         
-        \subsection{Die Präposition seit}
+        \subsection{Die Präposition seit \textnormal{(The preposition seit)}}
             
             \textbf{Seit ist eine Präposition mit Dativ.}
             \EN{Seit is a preposition with the dative.}
@@ -229,7 +379,7 @@
             \textbf{Ich lebe seit 2024 in Österreich.}
             \EN{I have been living in Austria since 2024.}
         
-        \subsection{Wichtige Formen mit seit}
+        \subsection{Wichtige Formen mit seit \textnormal{(Important forms with seit)}}
             
             \textbf{seit einem Tag}
             \EN{for one day}
@@ -261,7 +411,7 @@
             \textbf{seit der Kindheit}
             \EN{since childhood}
         
-        \subsection{Seit mit Präsens}
+        \subsection{Seit mit Präsens \textnormal{(Seit with present tense)}}
             
             \textbf{Im Deutschen benutzt man mit seit oft das Präsens, wenn die Situation noch jetzt gilt.}
             \EN{In German, with seit one often uses the present tense when the situation is still true now.}
@@ -278,7 +428,7 @@
             \textbf{Wir lernen seit drei Monaten Deutsch.}
             \EN{We have been learning German for three months.}
         
-        \subsection{Häufiger Fehler mit seit}
+        \subsection{Häufiger Fehler mit seit \textnormal{(Common mistake with seit)}}
             
             \textbf{Falsch: Ich freue mich, dass du hast seit ein Jahr in Paris leben.}
             \EN{Wrong: I am happy that you have since one year live in Paris.}
@@ -301,7 +451,7 @@
             \textbf{Mit seit benutzt man oft Präsens, wenn die Handlung noch dauert.}
             \EN{With seit one often uses the present tense when the action is still continuing.}
         
-        \subsection{Seit und seid}
+        \subsection{Seit und seid \textnormal{(Seit and seid)}}
             
             \textbf{Seit und seid klingen gleich, aber sie haben verschiedene Bedeutungen.}
             \EN{Seit and seid sound the same, but they have different meanings.}
@@ -322,7 +472,7 @@
             \EN{You have been here for one hour.}
     
     
-    \section{Zusammenfassung}
+    \section{Zusammenfassung \textnormal{(Summary)}}
         
         \textbf{Bei deutschen Verben muss man oft lernen, welchen Kasus das Verb verlangt.}
         \EN{With German verbs, one often has to learn which case the verb requires.}

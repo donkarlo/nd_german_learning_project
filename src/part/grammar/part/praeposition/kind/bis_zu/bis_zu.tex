@@ -1,0 +1,134 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage[a4paper,margin=2cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman,english]{babel}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{xcolor}
+\usepackage{parskip}
+\usepackage{enumitem}
+\usepackage[most]{tcolorbox}
+\usepackage{titlesec}
+\usepackage[hidelinks]{hyperref}
+\definecolor{HeaderBlueDark}{RGB}{70,110,170}
+\definecolor{RowBlueLight}{RGB}{235,243,255}
+\definecolor{RowBlueDark}{RGB}{220,233,250}
+\definecolor{SoftGray}{RGB}{90,90,90}
+\setlength{\parindent}{0pt}
+\setlist[itemize]{leftmargin=1.4em,itemsep=0.35em,topsep=0.35em}
+\linespread{1.06}
+\titleformat{\section}[block]{\Large\bfseries\color{HeaderBlueDark}}{}{0pt}{}
+\titlespacing{\section}{0pt}{1.3em}{0.8em}
+\titleformat{\subsection}[block]{\large\bfseries\color{HeaderBlueDark}}{}{0pt}{}
+\titlespacing{\subsection}{0pt}{1em}{0.6em}
+\newtcolorbox{exbox}{enhanced,breakable,colback=RowBlueLight,colframe=RowBlueDark,boxrule=0.4pt,arc=1.5mm,left=1.2mm,right=1.2mm,top=1mm,bottom=1mm,title={Beispiele \textnormal{(Examples)}},fonttitle=\bfseries,colbacktitle=RowBlueDark,coltitle=black}
+\NewDocumentEnvironment{grammarentry}{mm+b}{%
+\begin{tcolorbox}[enhanced,breakable,colback=white,colframe=HeaderBlueDark,boxrule=0.6pt,arc=1.5mm,left=1.5mm,right=1.5mm,top=1mm,bottom=1mm,colbacktitle=HeaderBlueDark,coltitle=white,fonttitle=\bfseries,title={#1\hfill\normalfont\footnotesize #2}]
+#3
+\end{tcolorbox}
+}{}
+\newcommand{\GermanText}[1]{\textbf{Deutsch: }#1\par}
+\newcommand{\EnglishText}[1]{{\small\color{SoftGray}\textbf{English: }#1\par}}
+\newcommand{\ExampleItem}[2]{\item \textbf{#1}\\{\small\color{SoftGray}#2}}
+\title{Die Verbindung \glqq bis zu\grqq\\{\large The expression bis zu}}
+\date{}
+\begin{document}
+   \maketitle
+   \tableofcontents
+   \newpage
+
+   \section{Grundbedeutung (Core meaning)}
+      \begin{grammarentry}{bis zu}{Grenze / obere Grenze}
+         \GermanText{\textbf{bis zu} bezeichnet einen Endpunkt oder eine obere Grenze. Vor Zahlen und Mengen bedeutet es \glqq höchstens\grqq\ bzw.\ \glqq nicht mehr als\grqq. Bei Orten und Zeitpunkten bezeichnet es einen Punkt, bis zu dem etwas reicht oder dauert.}
+         \EnglishText{\textbf{bis zu} indicates an endpoint or upper limit. Before numbers and quantities it means up to, at most or no more than. With places and points in time, it marks how far something extends or until when it lasts.}
+         \GermanText{Aussprache: ungefähr \glqq biss tsu\grqq.}
+         \EnglishText{Pronunciation: approximately biss tsoo.}
+      \end{grammarentry}
+
+   \section{Zwei grammatische Funktionen (Two grammatical functions)}
+      \subsection{Endpunkt mit Dativ (Endpoint with dative)}
+         \begin{grammarentry}{bis + zu}{Präpositionale Verbindung}
+            \GermanText{Bei einem bestimmten räumlichen oder zeitlichen Endpunkt bestimmt \textbf{zu} den \textbf{Dativ}: \textbf{bis zu dem Bahnhof = bis zum Bahnhof}; \textbf{bis zu der Kreuzung = bis zur Kreuzung}; \textbf{bis zu dem Wochenende = bis zum Wochenende}.}
+            \EnglishText{For a specific spatial or temporal endpoint, \textbf{zu} governs the \textbf{dative}: \textbf{bis zum Bahnhof} (as far as the station); \textbf{bis zur Kreuzung} (as far as the junction); \textbf{bis zum Wochenende} (until the weekend).}
+         \end{grammarentry}
+         \begin{exbox}
+            \begin{itemize}
+               \ExampleItem{Wir gehen bis zum Bahnhof.}{We walk as far as the station.}
+               \ExampleItem{Ich bleibe bis zum Wochenende.}{I am staying until the weekend.}
+               \ExampleItem{Fahren Sie bis zur nächsten Haltestelle.}{Travel as far as the next stop.}
+            \end{itemize}
+         \end{exbox}
+
+      \subsection{Obergrenze bei Zahlen (Upper limit with numbers)}
+         \begin{grammarentry}{bis zu + Zahl}{gradpartikelähnlich}
+            \GermanText{Vor Zahl- und Mengenangaben hat \textbf{bis zu} häufig eine \textbf{gradpartikelähnliche Funktion}. Es verändert dann \textbf{nicht selbst den Kasus} der folgenden Nominalgruppe; dieser ergibt sich aus dem übrigen Satz. Deshalb sind Nominativ, Akkusativ und Dativ möglich.}
+            \EnglishText{Before numbers and quantities, \textbf{bis zu} often functions like a degree particle. It does \textbf{not itself determine the case} of the following noun phrase; the rest of the sentence determines it. Thus nominative, accusative and dative can occur.}
+         \end{grammarentry}
+         \begin{exbox}
+            \begin{itemize}
+               \ExampleItem{Wir können bis zu zehn Leute aufnehmen.}{We can accommodate up to ten people. (accusative)}
+               \ExampleItem{Wir können bis zu zehn Leuten helfen.}{We can help up to ten people. (dative)}
+               \ExampleItem{In diesem Raum finden bis zu 30 Personen Platz.}{Up to 30 people can fit in this room. (nominative)}
+            \end{itemize}
+         \end{exbox}
+
+   \section{Typische Verwendungen (Typical uses)}
+      \begin{grammarentry}{Mengen, Zeit, Entfernung, Grad}{Bedeutungsbereiche}
+         \GermanText{\textbf{Menge und Preis:} eine maximale Zahl, Summe oder Menge.}
+         \EnglishText{\textbf{Quantity and price:} a maximum number, amount or sum.}
+         \GermanText{\textbf{Dauer:} eine maximal mögliche Zeitspanne.}
+         \EnglishText{\textbf{Duration:} the longest possible period of time.}
+         \GermanText{\textbf{Ort und Zeitpunkt:} eine räumliche oder zeitliche Grenze.}
+         \EnglishText{\textbf{Place and time:} a spatial or temporal endpoint.}
+         \GermanText{\textbf{Abstrakter Grad:} eine gedankliche Grenze, etwa \glqq bis zu einem gewissen Grad\grqq.}
+         \EnglishText{\textbf{Abstract degree:} a conceptual limit, as in to a certain extent.}
+      \end{grammarentry}
+      \begin{exbox}
+         \begin{itemize}
+            \ExampleItem{Das Ticket kostet bis zu 50 Euro.}{The ticket costs up to 50 euros.}
+            \ExampleItem{Die Reparatur kann bis zu drei Stunden dauern.}{The repair can take up to three hours.}
+            \ExampleItem{Kinder bis zu einem Alter von sechs Jahren fahren kostenlos.}{Children up to the age of six travel free of charge.}
+            \ExampleItem{Bis zu einem gewissen Grad stimme ich dir zu.}{I agree with you to a certain extent.}
+         \end{itemize}
+      \end{exbox}
+
+   \section{Unterschied zu \glqq bis\grqq\ (Difference from bis)}
+      \begin{grammarentry}{bis / bis zu}{Nicht beliebig austauschbar}
+         \GermanText{\textbf{bis} kann ohne \textbf{zu} vor Zeitangaben oder Ortsnamen stehen: \glqq bis morgen\grqq, \glqq bis Freitag\grqq, \glqq bis Berlin\grqq. Bei bestimmten Nominalgruppen steht häufig \textbf{bis zu} mit Dativ: \glqq bis zum Freitag\grqq, \glqq bis zum Bahnhof\grqq.}
+         \EnglishText{\textbf{bis} can occur without \textbf{zu} before time expressions or place names: until tomorrow, until Friday, as far as Berlin. With certain noun phrases, \textbf{bis zu} with dative is common: until Friday, as far as the station.}
+         \GermanText{Vor Zahlen bezeichnet \textbf{bis zu} ausdrücklich eine obere Grenze. \textbf{Bis zu zehn Personen} bedeutet nicht, dass tatsächlich zehn Personen anwesend sind.}
+         \EnglishText{Before numbers, \textbf{bis zu} explicitly indicates an upper bound. Up to ten people does not mean that ten people are actually present.}
+      \end{grammarentry}
+      \begin{exbox}
+         \begin{itemize}
+            \ExampleItem{Ich arbeite bis Freitag.}{I am working until Friday.}
+            \ExampleItem{Ich arbeite bis zum Freitag.}{I am working until Friday.}
+            \ExampleItem{Der Zug fährt bis Berlin.}{The train goes as far as Berlin.}
+            \ExampleItem{Es kommen bis zu zehn Gäste.}{Up to ten guests are coming.}
+         \end{itemize}
+      \end{exbox}
+
+   \section{Unterschied zu \glqq weitgehend\grqq\ (Difference from largely)}
+      \begin{grammarentry}{Obergrenze und Ausmaß}{Wichtige Unterscheidung}
+         \GermanText{\textbf{bis zu} = bis zu einer angegebenen Grenze (up to). Es bedeutet \textbf{nicht automatisch} \glqq in hohem Maße\grqq.}
+         \EnglishText{\textbf{bis zu} = up to a stated limit. It does \textbf{not automatically} mean to a great extent.}
+         \GermanText{\textbf{weitgehend} = größtenteils; in hohem Maße (largely; to a great extent).}
+         \EnglishText{\textbf{weitgehend} = largely; to a great extent.}
+         \GermanText{\textbf{bis zu einem gewissen Grad} = to a certain extent. Der Ausdruck legt \textbf{nicht} fest, dass dieser Grad besonders hoch ist.}
+         \EnglishText{\textbf{bis zu einem gewissen Grad} = to a certain extent. The expression does \textbf{not} specify that the extent is particularly large.}
+      \end{grammarentry}
+      \begin{exbox}
+         \begin{itemize}
+            \ExampleItem{Ich stimme dir weitgehend zu.}{I largely agree with you.}
+            \ExampleItem{Bis zu einem gewissen Grad stimme ich dir zu.}{I agree with you to a certain extent.}
+            \ExampleItem{Bis zu 90 Prozent der Arbeit sind erledigt.}{Up to 90 percent of the work has been completed.}
+         \end{itemize}
+      \end{exbox}
+
+   \section{Zusammenfassung (Summary)}
+      \begin{grammarentry}{Merksatz}{Key rule}
+         \GermanText{\textbf{Grenze bei Mengen:} bis zu 100 Personen = höchstens 100 Personen. \textbf{Endpunkt:} bis zum Bahnhof / bis zum Wochenende. \textbf{Ausmaß:} weitgehend, wenn \glqq zum großen Teil\grqq\ gemeint ist.}
+         \EnglishText{\textbf{Quantity limit:} up to 100 people = at most 100 people. \textbf{Endpoint:} as far as the station / until the weekend. \textbf{Extent:} use weitgehend for largely.}
+      \end{grammarentry}
+\end{document}

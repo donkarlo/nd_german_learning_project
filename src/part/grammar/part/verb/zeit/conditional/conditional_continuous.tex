@@ -1,0 +1,90 @@
+\documentclass[a4paper,11pt]{article}
+
+\usepackage[a4paper,margin=2cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman,english]{babel}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{xcolor}
+\usepackage{parskip}
+\usepackage{enumitem}
+\usepackage[most]{tcolorbox}
+\usepackage{titlesec}
+\usepackage[hidelinks]{hyperref}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage[table]{xcolor}
+
+\definecolor{HeaderBlueDark}{RGB}{70,110,170}
+\definecolor{RowBlueLight}{RGB}{235,243,255}
+\definecolor{RowBlueDark}{RGB}{220,233,250}
+\definecolor{SoftGray}{RGB}{90,90,90}
+
+\setlength{\parindent}{0pt}
+\setlist[itemize]{leftmargin=1.4em,itemsep=0.35em,topsep=0.35em}
+\linespread{1.06}
+\renewcommand{\arraystretch}{1.35}
+\setlength{\tabcolsep}{6pt}
+
+\titleformat{\section}[block]
+{\Large\bfseries\color{HeaderBlueDark}}
+{}{0pt}{}
+\titlespacing{\section}{0pt}{1.3em}{0.8em}
+
+\titleformat{\subsection}[block]
+{\large\bfseries\color{HeaderBlueDark}}
+{}{0pt}{}
+\titlespacing{\subsection}{0pt}{1.0em}{0.6em}
+
+\newtcolorbox{exbox}{enhanced,breakable,colback=RowBlueLight,colframe=RowBlueDark,boxrule=0.4pt,arc=1.5mm,left=1.2mm,right=1.2mm,top=1mm,bottom=1mm,title={Beispiele \textnormal{(Examples)}},fonttitle=\bfseries,colbacktitle=RowBlueDark,coltitle=black}
+
+\NewDocumentEnvironment{grammarentry}{mm+b}{%
+    \begin{tcolorbox}[enhanced,breakable,colback=white,colframe=HeaderBlueDark,boxrule=0.6pt,arc=1.5mm,left=1.5mm,right=1.5mm,top=1mm,bottom=1mm,colbacktitle=HeaderBlueDark,coltitle=white,fonttitle=\bfseries,title={#1\hfill\normalfont\footnotesize #2}]
+    #3
+    \end{tcolorbox}
+}{}
+
+\newcommand{\GermanText}[1]{\textbf{Deutsch: }#1\par}
+\newcommand{\EnglishText}[1]{{\small\color{SoftGray}\textbf{English: }#1\par}}
+\newcommand{\ExampleItem}[2]{\item \textbf{#1}\\{\small\color{SoftGray}#2}}
+
+\title{Hypothetischer Verlauf\\\large\textnormal{Conditional Continuous in German}}
+\date{}
+
+\begin{document}
+    \maketitle
+    \tableofcontents
+    \newpage
+
+
+\section{Grundidee \textnormal{(Basic idea)}}
+\begin{grammarentry}{Verlauf statt eigener Tempusform}{No separate German continuous tense}
+\GermanText{Das englische would be + -ing wird im Deutschen durch Konjunktiv II mit einer Zeitangabe und, falls nötig, gerade oder dabei sein wiedergegeben. Would have been + -ing bezieht sich auf einen nicht verwirklichten Verlauf in der Vergangenheit.}
+\EnglishText{English would be + -ing is expressed with German subjunctive II, a time reference and, where needed, gerade or dabei sein. Would have been + -ing concerns a counterfactual ongoing activity in the past.}
+\end{grammarentry}
+
+\section{Konjunktiv II und hypothetischer Verlauf \textnormal{(Conditional continuous and hypothetical progress)}}
+\begin{grammarentry}{würde arbeiten / wäre dabei}{Would be doing; would have been doing}
+\GermanText{Eine hypothetisch laufende Handlung kann mit Konjunktiv II, einer Zeitangabe und gegebenenfalls gerade oder dabei sein umschrieben werden. Für hypothetische Vergangenheit ist wäre dabei gewesen, ... zu ... grammatisch möglich, aber oft schwerfälliger als eine einfache Umschreibung.}
+\EnglishText{An ongoing hypothetical action can be paraphrased with subjunctive II, a time reference, and optionally gerade or dabei sein. For a counterfactual past, wäre dabei gewesen, ... zu ... is grammatically possible but often heavier than a simpler paraphrase.}
+\end{grammarentry}
+\begin{exbox}
+\begin{itemize}
+\ExampleItem{Wenn ich nicht krank wäre, würde ich jetzt arbeiten.}{If I were not ill, I would be working now.}
+\ExampleItem{Ohne die Unterbrechung wäre ich gerade dabei, den Text zu schreiben.}{Without the interruption I would be writing the text right now.}
+\ExampleItem{Ohne den Stromausfall wäre ich damals noch am Arbeiten gewesen.}{Without the power cut I would still have been working then (marked am-progressive).}
+\end{itemize}
+\end{exbox}
+
+\section{Zusammenfassung \textnormal{(Summary)}}
+\begin{grammarentry}{Merksätze}{Key rules}
+\GermanText{Wenn ich nicht krank wäre, würde ich jetzt arbeiten. Für einen ausdrücklich laufenden Vorgang: Ich wäre gerade dabei, einen Bericht zu schreiben. Eine besondere Continuous-Flexion gibt es nicht.}
+\EnglishText{Wenn ich nicht krank wäre, würde ich jetzt arbeiten. For an explicitly ongoing process: Ich wäre gerade dabei, einen Bericht zu schreiben. German has no separate continuous inflection.}
+\end{grammarentry}
+
+\section{Quelle \textnormal{(Source)}}
+        \GermanText{Institut für Deutsche Sprache (IDS), grammis: Darf man Ich bin am Schreiben schreiben?}
+        \EnglishText{Institute for the German Language (IDS), grammis: discussion of progressive constructions and their formation in different tenses.}
+        \url{https://grammis.ids-mannheim.de/fragen/4551}
+\end{document}
