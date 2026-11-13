@@ -1,0 +1,57 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage[a4paper,margin=2cm]{geometry}\usepackage[T1]{fontenc}\usepackage[utf8]{inputenc}\usepackage[ngerman,english]{babel}
+\usepackage{lmodern}\usepackage{microtype}\usepackage{xcolor}\usepackage{parskip}\usepackage{enumitem}\usepackage[most]{tcolorbox}\usepackage{titlesec}\usepackage[hidelinks]{hyperref}
+\definecolor{HeaderBlueDark}{RGB}{70,110,170}\definecolor{RowBlueLight}{RGB}{235,243,255}\definecolor{RowBlueDark}{RGB}{220,233,250}\definecolor{SoftGray}{RGB}{90,90,90}
+\setlength{\parindent}{0pt}\setlist[itemize]{leftmargin=1.4em,itemsep=0.35em,topsep=0.35em}\linespread{1.06}\titleformat{\section}[block]{\Large\bfseries\color{HeaderBlueDark}}{}{0pt}{}\titlespacing{\section}{0pt}{1.3em}{0.8em}
+\newtcolorbox{exbox}{enhanced,breakable,colback=RowBlueLight,colframe=RowBlueDark,boxrule=0.4pt,arc=1.5mm,left=1.2mm,right=1.2mm,top=1mm,bottom=1mm,title={Beispiele \textnormal{(Examples)}},fonttitle=\bfseries,colbacktitle=RowBlueDark,coltitle=black}
+\NewDocumentEnvironment{grammarentry}{mm+b}{\begin{tcolorbox}[enhanced,breakable,colback=white,colframe=HeaderBlueDark,boxrule=0.6pt,arc=1.5mm,left=1.5mm,right=1.5mm,top=1mm,bottom=1mm,colbacktitle=HeaderBlueDark,coltitle=white,fonttitle=\bfseries,title={#1\hfill\normalfont\footnotesize #2}]#3\end{tcolorbox}}{}
+\newcommand{\GermanText}[1]{\textbf{Deutsch: }#1\par}\newcommand{\EnglishText}[1]{{\small\color{SoftGray}\textbf{English: }#1\par}}\newcommand{\ExampleItem}[2]{\item \textbf{#1}\\{\small\color{SoftGray}#2}}
+\title{Das Konjunktionaladverb \glqq dennoch\grqq{} \textnormal{(The conjunctive adverb \glqq dennoch\grqq)}}\date{}
+\begin{document}\selectlanguage{ngerman}\maketitle\tableofcontents\newpage
+\section{Bedeutung und Wortart \textnormal{(Meaning and word class)}}
+\begin{grammarentry}{\textbf{dennoch}}{Einräumung / Gegensatz}
+\GermanText{\textbf{Dennoch} bedeutet \glqq trotz des zuvor genannten Umstands\grqq{} oder \glqq trotzdem\grqq. Es verbindet eine Aussage mit einem unerwarteten, aber weiterhin gültigen Ergebnis. Grammatisch ist es ein Konjunktionaladverb.}
+\EnglishText{\textbf{Dennoch} means \glqq despite the circumstance just mentioned\grqq{} or \glqq nevertheless\grqq. It connects a statement to an unexpected outcome that still holds. Grammatically, it is a conjunctive adverb.}
+\GermanText{\textbf{Dennoch} wirkt häufig etwas formeller oder schriftsprachlicher als \textbf{trotzdem}; die Bedeutungen überschneiden sich stark.}
+\EnglishText{\textbf{Dennoch} often sounds somewhat more formal or written than \textbf{trotzdem}; their meanings overlap considerably.}
+\end{grammarentry}
+
+\section{Wortstellung \textnormal{(Word order)}}
+\begin{grammarentry}{Verbzweitstellung im Hauptsatz}{\textbf{dennoch} am Satzanfang}
+\GermanText{Steht \textbf{dennoch} an erster Stelle, folgt unmittelbar das konjugierte Verb. Das Subjekt steht normalerweise danach.}
+\EnglishText{When \textbf{dennoch} is in first position, the finite verb immediately follows it. The subject normally comes after the verb.}
+\end{grammarentry}
+\begin{exbox}\begin{itemize}
+\ExampleItem{Die Lage war schwierig. Dennoch fanden wir eine Lösung.}{The situation was difficult. Nevertheless, we found a solution.}
+\ExampleItem{Obwohl es spät war, blieb sie dennoch bei uns.}{Although it was late, she nevertheless stayed with us.}
+\ExampleItem{Er hatte wenig Zeit; er half uns dennoch.}{He had little time; nevertheless, he helped us.}
+\end{itemize}\end{exbox}
+
+\section{Unterschied zu \glqq obwohl\grqq{} \textnormal{(Difference from \glqq obwohl\grqq)}}
+\begin{grammarentry}{Hauptsatz oder Nebensatz}{verschiedene Verbposition}
+\GermanText{\textbf{Dennoch} steht in einem Hauptsatz; das Verb bleibt auf Position 2. \textbf{Obwohl} leitet einen Nebensatz ein; dort steht das konjugierte Verb am Ende.}
+\EnglishText{\textbf{Dennoch} occurs in a main clause; the verb stays in position two. \textbf{Obwohl} introduces a subordinate clause; its finite verb goes to the end.}
+\end{grammarentry}
+\begin{exbox}\begin{itemize}
+\ExampleItem{Obwohl sie krank war, ging sie zur Arbeit.}{Although she was ill, she went to work.}
+\ExampleItem{Sie war krank. Dennoch ging sie zur Arbeit.}{She was ill. Nevertheless, she went to work.}
+\end{itemize}\end{exbox}
+
+\section{Kommas und Satzzeichen \textnormal{(Commas and punctuation)}}
+\begin{grammarentry}{Kein Komma nur wegen \textbf{dennoch}}{Satzgrenze entscheidet}
+\GermanText{\textbf{Dennoch} verlangt für sich allein kein Komma. Ein Punkt oder Semikolon kann zwei Hauptsätze trennen. Ein Komma richtet sich nach der Satzstruktur, nicht allein nach dem Wort \textbf{dennoch}.}
+\EnglishText{\textbf{Dennoch} does not by itself require a comma. A period or semicolon can separate two main clauses. Comma use depends on sentence structure, not on the word \textbf{dennoch} alone.}
+\end{grammarentry}
+
+\section{Nahe Ausdrücke \textnormal{(Related expressions)}}
+\begin{grammarentry}{\textbf{trotzdem}, \textbf{gleichwohl}, \textbf{jedoch}}{nicht immer völlig austauschbar}
+\GermanText{\textbf{Trotzdem} ist im Alltag sehr üblich und meist direkt austauschbar. \textbf{Gleichwohl} ist gehoben. \textbf{Jedoch} bedeutet oft \glqq aber\grqq{} oder \glqq allerdings\grqq{} und kann je nach Satzstellung eine etwas andere Betonung haben.}
+\EnglishText{\textbf{Trotzdem} is very common in everyday speech and is often directly interchangeable. \textbf{Gleichwohl} is elevated. \textbf{Jedoch} often means \glqq however\grqq{} and may have a somewhat different emphasis depending on its position.}
+\end{grammarentry}
+
+\section{Zusammenfassung \textnormal{(Summary)}}
+\begin{grammarentry}{Merksatz}{kurz und wichtig}
+\GermanText{\textbf{Dennoch} = \glqq trotzdem\grqq; danach steht im Hauptsatz das konjugierte Verb auf Position 2.}
+\EnglishText{\textbf{Dennoch} = \glqq nevertheless\grqq; in the main clause, the finite verb comes in position two.}
+\end{grammarentry}
+\end{document}
