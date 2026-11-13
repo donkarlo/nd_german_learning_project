@@ -1,0 +1,69 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage[a4paper,margin=2cm]{geometry}
+\usepackage[T1]{fontenc}\usepackage[utf8]{inputenc}\usepackage[ngerman,english]{babel}
+\usepackage{lmodern}\usepackage{microtype}\usepackage{xcolor}\usepackage{parskip}\usepackage{enumitem}
+\usepackage[most]{tcolorbox}\usepackage{titlesec}\usepackage[hidelinks]{hyperref}
+\definecolor{HeaderBlueDark}{RGB}{70,110,170}\definecolor{RowBlueLight}{RGB}{235,243,255}\definecolor{RowBlueDark}{RGB}{220,233,250}\definecolor{SoftGray}{RGB}{90,90,90}
+\setlength{\parindent}{0pt}\setlist[itemize]{leftmargin=1.4em,itemsep=0.35em,topsep=0.35em}\linespread{1.06}
+\titleformat{\section}[block]{\Large\bfseries\color{HeaderBlueDark}}{}{0pt}{}\titlespacing{\section}{0pt}{1.3em}{0.8em}
+\newtcolorbox{exbox}{enhanced,breakable,colback=RowBlueLight,colframe=RowBlueDark,boxrule=0.4pt,arc=1.5mm,left=1.2mm,right=1.2mm,top=1mm,bottom=1mm,title={Beispiele \textnormal{(Examples)}},fonttitle=\bfseries,colbacktitle=RowBlueDark,coltitle=black}
+\NewDocumentEnvironment{grammarentry}{mm+b}{\begin{tcolorbox}[enhanced,breakable,colback=white,colframe=HeaderBlueDark,boxrule=0.6pt,arc=1.5mm,left=1.5mm,right=1.5mm,top=1mm,bottom=1mm,colbacktitle=HeaderBlueDark,coltitle=white,fonttitle=\bfseries,title={#1\hfill\normalfont\footnotesize #2}]#3\end{tcolorbox}}{}
+\newcommand{\GermanText}[1]{\textbf{Deutsch: }#1\par}\newcommand{\EnglishText}[1]{{\small\color{SoftGray}\textbf{English: }#1\par}}\newcommand{\ExampleItem}[2]{\item \textbf{#1}\\{\small\color{SoftGray}#2}}
+\title{Das Konjunktionaladverb \glqq trotzdem\grqq{} \textnormal{(The conjunctive adverb \glqq trotzdem\grqq)}}\date{}
+\begin{document}\selectlanguage{ngerman}\maketitle\tableofcontents\newpage
+\section{Bedeutung und Wortart \textnormal{(Meaning and word class)}}
+\begin{grammarentry}{\textbf{trotzdem}}{Gegensatz und unerwartete Folge}
+\GermanText{\textbf{Trotzdem} bedeutet \glqq trotz dieses Umstands\grqq{} oder \glqq dennoch\grqq. Es zeigt, dass eine Aussage trotz eines zuvor genannten Hindernisses gilt. In dieser Verwendung ist es ein Konjunktionaladverb, keine subordinierende Konjunktion.}
+\EnglishText{\textbf{Trotzdem} means \glqq despite that\grqq{} or \glqq nevertheless\grqq. It shows that a statement holds despite an obstacle mentioned earlier. In this use it is a conjunctive adverb, not a subordinating conjunction.}
+\end{grammarentry}
+
+\section{Wortstellung: Verb auf Position 2 \textnormal{(Word order: verb in position two)}}
+\begin{grammarentry}{\textbf{trotzdem} am Satzanfang}{Inversion von Subjekt und Verb}
+\GermanText{Steht \textbf{trotzdem} am Anfang eines Hauptsatzes, besetzt es das Vorfeld. Das konjugierte Verb steht direkt danach auf Position 2; das Subjekt folgt dem Verb, wenn es nicht selbst an Position 1 steht.}
+\EnglishText{When \textbf{trotzdem} begins a main clause, it occupies the first position. The finite verb comes immediately after it in position two; the subject follows the verb unless it itself is in position one.}
+\end{grammarentry}
+\begin{exbox}\begin{itemize}
+\ExampleItem{Es regnet. Trotzdem gehen wir spazieren.}{It is raining. Nevertheless, we are going for a walk.}
+\ExampleItem{Sie war müde. Trotzdem arbeitete sie weiter.}{She was tired. Even so, she kept working.}
+\ExampleItem{Der Bus hatte Verspätung. Wir kamen trotzdem pünktlich an.}{The bus was delayed. We arrived on time anyway.}
+\end{itemize}\end{exbox}
+
+\section{Satzverbindung und Zeichensetzung \textnormal{(Connecting clauses and punctuation)}}
+\begin{grammarentry}{Hauptsatz bleibt Hauptsatz}{Punkt, Semikolon oder Komma}
+\GermanText{\textbf{Trotzdem} kann einen neuen Hauptsatz beginnen oder innerhalb eines Hauptsatzes stehen. Zwischen zwei selbstständigen Hauptsätzen stehen normalerweise ein Punkt oder ein Semikolon; ein Komma ist möglich, wenn die Satzverbindung entsprechend gebaut ist. Das Wort selbst verlangt kein Komma.}
+\EnglishText{\textbf{Trotzdem} can begin a new main clause or occur inside one. A period or semicolon normally separates two independent main clauses; a comma is possible when the sentence is constructed accordingly. The word itself does not require a comma.}
+\end{grammarentry}
+
+\section{Unterschied zu \glqq obwohl\grqq{} und \glqq trotz\grqq{} \textnormal{(Difference from \glqq obwohl\grqq{} and \glqq trotz\grqq)}}
+\begin{grammarentry}{Drei grammatische Muster}{Bedeutung ähnlich}
+\GermanText{\textbf{Obwohl} leitet einen Nebensatz mit Verbendstellung ein. \textbf{Trotz} steht vor einer Nominalgruppe, normalerweise im Genitiv. \textbf{Trotzdem} steht in einem Hauptsatz mit Verbzweitstellung.}
+\EnglishText{\textbf{Obwohl} introduces a subordinate clause with the verb at the end. \textbf{Trotz} precedes a noun phrase, normally in the genitive. \textbf{Trotzdem} occurs in a main clause with verb-second word order.}
+\end{grammarentry}
+\begin{exbox}\begin{itemize}
+\ExampleItem{Obwohl es spät war, blieb er.}{Although it was late, he stayed.}
+\ExampleItem{Trotz der späten Stunde blieb er.}{Despite the late hour, he stayed.}
+\ExampleItem{Es war spät. Trotzdem blieb er.}{It was late. Nevertheless, he stayed.}
+\end{itemize}\end{exbox}
+
+\section{Unterschied zu \glqq trotzdem\grqq{} als Satzadverb \textnormal{(Sentence-adverb use)}}
+\begin{grammarentry}{Bezug zum vorherigen Kontext}{Position flexibel}
+\GermanText{\textbf{Trotzdem} kann auch nach dem konjugierten Verb oder später im Satz stehen. Es verändert die Verbposition nicht; die normale Hauptsatzstellung bleibt bestehen.}
+\EnglishText{\textbf{Trotzdem} can also come after the finite verb or later in the sentence. It does not change the verb position; normal main-clause word order remains.}
+\end{grammarentry}
+\begin{exbox}\begin{itemize}
+\ExampleItem{Ich gehe trotzdem heute einkaufen.}{I am still going shopping today.}
+\ExampleItem{Wir haben trotzdem eine Lösung gefunden.}{We found a solution anyway.}
+\end{itemize}\end{exbox}
+
+\section{Nahe Ausdrücke \textnormal{(Related expressions)}}
+\begin{grammarentry}{\textbf{dennoch}, \textbf{gleichwohl}}{ähnliche Konjunktionaladverbien}
+\GermanText{\textbf{Dennoch} ist eine nahe Entsprechung und klingt häufig etwas formeller. \textbf{Gleichwohl} ist deutlich gehobener und seltener. Alle stehen im Hauptsatz mit Verbzweitstellung.}
+\EnglishText{\textbf{Dennoch} is a close equivalent and often sounds somewhat more formal. \textbf{Gleichwohl} is distinctly elevated and less common. All occur in main clauses with verb-second word order.}
+\end{grammarentry}
+
+\section{Zusammenfassung \textnormal{(Summary)}}
+\begin{grammarentry}{Merksatz}{kurz und wichtig}
+\GermanText{\textbf{Es regnet. Trotzdem gehen wir.} \quad \textbf{Trotzdem} verbindet Aussagen, leitet aber keinen Nebensatz ein. Danach steht das konjugierte Verb auf Position 2.}
+\EnglishText{\textbf{It is raining. Nevertheless, we are going.} \quad \textbf{Trotzdem} connects statements but does not introduce a subordinate clause. The finite verb comes in position two.}
+\end{grammarentry}
+\end{document}
