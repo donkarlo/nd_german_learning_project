@@ -1,0 +1,65 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage[a4paper,margin=2cm]{geometry}\usepackage[T1]{fontenc}\usepackage[utf8]{inputenc}\usepackage[ngerman,english]{babel}
+\usepackage{lmodern}\usepackage{microtype}\usepackage{xcolor}\usepackage{parskip}\usepackage{enumitem}\usepackage[most]{tcolorbox}\usepackage{titlesec}\usepackage[hidelinks]{hyperref}
+\definecolor{HeaderBlueDark}{RGB}{70,110,170}\definecolor{RowBlueLight}{RGB}{235,243,255}\definecolor{RowBlueDark}{RGB}{220,233,250}\definecolor{SoftGray}{RGB}{90,90,90}
+\setlength{\parindent}{0pt}\setlist[itemize]{leftmargin=1.4em,itemsep=0.35em,topsep=0.35em}\linespread{1.06}\titleformat{\section}[block]{\Large\bfseries\color{HeaderBlueDark}}{}{0pt}{}\titlespacing{\section}{0pt}{1.3em}{0.8em}
+\newtcolorbox{exbox}{enhanced,breakable,colback=RowBlueLight,colframe=RowBlueDark,boxrule=0.4pt,arc=1.5mm,left=1.2mm,right=1.2mm,top=1mm,bottom=1mm,title={Beispiele \textnormal{(Examples)}},fonttitle=\bfseries,colbacktitle=RowBlueDark,coltitle=black}
+\NewDocumentEnvironment{grammarentry}{mm+b}{\begin{tcolorbox}[enhanced,breakable,colback=white,colframe=HeaderBlueDark,boxrule=0.6pt,arc=1.5mm,left=1.5mm,right=1.5mm,top=1mm,bottom=1mm,colbacktitle=HeaderBlueDark,coltitle=white,fonttitle=\bfseries,title={#1\hfill\normalfont\footnotesize #2}]#3\end{tcolorbox}}{}
+\newcommand{\GermanText}[1]{\textbf{Deutsch: }#1\par}\newcommand{\EnglishText}[1]{{\small\color{SoftGray}\textbf{English: }#1\par}}\newcommand{\ExampleItem}[2]{\item \textbf{#1}\\{\small\color{SoftGray}#2}}
+\title{Die Konjunktion \glqq obgleich\grqq{} \textnormal{(The conjunction \glqq obgleich\grqq)}}\date{}
+\begin{document}\selectlanguage{ngerman}\maketitle\tableofcontents\newpage
+\section{Bedeutung und Gebrauch \textnormal{(Meaning and use)}}
+\begin{grammarentry}{\textbf{obgleich}}{konzessive Subjunktion}
+\GermanText{\textbf{Obgleich} leitet einen Nebensatz ein und bedeutet \glqq obwohl\grqq{} oder \glqq auch wenn\grqq. Es nennt einen Umstand, der einen Gegensatz zur Aussage des Hauptsatzes bildet, ohne sie aufzuheben.}
+\EnglishText{\textbf{Obgleich} introduces a subordinate clause and means \glqq although\grqq{} or \glqq even though\grqq. It names a circumstance that contrasts with the main-clause statement without cancelling it.}
+\GermanText{\textbf{Obgleich} ist standardsprachlich korrekt, klingt aber häufig formeller oder schriftsprachlicher als das sehr gebräuchliche \textbf{obwohl}.}
+\EnglishText{\textbf{Obgleich} is standard German, but often sounds more formal or literary than the very common \textbf{obwohl}.}
+\end{grammarentry}
+\begin{exbox}\begin{itemize}
+\ExampleItem{Obgleich es stark regnete, fand das Konzert im Freien statt.}{Although it was raining heavily, the concert took place outdoors.}
+\ExampleItem{Sie blieb ruhig, obgleich die Situation schwierig war.}{She stayed calm, although the situation was difficult.}
+\end{itemize}\end{exbox}
+
+\section{Wortstellung \textnormal{(Word order)}}
+\begin{grammarentry}{Verb am Ende}{wie bei \textbf{obwohl}}
+\GermanText{Als subordinierende Konjunktion leitet \textbf{obgleich} einen Nebensatz ein. Das konjugierte Verb steht in diesem Nebensatz am Ende.}
+\EnglishText{As a subordinating conjunction, \textbf{obgleich} introduces a subordinate clause. The finite verb stands at the end of that clause.}
+\end{grammarentry}
+\begin{exbox}\begin{itemize}
+\ExampleItem{Obgleich er lange gewartet hatte, bekam er keine Antwort.}{Although he had waited a long time, he received no answer.}
+\ExampleItem{Er bekam keine Antwort, obgleich er lange gewartet hatte.}{He received no answer, although he had waited a long time.}
+\end{itemize}\end{exbox}
+
+\section{Satzstellung und Komma \textnormal{(Clause position and comma)}}
+\begin{grammarentry}{Voranstellung oder Nachstellung}{Komma obligatorisch}
+\GermanText{Der \textbf{obgleich}-Nebensatz kann vor oder nach dem Hauptsatz stehen. Zwischen Nebensatz und Hauptsatz steht ein Komma. Steht der Nebensatz zuerst, folgt im Hauptsatz direkt das konjugierte Verb.}
+\EnglishText{The \textbf{obgleich}-clause can come before or after the main clause. A comma separates it from the main clause. If the subordinate clause comes first, the finite verb in the main clause follows immediately.}
+\end{grammarentry}
+\begin{exbox}\begin{itemize}
+\ExampleItem{Obgleich die Verbindung langsam ist, funktioniert das Programm.}{Although the connection is slow, the program works.}
+\ExampleItem{Das Programm funktioniert, obgleich die Verbindung langsam ist.}{The program works, although the connection is slow.}
+\end{itemize}\end{exbox}
+
+\section{Unterschied zu ähnlichen Wörtern \textnormal{(Difference from similar words)}}
+\begin{grammarentry}{\textbf{obwohl}, \textbf{wenngleich}, \textbf{trotz}, \textbf{trotzdem}}{Satzmuster beachten}
+\GermanText{\textbf{Obwohl}, \textbf{obgleich} und \textbf{wenngleich} leiten Nebensätze ein und verlangen Verbendstellung. \textbf{Trotz} steht vor einer Nominalgruppe, normalerweise im Genitiv. \textbf{Trotzdem} verbindet Hauptsätze; danach steht das Verb auf Position 2.}
+\EnglishText{\textbf{Obwohl}, \textbf{obgleich}, and \textbf{wenngleich} introduce subordinate clauses and require the verb at the end. \textbf{Trotz} precedes a noun phrase, normally in the genitive. \textbf{Trotzdem} connects main clauses; the verb then comes in position two.}
+\end{grammarentry}
+\begin{exbox}\begin{itemize}
+\ExampleItem{Obgleich es kalt war, gingen sie schwimmen.}{Although it was cold, they went swimming.}
+\ExampleItem{Trotz der Kälte gingen sie schwimmen.}{Despite the cold, they went swimming.}
+\ExampleItem{Es war kalt. Dennoch gingen sie schwimmen.}{It was cold. Nevertheless, they went swimming.}
+\end{itemize}\end{exbox}
+
+\section{Nahe Formen \textnormal{(Related forms)}}
+\begin{grammarentry}{\textbf{obschon} und \textbf{wenngleich}}{Bedeutung ähnlich}
+\GermanText{\textbf{Obschon} ist ebenfalls eine konzessive Subjunktion, heute jedoch seltener und oft gehoben. \textbf{Wenngleich} ist formell und kann auch eine Einschränkung oder ein Zugeständnis ausdrücken. In Alltagssprache ist \textbf{obwohl} meist die naheliegende Wahl.}
+\EnglishText{\textbf{Obschon} is also a concessive subordinator, but is now less common and often elevated. \textbf{Wenngleich} is formal and can express a qualification or concession. In everyday speech, \textbf{obwohl} is usually the natural choice.}
+\end{grammarentry}
+
+\section{Zusammenfassung \textnormal{(Summary)}}
+\begin{grammarentry}{Merksatz}{kurz und wichtig}
+\GermanText{\textbf{Obgleich} = \textbf{obwohl}; danach folgt ein Nebensatz mit dem konjugierten Verb am Ende. Das Wort ist oft formeller als \textbf{obwohl}.}
+\EnglishText{\textbf{Obgleich} = \textbf{obwohl}; it is followed by a subordinate clause with the finite verb at the end. The word is often more formal than \textbf{obwohl}.}
+\end{grammarentry}
+\end{document}
