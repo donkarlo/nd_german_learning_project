@@ -1,0 +1,117 @@
+\documentclass[a4paper,11pt]{article}
+
+\usepackage[a4paper,margin=2cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman,english]{babel}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{xcolor}
+\usepackage{parskip}
+\usepackage{enumitem}
+\usepackage[most]{tcolorbox}
+\usepackage{titlesec}
+\usepackage[hidelinks]{hyperref}
+
+\definecolor{HeaderBlueDark}{RGB}{70,110,170}
+\definecolor{RowBlueLight}{RGB}{235,243,255}
+\definecolor{RowBlueDark}{RGB}{220,233,250}
+\definecolor{SoftGray}{RGB}{90,90,90}
+\setlength{\parindent}{0pt}
+\setlist[itemize]{leftmargin=1.4em,itemsep=0.35em,topsep=0.35em}
+\linespread{1.06}
+\titleformat{\section}[block]{\Large\bfseries\color{HeaderBlueDark}}{}{0pt}{}
+\titlespacing{\section}{0pt}{1.3em}{0.8em}
+\newtcolorbox{exbox}{enhanced,breakable,colback=RowBlueLight,colframe=RowBlueDark,boxrule=0.4pt,arc=1.5mm,left=1.2mm,right=1.2mm,top=1mm,bottom=1mm,title={Beispiele \textnormal{(Examples)}},fonttitle=\bfseries,colbacktitle=RowBlueDark,coltitle=black}
+\NewDocumentEnvironment{grammarentry}{mm+b}{%
+  \begin{tcolorbox}[enhanced,breakable,colback=white,colframe=HeaderBlueDark,boxrule=0.6pt,arc=1.5mm,left=1.5mm,right=1.5mm,top=1mm,bottom=1mm,colbacktitle=HeaderBlueDark,coltitle=white,fonttitle=\bfseries,title={#1\hfill\normalfont\footnotesize #2}]
+  #3
+  \end{tcolorbox}
+}{}
+\newcommand{\GermanText}[1]{\textbf{Deutsch: }#1\par}
+\newcommand{\EnglishText}[1]{{\small\color{SoftGray}\textbf{English: }#1\par}}
+\newcommand{\ExampleItem}[2]{\item \textbf{#1}\\{\small\color{SoftGray}#2}}
+
+\title{Die Präposition \glqq trotz\grqq{} \textnormal{(The preposition \glqq trotz\grqq)}}
+\date{}
+\begin{document}
+\selectlanguage{ngerman}
+\maketitle
+\tableofcontents
+\newpage
+
+\section{Grundbedeutung \textnormal{(Basic meaning)}}
+\begin{grammarentry}{Bedeutung von \textbf{trotz}}{Einräumung / Gegensatz}
+\GermanText{\textbf{Trotz} nennt einen Umstand, der normalerweise gegen ein Ergebnis spricht. Das Ergebnis tritt dennoch ein. Die Präposition bedeutet \glqq ungeachtet\grqq{} oder \glqq trotz der Tatsache, dass ...\grqq.}
+\EnglishText{\textbf{Trotz} introduces a circumstance that would normally work against an outcome, but the outcome still happens. It means \glqq in spite of\grqq{} or \glqq despite\grqq.}
+\GermanText{Frage: \textbf{Trotz wessen? / Trotz welcher Sache?}}
+\EnglishText{Question: \textbf{In spite of what? / Despite which circumstance?}}
+\end{grammarentry}
+
+\section{Kasus: standardsprachlich Genitiv \textnormal{(Case: genitive in standard German)}}
+\begin{grammarentry}{Grundregel}{\textbf{trotz + Genitiv}}
+\GermanText{In der Standardsprache steht \textbf{trotz} normalerweise mit dem Genitiv. Für formelle Texte und Prüfungen ist der Genitiv die sichere Wahl.}
+\EnglishText{In standard German, \textbf{trotz} normally takes the genitive. The genitive is the safe choice in formal writing and exams.}
+\end{grammarentry}
+\begin{exbox}
+\begin{itemize}
+\ExampleItem{Trotz des Regens gingen wir spazieren.}{Despite the rain, we went for a walk.}
+\ExampleItem{Trotz ihrer Müdigkeit arbeitete sie weiter.}{Despite her tiredness, she continued working.}
+\ExampleItem{Trotz der hohen Preise ist das Café gut besucht.}{Despite the high prices, the café is busy.}
+\end{itemize}
+\end{exbox}
+
+\section{Formen mit Artikel und Adjektiv \textnormal{(Forms with articles and adjectives)}}
+\begin{grammarentry}{Genitivformen}{Artikel, Adjektiv und Nomen}
+\GermanText{Der Kasus betrifft die ganze Nominalgruppe. Bei maskulinen und neutralen Nomen steht im Genitiv Singular meist \textbf{des}; das Nomen erhält gewöhnlich \textbf{-s} oder \textbf{-es}.}
+\EnglishText{The case applies to the whole noun phrase. Masculine and neuter singular nouns usually use \textbf{des} in the genitive, and the noun normally takes \textbf{-s} or \textbf{-es}.}
+\GermanText{Mit bestimmtem Artikel: \textbf{trotz des starken Regens}, \textbf{trotz der langen Wartezeit}, \textbf{trotz der großen Probleme}.}
+\EnglishText{With a definite article: \textbf{despite the heavy rain}, \textbf{despite the long wait}, \textbf{despite the major problems}.}
+\GermanText{Ohne Artikel steht das Adjektiv stark: \textbf{trotz starken Regens}, \textbf{trotz großer Probleme}.}
+\EnglishText{Without an article, the adjective has strong inflection: \textbf{despite heavy rain}, \textbf{despite major problems}.}
+\end{grammarentry}
+
+\section{Dativ in der gesprochenen Sprache \textnormal{(Dative in spoken German)}}
+\begin{grammarentry}{Gebrauch}{Umgangssprache und Standard}
+\GermanText{\textbf{Trotz + Dativ} ist in der gesprochenen Umgangssprache verbreitet, zum Beispiel \textbf{trotz dem Regen}. In formellem Standarddeutsch und in Prüfungen solltest du \textbf{trotz des Regens} verwenden.}
+\EnglishText{\textbf{Trotz + dative} is common in colloquial speech, for example \textbf{trotz dem Regen}. In formal standard German and exams, use \textbf{trotz des Regens}.}
+\end{grammarentry}
+
+\section{Satzstellung und Komma \textnormal{(Word order and commas)}}
+\begin{grammarentry}{Nominalgruppe statt Nebensatz}{keine Verbendstellung}
+\GermanText{\textbf{Trotz} leitet eine Präpositionalgruppe mit einem Nomen oder Pronomen ein, keinen Nebensatz. Deshalb steht das konjugierte Verb nicht wegen \textbf{trotz} am Ende. Nach einer vorangestellten \textbf{trotz}-Gruppe folgt normalerweise kein Komma; das Verb des Hauptsatzes bleibt an Position 2.}
+\EnglishText{\textbf{Trotz} introduces a prepositional phrase with a noun or pronoun, not a subordinate clause. It therefore does not send the finite verb to the end. An initial \textbf{trotz}-phrase is normally not followed by a comma; the main-clause verb stays in position two.}
+\end{grammarentry}
+\begin{exbox}
+\begin{itemize}
+\ExampleItem{Trotz des Regens bleibe ich nicht zu Hause.}{Despite the rain, I am not staying at home.}
+\ExampleItem{Ich gehe trotz meiner Müdigkeit noch einkaufen.}{Despite being tired, I am still going shopping.}
+\end{itemize}
+\end{exbox}
+
+\section{Unterschied zu \glqq obwohl\grqq{} und \glqq trotzdem\grqq{} \textnormal{(Difference from \glqq obwohl\grqq{} and \glqq trotzdem\grqq)}}
+\begin{grammarentry}{Drei Formen, drei Satzmuster}{gleiche Grundbeziehung}
+\GermanText{Alle drei Formen können einen Gegensatz zwischen einem hinderlichen Umstand und einem trotzdem eintretenden Ergebnis ausdrücken. Ihre grammatische Struktur ist aber verschieden.}
+\EnglishText{All three forms can express a contrast between an obstacle and an outcome that happens anyway, but their grammatical structures differ.}
+\GermanText{\textbf{trotz + Genitivgruppe}: \textbf{Trotz des Regens gingen wir spazieren.} \quad \textbf{obwohl + Nebensatz}: \textbf{Obwohl es regnete, gingen wir spazieren.} \quad \textbf{trotzdem + Hauptsatz}: \textbf{Es regnete. Trotzdem gingen wir spazieren.}}
+\EnglishText{\textbf{trotz + genitive phrase}: \textbf{Trotz des Regens gingen wir spazieren.} \quad \textbf{obwohl + subordinate clause}: \textbf{Obwohl es regnete, gingen wir spazieren.} \quad \textbf{trotzdem + main clause}: \textbf{Es regnete. Trotzdem gingen wir spazieren.}}
+\end{grammarentry}
+
+\section{Feste Ausdrücke \textnormal{(Fixed expressions)}}
+\begin{grammarentry}{\textbf{trotz allem} und \textbf{trotz alledem}}{Bedeutung: trotzdem}
+\GermanText{\textbf{Trotz allem} und \textbf{trotz alledem} sind feste, häufige Ausdrücke mit der Bedeutung \glqq ungeachtet aller Schwierigkeiten\grqq{} oder \glqq dennoch\grqq.}
+\EnglishText{\textbf{Trotz allem} and \textbf{trotz alledem} are common fixed expressions meaning \glqq in spite of everything\grqq{} or \glqq nevertheless\grqq.}
+\end{grammarentry}
+\begin{exbox}
+\begin{itemize}
+\ExampleItem{Es war ein schwieriger Tag. Trotz allem blieb sie optimistisch.}{It was a difficult day. In spite of everything, she remained optimistic.}
+\ExampleItem{Trotz alledem wollen wir es noch einmal versuchen.}{Nevertheless, we want to try it once more.}
+\end{itemize}
+\end{exbox}
+
+\section{Zusammenfassung \textnormal{(Summary)}}
+\begin{grammarentry}{Merksatz}{kurz und wichtig}
+\GermanText{\textbf{trotz + Genitiv} + Nomen/Pronomen; \textbf{obwohl} + Nebensatz mit Verb am Ende; \textbf{trotzdem} + Hauptsatz mit Verb auf Position 2.}
+\EnglishText{\textbf{trotz + genitive} + noun/pronoun; \textbf{obwohl} + subordinate clause with the verb at the end; \textbf{trotzdem} + main clause with the verb in position two.}
+\end{grammarentry}
+\end{document}
