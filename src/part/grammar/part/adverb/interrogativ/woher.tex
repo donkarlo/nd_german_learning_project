@@ -1,0 +1,51 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage[a4paper,margin=2cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman,english]{babel}
+\usepackage{lmodern,microtype,xcolor,parskip,enumitem}
+\usepackage[most]{tcolorbox}
+\usepackage{titlesec}
+\usepackage[hidelinks]{hyperref}
+\definecolor{HeaderBlueDark}{RGB}{70,110,170}
+\definecolor{RowBlueLight}{RGB}{235,243,255}
+\definecolor{RowBlueDark}{RGB}{220,233,250}
+\definecolor{SoftGray}{RGB}{90,90,90}
+\setlength{\parindent}{0pt}
+\setlist[itemize]{leftmargin=1.4em,itemsep=0.35em,topsep=0.35em}
+\linespread{1.06}
+\titleformat{\section}[block]{\Large\bfseries\color{HeaderBlueDark}}{}{0pt}{}
+\titlespacing{\section}{0pt}{1.3em}{0.8em}
+\newtcolorbox{exbox}{enhanced,breakable,colback=RowBlueLight,colframe=RowBlueDark,boxrule=0.4pt,arc=1.5mm,left=1.2mm,right=1.2mm,top=1mm,bottom=1mm,title={Beispiele (Examples)},fonttitle=\bfseries,colbacktitle=RowBlueDark,coltitle=black}
+\NewDocumentEnvironment{grammarentry}{mm+b}{\begin{tcolorbox}[enhanced,breakable,colback=white,colframe=HeaderBlueDark,boxrule=0.6pt,arc=1.5mm,left=1.5mm,right=1.5mm,top=1mm,bottom=1mm,colbacktitle=HeaderBlueDark,coltitle=white,fonttitle=\bfseries,title={#1\hfill\normalfont\footnotesize #2}]#3\end{tcolorbox}}{}
+\newcommand{\GermanText}[1]{\textbf{Deutsch: }#1\par}
+\newcommand{\EnglishText}[1]{{\small\color{SoftGray}\textbf{English: }#1\par}}
+\newcommand{\ExampleItem}[2]{\item \textbf{#1}\\{\small\color{SoftGray}#2}}
+\title{Das Fragewort „woher“ (The question word “woher”)}
+\date{}
+\begin{document}
+\maketitle
+\tableofcontents
+\newpage
+\section{Grundbedeutung und Wortart (Basic meaning and word class)}
+\begin{grammarentry}{woher}{Interrogativadverb (Lokaladverb der Herkunft)}
+\GermanText{\textbf{woher} ist ein Lokaladverb der Herkunft. Es fragt nach Ausgangspunkt, Herkunft oder Quelle: „aus welchem Ort oder von welcher Quelle?“.}
+\EnglishText{\textbf{woher} is an adverb of origin. It asks about a starting point, origin, or source: “from what place or source?”.}
+
+\end{grammarentry}
+\section{Satzstellung und Verwendung (Word order and use)}
+\begin{grammarentry}{Direkte und indirekte Frage}{Fragewortstellung}
+\GermanText{In einer direkten W-Frage steht das finite Verb gewöhnlich an zweiter Stelle nach dem Fragewort. In einer indirekten Frage steht es am Ende. Es kann nach der räumlichen Herkunft, der Herkunft einer Sache oder der Quelle einer Information fragen.}
+\EnglishText{In a direct information question, the finite verb normally follows the question word in second position. In an indirect question, it goes at the end. It can ask about a place of origin, the origin of an item, or the source of information.}
+\end{grammarentry}
+\begin{exbox}\begin{itemize}
+\ExampleItem{Woher kommst du? — Aus Graz.}{Where are you from? — From Graz.}
+\ExampleItem{Woher hast du diese Information?}{Where did you get this information?}
+\ExampleItem{Weißt du, woher das Geräusch kommt?}{Do you know where the noise is coming from?}
+\end{itemize}\end{exbox}
+\section{Zusammenfassung (Summary)}
+\begin{grammarentry}{Merksatz}{kurz und wichtig}
+\GermanText{Merksatz: \textbf{woher} fragt nach Herkunft, Ausgangspunkt oder Quelle.}
+\EnglishText{Summary: \textbf{woher} asks about origin, a starting point, or a source.}
+\end{grammarentry}
+\end{document}

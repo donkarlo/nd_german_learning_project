@@ -1,0 +1,51 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage[a4paper,margin=2cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman,english]{babel}
+\usepackage{lmodern,microtype,xcolor,parskip,enumitem}
+\usepackage[most]{tcolorbox}
+\usepackage{titlesec}
+\usepackage[hidelinks]{hyperref}
+\definecolor{HeaderBlueDark}{RGB}{70,110,170}
+\definecolor{RowBlueLight}{RGB}{235,243,255}
+\definecolor{RowBlueDark}{RGB}{220,233,250}
+\definecolor{SoftGray}{RGB}{90,90,90}
+\setlength{\parindent}{0pt}
+\setlist[itemize]{leftmargin=1.4em,itemsep=0.35em,topsep=0.35em}
+\linespread{1.06}
+\titleformat{\section}[block]{\Large\bfseries\color{HeaderBlueDark}}{}{0pt}{}
+\titlespacing{\section}{0pt}{1.3em}{0.8em}
+\newtcolorbox{exbox}{enhanced,breakable,colback=RowBlueLight,colframe=RowBlueDark,boxrule=0.4pt,arc=1.5mm,left=1.2mm,right=1.2mm,top=1mm,bottom=1mm,title={Beispiele (Examples)},fonttitle=\bfseries,colbacktitle=RowBlueDark,coltitle=black}
+\NewDocumentEnvironment{grammarentry}{mm+b}{\begin{tcolorbox}[enhanced,breakable,colback=white,colframe=HeaderBlueDark,boxrule=0.6pt,arc=1.5mm,left=1.5mm,right=1.5mm,top=1mm,bottom=1mm,colbacktitle=HeaderBlueDark,coltitle=white,fonttitle=\bfseries,title={#1\hfill\normalfont\footnotesize #2}]#3\end{tcolorbox}}{}
+\newcommand{\GermanText}[1]{\textbf{Deutsch: }#1\par}
+\newcommand{\EnglishText}[1]{{\small\color{SoftGray}\textbf{English: }#1\par}}
+\newcommand{\ExampleItem}[2]{\item \textbf{#1}\\{\small\color{SoftGray}#2}}
+\title{Das Fragewort „wogegen“ (The question word “wogegen”)}
+\date{}
+\begin{document}
+\maketitle
+\tableofcontents
+\newpage
+\section{Grundbedeutung und Wortart (Basic meaning and word class)}
+\begin{grammarentry}{wogegen}{Interrogatives Pronominaladverb (gegen + wo)}
+\GermanText{\textbf{wogegen} ist ein interrogatives Pronominaladverb. Es vertritt eine Ergänzung mit der angegebenen Präposition. Das Wort fragt gewöhnlich nach Dingen oder Sachverhalten, nicht nach Personen. Für Personen verwendet man die Präposition mit einem Fragepronomen.}
+\EnglishText{\textbf{wogegen} is an interrogative pronominal adverb. It stands for a complement with the stated preposition. It normally asks about things or situations, not people. For people, use the preposition with an interrogative pronoun.}
+\GermanText{Die zugrunde liegende Rektion lautet: \textbf{gegen + Akk.}. Der konkrete Satz bestimmt, wie die Präposition gebraucht wird.}
+\EnglishText{The underlying preposition is governed as follows: \textbf{gegen + Akk.}. The particular sentence determines its use.}
+\end{grammarentry}
+\section{Satzstellung und Verwendung (Word order and use)}
+\begin{grammarentry}{Direkte und indirekte Frage}{Fragewortstellung}
+\GermanText{In einer direkten Frage steht das finite Verb gewöhnlich an zweiter Stelle nach dem Fragewort. In einer indirekten Frage steht das finite Verb am Ende des Nebensatzes. \textbf{gegen} regiert den Akkusativ. Für Personen verwendet man \textbf{gegen wen?}.}
+\EnglishText{In a direct question, the finite verb normally follows the question word in second position. In an indirect question, the finite verb goes at the end of the subordinate clause. \textbf{gegen} governs the accusative. For people, use \textbf{gegen wen?}.}
+\end{grammarentry}
+\begin{exbox}\begin{itemize}
+\ExampleItem{Wogegen protestieren die Menschen? — Gegen die Kürzungen.}{What are the people protesting against? — The cuts.}
+\ExampleItem{Wogegen hilft dieses Mittel? — Gegen Kopfschmerzen.}{What does this remedy help against? — Headaches.}
+\end{itemize}\end{exbox}
+\section{Zusammenfassung (Summary)}
+\begin{grammarentry}{Merksatz}{kurz und wichtig}
+\GermanText{\textbf{wogegen} fragt nach einer Sache oder einem Sachverhalt in einer Ergänzung mit \textbf{gegen}. Bei Personen verwendet man normalerweise die Präposition mit \textbf{wen/wem}.}
+\EnglishText{\textbf{wogegen} asks about a thing or situation in a complement with \textbf{gegen}. For people, use the preposition with \textbf{whom}.}
+\end{grammarentry}
+\end{document}

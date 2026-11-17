@@ -1,0 +1,111 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage[a4paper,margin=2cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman,english]{babel}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage[table]{xcolor}
+\usepackage{parskip}
+\usepackage{enumitem}
+\usepackage[most]{tcolorbox}
+\usepackage{titlesec}
+\usepackage[hidelinks]{hyperref}
+\usepackage{array}
+\definecolor{HeaderBlueDark}{RGB}{70,110,170}
+\definecolor{RowBlueLight}{RGB}{235,243,255}
+\definecolor{RowBlueDark}{RGB}{220,233,250}
+\definecolor{SoftGray}{RGB}{90,90,90}
+\setlength{\parindent}{0pt}
+\setlist[itemize]{leftmargin=1.4em,itemsep=0.35em,topsep=0.35em}
+\linespread{1.06}
+\titleformat{\section}[block]{\Large\bfseries\color{HeaderBlueDark}}{}{0pt}{}
+\titlespacing{\section}{0pt}{1.3em}{0.8em}
+\titleformat{\subsection}[block]{\large\bfseries\color{HeaderBlueDark}}{}{0pt}{}
+\titlespacing{\subsection}{0pt}{1.0em}{0.6em}
+\newtcolorbox{exbox}{enhanced,breakable,colback=RowBlueLight,colframe=RowBlueDark,boxrule=0.4pt,arc=1.5mm,left=1.2mm,right=1.2mm,top=1mm,bottom=1mm,title={Beispiele \textnormal{(Examples)}},fonttitle=\bfseries,colbacktitle=RowBlueDark,coltitle=black}
+\NewDocumentEnvironment{grammarentry}{mm+b}{%
+\begin{tcolorbox}[enhanced,breakable,colback=white,colframe=HeaderBlueDark,boxrule=0.6pt,arc=1.5mm,left=1.5mm,right=1.5mm,top=1mm,bottom=1mm,colbacktitle=HeaderBlueDark,coltitle=white,fonttitle=\bfseries,title={#1\hfill\normalfont\footnotesize #2}]
+#3
+\end{tcolorbox}
+}{}
+\newcommand{\GermanText}[1]{\textbf{Deutsch: }#1\par}
+\newcommand{\EnglishText}[1]{{\small\color{SoftGray}\textbf{English: }#1\par}}
+\newcommand{\ExampleItem}[2]{\item \textbf{#1}\\{\small\color{SoftGray}#2}}
+\title{Das Relativpronomen\\\large The Relative Pronoun}
+\date{}
+\begin{document}
+\maketitle
+\tableofcontents
+\newpage
+
+\section{Was ist ein Relativpronomen? (What is a relative pronoun?)}
+\begin{grammarentry}{Funktion}{Function}
+\GermanText{Ein Relativpronomen leitet einen Relativsatz ein und verweist auf ein Bezugswort oder auf einen ganzen Satz. Der Relativsatz liefert zusätzliche Information zu diesem Bezug.}
+\EnglishText{A relative pronoun introduces a relative clause and refers to an antecedent noun or an entire clause. The relative clause adds information about that reference.}
+\end{grammarentry}
+\begin{exbox}\begin{itemize}
+\ExampleItem{Das ist der Mann, der nebenan wohnt.}{That is the man who lives next door.}
+\ExampleItem{Sie hat die Prüfung bestanden, was mich freut.}{She passed the exam, which makes me happy.}
+\end{itemize}\end{exbox}
+
+\section{Die Formen im Überblick (Forms at a glance)}
+\begin{grammarentry}{Der / die / das}{Inflected relative pronouns}
+\GermanText{Diese Reihe ist die übliche Wahl bei konkreten Bezugsnomen. Genus und Numerus richten sich nach dem Bezugswort; der Kasus richtet sich nach der Funktion des Pronomens im Relativsatz.}
+\EnglishText{This is the usual series with specific antecedent nouns. Gender and number come from the antecedent; case comes from the pronoun's function inside the relative clause.}
+\end{grammarentry}
+\rowcolors{2}{RowBlueLight}{RowBlueDark}
+\begin{center}
+\begin{tabular}{>{\bfseries}p{2.2cm}|>{\centering\arraybackslash}p{2.2cm}|>{\centering\arraybackslash}p{2.2cm}|>{\centering\arraybackslash}p{2.2cm}|>{\centering\arraybackslash}p{2.2cm}}
+\rowcolor{HeaderBlueDark}
+\color{white}Kasus & \color{white}Maskulin & \color{white}Feminin & \color{white}Neutrum & \color{white}Plural\\
+Nominativ & der & die & das & die\\
+Akkusativ & den & die & das & die\\
+Dativ & dem & der & dem & denen\\
+Genitiv & dessen & deren & dessen & deren\\
+\end{tabular}
+\end{center}
+\GermanText{Die Formen \textbf{welcher/welche/welches} sind ebenfalls Relativpronomen, klingen aber oft formeller. Ihre Deklination ähnelt der des bestimmten Artikels.}
+\EnglishText{The forms \textbf{welcher/welche/welches} are also relative pronouns, but often sound more formal. Their declension resembles that of the definite article.}
+
+\section{So bestimmt man den Kasus (How to determine the case)}
+\begin{grammarentry}{Zwei Fragen}{Two questions}
+\GermanText{Erstens: Welches Genus und welcher Numerus hat das Bezugswort? Zweitens: Welche Funktion hat das Relativpronomen im Relativsatz? Diese Funktion bestimmt den Kasus.}
+\EnglishText{First: What are the gender and number of the antecedent? Second: What function does the relative pronoun have in its clause? That function determines its case.}
+\end{grammarentry}
+\begin{exbox}\begin{itemize}
+\ExampleItem{Der Mann, der hier wohnt, ist mein Nachbar.}{\emph{Der} is masculine singular and nominative because it is the subject of \emph{wohnt}.}
+\ExampleItem{Der Mann, den ich kenne, ist mein Nachbar.}{\emph{Den} is masculine singular and accusative because it is the object of \emph{kenne}.}
+\ExampleItem{Der Mann, dem ich helfe, ist mein Nachbar.}{\emph{Dem} is masculine singular and dative because \emph{helfen} takes the dative.}
+\ExampleItem{Die Gründe, aus denen ich den Computer benutze, sind verschieden.}{\emph{Denen} is plural dative because \emph{aus} governs the dative.}
+\end{itemize}\end{exbox}
+
+\section{Wer, was und Relativadverbien (Wer, was, and relative adverbs)}
+\begin{grammarentry}{Weitere Formen}{Other forms}
+\GermanText{\textbf{Was} steht häufig nach \emph{alles, etwas, nichts} und bezieht sich oft auf einen ganzen Satz. \textbf{Wer} kann ohne ausdrücklich genanntes Bezugswort eine Person allgemein bezeichnen; seine Formen sind \emph{wer, wen, wem, wessen}.}
+\EnglishText{\textbf{Was} often follows \emph{alles, etwas, nichts} and can refer to an entire clause. \textbf{Wer} can refer generally to a person without an explicitly stated antecedent; its forms are \emph{wer, wen, wem, wessen}.}
+\GermanText{Wörter wie \textbf{wo}, \textbf{wofür} und \textbf{womit} können Relativsätze einleiten, sind aber Relativadverbien beziehungsweise Pronominaladverbien, keine Relativpronomen.}
+\EnglishText{Words such as \textbf{wo}, \textbf{wofür}, and \textbf{womit} can introduce relative clauses, but they are relative adverbs or pronominal adverbs, not relative pronouns.}
+\end{grammarentry}
+\begin{exbox}\begin{itemize}
+\ExampleItem{Alles, was du gesagt hast, war hilfreich.}{Everything you said was helpful.}
+\ExampleItem{Wer viel liest, erweitert seinen Wortschatz.}{Whoever reads a lot expands their vocabulary.}
+\ExampleItem{Das ist die Stadt, in der ich wohne.}{That is the city where I live.}
+\end{itemize}\end{exbox}
+
+\section{Satzstellung und Kommas (Word order and commas)}
+\begin{grammarentry}{Relativsatz als Nebensatz}{Relative clause as a subordinate clause}
+\GermanText{Ein Relativsatz wird durch Kommas abgetrennt. Das finite Verb steht am Ende des Relativsatzes.}
+\EnglishText{A relative clause is set off by commas. Its finite verb stands at the end.}
+\end{grammarentry}
+\begin{exbox}\begin{itemize}
+\ExampleItem{Das Buch, das ich gestern gekauft habe, ist interessant.}{The book that I bought yesterday is interesting.}
+\ExampleItem{Die Kollegin, mit der ich gesprochen habe, arbeitet in Graz.}{The colleague I spoke with works in Graz.}
+\end{itemize}\end{exbox}
+
+\section{Merksätze (Key points)}
+\begin{grammarentry}{Kurzfassung}{Summary}
+\GermanText{Bezugswort: Genus und Numerus. Relativsatz: Kasus. Präposition: bestimmt den Kasus. Relativsatz: Komma und finites Verb am Ende.}
+\EnglishText{Antecedent: gender and number. Relative clause: case. Preposition: governs the case. Relative clause: comma and finite verb at the end.}
+\end{grammarentry}
+\end{document}

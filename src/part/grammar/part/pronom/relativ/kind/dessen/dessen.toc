@@ -1,0 +1,6 @@
+\babel@toc {english}{}\relax 
+\contentsline {section}{\numberline {1}Grammatische Funktion (Grammatical function)}{2}{section.1}%
+\contentsline {section}{\numberline {2}Bezug zum Bezugswort (Relation to the antecedent)}{2}{section.2}%
+\contentsline {section}{\numberline {3}Beispiele (Examples)}{2}{section.3}%
+\contentsline {section}{\numberline {4}Satzstellung und Zeichensetzung (Word order and punctuation)}{2}{section.4}%
+\contentsline {section}{\numberline {5}Merksatz (Memory rule)}{2}{section.5}%

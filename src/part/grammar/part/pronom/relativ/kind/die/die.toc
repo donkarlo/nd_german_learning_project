@@ -1,0 +1,7 @@
+\babel@toc {english}{}\relax 
+\contentsline {section}{\numberline {1}Bezugswort und grammatische Rolle (Antecedent and grammatical role)}{2}{section.1}%
+\contentsline {section}{\numberline {2}Deklination (Declension)}{2}{section.2}%
+\contentsline {section}{\numberline {3}Kasus im Relativsatz (Case inside the relative clause)}{2}{section.3}%
+\contentsline {section}{\numberline {4}Beispiele nach Kasus (Examples by case)}{2}{section.4}%
+\contentsline {section}{\numberline {5}Satzstellung und Kommas (Word order and commas)}{3}{section.5}%
+\contentsline {section}{\numberline {6}Merksatz (Memory rule)}{3}{section.6}%

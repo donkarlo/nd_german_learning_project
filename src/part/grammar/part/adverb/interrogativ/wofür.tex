@@ -1,0 +1,106 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage[a4paper,margin=2cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman,english]{babel}
+\usepackage{lmodern,microtype,xcolor,parskip,enumitem}
+\usepackage[most]{tcolorbox}
+\usepackage{titlesec}
+\usepackage[hidelinks]{hyperref}
+\definecolor{HeaderBlueDark}{RGB}{70,110,170}
+\definecolor{RowBlueLight}{RGB}{235,243,255}
+\definecolor{RowBlueDark}{RGB}{220,233,250}
+\definecolor{SoftGray}{RGB}{90,90,90}
+\setlength{\parindent}{0pt}
+\setlist[itemize]{leftmargin=1.4em,itemsep=0.35em,topsep=0.35em}
+\linespread{1.06}
+\titleformat{\section}[block]{\Large\bfseries\color{HeaderBlueDark}}{}{0pt}{}
+\titlespacing{\section}{0pt}{1.3em}{0.8em}
+\newtcolorbox{exbox}{enhanced,breakable,colback=RowBlueLight,colframe=RowBlueDark,boxrule=0.4pt,arc=1.5mm,left=1.2mm,right=1.2mm,top=1mm,bottom=1mm,title={Beispiele (Examples)},fonttitle=\bfseries,colbacktitle=RowBlueDark,coltitle=black}
+\NewDocumentEnvironment{grammarentry}{mm+b}{\begin{tcolorbox}[enhanced,breakable,colback=white,colframe=HeaderBlueDark,boxrule=0.6pt,arc=1.5mm,left=1.5mm,right=1.5mm,top=1mm,bottom=1mm,colbacktitle=HeaderBlueDark,coltitle=white,fonttitle=\bfseries,title={#1\hfill\normalfont\footnotesize #2}]#3\end{tcolorbox}}{}
+\newcommand{\GermanText}[1]{\textbf{Deutsch: }#1\par}
+\newcommand{\EnglishText}[1]{{\small\color{SoftGray}\textbf{English: }#1\par}}
+\newcommand{\ExampleItem}[2]{\item \textbf{#1}\\{\small\color{SoftGray}#2}}
+\title{Das Fragewort „wofür“ (The question word “wofür”)}
+\date{}
+\begin{document}
+\maketitle
+\tableofcontents
+\newpage
+\section{Grundbedeutung (Basic meaning)}
+\begin{grammarentry}{wofür}{Frage-Pronominaladverb}
+\GermanText{\textbf{wofür} verbindet \textbf{wo} mit der Präposition \textbf{für}. Es fragt nach Sache, Thema, Grund oder Zweck: „für welche Sache?“, „aus welchem Grund?“ oder „zu welchem Zweck?“.}
+\EnglishText{\textbf{wofür} combines \textbf{wo} with the preposition \textbf{für}. It asks about a thing, topic, reason, or purpose: “for what?”, “for what reason?”, or “for what purpose?”}
+\end{grammarentry}
+
+\section{Wortart und Satzgliedfunktion (Word class and clause function)}
+\begin{grammarentry}{Interrogativadverb und Pronominaladverb}{Form und Funktion}
+\GermanText{\textbf{wofür} ist ein interrogatives Pronominaladverb (Frageadverb). Es steht stellvertretend für \textbf{für etwas}. Je nach Verb und Kontext erfüllt es die Funktion eines Präpositionalobjekts oder einer adverbialen Bestimmung. In \textbf{Wofür hast du dich entschuldigt?} fragt es nach der Ergänzung zu \textbf{sich für etwas entschuldigen}.}
+\EnglishText{\textbf{wofür} is an interrogative pronominal adverb. It stands for \textbf{für etwas} (for something). Depending on the verb and context, it functions as a prepositional object or an adverbial. In \textbf{Wofür hast du dich entschuldigt?}, it asks for the complement of \textbf{sich für etwas entschuldigen}.}
+\end{grammarentry}
+
+\section{Bildung und Kasus (Formation and case)}
+\begin{grammarentry}{wo + für}{für regiert den Akkusativ}
+\GermanText{\textbf{für} regiert den Akkusativ. In \textbf{wofür} ist dieser Kasus an keiner sichtbaren Nominalendung erkennbar. Anders als \textbf{woran} oder \textbf{worauf} braucht \textbf{wofür} kein eingeschobenes \textbf{r}.}
+\EnglishText{\textbf{für} governs the accusative. In \textbf{wofür}, this case is not visible on a noun ending. Unlike \textbf{woran} or \textbf{worauf}, \textbf{wofür} needs no inserted \textbf{r}.}
+\end{grammarentry}
+
+\section{Bedeutungen und Verwendungen (Meanings and uses)}
+\begin{grammarentry}{Zweck, Grund oder Thema}{purpose, reason, or topic}
+\GermanText{\textbf{wofür} kann je nach Verbindung nach Zweck, Anlass, Gegenstand des Interesses oder Verantwortungsbereich fragen.}
+\EnglishText{Depending on the expression, \textbf{wofür} can ask about purpose, occasion, topic of interest, or area of responsibility.}
+\end{grammarentry}
+\begin{exbox}\begin{itemize}
+\ExampleItem{Wofür brauchst du dieses Werkzeug? — Für die Reparatur des Fahrrads.}{What do you need this tool for? — To repair the bicycle.}
+\ExampleItem{Wofür hast du dich entschuldigt? — Für meine Verspätung.}{What did you apologize for? — For being late.}
+\ExampleItem{Wofür interessierst du dich? — Für Literatur und Kunst.}{What are you interested in? — Literature and art.}
+\ExampleItem{Wofür bist du verantwortlich? — Für die technische Umsetzung.}{What are you responsible for? — The technical implementation.}
+\end{itemize}\end{exbox}
+
+\section{Frage nach Personen (Asking about people)}
+\begin{grammarentry}{für wen statt wofür}{Präposition + Fragepronomen}
+\GermanText{Bezieht sich \textbf{für} auf eine Person, verwendet man normalerweise \textbf{für wen?}, nicht \textbf{wofür?}. Eine feste Sonderverwendung ist \textbf{Wofür hältst du mich?}; hier fragt man nach der zugeschriebenen Rolle oder Einschätzung.}
+\EnglishText{When \textbf{für} refers to a person, normally use \textbf{für wen?}, not \textbf{wofür?}. A fixed special use is \textbf{Wofür hältst du mich?} (What do you take me for?), which asks about an attributed role or judgment.}
+\end{grammarentry}
+\begin{exbox}\begin{itemize}
+\ExampleItem{Für wen hast du das Geschenk gekauft? — Für Max.}{Who did you buy the present for? — For Max.}
+\ExampleItem{Wofür hältst du mich? — Für einen Narren?}{What do you take me for? — A fool?}
+\end{itemize}\end{exbox}
+
+\section{Wortstellung (Word order)}
+\begin{grammarentry}{Direkte und indirekte Frage}{Verbposition}
+\GermanText{In der direkten Frage folgt das finite Verb auf \textbf{wofür}: \textbf{Wofür hast du dich entschuldigt?} In einer indirekten Frage steht das finite Verb am Ende.}
+\EnglishText{In a direct question, the finite verb follows \textbf{wofür}. In an indirect question, the finite verb goes at the end.}
+\end{grammarentry}
+\begin{exbox}\begin{itemize}
+\ExampleItem{Wofür interessierst du dich?}{What are you interested in?}
+\ExampleItem{Ich weiß nicht, wofür er sich interessiert.}{I do not know what he is interested in.}
+\end{itemize}\end{exbox}
+
+\section{dafür als Korrelat vor einem dass-Satz (dafür as a correlate before a dass-clause)}
+\begin{grammarentry}{Voranzeigendes Pronominaladverb}{Korrelat}
+\GermanText{Auf \textbf{wofür} kann man mit einer Präpositionalgruppe antworten: \textbf{Für meine Verspätung}. Bei einem folgenden \textbf{dass}-Satz kann \textbf{dafür} im Hauptsatz als Korrelat stehen und auf den Inhalt des Nebensatzes vorausweisen.}
+\EnglishText{A question with \textbf{wofür} can be answered with a prepositional phrase: \textbf{Für meine Verspätung} (for being late). Before a following \textbf{dass}-clause, \textbf{dafür} can act as a correlate in the main clause and anticipate the subordinate clause's content.}
+\GermanText{In \textbf{Ich habe mich dafür entschuldigt, dass ich mich verspätet habe}, bedeutet \textbf{dafür} sinngemäß „wegen dieser Sache“. In \textbf{Ich habe Max dafür gedankt, dass er mir sehr geholfen hat} verweist es auf den Grund des Dankes. Das Korrelat ist nicht in jedem Satz zwingend.}
+\EnglishText{In the first example, \textbf{dafür} means roughly “for that reason.” In the second, it points to the reason for the thanks. The correlate is not compulsory in every sentence.}
+\end{grammarentry}
+\begin{exbox}\begin{itemize}
+\ExampleItem{Ich habe mich dafür entschuldigt, dass ich mich verspätet habe.}{I apologized for being late.}
+\ExampleItem{Ich habe Max dafür gedankt, dass er mir sehr geholfen hat.}{I thanked Max for helping me a lot.}
+\end{itemize}\end{exbox}
+
+\section{Unterschied zwischen wofür und wozu (Difference between wofür and wozu)}
+\begin{grammarentry}{Zweck und Bezug}{overlap in meaning}
+\GermanText{Beide Wörter können nach einem Zweck fragen. \textbf{wozu} betont oft die beabsichtigte Verwendung oder den Nutzen. \textbf{wofür} ist breiter und kann auch nach Anlass, Thema, Gegenstand oder Wertung fragen. Sie sind nicht immer austauschbar.}
+\EnglishText{Both words can ask about purpose. \textbf{wozu} often emphasizes intended use or benefit. \textbf{wofür} is broader and can also ask about an occasion, topic, object, or judgment. They are not always interchangeable.}
+\end{grammarentry}
+\begin{exbox}\begin{itemize}
+\ExampleItem{Wofür brauchst du den Schlüssel? — Für die Haustür.}{What do you need the key for? — For the front door.}
+\ExampleItem{Wozu dient dieser Hebel? — Zum Öffnen des Fensters.}{What is this lever for? — To open the window.}
+\end{itemize}\end{exbox}
+
+\section{Zusammenfassung (Summary)}
+\begin{grammarentry}{Merksatz}{kurz und wichtig}
+\GermanText{\textbf{wofür} fragt nach \textbf{für + Sache/Sachverhalt}; für eine Person fragt man normalerweise \textbf{für wen?}. Grammatisch ist \textbf{wofür} ein interrogatives Pronominaladverb.}
+\EnglishText{\textbf{wofür} asks about \textbf{für + thing/situation}; for a person, normally ask \textbf{für wen?}. Grammatically, \textbf{wofür} is an interrogative pronominal adverb.}
+\end{grammarentry}\end{document}

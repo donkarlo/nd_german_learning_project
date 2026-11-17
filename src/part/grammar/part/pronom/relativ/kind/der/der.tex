@@ -1,0 +1,82 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage[a4paper,margin=2cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman,english]{babel}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{xcolor}
+\usepackage{parskip}
+\usepackage{enumitem}
+\usepackage[most]{tcolorbox}
+\usepackage{titlesec}
+\usepackage[hidelinks]{hyperref}
+\usepackage{array}
+\definecolor{HeaderBlueDark}{RGB}{70,110,170}
+\definecolor{RowBlueLight}{RGB}{235,243,255}
+\definecolor{RowBlueDark}{RGB}{220,233,250}
+\definecolor{SoftGray}{RGB}{90,90,90}
+\setlength{\parindent}{0pt}
+\setlist[itemize]{leftmargin=1.4em,itemsep=0.35em,topsep=0.35em}
+\linespread{1.06}
+\titleformat{\section}[block]{\Large\bfseries\color{HeaderBlueDark}}{}{0pt}{}
+\titlespacing{\section}{0pt}{1.3em}{0.8em}
+\titleformat{\subsection}[block]{\large\bfseries\color{HeaderBlueDark}}{}{0pt}{}
+\titlespacing{\subsection}{0pt}{1.0em}{0.6em}
+\newtcolorbox{exbox}{enhanced,breakable,colback=RowBlueLight,colframe=RowBlueDark,boxrule=0.4pt,arc=1.5mm,left=1.2mm,right=1.2mm,top=1mm,bottom=1mm,title={Beispiele \textnormal{(Examples)}},fonttitle=\bfseries,colbacktitle=RowBlueDark,coltitle=black}
+\NewDocumentEnvironment{grammarentry}{mm+b}{%
+\begin{tcolorbox}[enhanced,breakable,colback=white,colframe=HeaderBlueDark,boxrule=0.6pt,arc=1.5mm,left=1.5mm,right=1.5mm,top=1mm,bottom=1mm,colbacktitle=HeaderBlueDark,coltitle=white,fonttitle=\bfseries,title={#1\hfill\normalfont\footnotesize #2}]
+#3
+\end{tcolorbox}
+}{}
+\newcommand{\GermanText}[1]{\textbf{Deutsch: }#1\par}
+\newcommand{\EnglishText}[1]{{\small\color{SoftGray}\textbf{English: }#1\par}}
+\newcommand{\ExampleItem}[2]{\item \textbf{#1}\\{\small\color{SoftGray}#2}}
+\title{Das Relativpronomen \glqq der\grqq{}\\\large The Relative Pronoun \glqq der\grqq{}}
+\date{}
+\begin{document}
+\maketitle
+\tableofcontents
+\newpage
+
+\section{Bezugswort und grammatische Rolle (Antecedent and grammatical role)}
+\begin{grammarentry}{der}{Relativpronomen für ein maskulinen Bezugswort}
+\GermanText{Das Relativpronomen \textbf{der} leitet einen Relativsatz ein und bezieht sich auf ein maskulinen Nomen im Hauptsatz.}
+\EnglishText{The relative pronoun \textbf{der} introduces a relative clause and refers to a maskulinen noun in the main clause.}
+\GermanText{Das Bezugswort ist maskulin und Singular. Der Kasus von \textbf{der/den/dem/dessen} wird dagegen durch die jeweilige Funktion innerhalb des Relativsatzes bestimmt.}
+\EnglishText{The antecedent is maskulinen and singular. The case of the relative form is determined by its function inside the relative clause.}
+\end{grammarentry}
+
+\section{Deklination (Declension)}
+\begin{grammarentry}{Formen der Relativpronomenreihe}{Forms in this relative-pronoun series}
+\GermanText{Die Formen für ein maskulinen Bezugswort sind: Nominativ: der \quad Akkusativ: den \quad Dativ: dem \quad Genitiv: dessen.}
+\EnglishText{The forms for a maskulinen antecedent are: Nominativ: der \quad Akkusativ: den \quad Dativ: dem \quad Genitiv: dessen.}
+\end{grammarentry}
+
+\section{Kasus im Relativsatz (Case inside the relative clause)}
+\begin{grammarentry}{Der Kasus folgt der Funktion}{Case follows grammatical function}
+\GermanText{Das Bezugswort bestimmt Genus und Numerus. Die grammatische Funktion des Relativpronomens im Relativsatz bestimmt den Kasus: Subjekt steht im Nominativ; Akkusativ- und Dativobjekte richten sich nach dem Verb; eine Präposition bestimmt ebenfalls den Kasus.}
+\EnglishText{The antecedent determines gender and number. The pronoun's grammatical function inside the relative clause determines case: a subject is nominative; accusative and dative objects follow the verb; a preposition also governs case.}
+\end{grammarentry}
+
+\section{Beispiele nach Kasus (Examples by case)}
+\begin{exbox}\begin{itemize}
+\ExampleItem{Der Mann, der nebenan wohnt, ist Arzt.}{The man who lives next door is a doctor.}
+\ExampleItem{Der Mann, den ich gestern gesehen habe, ist Arzt.}{The man whom I saw yesterday is a doctor.}
+\ExampleItem{Der Mann, dem ich geholfen habe, ist mein Nachbar.}{The man whom I helped is my neighbor.}
+\ExampleItem{Der Mann, dessen Auto kaputt ist, nimmt den Bus.}{The man whose car is broken takes the bus.}
+\ExampleItem{Der Kollege, mit dem ich gesprochen habe, arbeitet in Graz.}{The colleague I spoke with works in Graz.}
+\end{itemize}\end{exbox}
+
+\section{Satzstellung und Kommas (Word order and commas)}
+\begin{grammarentry}{Relativsatz als Nebensatz}{Relative clause as a subordinate clause}
+\GermanText{Der Relativsatz wird durch Kommas vom übrigen Satz abgetrennt. Das finite Verb steht am Ende des Relativsatzes.}
+\EnglishText{Commas set the relative clause off from the rest of the sentence. Its finite verb stands at the end.}
+\end{grammarentry}
+
+\section{Merksatz (Memory rule)}
+\begin{grammarentry}{Genus und Kasus}{Gender and case}
+\GermanText{Das Bezugswort bestimmt Genus und Numerus; die Funktion im Relativsatz bestimmt den Kasus.}
+\EnglishText{The antecedent determines gender and number; the function inside the relative clause determines case.}
+\end{grammarentry}
+\end{document}

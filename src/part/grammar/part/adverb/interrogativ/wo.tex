@@ -1,15 +1,105 @@
-\documentclass[a4paper]{article}
-\usepackage{graphicx}
-\usepackage{amsmath,amssymb}
-\usepackage{hyperref}
-\usepackage{minted}
-
-\title{}
+\documentclass[a4paper,11pt]{article}
+\usepackage[a4paper,margin=2cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman,english]{babel}
+\usepackage{lmodern,microtype,xcolor,parskip,enumitem}
+\usepackage[most]{tcolorbox}
+\usepackage{titlesec}
+\usepackage[hidelinks]{hyperref}
+\definecolor{HeaderBlueDark}{RGB}{70,110,170}
+\definecolor{RowBlueLight}{RGB}{235,243,255}
+\definecolor{RowBlueDark}{RGB}{220,233,250}
+\definecolor{SoftGray}{RGB}{90,90,90}
+\setlength{\parindent}{0pt}
+\setlist[itemize]{leftmargin=1.4em,itemsep=0.35em,topsep=0.35em}
+\linespread{1.06}
+\titleformat{\section}[block]{\Large\bfseries\color{HeaderBlueDark}}{}{0pt}{}
+\titlespacing{\section}{0pt}{1.3em}{0.8em}
+\newtcolorbox{exbox}{enhanced,breakable,colback=RowBlueLight,colframe=RowBlueDark,boxrule=0.4pt,arc=1.5mm,left=1.2mm,right=1.2mm,top=1mm,bottom=1mm,title={Beispiele (Examples)},fonttitle=\bfseries,colbacktitle=RowBlueDark,coltitle=black}
+\NewDocumentEnvironment{grammarentry}{mm+b}{\begin{tcolorbox}[enhanced,breakable,colback=white,colframe=HeaderBlueDark,boxrule=0.6pt,arc=1.5mm,left=1.5mm,right=1.5mm,top=1mm,bottom=1mm,colbacktitle=HeaderBlueDark,coltitle=white,fonttitle=\bfseries,title={#1\hfill\normalfont\footnotesize #2}]#3\end{tcolorbox}}{}
+\newcommand{\GermanText}[1]{\textbf{Deutsch: }#1\par}
+\newcommand{\EnglishText}[1]{{\small\color{SoftGray}\textbf{English: }#1\par}}
+\newcommand{\ExampleItem}[2]{\item \textbf{#1}\\{\small\color{SoftGray}#2}}
+\title{Das Wort „wo“ (The word “wo”)}
 \date{}
 \begin{document}
-    \maketitle
-    \textbf{Wo} ich  wohn \textbf{zu} Hause\\
-    \textbf{Wohin} ich  reise \textbf{nach} Italien\\
-    \textbf{Woher} ich  komme \textbf{aus} Italien\\
-    
-\end{document}
+\maketitle
+\tableofcontents
+\newpage
+\section{Grundbedeutung (Basic meaning)}
+\begin{grammarentry}{wo}{Frageadverb, Lokaladverb}
+\GermanText{In seiner Grundbedeutung fragt \textbf{wo} nach einem Ort: „an welchem Ort?“ Die Antwort nennt eine Position, keine Bewegungsrichtung. \textbf{wo} ist nicht steigerbar.}
+\EnglishText{In its basic meaning, \textbf{wo} asks about a place: “at which place?” The answer gives a location, not a direction of movement. \textbf{wo} is not comparable.}
+\end{grammarentry}
+
+\section{Wortart und Funktion (Word class and function)}
+\begin{grammarentry}{Interrogativadverb}{direkte und indirekte Fragen}
+\GermanText{In einer direkten Frage ist \textbf{wo} ein interrogatives Lokaladverb und erfüllt die Satzgliedfunktion einer lokalen Adverbialbestimmung. In einer indirekten Frage leitet es einen Nebensatz ein; das finite Verb steht am Ende.}
+\EnglishText{In a direct question, \textbf{wo} is an interrogative adverb of place functioning as a locative adverbial. In an indirect question, it introduces a subordinate clause, with the finite verb at the end.}
+\end{grammarentry}
+\begin{exbox}\begin{itemize}
+\ExampleItem{Wo wohnst du?}{Where do you live?}
+\ExampleItem{Ich weiß nicht, wo er wohnt.}{I do not know where he lives.}
+\ExampleItem{Sie fragte, wo der Bahnhof ist.}{She asked where the railway station is.}
+\end{itemize}\end{exbox}
+
+\section{Relativisches wo (Relative wo)}
+\begin{grammarentry}{Rückverweis auf einen Ort}{Relativadverb}
+\GermanText{\textbf{wo} kann einen Relativsatz einleiten und auf einen vorher genannten Ort zurückverweisen. Das ist besonders in lockerer Sprache üblich. In formellen Texten ist eine Präposition mit Relativpronomen oft präziser: \textbf{die Stadt, in der ich wohne}. Das Relativsatzverb steht am Ende.}
+\EnglishText{\textbf{wo} can introduce a relative clause referring to a place mentioned earlier. This is common in informal language. In formal writing, a preposition plus relative pronoun is often more precise: \textbf{die Stadt, in der ich wohne} (the city in which I live). The relative-clause verb goes at the end.}
+\end{grammarentry}
+\begin{exbox}\begin{itemize}
+\ExampleItem{Das ist das Haus, wo ich geboren wurde.}{That is the house where I was born.}
+\ExampleItem{Das ist die Stadt, in der ich wohne.}{That is the city in which I live.}
+\end{itemize}\end{exbox}
+
+\section{Zeitliche Verwendung (Temporal use)}
+\begin{grammarentry}{wo = als / an dem}{zeitlicher Bezug}
+\GermanText{\textbf{wo} kann auch einen Zeitpunkt oder eine Zeitspanne einleiten. Diese Verwendung ist im heutigen Standarddeutsch belegt. In sorgfältiger Prosa sind \textbf{als}, \textbf{an dem} oder \textbf{in der} häufig die klarere Wahl.}
+\EnglishText{\textbf{wo} can also introduce a point or period in time. This use is attested in present-day Standard German. In careful prose, \textbf{als}, \textbf{an dem}, or \textbf{in der} is often clearer.}
+\end{grammarentry}
+\begin{exbox}\begin{itemize}
+\ExampleItem{Das war in dem Jahr, wo ich nach Graz gezogen bin.}{That was the year when I moved to Graz.}
+\ExampleItem{Formeller: Das war in dem Jahr, in dem ich nach Graz gezogen bin.}{More formal: That was the year in which I moved to Graz.}
+\end{itemize}\end{exbox}
+
+\section{Weitere Verwendungen (Other uses)}
+\begin{grammarentry}{wo auch immer und konnektorales wo}{je nach Satzbau}
+\GermanText{In \textbf{wo auch immer} bedeutet \textbf{wo} weiterhin „an welchem Ort“. Umgangssprachlich kann \textbf{wo} auch einen begründenden oder anschließenden Nebensatz einleiten, ungefähr wie \textbf{da}, \textbf{weil} oder \textbf{zumal}. Diese Verwendung ist stilistisch markiert; in formellen Texten sollte man die Beziehung ausdrücklich formulieren.}
+\EnglishText{In \textbf{wo auch immer}, \textbf{wo} still means “at which place.” Colloquially, \textbf{wo} can also introduce a reason or follow-up clause, roughly like \textbf{da}, \textbf{weil}, or \textbf{zumal}. This use is stylistically marked; formal writing should express the relation explicitly.}
+\end{grammarentry}
+\begin{exbox}\begin{itemize}
+\ExampleItem{Wo auch immer du bist, ich wünsche dir alles Gute.}{Wherever you are, I wish you all the best.}
+\ExampleItem{Wo du schon hier bist, kannst du mir kurz helfen.}{Since you are here anyway, you can help me for a moment.}
+\end{itemize}\end{exbox}
+
+\section{Abgrenzung zu wohin und woher (Difference from wohin and woher)}
+\begin{grammarentry}{Ort, Ziel und Herkunft}{Lokaladverbien}
+\GermanText{\textbf{wo} fragt nach dem Ort; \textbf{wohin} nach dem Ziel einer Bewegung; \textbf{woher} nach dem Ausgangspunkt oder der Herkunft.}
+\EnglishText{\textbf{wo} asks about a location; \textbf{wohin} about a destination; \textbf{woher} about a starting point or origin.}
+\end{grammarentry}
+\begin{exbox}\begin{itemize}
+\ExampleItem{Wo bist du? — Zu Hause.}{Where are you? — At home.}
+\ExampleItem{Wohin gehst du? — Nach Hause.}{Where are you going? — Home.}
+\ExampleItem{Woher kommst du? — Aus dem Büro.}{Where are you coming from? — From the office.}
+\end{itemize}\end{exbox}
+
+\section{wo mit Präposition: wo(r)-Verbindungen (wo with prepositions: wo(r)- compounds)}
+\begin{grammarentry}{Frage nach Sachen oder Sachverhalten}{Frage-Pronominaladverb}
+\GermanText{Mit einer Präposition bildet \textbf{wo} ein Frage-Pronominaladverb. Beginnt die Präposition mit einem Vokal, steht häufig ein \textbf{r} dazwischen: \textbf{woran}, \textbf{worauf}, \textbf{worüber}. Diese Formen fragen meist nach Sachen, Themen oder Sachverhalten, nicht nach Personen. Für Personen sagt man \textbf{mit wem?}, \textbf{für wen?}.}
+\EnglishText{With a preposition, \textbf{wo} forms an interrogative pronominal adverb. An \textbf{r} is often inserted before a vowel: \textbf{woran}, \textbf{worauf}, \textbf{worüber}. These forms usually ask about things or topics, not people. For people, use \textbf{mit wem?}, \textbf{für wen?}.}
+\GermanText{Die Bildung und Funktion von \textbf{wofür} stehen in einer eigenen Erklärung.}
+\EnglishText{The formation and function of \textbf{wofür} are covered in its own document.}
+\end{grammarentry}
+\begin{exbox}\begin{itemize}
+\ExampleItem{Woran denkst du?}{What are you thinking about?}
+\ExampleItem{Womit schreibst du?}{What are you writing with?}
+\ExampleItem{Wofür interessierst du dich?}{What are you interested in?}
+\end{itemize}\end{exbox}
+
+\section{Zusammenfassung (Summary)}
+\begin{grammarentry}{Merksatz}{kurz und wichtig}
+\GermanText{\textbf{wo?} = Ort; \textbf{wohin?} = Ziel; \textbf{woher?} = Herkunft. In \textbf{wofür}, \textbf{womit} usw. bildet \textbf{wo(r)-} mit einer Präposition ein Frage-Pronominaladverb und bedeutet nicht einfach „wo?“.}
+\EnglishText{\textbf{wo?} = location; \textbf{wohin?} = destination; \textbf{woher?} = origin. In \textbf{wofür}, \textbf{womit}, and similar forms, \textbf{wo(r)-} combines with a preposition; it does not simply mean “where.”}
+\end{grammarentry}\end{document}

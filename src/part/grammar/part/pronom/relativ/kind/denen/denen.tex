@@ -1,0 +1,63 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage[a4paper,margin=2cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman,english]{babel}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{xcolor}
+\usepackage{parskip}
+\usepackage{enumitem}
+\usepackage[most]{tcolorbox}
+\usepackage{titlesec}
+\usepackage[hidelinks]{hyperref}
+\definecolor{HeaderBlueDark}{RGB}{70,110,170}
+\definecolor{RowBlueLight}{RGB}{235,243,255}
+\definecolor{RowBlueDark}{RGB}{220,233,250}
+\definecolor{SoftGray}{RGB}{90,90,90}
+\setlength{\parindent}{0pt}
+\setlist[itemize]{leftmargin=1.4em,itemsep=0.35em,topsep=0.35em}
+\linespread{1.06}
+\titleformat{\section}[block]{\Large\bfseries\color{HeaderBlueDark}}{}{0pt}{}
+\titlespacing{\section}{0pt}{1.3em}{0.8em}
+\newtcolorbox{exbox}{enhanced,breakable,colback=RowBlueLight,colframe=RowBlueDark,boxrule=0.4pt,arc=1.5mm,left=1.2mm,right=1.2mm,top=1mm,bottom=1mm,title={Beispiele \textnormal{(Examples)}},fonttitle=\bfseries,colbacktitle=RowBlueDark,coltitle=black}
+\NewDocumentEnvironment{grammarentry}{mm+b}{%
+\begin{tcolorbox}[enhanced,breakable,colback=white,colframe=HeaderBlueDark,boxrule=0.6pt,arc=1.5mm,left=1.5mm,right=1.5mm,top=1mm,bottom=1mm,colbacktitle=HeaderBlueDark,coltitle=white,fonttitle=\bfseries,title={#1\hfill\normalfont\footnotesize #2}]
+#3
+\end{tcolorbox}
+}{}
+\newcommand{\GermanText}[1]{\textbf{Deutsch: }#1\par}
+\newcommand{\EnglishText}[1]{{\small\color{SoftGray}\textbf{English: }#1\par}}
+\newcommand{\ExampleItem}[2]{\item \textbf{#1}\\{\small\color{SoftGray}#2}}
+\title{Die Relativpronomenform \glqq denen\grqq{}\\\large Relative Pronoun Form \glqq denen\grqq{}}
+\date{}
+\begin{document}
+\maketitle
+\tableofcontents
+\newpage
+\section{Grammatische Funktion (Grammatical function)}
+\begin{grammarentry}{denen}{Dativ Plural}
+\GermanText{\textbf{Denen} ist die Dativform des pluralischen Relativpronomens. Das Bezugswort kann maskulin, feminin oder neutral sein; im Plural ist das Genus an der Form nicht sichtbar. Nach einer Dativpräposition wie \textbf{aus} bleibt der Dativ erhalten.}
+\EnglishText{\textbf{Denen} is the dative plural form of the relative pronoun. The antecedent may be masculine, feminine, or neuter; gender is not visible in the plural form. A dative preposition such as \textbf{aus} requires the dative.}
+\end{grammarentry}
+\section{Bezug zum Bezugswort (Relation to the antecedent)}
+\begin{grammarentry}{Genus und Numerus}{Gender and number}
+\GermanText{Genus und Numerus richten sich nach dem Bezugswort. Der Kasus dieser Relativpronomenform richtet sich nach ihrer Funktion im Relativsatz.}
+\EnglishText{Gender and number come from the antecedent. The case of this relative-pronoun form is determined by its function inside the relative clause.}
+\end{grammarentry}
+\section{Beispiele (Examples)}
+\begin{exbox}\begin{itemize}
+\ExampleItem{Die Menschen, denen ich geholfen habe, waren dankbar.}{The people whom I helped were grateful.}
+\ExampleItem{Die Gründe, aus denen ich den Computer benutze, sind verschieden.}{The reasons for which I use the computer are different.}
+\end{itemize}\end{exbox}
+\section{Satzstellung und Zeichensetzung (Word order and punctuation)}
+\begin{grammarentry}{Relativsatz}{Relative clause}
+\GermanText{Der Relativsatz wird durch ein Komma eingeleitet; das finite Verb steht am Ende.}
+\EnglishText{A comma introduces the relative clause; its finite verb stands at the end.}
+\end{grammarentry}
+\section{Merksatz (Memory rule)}
+\begin{grammarentry}{Die Form erkennen}{Recognizing the form}
+\GermanText{Bestimme zuerst das Bezugswort und dann die Funktion des Relativpronomens im Relativsatz. Die Funktion bestimmt den Kasus.}
+\EnglishText{First identify the antecedent, then determine the relative pronoun's function inside the relative clause. Its function determines the case.}
+\end{grammarentry}
+\end{document}

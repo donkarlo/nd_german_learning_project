@@ -1,0 +1,51 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage[a4paper,margin=2cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman,english]{babel}
+\usepackage{lmodern,microtype,xcolor,parskip,enumitem}
+\usepackage[most]{tcolorbox}
+\usepackage{titlesec}
+\usepackage[hidelinks]{hyperref}
+\definecolor{HeaderBlueDark}{RGB}{70,110,170}
+\definecolor{RowBlueLight}{RGB}{235,243,255}
+\definecolor{RowBlueDark}{RGB}{220,233,250}
+\definecolor{SoftGray}{RGB}{90,90,90}
+\setlength{\parindent}{0pt}
+\setlist[itemize]{leftmargin=1.4em,itemsep=0.35em,topsep=0.35em}
+\linespread{1.06}
+\titleformat{\section}[block]{\Large\bfseries\color{HeaderBlueDark}}{}{0pt}{}
+\titlespacing{\section}{0pt}{1.3em}{0.8em}
+\newtcolorbox{exbox}{enhanced,breakable,colback=RowBlueLight,colframe=RowBlueDark,boxrule=0.4pt,arc=1.5mm,left=1.2mm,right=1.2mm,top=1mm,bottom=1mm,title={Beispiele (Examples)},fonttitle=\bfseries,colbacktitle=RowBlueDark,coltitle=black}
+\NewDocumentEnvironment{grammarentry}{mm+b}{\begin{tcolorbox}[enhanced,breakable,colback=white,colframe=HeaderBlueDark,boxrule=0.6pt,arc=1.5mm,left=1.5mm,right=1.5mm,top=1mm,bottom=1mm,colbacktitle=HeaderBlueDark,coltitle=white,fonttitle=\bfseries,title={#1\hfill\normalfont\footnotesize #2}]#3\end{tcolorbox}}{}
+\newcommand{\GermanText}[1]{\textbf{Deutsch: }#1\par}
+\newcommand{\EnglishText}[1]{{\small\color{SoftGray}\textbf{English: }#1\par}}
+\newcommand{\ExampleItem}[2]{\item \textbf{#1}\\{\small\color{SoftGray}#2}}
+\title{Das Fragewort „wie viel / wie viele“ (The question word “wie viel / wie viele”)}
+\date{}
+\begin{document}
+\maketitle
+\tableofcontents
+\newpage
+\section{Grundbedeutung und Wortart (Basic meaning and word class)}
+\begin{grammarentry}{wie viel / wie viele}{Interrogativadverbiale Wortverbindung (Mengenfrage)}
+\GermanText{\textbf{wie viel} fragt nach einer Menge; \textbf{wie viele} fragt nach der Anzahl zählbarer Dinge.}
+\EnglishText{\textbf{wie viel} asks about an amount; \textbf{wie viele} asks about the number of countable things.}
+
+\end{grammarentry}
+\section{Satzstellung und Verwendung (Word order and use)}
+\begin{grammarentry}{Direkte und indirekte Frage}{Fragewortstellung}
+\GermanText{In einer direkten W-Frage steht das finite Verb gewöhnlich an zweiter Stelle nach dem Fragewort. In einer indirekten Frage steht es am Ende. \textbf{wie viele} steht gewöhnlich bei zählbaren Nomen im Plural: \textbf{Wie viele Bücher?}. \textbf{Wie viel} steht bei Mengen und nicht zählbaren Nomen: \textbf{Wie viel Wasser?}.}
+\EnglishText{In a direct information question, the finite verb normally follows the question word in second position. In an indirect question, it goes at the end. \textbf{wie viele} normally accompanies countable plural nouns: \textbf{Wie viele Bücher?}. \textbf{Wie viel} is used for amounts and uncountable nouns: \textbf{Wie viel Wasser?}.}
+\end{grammarentry}
+\begin{exbox}\begin{itemize}
+\ExampleItem{Wie viele Bücher hast du?}{How many books do you have?}
+\ExampleItem{Wie viel Wasser trinkst du am Tag?}{How much water do you drink each day?}
+\ExampleItem{Wie viel kostet das?}{How much does it cost?}
+\end{itemize}\end{exbox}
+\section{Zusammenfassung (Summary)}
+\begin{grammarentry}{Merksatz}{kurz und wichtig}
+\GermanText{Merksatz: \textbf{wie viel} fragt nach einer Menge; \textbf{wie viele} nach einer Anzahl.}
+\EnglishText{Summary: \textbf{wie viel} asks about an amount; \textbf{wie viele} asks about a number.}
+\end{grammarentry}
+\end{document}

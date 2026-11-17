@@ -1,0 +1,82 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage[a4paper,margin=2cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman,english]{babel}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{xcolor}
+\usepackage{parskip}
+\usepackage{enumitem}
+\usepackage[most]{tcolorbox}
+\usepackage{titlesec}
+\usepackage[hidelinks]{hyperref}
+\usepackage{array}
+\definecolor{HeaderBlueDark}{RGB}{70,110,170}
+\definecolor{RowBlueLight}{RGB}{235,243,255}
+\definecolor{RowBlueDark}{RGB}{220,233,250}
+\definecolor{SoftGray}{RGB}{90,90,90}
+\setlength{\parindent}{0pt}
+\setlist[itemize]{leftmargin=1.4em,itemsep=0.35em,topsep=0.35em}
+\linespread{1.06}
+\titleformat{\section}[block]{\Large\bfseries\color{HeaderBlueDark}}{}{0pt}{}
+\titlespacing{\section}{0pt}{1.3em}{0.8em}
+\titleformat{\subsection}[block]{\large\bfseries\color{HeaderBlueDark}}{}{0pt}{}
+\titlespacing{\subsection}{0pt}{1.0em}{0.6em}
+\newtcolorbox{exbox}{enhanced,breakable,colback=RowBlueLight,colframe=RowBlueDark,boxrule=0.4pt,arc=1.5mm,left=1.2mm,right=1.2mm,top=1mm,bottom=1mm,title={Beispiele \textnormal{(Examples)}},fonttitle=\bfseries,colbacktitle=RowBlueDark,coltitle=black}
+\NewDocumentEnvironment{grammarentry}{mm+b}{%
+\begin{tcolorbox}[enhanced,breakable,colback=white,colframe=HeaderBlueDark,boxrule=0.6pt,arc=1.5mm,left=1.5mm,right=1.5mm,top=1mm,bottom=1mm,colbacktitle=HeaderBlueDark,coltitle=white,fonttitle=\bfseries,title={#1\hfill\normalfont\footnotesize #2}]
+#3
+\end{tcolorbox}
+}{}
+\newcommand{\GermanText}[1]{\textbf{Deutsch: }#1\par}
+\newcommand{\EnglishText}[1]{{\small\color{SoftGray}\textbf{English: }#1\par}}
+\newcommand{\ExampleItem}[2]{\item \textbf{#1}\\{\small\color{SoftGray}#2}}
+\title{Das Relativpronomen \glqq die\grqq{}\\\large The Relative Pronoun \glqq die\grqq{}}
+\date{}
+\begin{document}
+\maketitle
+\tableofcontents
+\newpage
+
+\section{Bezugswort und grammatische Rolle (Antecedent and grammatical role)}
+\begin{grammarentry}{die}{Relativpronomen für ein femininen Bezugswort}
+\GermanText{Das Relativpronomen \textbf{die} leitet einen Relativsatz ein und bezieht sich auf ein femininen Nomen im Hauptsatz.}
+\EnglishText{The relative pronoun \textbf{die} introduces a relative clause and refers to a femininen noun in the main clause.}
+\GermanText{Das Bezugswort ist feminin und Singular. Im Nominativ und Akkusativ lautet die Form \textbf{die}; im Dativ lautet sie \textbf{der}, im Genitiv \textbf{deren}.}
+\EnglishText{The antecedent is femininen and singular. The case of the relative form is determined by its function inside the relative clause.}
+\end{grammarentry}
+
+\section{Deklination (Declension)}
+\begin{grammarentry}{Formen der Relativpronomenreihe}{Forms in this relative-pronoun series}
+\GermanText{Die Formen für ein femininen Bezugswort sind: Nominativ: die \quad Akkusativ: die \quad Dativ: der \quad Genitiv: deren.}
+\EnglishText{The forms for a femininen antecedent are: Nominativ: die \quad Akkusativ: die \quad Dativ: der \quad Genitiv: deren.}
+\end{grammarentry}
+
+\section{Kasus im Relativsatz (Case inside the relative clause)}
+\begin{grammarentry}{Der Kasus folgt der Funktion}{Case follows grammatical function}
+\GermanText{Das Bezugswort bestimmt Genus und Numerus. Die grammatische Funktion des Relativpronomens im Relativsatz bestimmt den Kasus: Subjekt steht im Nominativ; Akkusativ- und Dativobjekte richten sich nach dem Verb; eine Präposition bestimmt ebenfalls den Kasus.}
+\EnglishText{The antecedent determines gender and number. The pronoun's grammatical function inside the relative clause determines case: a subject is nominative; accusative and dative objects follow the verb; a preposition also governs case.}
+\end{grammarentry}
+
+\section{Beispiele nach Kasus (Examples by case)}
+\begin{exbox}\begin{itemize}
+\ExampleItem{Die Frau, die nebenan wohnt, ist Ärztin.}{The woman who lives next door is a doctor.}
+\ExampleItem{Die Frau, die ich gestern getroffen habe, ist Ärztin.}{The woman whom I met yesterday is a doctor.}
+\ExampleItem{Die Frau, der ich geholfen habe, ist meine Nachbarin.}{The woman whom I helped is my neighbor.}
+\ExampleItem{Die Frau, deren Sohn in Graz studiert, ist Ärztin.}{The woman whose son studies in Graz is a doctor.}
+\ExampleItem{Die Kollegin, mit der ich gesprochen habe, arbeitet in Graz.}{The colleague I spoke with works in Graz.}
+\end{itemize}\end{exbox}
+
+\section{Satzstellung und Kommas (Word order and commas)}
+\begin{grammarentry}{Relativsatz als Nebensatz}{Relative clause as a subordinate clause}
+\GermanText{Der Relativsatz wird durch Kommas vom übrigen Satz abgetrennt. Das finite Verb steht am Ende des Relativsatzes.}
+\EnglishText{Commas set the relative clause off from the rest of the sentence. Its finite verb stands at the end.}
+\end{grammarentry}
+
+\section{Merksatz (Memory rule)}
+\begin{grammarentry}{Genus und Kasus}{Gender and case}
+\GermanText{Das Bezugswort bestimmt Genus und Numerus; die Funktion im Relativsatz bestimmt den Kasus.}
+\EnglishText{The antecedent determines gender and number; the function inside the relative clause determines case.}
+\end{grammarentry}
+\end{document}
